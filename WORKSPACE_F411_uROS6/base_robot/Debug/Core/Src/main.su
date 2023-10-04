@@ -1,0 +1,9 @@
+../Core/Src/main.c:114:13:task_Motor_Left	48	static
+../Core/Src/main.c:154:13:task_Motor_Right	56	static
+../Core/Src/main.c:198:13:task_Decision	64	static
+../Core/Src/main.c:419:13:task_Ultra	32	static
+../Core/Src/main.c:449:13:task_LCD	32	static
+../Core/Src/main.c:471:5:main	48	static
+../Core/Src/main.c:579:6:microros_task	200	static
+../Core/Src/main.c:664:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:672:6:Error_Handler	4	static,ignoring_inline_asm

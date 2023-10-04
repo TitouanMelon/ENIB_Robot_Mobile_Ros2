@@ -1,0 +1,11 @@
+../Core/Src/quadEncoder.c:58:6:quadEncoder_Init	48	static
+../Core/Src/quadEncoder.c:118:6:quadEncoder_PosCalcL	24	static
+../Core/Src/quadEncoder.c:131:6:quadEncoder_PosCalcR	24	static
+../Core/Src/quadEncoder.c:144:9:quadEncoder_GetPos16L	16	static
+../Core/Src/quadEncoder.c:156:9:quadEncoder_GetPos16R	16	static
+../Core/Src/quadEncoder.c:166:9:quadEncoder_GetPos32L	24	static
+../Core/Src/quadEncoder.c:177:9:quadEncoder_GetPos32R	24	static
+../Core/Src/quadEncoder.c:189:9:quadEncoder_GetSpeedL	8	static
+../Core/Src/quadEncoder.c:227:9:quadEncoder_GetSpeedR	8	static
+../Core/Src/quadEncoder.c:264:6:quadEncoder_CallbackIndexL	8	static
+../Core/Src/quadEncoder.c:285:6:quadEncoder_CallbackIndexR	8	static

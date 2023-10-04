@@ -1,0 +1,695 @@
+// https://github.com/lFatality/stm32_micro_ros_setup
+
+#include "main.h"
+#include "cmsis_os.h"
+
+#include <rcl/rcl.h>
+#include <rcl/error_handling.h>
+#include <rclc/rclc.h>
+#include <rclc/executor.h>
+#include <uxr/client/transport.h>
+#include <rmw_microxrcedds_c/config.h>
+#include <rmw_microros/rmw_microros.h>
+
+#include <std_msgs/msg/int32.h>
+#include <std_msgs/msg/string.h>
+#include <std_msgs/msg/header.h>
+
+#define ARRAY_LEN 100
+
+#include "systemclock.h"
+#include "drv_uart.h"
+#include "drv_gpio.h"
+#include "drv_i2c.h"
+
+#include "VL53L0X.h"
+
+extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef huart2;
+extern DMA_HandleTypeDef hdma_usart1_rx;
+extern DMA_HandleTypeDef hdma_usart1_tx;
+extern DMA_HandleTypeDef hdma_usart2_rx;
+extern DMA_HandleTypeDef hdma_usart2_tx;
+
+extern I2C_HandleTypeDef hi2c1;
+
+/* Definitions for defaultTask */
+osThreadId_t defaultTaskHandle;
+const osThreadAttr_t defaultTask_attributes = {
+  .name = "defaultTask",
+  .stack_size = 3000 * 4,
+  .priority = (osPriority_t) osPriorityNormal,
+};
+
+//#######################################################
+#define EX1 1
+#define EX2 2
+#define EX3 3
+#define EXFINAL 4
+
+#define SYNCHRO_EX EXFINAL
+
+enum {MODE_OBS, MODE_ZIG, MODE_CAM};
+enum {STOP_VIT, LOW, FAST, SONIC};
+enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GAUCHE, RECULE_DROITE};
+
+#define NB 200
+#define LCD 0
+#define ULTRASON 0
+#define MICROROS 0
+//#######################################################
+#define CMD 750
+#define VITESSE_KART CMD/2
+#define VITESSE_OBS 400
+#define VITESSE_CAM CMD
+//#######################################################
+#define Te 5
+
+#define Ltau 44//38
+#define LTi (0.1*Ltau)
+#define LKi (Te/LTi)
+#define LKp 0.01
+
+#define Rtau 44
+#define RTi (0.1*Rtau)
+#define RKi (Te/RTi)
+#define RKp 0.01
+//#######################################################
+
+// Déclaration des objets synchronisants !! Ne pas oublier de les créer
+xSemaphoreHandle xSemaphore = NULL;
+xQueueHandle qhL = NULL;
+xQueueHandle qhR = NULL;
+xQueueHandle qhMR = NULL;
+
+xQueueHandle qhLCD = NULL;
+xQueueHandle qhCamG = NULL;  //queue caméra
+xQueueHandle qhCamD = NULL;
+xQueueHandle qhUlt = NULL;
+
+//variable globales caméra
+uint16_t xy[2];
+uint16_t wh[2];
+
+uint16_t whinit[2];
+bool one=1;
+bool cam=0;
+
+int lowservopos=0;
+int highservopos=0;
+
+extern uint8_t rec_buf2[NB_CAR_TO_RECEIVE+1];	 // defined in drv_uart.c
+extern uint8_t rec_buf6[NB_CAR_TO_RECEIVE+1];
+
+struct AMessage
+{
+	char command;
+	int data;
+};
+
+void SystemClock_Config(void);
+void microros_task(void *argument);
+//========================================================================
+
+static void task_Motor_Left(void *pvParameters)
+{
+	int err = 0;
+	float up = 0;
+	static float ui = 0.0;
+	int speed=0;
+	static int speed1 = 0;
+	static int cmd = 100;
+	static int lastCmd = 0;
+
+	int i = 0;
+
+	struct AMessage pxRxedMessage;
+
+	for (;;)
+	{
+		xQueueReceive( qhL,  &( pxRxedMessage ) , 1 );
+		cmd = pxRxedMessage.data;
+
+		speed = quadEncoder_GetSpeedL();
+
+		if (cmd == -1)
+			cmd = lastCmd;
+		else
+			lastCmd = cmd;
+
+		if (speed - speed1 > 500 || speed - speed1 < -500)
+			speed = speed1;
+
+		err = cmd-speed;
+		speed1 = speed;
+		up = LKp*(float)err;
+		ui = ui+LKp*LKi*(float)err;
+
+		motorLeft_SetDuty(100+up+ui);
+		xSemaphoreGive( xSemaphore );
+		vTaskDelay(SAMPLING_PERIOD_ms);
+	}
+}
+
+static void task_Motor_Right(void *pvParameters)
+{
+	int err = 0;
+	float up = 0;
+	static float ui = 0.0;
+	int speed=0;
+	static int speed1 = 0;
+	static int cmd = 100;
+	static int lastCmd = 0;
+
+	int i = 0;
+
+	struct AMessage pxRxedMessage;
+
+	int pin = 0;
+
+	for (;;)
+	{
+		xQueueReceive( qhR,  &( pxRxedMessage ) , 1 );
+		cmd = pxRxedMessage.data;
+
+		speed = quadEncoder_GetSpeedR();
+
+		if (cmd == -1)
+			cmd = lastCmd;
+		else
+			lastCmd = cmd;
+
+		if (speed - speed1 > 500 || speed - speed1 < -500)
+			speed = speed1;
+
+		err = cmd-speed;
+		speed1 = speed;
+		up = RKp*(float)err;
+		ui = ui+RKp*RKi*(float)err;
+
+		motorRight_SetDuty(100+up+ui);
+		pin = (pin+1)%2;
+		HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, pin);
+		xSemaphoreGive( xSemaphore );
+		vTaskDelay(SAMPLING_PERIOD_ms);
+	}
+}
+
+static void task_Decision(void *pvParameters)
+{
+	int speedLeft;
+	int speedRight;
+
+	int AspeedLeft = 0;
+	int AspeedRight = 0;
+
+	int table[2];
+	static int obs = 0;
+	static char dir = 'f';
+	static int direction = AVANT;
+	static int speed = LOW;
+	static int mode = MODE_OBS;
+
+	struct AMessage pxRxedMessage;
+
+	for (;;)
+	{
+		//mode = ((rec_buf6[0] & 0xC0) >> 6);
+		/*if(mode != MODE_CAM){
+			one=0;
+		}*/
+
+		if (mode == MODE_ZIG)
+		{
+			#ifdef ULTRASON
+			xQueueReceive( qhUlt,  &( pxRxedMessage ) , 1 ); //For ultrason
+			#endif
+			xQueueReceive( qhCamD,  &( pxRxedMessage ) , 1 ); //For cam
+
+			dir = 'N';
+			//direction = rec_buf6[0] & 0x0F;
+			//speed = (rec_buf6[0] & 0x30) >> 4;
+			switch(direction)
+			{
+				case STOP:
+					speedLeft = 0;
+					speedRight = 0;
+					break;
+				case AVANT:
+					speedLeft = VITESSE_KART*speed;
+					speedRight = VITESSE_KART*speed;
+					break;
+				case RECULE:
+					speedLeft = -VITESSE_KART*speed;
+					speedRight = -VITESSE_KART*speed;
+					break;
+				case DROITE:
+					speedLeft = VITESSE_KART*speed;
+					speedRight = -VITESSE_KART*speed;
+					break;
+				case GAUCHE:
+					speedLeft = -VITESSE_KART*speed;
+					speedRight = VITESSE_KART*speed;
+					break;
+				case AVANT_GAUCHE:
+					speedLeft = (VITESSE_KART/2)*speed;
+					speedRight = VITESSE_KART*speed;
+					break;
+				case AVANT_DROITE:
+					speedLeft = VITESSE_KART*speed;
+					speedRight = (VITESSE_KART/2)*speed;
+					break;
+				case RECULE_GAUCHE:
+					speedLeft = -VITESSE_KART*speed;
+					speedRight = (-VITESSE_KART/2)*speed;
+					break;
+				case RECULE_DROITE:
+					speedLeft = (-VITESSE_KART/2)*speed;
+					speedRight = -VITESSE_KART*speed;
+					break;
+				default:
+					speedLeft = 0;
+					speedRight = 0;
+					break;
+			}
+			//Stop si hors porte
+		}
+		else if (mode == MODE_OBS)
+		{
+			captDistIR_Get(table);
+			//xQueueReceive( qhCamD,  &( pxRxedMessage ) , 1 ); //For cam
+			#if ULTRASON
+			xQueueReceive( qhUlt,  &( pxRxedMessage ) , 1 );
+			#endif
+
+			int ultrason = 0;
+			if (pxRxedMessage.data != 0 || pxRxedMessage.data != 1 || pxRxedMessage.data != 2)
+				ultrason = 0;
+			else
+				ultrason = pxRxedMessage.data;
+
+
+			if (table[0] > 1000 || table[1] > 1000)
+			{
+				if (obs > 10)
+				{
+					speedLeft = 100;
+					speedRight = -100;
+					dir = 'G';
+				}
+				else
+				{
+					speedLeft = 0;
+					speedRight = 0;
+
+					if (table[0] > table[1] && table[0] > 1000)
+					{
+						dir = 'G';
+						speedLeft = 100;
+						speedRight = -100;
+						if (obs%2 == 0)
+							obs++;
+					}
+					else if (table[0] < table[1] && table[1] > 1000)
+					{
+						dir = 'D';
+						speedLeft = -100;
+						speedRight = 100;
+						if (obs%2 == 1)
+							obs++;
+					}
+				}
+			}
+			else
+			{
+				speedLeft = VITESSE_OBS;
+				speedRight = VITESSE_OBS;
+				dir = 'F';
+				obs = 0;
+			}
+		}
+		else if (mode == MODE_CAM)
+		{
+			#if ULTRASON
+			xQueueReceive( qhUlt,  &( pxRxedMessage ) , 1 ); //For ultrason
+			pxRxedMessage.data = -1;
+			#endif
+
+			xQueueReceive( qhCamD,  &( pxRxedMessage ) , 1 );
+			switch (pxRxedMessage.data)
+			{
+				case AVANT:
+					speedLeft = VITESSE_CAM;
+					AspeedLeft = VITESSE_CAM;
+					speedRight = VITESSE_CAM;
+					AspeedRight = VITESSE_CAM;
+					break;
+				case AVANT_DROITE:
+					speedLeft = VITESSE_CAM;
+					AspeedLeft = VITESSE_CAM;
+					speedRight = VITESSE_CAM/2;
+					AspeedRight = VITESSE_CAM/2;
+					break;
+				case AVANT_GAUCHE:
+					speedLeft = VITESSE_CAM/2;
+					AspeedLeft = VITESSE_CAM/2;
+					speedRight = VITESSE_CAM;
+					AspeedRight = VITESSE_CAM;
+					break;
+				case RECULE:
+					speedLeft = -VITESSE_CAM;
+					AspeedLeft = -VITESSE_CAM;
+					speedRight = -VITESSE_CAM;
+					AspeedRight = -VITESSE_CAM;
+					break;
+				case RECULE_DROITE:
+					speedLeft = -VITESSE_CAM/2;
+					AspeedLeft = -VITESSE_CAM/2;
+					speedRight = -VITESSE_CAM;
+					AspeedRight = -VITESSE_CAM;
+					break;
+				case RECULE_GAUCHE:
+					speedLeft = -VITESSE_CAM;
+					AspeedLeft = -VITESSE_CAM;
+					speedRight = -VITESSE_CAM/2;
+					AspeedRight = -VITESSE_CAM/2;
+					break;
+				case STOP:
+					speedLeft = 0;
+					AspeedLeft = 0;
+					speedRight = 0;
+					AspeedRight = 0;
+					break;
+				default:
+					speedLeft = AspeedLeft;
+					speedRight = AspeedRight;
+					break;
+			}
+
+			dir = 'N';
+			obs = 0;
+		}
+
+		struct AMessage pxMessage;
+
+		pxMessage.data=speedLeft;
+		xQueueSend( qhL, ( void * ) &pxMessage,  portMAX_DELAY );
+		//xSemaphoreTake( xSemaphore, portMAX_DELAY );
+
+		pxMessage.data=speedRight;
+		xQueueSend( qhR, ( void * ) &pxMessage,  portMAX_DELAY );
+		//xSemaphoreTake( xSemaphore, portMAX_DELAY );
+
+#if LCD
+		pxMessage.data=mode;
+		pxMessage.command=dir;
+		xQueueSend( qhLCD, ( void * ) &pxMessage, 1);
+#endif
+
+#if MICROROS
+		pxMessage.data=mode;
+		pxMessage.command=dir;
+		xQueueSend( qhMR, ( void * ) &pxMessage, 1);
+#endif
+
+		vTaskDelay(SAMPLING_PERIOD_ms);
+	}
+}
+
+static void task_Ultra(void *pvParameters)
+{
+	static int dist[2];
+	static const int SEUIL = 40;
+	int obs = 0;
+
+	for(;;)
+	{
+		xSemaphoreGive( xSemaphore );
+		Ultrason(dist);
+		//term_printf("%d // %d \r\n", dist[0], dist[1]);
+		if (dist[0] < SEUIL || dist[1] < SEUIL)
+		{
+			if (dist[0] > dist[1])
+				obs = 1;
+			else if (dist[0] < dist[1])
+				obs = 2;
+		}
+		else
+			obs = 0;
+
+		struct AMessage pxMessage;
+
+		pxMessage.data=obs;
+		xQueueSend( qhUlt, ( void * ) &pxMessage,  portMAX_DELAY );
+
+		HAL_Delay(100);
+	}
+}
+
+static void task_LCD(void *pvParameters)
+{
+	struct AMessage pxRxedMessage;
+
+	for(;;){
+		xQueueReceive( qhLCD,  &( pxRxedMessage ) , 1);
+		int mode = pxRxedMessage.data;
+		char direction=pxRxedMessage.command;
+		groveLCD_setCursor(0,0);
+		if (mode == MODE_OBS)
+			groveLCD_term_printf("M:Obstacle  D:%c", direction);
+		else if (mode == MODE_ZIG)
+			groveLCD_term_printf("M:Zigbee        ");
+		else if (mode == MODE_CAM)
+			groveLCD_term_printf("M:Camera        ");
+
+		vTaskDelay(SAMPLING_PERIOD_ms);
+	}
+
+}
+
+//=========================================================================
+int main(void)
+{
+  HAL_Init();
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+  MX_DMA_Init();
+  MX_USART2_UART_Init();
+  MX_I2C1_Init();
+  MX_USART1_UART_Init();
+
+  captDistIR_Init();		// Capteurs Infrarouge
+  quadEncoder_Init();		// Encodeurs Incrémentaux
+
+  // Test Ecran LCD
+  groveLCD_begin(16,2,0); // !! cette fonction prend du temps
+  HAL_Delay(100);
+  groveLCD_setCursor(0,0);
+  groveLCD_setColor(1);
+  groveLCD_term_printf("Titouan/\njeremy/Louanne");
+  HAL_Delay(1000);
+
+  motorCommand_Init();
+
+  HAL_Delay(500);
+
+  //Use to test the motor delay between each loop##
+  GPIO_InitTypeDef  GPIO_InitStruct;
+  GPIO_InitStruct.Pin = GPIO_PIN_10;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FAST;
+
+  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+  HAL_GPIO_WritePin(GPIOC, GPIO_PIN_10, 0);
+  //################################################
+
+  motorRight_SetDuty(100);
+  motorLeft_SetDuty(100);
+
+  // TEST VL53L0X ###################################
+  uint8_t i;
+  uint16_t val;
+  i2c1_ReadRegBuffer(0x53,0xC2,&i,1);
+
+  initVL53L0X();
+
+  val = readRangeSingleMillimeters()/10;
+  HAL_Delay(200);
+  //#################################################
+
+  HAL_Delay(50);
+
+  osKernelInitialize();
+  //defaultTaskHandle = osThreadNew(microros_task, NULL, &defaultTask_attributes);
+  #if SYNCHRO_EX == EX3
+    xTaskCreate(microros_task, ( signed portCHAR * ) "microros_task", 512 /* stack size */, NULL,  tskIDLE_PRIORITY, NULL );
+  #elif SYNCHRO_EX == EXFINAL
+    xTaskCreate(task_Decision, ( signed portCHAR * ) "task Decision", 512 /* stack size */, NULL, tskIDLE_PRIORITY+33, NULL);
+	xTaskCreate(task_Motor_Left, ( signed portCHAR * ) "task Motor Left", 512 /* stack size */, NULL, tskIDLE_PRIORITY+35, NULL);
+	xTaskCreate(task_Motor_Right, ( signed portCHAR * ) "task Motor Right", 512 /* stack size */, NULL, tskIDLE_PRIORITY+34, NULL);
+	//xTaskCreate(task_PIXY, ( signed portCHAR * ) "task PIXY", 512 /* stack size */, NULL, tskIDLE_PRIORITY+1, NULL);
+
+	#if MICROROS
+	  xTaskCreate(microros_task, ( signed portCHAR * ) "microros_task", 512 /* stack size */, NULL,  tskIDLE_PRIORITY+2, NULL );
+	#endif
+
+	#if ULTRASON
+	  xTaskCreate(task_Ultra, ( signed portCHAR * ) "task Ultrason", 512 /* stack size */, NULL, tskIDLE_PRIORITY+1, NULL);
+	#endif
+
+	#if LCD
+	  xTaskCreate(task_LCD, ( signed portCHAR * ) "task LCD", 512 /* stack size */, NULL, tskIDLE_PRIORITY+1, NULL);
+	#endif
+  #endif
+
+  vSemaphoreCreateBinary(xSemaphore);
+  xSemaphoreTake( xSemaphore, portMAX_DELAY );
+
+  qhL = xQueueCreate( 1, sizeof(struct AMessage ) );
+  qhR = xQueueCreate( 1, sizeof(struct AMessage ) );
+  qhMR = xQueueCreate( 1, sizeof(struct AMessage ) );
+
+  qhLCD = xQueueCreate( 1, sizeof(struct AMessage ) );
+  qhCamG = xQueueCreate( 1, sizeof(struct AMessage ) );
+  qhCamD = xQueueCreate( 1, sizeof(struct AMessage ) );
+  qhUlt = xQueueCreate( 1, sizeof(struct AMessage ) );
+
+  //rec_buf6[0] = 'T';
+
+  osKernelStart();
+  while(1)
+  {
+
+  }
+  //vTaskStartScheduler();
+}
+//=========================================================================
+bool cubemx_transport_open(struct uxrCustomTransport * transport);
+bool cubemx_transport_close(struct uxrCustomTransport * transport);
+size_t cubemx_transport_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);
+size_t cubemx_transport_read(struct uxrCustomTransport* transport, uint8_t* buf, size_t len, int timeout, uint8_t* err);
+
+void * microros_allocate(size_t size, void * state);
+void microros_deallocate(void * pointer, void * state);
+void * microros_reallocate(void * pointer, size_t size, void * state);
+void * microros_zero_allocate(size_t number_of_elements, size_t size_of_element, void * state);
+
+void microros_task(void *argument)
+{
+	// micro-ROS configuration
+	rmw_uros_set_custom_transport(true,
+		(void *) &huart1,
+		cubemx_transport_open,
+		cubemx_transport_close,
+		cubemx_transport_write,
+		cubemx_transport_read);
+
+	rcl_allocator_t freeRTOS_allocator = rcutils_get_zero_initialized_allocator();
+	freeRTOS_allocator.allocate = microros_allocate;
+	freeRTOS_allocator.deallocate = microros_deallocate;
+	freeRTOS_allocator.reallocate = microros_reallocate;
+	freeRTOS_allocator.zero_allocate =  microros_zero_allocate;
+
+	if (!rcutils_set_default_allocator(&freeRTOS_allocator)) {
+		printf("Error on default allocators (line %d)\n", __LINE__);
+	}
+
+	// micro-ROS app
+	rcl_publisher_t publisher;
+	std_msgs__msg__String msg;
+	rclc_support_t support;
+	rcl_allocator_t allocator;
+	rcl_node_t node;
+
+	allocator = rcl_get_default_allocator();
+
+	//create init_options
+	rclc_support_init(&support, 0, NULL, &allocator);
+
+	// create node
+	rclc_node_init_default(&node, "STM32_node", "", &support);
+
+	// create publisher
+	rclc_publisher_init_default(
+		&publisher,
+		&node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+		"cubemx_publisher");
+
+	msg.data.data = (char * ) malloc(ARRAY_LEN * sizeof(char));
+	msg.data.size = 0;
+	msg.data.capacity = ARRAY_LEN;
+	sprintf(msg.data.data, " ");
+
+	struct AMessage pxRxedMessage;
+
+	for(;;)
+	{
+		xQueueReceive( qhMR,  &( pxRxedMessage ) , 1);
+		int mode = pxRxedMessage.data;
+		char direction=pxRxedMessage.command;
+
+		if (mode == MODE_OBS)
+			sprintf(msg.data.data, "M:Obstacle D:%c", direction);
+		else if (mode == MODE_ZIG)
+			sprintf(msg.data.data, "M:Zigbee");
+		else if (mode == MODE_CAM)
+			sprintf(msg.data.data, "M:Camera");
+
+		#if SYNCHRO_EX == EX3
+		sprintf(msg.data.data, "Distance : %d", readRangeSingleMillimeters()/10);
+		#endif
+		msg.data.size = strlen(msg.data.data);
+
+		rcl_ret_t ret = rcl_publish(&publisher, &msg, NULL);
+		if (ret != RCL_RET_OK)
+		{
+			printf("Error publishing (line %d)\n", __LINE__);
+		}
+		//vTaskDelay(1000); // 1000 ms
+	}
+	/* USER CODE END 5 */
+}
+//=========================================================================
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @note   This function is called  when TIM1 interrupt took place, inside
+  * HAL_TIM_IRQHandler(). It makes a direct call to HAL_IncTick() to increment
+  * a global variable "uwTick" used as application time base.
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  if (htim->Instance == TIM4) {
+    HAL_IncTick();
+  }
+}
+
+//=========================================================================
+void Error_Handler(void)
+{
+  __disable_irq();
+  while (1)
+  {
+  }
+}
+//=========================================================================
+#ifdef  USE_FULL_ASSERT
+/**
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
+void assert_failed(uint8_t *file, uint32_t line)
+{
+  /* USER CODE BEGIN 6 */
+  /* User can add his own implementation to report the file name and line number,
+     ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+  /* USER CODE END 6 */
+}
+#endif /* USE_FULL_ASSERT */

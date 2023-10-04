@@ -1,0 +1,29 @@
+2023-03-13 11:05:35,277 [INFO] Activator:177 - 
+
+
+2023-03-13 11:05:35,278 [INFO] Activator:178 - !SESSION log4j initialized
+2023-03-13 11:05:57,994 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-03-13 11:05:57,995 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-03-13 11:05:57,996 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-03-13 12:52:14,199 [INFO] Activator:177 - 
+
+
+2023-03-13 12:52:14,200 [INFO] Activator:178 - !SESSION log4j initialized
+2023-03-13 12:52:40,906 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-03-13 12:52:40,907 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-03-13 12:52:40,907 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-03-15 11:59:18,853 [INFO] Activator:177 - 
+
+
+2023-03-15 11:59:18,854 [INFO] Activator:178 - !SESSION log4j initialized
+2023-03-15 11:59:45,292 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-03-15 11:59:45,293 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-03-15 11:59:45,293 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-04-12 10:29:47,370 [INFO] Activator:177 - 
+
+
+2023-04-12 10:29:47,372 [INFO] Activator:178 - !SESSION log4j initialized
+2023-04-12 10:30:14,023 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+2023-04-12 10:30:14,024 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: Defaulting to no-operation (NOP) logger implementation
+2023-04-12 10:30:14,024 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+2023-04-12 12:31:06,757 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] SWT SessionManagerDBus: Failed to UnregisterClient: GDBus.Error:org.xfce.SessionManager.Error.General: Client with id of '/org/xfce/SessionClients/org_eclipse_swt_Application' was not found

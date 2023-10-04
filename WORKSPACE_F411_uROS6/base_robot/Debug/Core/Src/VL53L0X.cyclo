@@ -1,0 +1,14 @@
+../Core/Src/VL53L0X.c:28:6:writeReg	1
+../Core/Src/VL53L0X.c:34:6:writeReg16Bit	1
+../Core/Src/VL53L0X.c:43:6:writeReg32Bit	1
+../Core/Src/VL53L0X.c:53:9:readReg	1
+../Core/Src/VL53L0X.c:60:10:readReg16Bit	1
+../Core/Src/VL53L0X.c:68:10:readReg32Bit	1
+../Core/Src/VL53L0X.c:77:6:writeMulti	2
+../Core/Src/VL53L0X.c:88:6:setAddress	1
+../Core/Src/VL53L0X.c:93:9:getAddress	1
+../Core/Src/VL53L0X.c:105:6:initVL53L0X	3
+../Core/Src/VL53L0X.c:301:6:setSignalRateLimit	3
+../Core/Src/VL53L0X.c:311:7:getSignalRateLimit	1
+../Core/Src/VL53L0X.c:324:10:readRangeSingleMillimeters	1
+../Core/Src/VL53L0X.c:348:6:performSingleRefCalibration	1

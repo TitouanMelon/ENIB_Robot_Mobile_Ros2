@@ -1,0 +1,3 @@
+../Core/Src/captDistUltrason.c:27:6:captDistUS_Measure	24	static
+../Core/Src/captDistUltrason.c:35:10:captDistUS_Get	24	static
+../Core/Src/captDistUltrason.c:48:6:Ultrason	24	static
