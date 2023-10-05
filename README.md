@@ -66,15 +66,16 @@ cp -r ./WORKSPACE_F411_uROSS6 /your/path/of/workspace/folder
 
 # Pinout
 
-|Pin STM32|Function     |Use            |
-|PA8      |PWM1/1       |Encodeur Voie A|
-|PA9      |PWM1/2       |Encodeur Voie B|
-|PB10     |EXTI1        |Index encodeur |
-|PA0      |PWM2/1       |Encodeur Voie A|
-|PA1      |PWM2/2       |Encodeur Voie B|
-|PC0      |EXTI         |Index Moteur   |
-|PA6      |PWM3/1       |PWM motor 1    |
-|PC7      |PWM3/2       |PWM motor 2    |
-|PA7      |ENABLE MOTEUR|actif état Bas |
-|PA4      |ADC1_8       |Sensor IR 1    |
-|PB0      |ADC1_4       |Sensor IR 2    |
+| Pin STM32 | Function      | Use             |
+|---------- | ------------- | --------------- |
+|PA8        | PWM1/1        | Encodeur Voie A |
+|PA9        | PWM1/2        | Encodeur Voie B |
+|PB10       | EXTI1         | Index encodeur  |
+|PA0        | PWM2/1        | Encodeur Voie A |
+|PA1        | PWM2/2        | Encodeur Voie B |
+|PC0        | EXTI          | Index Moteur    |
+|PA6        | PWM3/1        | PWM motor 1     |
+|PC7        | PWM3/2        | PWM motor 2     |
+|PA7        | ENABLE MOTEUR | actif état Bas  |
+|PA4        | ADC1_8        | Sensor IR 1     |
+|PB0        | ADC1_4        | Sensor IR 2     |
