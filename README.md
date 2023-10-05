@@ -43,7 +43,7 @@ Get <a href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32Cub
 Go to the **Get Software** level and select the latest version of your OS
 
 Next accept the EULA and fil the form with the name of your choice but a valid email address on the next prompt
-![STM32 prompt](./img/stm32.png)
+![STM32 prompt](./img/stm32.PNG)
 You will receive an email with the download link
 
 After download just launch the executable and follow the instructions
