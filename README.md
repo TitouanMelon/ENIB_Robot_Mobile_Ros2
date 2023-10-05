@@ -6,6 +6,7 @@
   Install <a href="https://ubuntu.com/download/desktop" >Ubuntu 22.04.3 LTS</a> on a pc
 ## On a RPI
 Install <a href="https://www.raspberrypi.com/software/">RPI imager</a> and with this install Ubuntu like this
+
 CHOOSE OS -> Other general-purpose OS -> Ubuntu -> Ubuntu Desktop 22.04.03 LTS (64bits)
 
 # Install ROS2
@@ -40,8 +41,11 @@ Get <a href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32Cub
 ## Install
 
 Go to the **Get Software** level and select the latest version of your OS
+
 Next accept the EULA and fil the form with the name of your choice but a valid email address on the next prompt
+![STM32 prompt](./img/stm32.png)
 You will receive an email with the download link
+
 After download just launch the executable and follow the instructions
 
 ## Get the workspace
