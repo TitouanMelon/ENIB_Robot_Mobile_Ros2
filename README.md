@@ -2,7 +2,7 @@
 
 Project to make a moving robot with communication and sensors
 
-![robot sheme] (./img/robotScheme.svg)
+![robot sheme] (./img/robotScheme.png)
 
 # Install OS
 
