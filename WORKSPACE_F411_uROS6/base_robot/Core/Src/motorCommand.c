@@ -44,7 +44,8 @@ void motorCommand_Init(void)
 	  HAL_TIM_PWM_Start(&TimHandle, TIM_CHANNEL_2); // MOTOR LEFT
 
 	  // ENABLE MOTEUR (SI INVERSEUR)
-	  HAL_GPIO_WritePin(GPIOA, PIN_MOTOR_ENABLE, 0);
+	  //HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, 0);
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, 0);
 }
 
 //=================================================================

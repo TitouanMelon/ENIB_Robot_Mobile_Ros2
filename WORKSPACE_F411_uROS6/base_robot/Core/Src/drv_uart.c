@@ -1,7 +1,5 @@
 #include "main.h"
-#include "config.h"
 #include "drv_uart.h"
-#include "util.h"
 
 UART_HandleTypeDef huart1;
 UART_HandleTypeDef huart2;
@@ -10,12 +8,6 @@ DMA_HandleTypeDef hdma_usart1_tx;
 DMA_HandleTypeDef hdma_usart2_rx;
 DMA_HandleTypeDef hdma_usart2_tx;
 
-int put_char(char);
-int putchar_stlink(char);
-int puchar_zigbee(char);
-
-uint8_t rec_buf2[NB_CAR_TO_RECEIVE+1]="";
-uint8_t rec_buf6[NB_CAR_TO_RECEIVE+1]="";
 
 void MX_USART1_UART_Init(void)
 {

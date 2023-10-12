@@ -31,10 +31,7 @@ Core/Src/util.o: ../Core/Src/util.c ../Core/Inc/util.h ../Core/Inc/main.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h \
  ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
- ../Core/Inc/captDistIR.h ../Core/Inc/captDistUltrason.h \
- ../Core/Inc/config.h ../Core/Inc/drv_uart.h ../Core/Inc/drv_i2c.h \
- ../Core/Inc/motorCommand.h ../Core/Inc/quadEncoder.h \
- ../Core/Inc/groveLCD.h \
+ ../Core/Inc/retarget.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../Core/Inc/FreeRTOSConfig.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -48,7 +45,117 @@ Core/Src/util.o: ../Core/Src/util.c ../Core/Inc/util.h ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
- ../Core/Inc/util.h
+ ../Core/Inc/systemclock.h ../Core/Inc/drv_uart.h ../Core/Inc/drv_gpio.h \
+ ../Core/Inc/drv_i2c.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h \
+ ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/rcl.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/init.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/allocator.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/allocator.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/macros.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/configuration_flags.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/rcutils_ret.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/visibility_control.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/visibility_control_macros.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/context.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/init.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/init_options.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/domain_id.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/localhost.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/visibility_control.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/macros.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/ret_types.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/security_options.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/init_options.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/macros.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/types.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/types.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/logging.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/error_handling.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/snprintf.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/testing/fault_injection.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/time.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/array_list.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/char_array.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/hash_map.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/string_array.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/qsort.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/string_map.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/uint8_array.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/serialized_message.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/visibility_control.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/node.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/node_options.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/domain_id.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/publisher.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/message_type_support_struct.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/visibility_control.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_typesupport_interface/macros.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/subscription.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/message_sequence.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/wait.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/client.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/service_type_support_struct.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/guard_condition.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/service.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/timer.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/time.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/rmw.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/sequence_bound.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/qos_profiles.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/subscription_options.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/event.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/error_handling.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/rclc.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/init.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/types.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/visibility_control.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/node.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/publisher.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/subscription.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/timer.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/client.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/service.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/executor.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/logging_macros.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/executor_handle.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/sleep.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/transport.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/config.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/profile/transport/custom/custom_transport.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/core/communication/communication.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/profile/transport/stream_framing/stream_framing_protocol.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/visibility.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microxrcedds_c/config.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/rmw_microros.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/continous_serialization.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/ucdr/microcdr.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/ucdr/visibility.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/ucdr/config.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/init_options.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/time_sync.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/util/time.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/ping.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/timing.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/custom_transport.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/int32.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/int32__struct.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/int32__functions.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/rosidl_generator_c__visibility_control.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/int32__type_support.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/string.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/string__struct.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/string.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/primitives_sequence.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/string__functions.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/string__type_support.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/header.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/header__struct.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/builtin_interfaces/msg/detail/time__struct.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/header__functions.h \
+ /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/header__type_support.h
 ../Core/Inc/util.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
@@ -83,14 +190,7 @@ Core/Src/util.o: ../Core/Src/util.c ../Core/Inc/util.h ../Core/Inc/main.h \
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim_ex.h:
 ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
-../Core/Inc/captDistIR.h:
-../Core/Inc/captDistUltrason.h:
-../Core/Inc/config.h:
-../Core/Inc/drv_uart.h:
-../Core/Inc/drv_i2c.h:
-../Core/Inc/motorCommand.h:
-../Core/Inc/quadEncoder.h:
-../Core/Inc/groveLCD.h:
+../Core/Inc/retarget.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -104,4 +204,116 @@ Core/Src/util.o: ../Core/Src/util.c ../Core/Inc/util.h ../Core/Inc/main.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
-../Core/Inc/util.h:
+../Core/Inc/systemclock.h:
+../Core/Inc/drv_uart.h:
+../Core/Inc/drv_gpio.h:
+../Core/Inc/drv_i2c.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os.h:
+../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/rcl.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/init.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/allocator.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/allocator.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/macros.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/configuration_flags.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/rcutils_ret.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/visibility_control.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/visibility_control_macros.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/context.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/init.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/init_options.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/domain_id.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/localhost.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/visibility_control.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/macros.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/ret_types.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/security_options.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/init_options.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/macros.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/types.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/types.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/logging.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/error_handling.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/snprintf.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/testing/fault_injection.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/time.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/array_list.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/char_array.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/hash_map.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/string_array.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/qsort.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/string_map.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/types/uint8_array.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/serialized_message.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/visibility_control.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/node.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/node_options.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/domain_id.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/publisher.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/message_type_support_struct.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/visibility_control.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_typesupport_interface/macros.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/subscription.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/message_sequence.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/wait.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/client.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/service_type_support_struct.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/guard_condition.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/service.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/timer.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/time.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/rmw.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/sequence_bound.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/qos_profiles.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw/subscription_options.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/event.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcl/error_handling.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/rclc.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/init.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/types.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/visibility_control.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/node.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/publisher.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/subscription.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/timer.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/client.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/service.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/executor.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rcutils/logging_macros.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/executor_handle.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/sleep.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/transport.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/config.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/profile/transport/custom/custom_transport.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/core/communication/communication.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/profile/transport/stream_framing/stream_framing_protocol.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/visibility.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microxrcedds_c/config.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/rmw_microros.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/continous_serialization.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/ucdr/microcdr.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/ucdr/visibility.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/ucdr/config.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/init_options.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/time_sync.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/uxr/client/util/time.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/ping.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/timing.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rmw_microros/custom_transport.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/int32.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/int32__struct.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/int32__functions.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/rosidl_generator_c__visibility_control.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/int32__type_support.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/string.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/string__struct.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/string.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rosidl_runtime_c/primitives_sequence.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/string__functions.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/string__type_support.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/header.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/header__struct.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/builtin_interfaces/msg/detail/time__struct.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/header__functions.h:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/std_msgs/msg/detail/header__type_support.h:

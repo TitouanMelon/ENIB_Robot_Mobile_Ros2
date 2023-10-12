@@ -12,4 +12,7 @@ void MX_USART1_UART_Init(void);
 void MX_USART2_UART_Init(void);
 void MX_DMA_Init(void);
 
+
+
+
 #endif /* INC_DRV_UART_H_ */

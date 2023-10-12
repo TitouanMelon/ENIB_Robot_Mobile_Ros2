@@ -29,27 +29,6 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
 
-#include <inttypes.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include "captDistIR.h"
-#include "captDistUltrason.h"
-#include "config.h"
-
-#include "drv_uart.h"
-#include "drv_i2c.h"
-
-#include "motorCommand.h"
-#include "quadEncoder.h"
-#include "groveLCD.h"
-
-#include "FreeRTOS.h"
-#include "task.h"
-#include "queue.h"
-#include "semphr.h"
-
-#include "util.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -92,8 +71,34 @@ void Error_Handler(void);
 #define TCK_GPIO_Port GPIOA
 #define SWO_Pin GPIO_PIN_3
 #define SWO_GPIO_Port GPIOB
-#define PIN_MOTOR_ENABLE GPIO_PIN_7
 /* USER CODE BEGIN Private defines */
+
+#include <stdio.h>
+#include "retarget.h"
+
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+
+#include "systemclock.h"
+#include "drv_uart.h"
+#include "drv_gpio.h"
+#include "drv_i2c.h"
+
+#include "cmsis_os.h"
+
+#include <rcl/rcl.h>
+#include <rcl/error_handling.h>
+#include <rclc/rclc.h>
+#include <rclc/executor.h>
+#include <uxr/client/transport.h>
+#include <rmw_microxrcedds_c/config.h>
+#include <rmw_microros/rmw_microros.h>
+
+#include <std_msgs/msg/int32.h>
+#include <std_msgs/msg/string.h>
+#include <std_msgs/msg/header.h>
 
 /* USER CODE END Private defines */
 

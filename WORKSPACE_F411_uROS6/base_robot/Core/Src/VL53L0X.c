@@ -9,6 +9,7 @@
 
 #include <stdint.h>
 #include "VL53L0X.h"
+#include "drv_i2c.h"
 
 //---------------------------------------------------------
 // Local variables within this file (private)
@@ -20,7 +21,7 @@ uint8_t g_stopVariable; // read by init and used when starting measurement; is S
 //---------------------------------------------------------
 // Locally used functions (private)
 //---------------------------------------------------------
-bool performSingleRefCalibration(uint8_t vhv_init_byte);
+uint8_t performSingleRefCalibration(uint8_t vhv_init_byte);
 //---------------------------------------------------------
 // I2C communication Functions
 //---------------------------------------------------------
@@ -102,7 +103,7 @@ uint8_t getAddress() {
 // enough unless a cover glass is added.
 // If io_2v8 (optional) is true or not given, the sensor is configured for 2V8
 // mode.
-bool initVL53L0X( ){
+uint8_t initVL53L0X( ){
   // VL53L0X_DataInit() begin
 
   // "Set I2C standard mode"
@@ -287,7 +288,7 @@ bool initVL53L0X( ){
 
   // VL53L0X_PerformRefCalibration() end
 
-  return true;
+  return 1;
 }
 
 // Set the return signal rate limit check value in units of MCPS (mega counts
@@ -298,13 +299,13 @@ bool initVL53L0X( ){
 // seems to increase the likelihood of getting an inaccurate reading because of
 // unwanted reflections from objects other than the intended target.
 // Defaults to 0.25 MCPS as initialized by the ST API and this library.
-bool setSignalRateLimit(float limit_Mcps)
+uint8_t setSignalRateLimit(float limit_Mcps)
 {
   if (limit_Mcps < 0 || limit_Mcps > 511.99) { return false; }
 
   // Q9.7 fixed point format (9 integer bits, 7 fractional bits)
   writeReg16Bit(FINAL_RANGE_CONFIG_MIN_COUNT_RATE_RTN_LIMIT, limit_Mcps * (1 << 7));
-  return true;
+  return 0;
 }
 
 // Get the return signal rate limit check value in MCPS
@@ -333,11 +334,10 @@ uint16_t readRangeSingleMillimeters( /*statInfo_t *extraStats */) {
 
   uint16_t temp;
 
-    // assumptions: Linearity Corrective Gain is 1000 (default);
-    // fractional ranging is not enabled
-  	  temp = readReg16Bit(RESULT_RANGE_STATUS + 10);
-
-  	  temp+=0;
+  // assumptions: Linearity Corrective Gain is 1000 (default);
+  // fractional ranging is not enabled
+  temp = readReg16Bit(RESULT_RANGE_STATUS + 10);
+  temp+=0;
 
   writeReg(SYSTEM_INTERRUPT_CLEAR, 0x01);
   return temp;
@@ -345,7 +345,7 @@ uint16_t readRangeSingleMillimeters( /*statInfo_t *extraStats */) {
 
 
 // based on VL53L0X_perform_single_ref_calibration()
-bool performSingleRefCalibration(uint8_t vhv_init_byte)
+uint8_t performSingleRefCalibration(uint8_t vhv_init_byte)
 {
   writeReg(SYSRANGE_START, 0x01 | vhv_init_byte); // VL53L0X_REG_SYSRANGE_MODE_START_STOP
 
@@ -355,5 +355,5 @@ bool performSingleRefCalibration(uint8_t vhv_init_byte)
 
   writeReg(SYSRANGE_START, 0x00);
 
-  return true;
+  return 1;
 }

@@ -6,14 +6,14 @@
  */
 
 #include "groveLCD.h"
-#include "math.h"
-#include <stdarg.h>
+#include <math.h>
+#include "util.h"
 
-uint8_t _displayfunction;
-uint8_t _displaycontrol;
-uint8_t _displaymode;
-uint8_t _initialized;
-uint8_t _numlines,_currline;
+  uint8_t _displayfunction;
+  uint8_t _displaycontrol;
+  uint8_t _displaymode;
+  uint8_t _initialized;
+  uint8_t _numlines,_currline;
 
 //=================================================================
 void groveLCD_test()
@@ -376,7 +376,6 @@ void groveLCD_term_printf(const char* fmt, ...)
 		fmt++;
 	}
 	va_end(ap);
-	return;
 }
 //=================================================================
 

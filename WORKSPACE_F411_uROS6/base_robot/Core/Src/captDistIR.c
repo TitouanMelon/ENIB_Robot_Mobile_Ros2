@@ -44,8 +44,7 @@ void  captDistIR_Init(void)
 
 int  captDistIR_Get(int* tab)
 {
-	//sConfig.Channel      = ADC_CHANNEL_2;
-	sConfig.Channel      = ADC_CHANNEL_8;
+	sConfig.Channel      = ADC_CHANNEL_4;
 	sConfig.Rank         = 1;
 	sConfig.SamplingTime = ADC_SAMPLETIME_56CYCLES;
 	HAL_ADC_ConfigChannel(&adcHandle, &sConfig);
@@ -54,8 +53,7 @@ int  captDistIR_Get(int* tab)
 	HAL_ADC_PollForConversion(&adcHandle,10);	//Processing the conversion
 	tab[0]=HAL_ADC_GetValue(&adcHandle); 		//Return the converted data
 
-	//sConfig.Channel      = ADC_CHANNEL_3;
-	sConfig.Channel      = ADC_CHANNEL_4;
+	sConfig.Channel      = ADC_CHANNEL_8;
 	sConfig.Rank         = 1;
 	sConfig.SamplingTime = ADC_SAMPLETIME_56CYCLES;
 	HAL_ADC_ConfigChannel(&adcHandle, &sConfig);

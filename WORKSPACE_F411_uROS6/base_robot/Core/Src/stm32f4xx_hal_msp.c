@@ -38,9 +38,25 @@ void HAL_MspInit(void)
   HAL_Encoder_Timer1_MspInit();
   HAL_Encoder_Timer2_MspInit();
   HAL_adcir_MspInit();
+  HAL_GPIO_MspInit();
 
 }
+/******************************************************************
+			GPIO : contrôle période d'échantillonage
+GPIO OUTPUT	-->	PB4
+******************************************************************/
+void HAL_GPIO_MspInit(void)
+{
+	  GPIO_InitTypeDef  GPIO_InitStruct;
 
+	  GPIO_InitStruct.Pin = GPIO_PIN_4;
+	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP; // hal_gpio.h
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  GPIO_InitStruct.Speed = GPIO_SPEED_MEDIUM;
+
+	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+}
 /******************************************************************
 			ENCODER - TIMER1
 PWM1/1	-->	PA8		-- Encodeur Voie A
@@ -51,7 +67,7 @@ void HAL_Encoder_Timer1_MspInit(void)
 {
 	  GPIO_InitTypeDef  GPIO_InitStruct;
 
-	  __TIM1_CLK_ENABLE(); // ATTENTION
+	  __TIM1_CLK_ENABLE();
 
 	  GPIO_InitStruct.Pin = GPIO_PIN_8 | GPIO_PIN_9;
 	  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP; // hal_gpio.h
@@ -60,8 +76,6 @@ void HAL_Encoder_Timer1_MspInit(void)
 	  GPIO_InitStruct.Alternate =  GPIO_AF1_TIM1 ; // hal_gpio_ex.h
 
 	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-
-	  // Index moteur -- PB10
 
 	  GPIO_InitStruct.Pin = GPIO_PIN_10;
 	  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
@@ -83,7 +97,7 @@ void HAL_Encoder_Timer2_MspInit(void)
 {
 	  GPIO_InitTypeDef  GPIO_InitStruct;
 
-	  __TIM2_CLK_ENABLE(); // ATTENTION
+	  __TIM2_CLK_ENABLE();
 
 	  GPIO_InitStruct.Pin = GPIO_PIN_0 | GPIO_PIN_1;
 	  GPIO_InitStruct.Mode = GPIO_MODE_AF_PP; // hal_gpio.h
@@ -108,7 +122,7 @@ void HAL_Encoder_Timer2_MspInit(void)
 //			PWM - TIMER4 COMMANDE MOTEURS
 PA6 --> PWM3/1
 PC7 --> PWM3/2
-PA7 --> ENABLE MOTEUR (actif état Bas)
+PB3 --> ENABLE MOTEUR (actif état Bas)
 ******************************************************************/
 void HAL_PWM_Timer3_MspInit(void)
 {
@@ -132,20 +146,31 @@ void HAL_PWM_Timer3_MspInit(void)
 
 	  HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
-	  // ENABLE MOTEUR : SORTIE LOGIQUE PA7
-	  GPIO_InitStruct.Pin = PIN_MOTOR_ENABLE;
+	  // ENABLE MOTEUR : SORTIE LOGIQUE PB3
+	  GPIO_InitStruct.Pin = GPIO_PIN_7;
+	  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+	  GPIO_InitStruct.Pull = GPIO_NOPULL;
+
+	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_7, 1);
+
+	  GPIO_InitStruct.Pin = GPIO_PIN_3;
 	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	  GPIO_InitStruct.Pull = GPIO_PULLUP;
 	  GPIO_InitStruct.Speed = GPIO_SPEED_FAST;
 
-	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
-	  HAL_GPIO_WritePin(GPIOA, PIN_MOTOR_ENABLE, 1);
+	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, 1);
+
+
+
+
 }
 
 /******************************************************************
 			ADC
-ADC1_12	--> PC2
-ADC1_13	--> PC3
+ADC1_4	--> PA4
+ADC1_8	--> PB0
 http://stm32f4-discovery.com/2014/04/library-06-ad-converter-on-stm32f4xx/
 ******************************************************************/
 void HAL_adcir_MspInit(void)
@@ -161,20 +186,21 @@ void HAL_adcir_MspInit(void)
 	  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 
-	  GPIO_InitStruct.Pin = GPIO_PIN_0;
+	  GPIO_InitStruct.Pin = GPIO_PIN_0 ;
 	  GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
 	  GPIO_InitStruct.Pull = GPIO_NOPULL;
 
 	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
 }
 
 
-/**
+/******************************************************************
 * @brief I2C MSP Initialization
 * This function configures the hardware resources used in this example
 * @param hi2c: I2C handle pointer
 * @retval None
-*/
+******************************************************************/
 void HAL_I2C_MspInit(I2C_HandleTypeDef* hi2c)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -206,12 +232,12 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* hi2c)
 
 }
 
-/**
+/******************************************************************
 * @brief I2C MSP De-Initialization
 * This function freeze the hardware resources used in this example
 * @param hi2c: I2C handle pointer
 * @retval None
-*/
+******************************************************************/
 void HAL_I2C_MspDeInit(I2C_HandleTypeDef* hi2c)
 {
   if(hi2c->Instance==I2C1)
@@ -237,12 +263,12 @@ void HAL_I2C_MspDeInit(I2C_HandleTypeDef* hi2c)
 
 }
 
-/**
+/******************************************************************
 * @brief UART MSP Initialization
 * This function configures the hardware resources used in this example
 * @param huart: UART handle pointer
 * @retval None
-*/
+******************************************************************/
 void HAL_UART_MspInit(UART_HandleTypeDef* huart)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -384,12 +410,12 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
 
 }
 
-/**
+/******************************************************************
 * @brief UART MSP De-Initialization
 * This function freeze the hardware resources used in this example
 * @param huart: UART handle pointer
 * @retval None
-*/
+******************************************************************/
 void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
 {
   if(huart->Instance==USART1)
