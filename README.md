@@ -59,7 +59,7 @@ After download just launch the executable and follow the instructions
 ```
 sudo apt install git
 git clone https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2.git
-cp -r ./WORKSPACE_F411_uROSS6 /your/path/of/workspace/folder
+cp -r ./ENIB_Robot_Mobile_Ros2/WORKSPACE_F411_uROSS6 /your/path/of/workspace/folder
 # Uncomment the next line to remove the git folder after move workspace
 #rm -r ENIB_Robot_Mobile_Ros2
 ```
@@ -76,6 +76,6 @@ cp -r ./WORKSPACE_F411_uROSS6 /your/path/of/workspace/folder
 |PC0        | EXTI          | Index Moteur    |
 |PA6        | PWM3/1        | PWM motor 1     |
 |PC7        | PWM3/2        | PWM motor 2     |
-|PA7        | ENABLE MOTEUR | actif état Bas  |
+|PB3        | ENABLE MOTEUR | actif état Bas  |
 |PA4        | ADC1_8        | Sensor IR 1     |
 |PB0        | ADC1_4        | Sensor IR 2     |
