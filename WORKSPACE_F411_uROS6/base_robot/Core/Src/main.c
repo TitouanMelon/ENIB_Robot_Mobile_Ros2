@@ -4,10 +4,9 @@
 #include "motorCommand.h"
 #include "quadEncoder.h"
 #include "captDistIR.h"
-#include "VL53L0X.h"//
+#include "VL53L0X.h"
 #include "groveLCD.h"
 
-#define ARRAY_LEN 100
 #define SAMPLING_PERIOD_ms 5
 
 extern UART_HandleTypeDef huart1;
@@ -36,7 +35,7 @@ const osThreadAttr_t defaultTask_attributes = {
 #define EXFINAL 5 //S7 titouan without cam call
 #define TESTMR 6
 
-#define SYNCHRO_EX EXFINAL
+#define SYNCHRO_EX TESTMR
 
 enum {MODE_OBS, MODE_ZIG, MODE_CAM};
 enum {STOP_VIT, LOW, FAST, SONIC};
@@ -78,12 +77,14 @@ struct AMessage
 	int data;
 };
 
+//Test function
 void test_print_uart2(void *pvParameters);
 void test_vl53(void *pvParameters);
 
+//Robot function
 void SystemClock_Config(void);
-void microros_task(void *argument);
 
+//Micro-Ros function
 bool cubemx_transport_open(struct uxrCustomTransport * transport);
 bool cubemx_transport_close(struct uxrCustomTransport * transport);
 size_t cubemx_transport_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);
@@ -94,101 +95,189 @@ void microros_deallocate(void * pointer, void * state);
 void * microros_reallocate(void * pointer, size_t size, void * state);
 void * microros_zero_allocate(size_t number_of_elements, size_t size_of_element, void * state);
 
+
 void microros_task(void *argument)
 {
-  // micro-ROS configuration
-  rmw_uros_set_custom_transport(
-    true,
-    (void *) &huart1,
-    cubemx_transport_open,
-    cubemx_transport_close,
-    cubemx_transport_write,
-    cubemx_transport_read);
+	static int counter = 0;
+	//struct Amessage pxRxedMessage;
 
-  rcl_allocator_t freeRTOS_allocator = rcutils_get_zero_initialized_allocator();
-  freeRTOS_allocator.allocate = microros_allocate;
-  freeRTOS_allocator.deallocate = microros_deallocate;
-  freeRTOS_allocator.reallocate = microros_reallocate;
-  freeRTOS_allocator.zero_allocate =  microros_zero_allocate;
+	// micro-ROS app variable
+	rclc_support_t support;
+	rcl_allocator_t allocator;
+	rcl_node_t node;
+	rcl_ret_t ret;
 
-  if (!rcutils_set_default_allocator(&freeRTOS_allocator)) {
-      printf("Error on default allocators (line %d)\r\n", __LINE__);
-  }
+	//micro-ros topic variable
+	rcl_publisher_t publisher;
+	rcl_subscription_t subscriber;
+	std_msgs__msg__String msg;
+	rmw_message_info_t msg_info;
+	rcl_subscription_options_t sub_opts;
 
-  // micro-ROS app
-  rcl_publisher_t publisher;
-  rcl_subscription_t subscriber;
-  std_msgs__msg__String msg;
-  rclc_support_t support;
-  rcl_allocator_t allocator;
-  rcl_node_t node;
-  rcl_ret_t ret;
+	/* PUBLISHER */
+	//Use to publish the direction of robot in sensor mode
+	rcl_publisher_t capteur_dir_pub;
+	char* capteur_dir_topic = "capteur/dir";
+	std_msgs__msg__String capteur_dir_msg;
+	//Use to publish the actual mode of the robot
+	rcl_publisher_t etat_mode_pub;
+	char* etat_mode_topic = "etat_mode";
+	std_msgs__msg__String etat_mode_msg;
+	//Use to publish the actual speed of the robot
+	rcl_publisher_t etat_speed_pub;
+	char* etat_speed_topic = "etat/speed";
+	std_msgs__msg__String etat_speed_msg;
 
-  allocator = rcl_get_default_allocator();
+	/* SUBSCRIBER */
+	//Use to receive the x position of object see by the camera
+	rcl_subscription_t camera_x_sub;
+	char* camera_x_topic = "camera/x";
+	std_msgs__msg__String camera_x_msg;
+	rmw_message_info_t camera_x_msg_info;
+	//Use to receive the y position of object see by the camera
+	rcl_subscription_t camera_y_sub;
+	char* camera_y_topic = "camera/y";
+	std_msgs__msg__String camera_y_msg;
+	rmw_message_info_t camera_y_msg_info;
+	//Use to receive the remote control in remote mode
+	rcl_subscription_t telecommande_dir_sub;
+	char* telecommande_dir_topic = "telecommande/dir";
+	std_msgs__msg__String telecommande_dir_msg;
+	rmw_message_info_t telecommande_dir_msg_info;
+	//Use to receive the mode config
+	rcl_subscription_t config_mode_sub;
+	char* config_mode_topic = "config/mode";
+	std_msgs__msg__String config_mode_msg;
+	rmw_message_info_t config_mode_msg_info;
+	//Use to receive the speed config
+	rcl_subscription_t config_speed_sub;
+	char* config_speed_topic = "config/speed";
+	std_msgs__msg__String config_speed_msg;
+	rmw_message_info_t config_speed_msg_info;
 
-  //create init_options
-  rclc_support_init(&support, 0, NULL, &allocator);
-  // create node
-  rclc_node_init_default(&node, "STM32_node", "", &support);
+	// micro-ROS configuration
+	rmw_uros_set_custom_transport(
+		true,
+		(void *) &huart1,
+		cubemx_transport_open,
+		cubemx_transport_close,
+		cubemx_transport_write,
+		cubemx_transport_read);
 
-  // create publisher
-  ret = rclc_publisher_init_default(
-    &publisher,
-    &node,
-    ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-    "cubemx_publisher");
-  printf("Publisher return result : %d\r\n", ret);
+	rcl_allocator_t freeRTOS_allocator = rcutils_get_zero_initialized_allocator();
+	freeRTOS_allocator.allocate = microros_allocate;
+	freeRTOS_allocator.deallocate = microros_deallocate;
+	freeRTOS_allocator.reallocate = microros_reallocate;
+	freeRTOS_allocator.zero_allocate =  microros_zero_allocate;
 
-  //create subscriber
-  rcl_subscription_options_t sub_opts = rcl_subscription_get_default_options();
-  sub_opts.qos.reliability = RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT;
+	if (!rcutils_set_default_allocator(&freeRTOS_allocator)) {
+		printf("Error on default allocators (line %d)\r\n", __LINE__);
+	}
 
-  ret = rcl_subscription_init(
-		  &subscriber,
-		  &node,
-		  ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-		  "cubemx_publisher",
-		  &sub_opts);
-  printf("Subscription return result : %ld\r\n", ret);
+	allocator = rcl_get_default_allocator();
 
-  msg.data.data = (char * ) malloc(ARRAY_LEN * sizeof(char));
-  msg.data.size = 0;
-  msg.data.capacity = ARRAY_LEN;
+	//create init_options
+	rclc_support_init(&support, 0, NULL, &allocator);
+	// create node
+	rclc_node_init_default(&node, "STM32_node", "", &support);
 
-  static int counter = 0;
-  //struct Amessage pxRxedMessage;
+	// create publisher
+	/* Default test publisher */
+	ret = rclc_publisher_init_default(&publisher, &node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+		"cubemx_publisher");
+	printf("Default publisher return result : %d\r\n", (int)ret);
+	/* ---------------------- */
 
-  for(;;)
-  {
+	createPublisher(&capteur_dir_pub, &node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+		capteur_dir_topic, &capteur_dir_msg);
+
+	createPublisher(&etat_mode_pub, &node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+		etat_mode_topic, &etat_mode_msg);
+
+	createPublisher(&etat_speed_pub, &node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+		etat_speed_topic, &etat_speed_msg);
+
+	//create subscriber
+	sub_opts = rcl_subscription_get_default_options();
+	sub_opts.qos.reliability = RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT;
+
+	/* Default test subscriber */
+	subscriber = rcl_get_zero_initialized_subscription();
+	ret = rcl_subscription_init(&subscriber, &node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+		"cubemx_publisher", &sub_opts);
+	printf("Default subscription created with result %d\r\n", (int)ret);
+	/* ----------------------- */
+
+	createSubscriber(&camera_x_sub,&node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+		camera_x_topic, &sub_opts, &camera_x_msg);
+
+	createSubscriber(&camera_y_sub,&node,
+			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+			camera_y_topic, &sub_opts, &camera_y_msg);
+
+	createSubscriber(&telecommande_dir_sub,&node,
+			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+			telecommande_dir_topic, &sub_opts, &telecommande_dir_msg);
+
+	createSubscriber(&config_mode_sub,&node,
+			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+			config_mode_topic, &sub_opts, &config_mode_msg);
+
+	createSubscriber(&config_speed_sub,&node,
+			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
+			config_speed_topic, &sub_opts, &config_speed_msg);
+
+	/* Init default msg */
+	msg.data.data = (char * ) malloc(ARRAY_LEN * sizeof(char));
+	msg.data.size = 0;
+	msg.data.capacity = ARRAY_LEN;
+	/* ---------------- */
+
+	for(;;)
+	{
 #if SYNCHRO_EX == STARTUP
-	  sprintf(msg.data.data, "Hello from micro-ROS #%d", counter++);
+		sprintf(msg.data.data, "Hello from micro-ROS #%d", counter++);
+		msg.data.size = strlen(msg.data.data);
+		ret = rcl_publish(&publisher, &msg, NULL);
+		if (ret != RCL_RET_OK)
+			printf("Error publishing (line %d)\r\n", __LINE__);
 #elif SYNCHRO_EX == TESTMR
-	  ret = rcl_take(&subscriber, &msg, NULL, NULL);
-	  printf("retour take result = %ld\r\nMessage : %s\r\n", ret, msg.data.data);
-	  if (ret != RCL_RET_OK)
-		  sprintf(msg.data.data, "message");
+		ret = rcl_take(&subscriber, &msg, &msg_info, NULL);
+		printf("return take result = %d\r\n", (int)ret);
+		if (ret == RCL_RET_OK)
+		{
+			sprintf(msg.data.data, "pong");
+			msg.data.size = strlen(msg.data.data);
+			printf("Message : %s\r\n", msg.data.data);
+			ret = rcl_publish(&publisher, &msg, NULL);
+			if (ret != RCL_RET_OK)
+				printf("Error publishing (line %d)\r\n", __LINE__);
+		}
 #elif SYNCHRO_EX == EXFINAL
-	  //xQueueReceive( qhMR,  &( pxRxedMessage ) , 1);
-	  int mode = MODE_OBS; //pxRxedMessage.data;
-	  char direction = 'f'; //pxRxedMessage.command;
+		//xQueueReceive( qhMR,  &( pxRxedMessage ) , 1);
+		int mode = MODE_OBS; //pxRxedMessage.data;
+		char direction = 'f'; //pxRxedMessage.command;
 
-	  if (mode == MODE_OBS)
-		  sprintf(msg.data.data, "M:Obstacle D:%c", direction);
-	  else if (mode == MODE_ZIG)
-		  sprintf(msg.data.data, "M:Zigbee");
-	  else if (mode == MODE_CAM)
-		  sprintf(msg.data.data, "M:Camera");
+		if (mode == MODE_OBS)
+			sprintf(msg.data.data, "M:Obstacle D:%c", direction);
+		else if (mode == MODE_ZIG)
+			sprintf(msg.data.data, "M:Zigbee");
+		else if (mode == MODE_CAM)
+			sprintf(msg.data.data, "M:Camera");
+
+		msg.data.size = strlen(msg.data.data);
+		ret = rcl_publish(&publisher, &msg, NULL);
+		if (ret != RCL_RET_OK)
+			printf("Error publishing (line %d)\r\n", __LINE__);
 #endif
-
-	msg.data.size = strlen(msg.data.data);
-    ret = rcl_publish(&publisher, &msg, NULL);
-    if (ret != RCL_RET_OK)
-    {
-      printf("Error publishing (line %d)\r\n", __LINE__);
-    }
-
-    osDelay(10);
-  }
+		osDelay(10);
+	}
 }
 //========================================================================
 static void task_Motor_Left(void *pvParameters)

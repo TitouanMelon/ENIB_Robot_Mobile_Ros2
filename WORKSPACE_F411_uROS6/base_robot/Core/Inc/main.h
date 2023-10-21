@@ -100,6 +100,8 @@ void Error_Handler(void);
 #include <std_msgs/msg/string.h>
 #include <std_msgs/msg/header.h>
 
+#include "microROS.h"
+
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

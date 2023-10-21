@@ -1,0 +1,9 @@
+#ifndef DEF_MICROROS
+#define DEF_MICROROS
+
+	#include "main.h"
+
+	void createPublisher();
+	void createSubscriber();
+
+#endif //DEF_MICROROS

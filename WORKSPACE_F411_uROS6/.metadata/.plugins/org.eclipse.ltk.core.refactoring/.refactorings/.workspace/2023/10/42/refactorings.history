@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;base_robot/Core/Src/VL53L0X.c.bad&apos;" deleteContents="false" description="Delete resource &apos;base_robot/Core/Src/VL53L0X.c.bad&apos;" element1="/base_robot/Core/Src/VL53L0X.c.bad" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1697876959245"/>
+</session>

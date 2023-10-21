@@ -8,6 +8,7 @@
 "./Core/Src/freertos.o"
 "./Core/Src/groveLCD.o"
 "./Core/Src/main.o"
+"./Core/Src/microROS.o"
 "./Core/Src/microros_allocators.o"
 "./Core/Src/microros_time.o"
 "./Core/Src/motorCommand.o"

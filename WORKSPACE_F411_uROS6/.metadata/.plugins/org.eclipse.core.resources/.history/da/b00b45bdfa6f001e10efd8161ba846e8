@@ -1,0 +1,7 @@
+#ifndef DEF_MICROROS
+#define DEF_MICROROS
+
+	void createPublisher();
+	void createSubscriber();
+
+#endif //DEF_MICROROS

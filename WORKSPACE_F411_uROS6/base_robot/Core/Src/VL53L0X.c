@@ -272,14 +272,14 @@ uint8_t initVL53L0X( ){
   // -- VL53L0X_perform_vhv_calibration() begin
 
   writeReg(SYSTEM_SEQUENCE_CONFIG, 0x01);
-  if (!performSingleRefCalibration(0x40)) { return false; }
+  if (performSingleRefCalibration(0x40)) { return false; }
 
   // -- VL53L0X_perform_vhv_calibration() end
 
   // -- VL53L0X_perform_phase_calibration() begin
 
   writeReg(SYSTEM_SEQUENCE_CONFIG, 0x02);
-  if (!performSingleRefCalibration(0x00)) { return false; }
+  if (performSingleRefCalibration(0x00)) { return false; }
 
   // -- VL53L0X_perform_phase_calibration() end
 
@@ -288,7 +288,7 @@ uint8_t initVL53L0X( ){
 
   // VL53L0X_PerformRefCalibration() end
 
-  return 1;
+  return 0;
 }
 
 // Set the return signal rate limit check value in units of MCPS (mega counts
@@ -334,10 +334,11 @@ uint16_t readRangeSingleMillimeters( /*statInfo_t *extraStats */) {
 
   uint16_t temp;
 
-  // assumptions: Linearity Corrective Gain is 1000 (default);
-  // fractional ranging is not enabled
-  temp = readReg16Bit(RESULT_RANGE_STATUS + 10);
-  temp+=0;
+    // assumptions: Linearity Corrective Gain is 1000 (default);
+    // fractional ranging is not enabled
+  	  temp = readReg16Bit(RESULT_RANGE_STATUS + 10);
+
+  	  temp+=0;
 
   writeReg(SYSTEM_INTERRUPT_CLEAR, 0x01);
   return temp;
@@ -355,5 +356,5 @@ uint8_t performSingleRefCalibration(uint8_t vhv_init_byte)
 
   writeReg(SYSRANGE_START, 0x00);
 
-  return 1;
+  return 0;
 }

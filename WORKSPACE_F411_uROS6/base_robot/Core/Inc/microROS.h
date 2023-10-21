@@ -1,0 +1,20 @@
+#ifndef DEF_MICROROS
+#define DEF_MICROROS
+
+	#include "main.h"
+	#define ARRAY_LEN 100
+
+	void createPublisher(rcl_publisher_t* publisher,
+			  const rcl_node_t* node,
+			  const rosidl_message_type_support_t* type_support,
+			  const char* topic_name,
+			  std_msgs__msg__String* msg);
+
+	void createSubscriber(rcl_subscription_t* subscription,
+			  const rcl_node_t* node,
+			  const rosidl_message_type_support_t* type_support,
+			  const char* topic_name,
+			  const rcl_subscription_options_t* options,
+			  std_msgs__msg__String* msg);
+
+#endif //DEF_MICROROS

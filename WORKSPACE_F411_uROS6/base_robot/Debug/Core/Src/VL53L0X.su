@@ -11,4 +11,4 @@
 ../Core/Src/VL53L0X.c:302:9:setSignalRateLimit	16	static
 ../Core/Src/VL53L0X.c:312:7:getSignalRateLimit	8	static
 ../Core/Src/VL53L0X.c:325:10:readRangeSingleMillimeters	16	static
-../Core/Src/VL53L0X.c:348:9:performSingleRefCalibration	16	static
+../Core/Src/VL53L0X.c:349:9:performSingleRefCalibration	16	static
