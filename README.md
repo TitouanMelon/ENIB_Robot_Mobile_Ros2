@@ -57,7 +57,7 @@ After download just launch the executable and follow the instructions
 ## Get the workspace
 
 ```
-sudo apt install git
+sudo apt install git -y
 git clone https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2.git
 cp -r ./ENIB_Robot_Mobile_Ros2/WORKSPACE_F411_uROSS6 /your/path/of/workspace/folder
 # Uncomment the next line to remove the git folder after move workspace
