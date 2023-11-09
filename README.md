@@ -79,3 +79,7 @@ cp -r ./ENIB_Robot_Mobile_Ros2/WORKSPACE_F411_uROSS6 /your/path/of/workspace/fol
 |PB3        | ENABLE MOTEUR | actif état Bas  |
 |PA4        | ADC1_8        | Sensor IR 1     |
 |PB0        | ADC1_4        | Sensor IR 2     |
+
+
+![STM32 prompt](./img/UART1_STM32.jpg)
+![STM32 prompt](./img/Shield_Ard.jpg)
