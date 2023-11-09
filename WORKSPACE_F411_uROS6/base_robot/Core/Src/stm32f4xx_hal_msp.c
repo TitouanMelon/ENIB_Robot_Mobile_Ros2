@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 #define USART2_IRQ_PRIO	9
 #define USART6_IRQ_PRIO	10
 //#define EXTI1_IRQ_PRIO	7
@@ -161,10 +160,6 @@ void HAL_PWM_Timer3_MspInit(void)
 
 	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, 1);
-
-
-
-
 }
 
 /******************************************************************

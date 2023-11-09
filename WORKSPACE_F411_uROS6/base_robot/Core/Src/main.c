@@ -35,9 +35,10 @@ const osThreadAttr_t defaultTask_attributes = {
 #define EXFINAL 5 //S7 titouan without cam call
 #define TESTMR 6
 
-#define SYNCHRO_EX TESTMR
+#define SYNCHRO_EX EXFINAL
 
-enum {MODE_OBS, MODE_ZIG, MODE_CAM};
+enum {SENSOR_LEFT, SENSOR_RIGHT};
+enum {MODE_OBS, MODE_ZIG, MODE_CAM, MODE_LAST};
 enum {STOP_VIT, LOW, FAST, SONIC};
 enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GAUCHE, RECULE_DROITE};
 
@@ -49,6 +50,13 @@ enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GA
 #define VITESSE_KART CMD/2
 #define VITESSE_OBS CMD
 #define VITESSE_CAM CMD
+//#######################################################
+#define CAMERA_X_MIN 0
+#define CAMERA_X_MAX 1024
+#define CAMERA_Y_MIN 0
+#define CAMERA_Y_MAX 1024
+#define CAMERA_X_TIER (CAMERA_X_MAX-CAMERA_X_MIN)/3
+#define CAMERA_Y_TIER (CAMERA_Y_MAX-CAMERA_Y_MIN)/3
 //#######################################################
 #define Te 5
 
@@ -63,14 +71,15 @@ enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GA
 xSemaphoreHandle xSem_Supervision = NULL;
 xQueueHandle q_mot_L = NULL;
 xQueueHandle q_mot_R = NULL;
-
-xQueueHandle qhMR = NULL;
+xQueueHandle qhMR_sub = NULL;
+xQueueHandle qhMR_pub = NULL;
 xQueueHandle qhLCD = NULL;
 xQueueHandle qhVl53 = NULL;
 
 int16_t tab_speedL[NB];
 int16_t tab_speedR[NB];
 
+typedef struct AMessage AMessage;
 struct AMessage
 {
 	char command;
@@ -84,7 +93,7 @@ void test_vl53(void *pvParameters);
 //Robot function
 void SystemClock_Config(void);
 
-//Micro-Ros function
+/* Micro-Ros function ********************/
 bool cubemx_transport_open(struct uxrCustomTransport * transport);
 bool cubemx_transport_close(struct uxrCustomTransport * transport);
 size_t cubemx_transport_write(struct uxrCustomTransport* transport, const uint8_t * buf, size_t len, uint8_t * err);
@@ -94,66 +103,67 @@ void * microros_allocate(size_t size, void * state);
 void microros_deallocate(void * pointer, void * state);
 void * microros_reallocate(void * pointer, size_t size, void * state);
 void * microros_zero_allocate(size_t number_of_elements, size_t size_of_element, void * state);
+/*****************************************/
 
-
+/**
+ * microros_task
+ * effectue la liaison entre la RPI et la tache decision
+ */
 void microros_task(void *argument)
 {
-	static int counter = 0;
-	//struct Amessage pxRxedMessage;
+	MicroRosPubMsg MsgToPub = {'s', 0, 0, 0};
+	MicroRosSubMsg SubToMsg = {0, 0, 0, 0, 0};
 
 	// micro-ROS app variable
 	rclc_support_t support;
 	rcl_allocator_t allocator;
 	rcl_node_t node;
+	rclc_executor_t executor;
 	rcl_ret_t ret;
 
-	//micro-ros topic variable
-	rcl_publisher_t publisher;
-	rcl_subscription_t subscriber;
-	std_msgs__msg__String msg;
-	rmw_message_info_t msg_info;
-	rcl_subscription_options_t sub_opts;
-
+#if SYNCHRO_EX == EXFINAL
 	/* PUBLISHER */
 	//Use to publish the direction of robot in sensor mode
 	rcl_publisher_t capteur_dir_pub;
 	char* capteur_dir_topic = "capteur/dir";
-	std_msgs__msg__String capteur_dir_msg;
+	std_msgs__msg__Int32 capteur_dir_msg;
 	//Use to publish the actual mode of the robot
 	rcl_publisher_t etat_mode_pub;
-	char* etat_mode_topic = "etat_mode";
-	std_msgs__msg__String etat_mode_msg;
+	char* etat_mode_topic = "etat/mode";
+	std_msgs__msg__Int32 etat_mode_msg;
 	//Use to publish the actual speed of the robot
 	rcl_publisher_t etat_speed_pub;
 	char* etat_speed_topic = "etat/speed";
-	std_msgs__msg__String etat_speed_msg;
+	std_msgs__msg__Int32 etat_speed_msg;
 
 	/* SUBSCRIBER */
 	//Use to receive the x position of object see by the camera
 	rcl_subscription_t camera_x_sub;
 	char* camera_x_topic = "camera/x";
-	std_msgs__msg__String camera_x_msg;
-	rmw_message_info_t camera_x_msg_info;
+	std_msgs__msg__Int32 camera_x_msg;
 	//Use to receive the y position of object see by the camera
 	rcl_subscription_t camera_y_sub;
 	char* camera_y_topic = "camera/y";
-	std_msgs__msg__String camera_y_msg;
-	rmw_message_info_t camera_y_msg_info;
+	std_msgs__msg__Int32 camera_y_msg;
 	//Use to receive the remote control in remote mode
 	rcl_subscription_t telecommande_dir_sub;
 	char* telecommande_dir_topic = "telecommande/dir";
-	std_msgs__msg__String telecommande_dir_msg;
-	rmw_message_info_t telecommande_dir_msg_info;
+	std_msgs__msg__Int32 telecommande_dir_msg;
 	//Use to receive the mode config
 	rcl_subscription_t config_mode_sub;
 	char* config_mode_topic = "config/mode";
-	std_msgs__msg__String config_mode_msg;
-	rmw_message_info_t config_mode_msg_info;
+	std_msgs__msg__Int32 config_mode_msg;
 	//Use to receive the speed config
 	rcl_subscription_t config_speed_sub;
 	char* config_speed_topic = "config/speed";
-	std_msgs__msg__String config_speed_msg;
-	rmw_message_info_t config_speed_msg_info;
+	std_msgs__msg__Int32 config_speed_msg;
+#elif SYNCHRO_EX == TESTMR
+	//micro-ros topic variable
+	static int counter = 0;
+	rcl_publisher_t publisher;
+	rcl_subscription_t subscriber;
+	std_msgs__msg__String msg;
+#endif //SYNCHRO_EX
 
 	// micro-ROS configuration
 	rmw_uros_set_custom_transport(
@@ -177,68 +187,74 @@ void microros_task(void *argument)
 	allocator = rcl_get_default_allocator();
 
 	//create init_options
-	rclc_support_init(&support, 0, NULL, &allocator);
+	CHECKMRRET(rclc_support_init(&support, 0, NULL, &allocator), "error on init support");
 	// create node
-	rclc_node_init_default(&node, "STM32_node", "", &support);
+	CHECKMRRET(rclc_node_init_default(&node, "STM32_node", "", &support), "error on init node");
 
+#if SYNCHRO_EX == EXFINAL
 	// create publisher
+	createPublisher(&capteur_dir_pub, &node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+		capteur_dir_topic, &capteur_dir_msg);
+
+	createPublisher(&etat_mode_pub, &node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+		etat_mode_topic, &etat_mode_msg);
+
+	createPublisher(&etat_speed_pub, &node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+		etat_speed_topic, &etat_speed_msg);
+
+	//create subscriber
+	createSubscriber(&camera_x_sub,&node,
+		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+		camera_x_topic, &camera_x_msg);
+
+	createSubscriber(&camera_y_sub,&node,
+			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+			camera_y_topic, &camera_y_msg);
+
+	createSubscriber(&telecommande_dir_sub,&node,
+			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+			telecommande_dir_topic, &telecommande_dir_msg);
+
+	createSubscriber(&config_mode_sub,&node,
+			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+			config_mode_topic, &config_mode_msg);
+
+	createSubscriber(&config_speed_sub,&node,
+			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
+			config_speed_topic, &config_speed_msg);
+
+	CHECKMRRET(rclc_executor_init(&executor, &support.context, 5, &allocator), "Error on init executor");
+	CHECKMRRET(rclc_executor_add_subscription(&executor, &camera_x_sub, &camera_x_msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add camera_x_sub");
+	CHECKMRRET(rclc_executor_add_subscription(&executor, &camera_y_sub, &camera_y_msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add camera_y_sub");
+	CHECKMRRET(rclc_executor_add_subscription(&executor, &telecommande_dir_sub, &telecommande_dir_msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add telecommande_dir_sub");
+	CHECKMRRET(rclc_executor_add_subscription(&executor, &config_mode_sub, &config_mode_msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add config_mode_sub");
+	CHECKMRRET(rclc_executor_add_subscription(&executor, &config_speed_sub, &config_speed_msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add config_speed_sub");
+#elif SYNCHRO_EX == TESTMR
 	/* Default test publisher */
 	ret = rclc_publisher_init_default(&publisher, &node,
 		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
 		"cubemx_publisher");
 	printf("Default publisher return result : %d\r\n", (int)ret);
 	/* ---------------------- */
-
-	createPublisher(&capteur_dir_pub, &node,
-		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-		capteur_dir_topic, &capteur_dir_msg);
-
-	createPublisher(&etat_mode_pub, &node,
-		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-		etat_mode_topic, &etat_mode_msg);
-
-	createPublisher(&etat_speed_pub, &node,
-		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-		etat_speed_topic, &etat_speed_msg);
-
-	//create subscriber
-	sub_opts = rcl_subscription_get_default_options();
-	sub_opts.qos.reliability = RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT;
-
 	/* Default test subscriber */
 	subscriber = rcl_get_zero_initialized_subscription();
-	ret = rcl_subscription_init(&subscriber, &node,
+	ret = rclc_subscription_init_default(&subscriber, &node,
 		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-		"cubemx_publisher", &sub_opts);
+		"cubemx_subscriber");
 	printf("Default subscription created with result %d\r\n", (int)ret);
 	/* ----------------------- */
-
-	createSubscriber(&camera_x_sub,&node,
-		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-		camera_x_topic, &sub_opts, &camera_x_msg);
-
-	createSubscriber(&camera_y_sub,&node,
-			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-			camera_y_topic, &sub_opts, &camera_y_msg);
-
-	createSubscriber(&telecommande_dir_sub,&node,
-			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-			telecommande_dir_topic, &sub_opts, &telecommande_dir_msg);
-
-	createSubscriber(&config_mode_sub,&node,
-			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-			config_mode_topic, &sub_opts, &config_mode_msg);
-
-	createSubscriber(&config_speed_sub,&node,
-			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, String),
-			config_speed_topic, &sub_opts, &config_speed_msg);
-
 	/* Init default msg */
 	msg.data.data = (char * ) malloc(ARRAY_LEN * sizeof(char));
 	msg.data.size = 0;
 	msg.data.capacity = ARRAY_LEN;
 	/* ---------------- */
 
+	CHECKMRRET(rclc_executor_init(&executor, &support.context, 1, &allocator), "Error on init executor");
+	CHECKMRRET(rclc_executor_add_subscription(&executor, &subscriber, &msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add subscriber");
+#endif
 	for(;;)
 	{
 #if SYNCHRO_EX == STARTUP
@@ -248,33 +264,31 @@ void microros_task(void *argument)
 		if (ret != RCL_RET_OK)
 			printf("Error publishing (line %d)\r\n", __LINE__);
 #elif SYNCHRO_EX == TESTMR
-		ret = rcl_take(&subscriber, &msg, &msg_info, NULL);
-		printf("return take result = %d\r\n", (int)ret);
-		if (ret == RCL_RET_OK)
-		{
-			sprintf(msg.data.data, "pong");
-			msg.data.size = strlen(msg.data.data);
-			printf("Message : %s\r\n", msg.data.data);
-			ret = rcl_publish(&publisher, &msg, NULL);
-			if (ret != RCL_RET_OK)
-				printf("Error publishing (line %d)\r\n", __LINE__);
-		}
+	ret = rclc_executor_spin_some(&executor, 100*1000*1000);
 #elif SYNCHRO_EX == EXFINAL
-		//xQueueReceive( qhMR,  &( pxRxedMessage ) , 1);
-		int mode = MODE_OBS; //pxRxedMessage.data;
-		char direction = 'f'; //pxRxedMessage.command;
+		xQueueSend(qhMR_sub, ( void * ) &SubToMsg, portMAX_DELAY);
+		xQueueReceive(qhMR_pub, &MsgToPub, portMAX_DELAY);
 
-		if (mode == MODE_OBS)
-			sprintf(msg.data.data, "M:Obstacle D:%c", direction);
-		else if (mode == MODE_ZIG)
-			sprintf(msg.data.data, "M:Zigbee");
-		else if (mode == MODE_CAM)
-			sprintf(msg.data.data, "M:Camera");
+		if (MsgToPub.isGood == 1)
+		{
+			capteur_dir_msg.data = (int)MsgToPub.dir;
+			etat_mode_msg.data = MsgToPub.mode;
+			etat_speed_msg.data = MsgToPub.speed;
+		}
+		else
+			printf("Error when receive qhMR_pub on line %d", __LINE__);
 
-		msg.data.size = strlen(msg.data.data);
-		ret = rcl_publish(&publisher, &msg, NULL);
-		if (ret != RCL_RET_OK)
-			printf("Error publishing (line %d)\r\n", __LINE__);
+		CHECKMRRET(rcl_publish(&capteur_dir_pub, &capteur_dir_msg, NULL), "erreur publish capteur_dir_pub");
+		CHECKMRRET(rcl_publish(&etat_mode_pub, &etat_mode_msg, NULL), "erreur publish etat_mode_pub");
+		CHECKMRRET(rcl_publish(&etat_speed_pub, &etat_speed_msg, NULL), "erreur publish etat_speed_pub");
+		//printf("Receive from decision :\r\nDirection : %d\r\nMode : %d\r\nSpeed : %d\r\n", capteur_dir_msg.data, etat_mode_msg.data, etat_speed_msg.data);
+
+		ret = rclc_executor_spin_some(&executor, 100*1000*1000);
+		SubToMsg.dir = telecommande_dir_msg.data;
+		SubToMsg.x = camera_x_msg.data;
+		SubToMsg.y = camera_y_msg.data;
+		SubToMsg.mode = config_mode_msg.data;
+		SubToMsg.speed = config_speed_msg.data;
 #endif
 		osDelay(10);
 	}
@@ -331,6 +345,7 @@ static void task_Motor_Right(void *pvParameters)
 	for (;;)
 	{
 		xQueueReceive(q_mot_R, &consigne, portMAX_DELAY);
+
 		/*xQueueReceive( qhR,  &( pxRxedMessage ) , 1 );
 		cmd = pxRxedMessage.data;
 		if (cmd == -1)
@@ -366,7 +381,6 @@ static void task_VL53(void *pvParameters)
 	for(;;)
 	{
 		dist = readRangeSingleMillimeters()/10;
-		printf("distance %d\r\n", dist);
 		if (dist < SEUIL)
 			obs = 1;
 		else
@@ -384,7 +398,7 @@ static void task_VL53(void *pvParameters)
 static void task_Grove_LCD(void *pvParameters)
 {
 #if SYNCHRO_EX == EXFINAL
-	struct AMessage pxRxedMessage;
+	AMessage pxRxedMessage;
 
 	for(;;){
 		xQueueReceive(qhLCD, &( pxRxedMessage ), 1);
@@ -453,36 +467,44 @@ static void task_Supervision(void *pvParameters)
 	int16_t speedLeft;
 	int16_t speedRight;
 
-	int16_t AspeedLeft = 0;
-	int16_t AspeedRight = 0;
+	int sensor_ir[2];
+	int sensor_vl53 = 0;
 
-	int table[2];
-	int vl53 = 0;
+	static int obs = 0; //Use to count the number of obstacle
+	static char dir = 'F'; //Use to prompt dir
+	static int direction = STOP; //Use to guide the robot
+	static int speed = LOW; //Use to multiply speed by
+	static int mode = MODE_OBS; //Use to set the mode
+	static int x = 0;
+	static int y = 0;
 
-	static int obs = 0;
-	static char dir = 'f';
-	static int direction = AVANT;
-	static int speed = LOW;
-	static int mode = MODE_OBS;
-
-	struct AMessage pxRxedMessage;
+	MicroRosSubMsg SubToMsg; //Info receive from MicroRos
+	MicroRosPubMsg MsgToPub; //Info give to MicroRos
 
 	for (;;)
 	{
-		//mode = ((rec_buf6[0] & 0xC0) >> 6);
-		/*if(mode != MODE_CAM){
-			one=0;
-		}*/
+		xQueueReceive(qhMR_sub, &SubToMsg, portMAX_DELAY); //For vl53
+		//printf("%cc%c[2J%c[0;0HWe receive from MR : \n\rDirection : %d\r\nMode: %d\r\nSpeed : %d\r\nX: %d\r\nY : %d\r\n", 0x1b, 0x1b, 0x1b, SubToMsg.dir, SubToMsg.mode, SubToMsg.speed, SubToMsg.x, SubToMsg.y);
+
+		if (mode >= 0 && mode < MODE_LAST)
+		{
+			obs = 0;
+			dir = 'N';
+			direction = STOP;
+			speed = LOW;
+			mode = SubToMsg.mode;
+			x = (CAMERA_X_MAX-CAMERA_X_MIN)/2;
+			y = (CAMERA_Y_MAX-CAMERA_Y_MIN)/2;
+		}
 
 		if (mode == MODE_ZIG)
 		{
 			#ifdef VL53
-			xQueueReceive(qhVl53, &vl53, 1); //For VL53
+			xQueueReceive(qhVl53, &sensor_vl53, 1); //For VL53
 			#endif
 
-			dir = 'N';
-			//direction = rec_buf6[0] & 0x0F;
-			//speed = (rec_buf6[0] & 0x30) >> 4;
+			direction = SubToMsg.dir;
+			speed = SubToMsg.speed;
 			switch(direction)
 			{
 				case STOP:
@@ -530,14 +552,14 @@ static void task_Supervision(void *pvParameters)
 		}
 		else if (mode == MODE_OBS)
 		{
-			captDistIR_Get(table);
+			captDistIR_Get(sensor_ir);
 			#if VL53
-			xQueueReceive(qhVl53, &vl53, 1);
+			xQueueReceive(qhVl53, &sensor_vl53, 1);
 
-			if (vl53 != 0 || vl53 != 1)
-				vl53 = 0;
+			if (sensor_vl53 != 0 || sensor_vl53 != 1)
+				sensor_vl53 = 0;
 
-			if (vl53 == 1) //Il y a un obstacle
+			if (sensor_vl53 == 1) //Il y a un obstacle
 			{
 				speedLeft = 0;
 				speedRight = 0;
@@ -545,31 +567,31 @@ static void task_Supervision(void *pvParameters)
 				obs = 1;
 			}
 			else
-#endif
-			if (table[0] > 1000 || table[1] > 1000)
+			#endif //if VL53
+			if (sensor_ir[SENSOR_LEFT] > 1000 || sensor_ir[SENSOR_RIGHT] > 1000)
 			{
 				if (obs > 10)
 				{
 					speedLeft = VITESSE_OBS;
 					speedRight = -VITESSE_OBS/2;
-					dir = 'G';
+					dir = 'D';
 				}
 				else
 				{
 					speedLeft = 0;
 					speedRight = 0;
 
-					if (table[0] > table[1] && table[0] > 1000)
+					if (sensor_ir[SENSOR_LEFT] > sensor_ir[SENSOR_RIGHT] && sensor_ir[SENSOR_LEFT] > 1000)
 					{
-						dir = 'G';
+						dir = 'D';
 						speedLeft = VITESSE_OBS/2;
 						speedRight = -VITESSE_OBS/2;
 						if (obs%2 == 0)
 							obs++;
 					}
-					else if (table[0] < table[1] && table[1] > 1000)
+					else if (sensor_ir[SENSOR_LEFT] < sensor_ir[SENSOR_RIGHT] && sensor_ir[SENSOR_RIGHT] > 1000)
 					{
-						dir = 'D';
+						dir = 'G';
 						speedLeft = -VITESSE_OBS/2;
 						speedRight = VITESSE_OBS/2;
 						if (obs%2 == 1)
@@ -588,62 +610,63 @@ static void task_Supervision(void *pvParameters)
 		else if (mode == MODE_CAM)
 		{
 			#if VL53
-			xQueueReceive(qhVl53, &vl53, 1); //For vl53
+			xQueueReceive(qhVl53, &sensor_vl53, 1); //For vl53
 			#endif
 
-			pxRxedMessage.data = STOP; //REPLACE BY CAM INFO WITH ROS
-			switch (pxRxedMessage.data)
+			x = SubToMsg.x;
+			y = SubToMsg.y;
+
+			if (x > CAMERA_X_MIN+CAMERA_X_TIER && x < CAMERA_X_MAX-CAMERA_X_TIER && y > CAMERA_Y_MIN && y <CAMERA_Y_MIN+CAMERA_Y_TIER) //AVANT
 			{
-				case AVANT:
-					speedLeft = VITESSE_CAM;
-					AspeedLeft = VITESSE_CAM;
-					speedRight = VITESSE_CAM;
-					AspeedRight = VITESSE_CAM;
-					break;
-				case AVANT_DROITE:
-					speedLeft = VITESSE_CAM;
-					AspeedLeft = VITESSE_CAM;
-					speedRight = VITESSE_CAM/2;
-					AspeedRight = VITESSE_CAM/2;
-					break;
-				case AVANT_GAUCHE:
-					speedLeft = VITESSE_CAM/2;
-					AspeedLeft = VITESSE_CAM/2;
-					speedRight = VITESSE_CAM;
-					AspeedRight = VITESSE_CAM;
-					break;
-				case RECULE:
-					speedLeft = -VITESSE_CAM;
-					AspeedLeft = -VITESSE_CAM;
-					speedRight = -VITESSE_CAM;
-					AspeedRight = -VITESSE_CAM;
-					break;
-				case RECULE_DROITE:
-					speedLeft = -VITESSE_CAM/2;
-					AspeedLeft = -VITESSE_CAM/2;
-					speedRight = -VITESSE_CAM;
-					AspeedRight = -VITESSE_CAM;
-					break;
-				case RECULE_GAUCHE:
-					speedLeft = -VITESSE_CAM;
-					AspeedLeft = -VITESSE_CAM;
-					speedRight = -VITESSE_CAM/2;
-					AspeedRight = -VITESSE_CAM/2;
-					break;
-				case STOP:
-					speedLeft = 0;
-					AspeedLeft = 0;
-					speedRight = 0;
-					AspeedRight = 0;
-					break;
-				default:
-					speedLeft = AspeedLeft;
-					speedRight = AspeedRight;
-					break;
+				speedLeft = VITESSE_CAM;
+				speedRight = VITESSE_CAM;
+			}
+			else if (x > CAMERA_X_MAX-CAMERA_X_TIER && x < CAMERA_X_MAX && y > CAMERA_Y_MIN && y < CAMERA_Y_MIN+CAMERA_Y_TIER) //AVANT_DROITE:
+			{
+				speedLeft = VITESSE_CAM;
+				speedRight = VITESSE_CAM/2;
+			}
+			else if (x > CAMERA_X_MIN && x < CAMERA_X_MIN+CAMERA_X_TIER && y > CAMERA_Y_MIN && y < CAMERA_Y_MIN+CAMERA_Y_TIER) //AVANT_GAUCHE:
+			{
+				speedLeft = VITESSE_CAM/2;
+				speedRight = VITESSE_CAM;
+			}
+			else if (x > CAMERA_X_MIN+CAMERA_X_TIER && x < CAMERA_X_MAX-CAMERA_X_TIER && y > CAMERA_Y_MIN+CAMERA_Y_TIER && y <CAMERA_Y_MAX-CAMERA_Y_TIER) //STOP
+			{
+				speedLeft = 0;
+				speedRight = 0;
+			}
+			else if (x > CAMERA_X_MAX-CAMERA_X_TIER && x < CAMERA_X_MAX && y > CAMERA_Y_MIN+CAMERA_Y_TIER && y <CAMERA_Y_MAX-CAMERA_Y_TIER) //DROITE
+			{
+				speedLeft = VITESSE_CAM;
+				speedRight = -VITESSE_CAM;
+			}
+			else if (x > CAMERA_X_MIN && x < CAMERA_X_MIN+CAMERA_X_TIER && y > CAMERA_Y_MIN+CAMERA_Y_TIER && y <CAMERA_Y_MAX-CAMERA_Y_TIER) //GAUCHE
+			{
+				speedLeft = -VITESSE_CAM;
+				speedRight = VITESSE_CAM;
 			}
 
-			dir = 'N';
-			obs = 0;
+			else if (x > CAMERA_X_MIN+CAMERA_X_TIER && x < CAMERA_X_MAX-CAMERA_X_TIER && y > CAMERA_Y_MAX-CAMERA_Y_TIER && y < CAMERA_Y_MAX) //RECULE:
+			{
+				speedLeft = -VITESSE_CAM;
+				speedRight = -VITESSE_CAM;
+			}
+			else if (x > CAMERA_X_MAX-CAMERA_X_TIER && x < CAMERA_X_MAX && y > CAMERA_Y_MAX-CAMERA_Y_TIER && y < CAMERA_Y_MAX) //RECULE_DROITE:
+			{
+				speedLeft = -VITESSE_CAM/2;
+				speedRight = -VITESSE_CAM;
+			}
+			else if (x > CAMERA_X_MIN && x < CAMERA_X_MIN+CAMERA_X_TIER && y > CAMERA_Y_MAX-CAMERA_Y_TIER && y < CAMERA_Y_MAX) //RECULE_GAUCHE:
+			{
+				speedLeft = -VITESSE_CAM;
+				speedRight = -VITESSE_CAM/2;
+			}
+			else
+			{
+				speedLeft = 0;
+				speedRight = 0;
+			}
 		}
 
 		xQueueSend( q_mot_L, ( void * ) &speedLeft,  portMAX_DELAY );
@@ -652,13 +675,14 @@ static void task_Supervision(void *pvParameters)
 		xQueueSend( q_mot_R, ( void * ) &speedRight,  portMAX_DELAY );
 		xSemaphoreTake( xSem_Supervision, portMAX_DELAY );
 
-		struct AMessage pxMessage;
-
-		pxMessage.data=mode;
-		pxMessage.command=dir;
-		xQueueSend( qhMR, ( void * ) &pxMessage, 1);
+		MsgToPub.dir = dir;
+		MsgToPub.mode = mode;
+		MsgToPub.speed = speed;
+		MsgToPub.isGood = 1;
+		xQueueSend(qhMR_pub, ( void * ) &MsgToPub, portMAX_DELAY);
 
 	#if LCD
+		AMessage pxMessage;
 		pxMessage.data=mode;
 		pxMessage.command=dir;
 		xQueueSend( qhLCD, ( void * ) &pxMessage, 1);
@@ -741,10 +765,9 @@ int main(void)
     q_mot_R = xQueueCreate(1, sizeof(int16_t));
     qhVl53 = xQueueCreate(1, sizeof(int));
 
-    qhMR = xQueueCreate( 1, sizeof(struct AMessage ) );
-    qhLCD = xQueueCreate( 1, sizeof(struct AMessage ) );
-
-  //rec_buf6[0] = 'T';
+    qhMR_sub = xQueueCreate(1, sizeof(MicroRosSubMsg));
+    qhMR_pub = xQueueCreate(1, sizeof(MicroRosPubMsg));
+    qhLCD = xQueueCreate(1, sizeof(AMessage));
 
   osKernelStart();
   while(1)

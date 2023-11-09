@@ -1,47 +1,7 @@
-13:18:47 **** Incremental Build of configuration Debug for project base_robot ****
+01:43:57 **** Incremental Build of configuration Debug for project base_robot ****
 make -j2 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'microros_task':
-../Core/Src/main.c:156:28: warning: unused variable 'config_speed_msg_info' [-Wunused-variable]
-  156 |         rmw_message_info_t config_speed_msg_info;
-      |                            ^~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:151:28: warning: unused variable 'config_mode_msg_info' [-Wunused-variable]
-  151 |         rmw_message_info_t config_mode_msg_info;
-      |                            ^~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:146:28: warning: unused variable 'telecommande_dir_msg_info' [-Wunused-variable]
-  146 |         rmw_message_info_t telecommande_dir_msg_info;
-      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~
-../Core/Src/main.c:141:28: warning: unused variable 'camera_y_msg_info' [-Wunused-variable]
-  141 |         rmw_message_info_t camera_y_msg_info;
-      |                            ^~~~~~~~~~~~~~~~~
-../Core/Src/main.c:136:28: warning: unused variable 'camera_x_msg_info' [-Wunused-variable]
-  136 |         rmw_message_info_t camera_x_msg_info;
-      |                            ^~~~~~~~~~~~~~~~~
-../Core/Src/main.c:101:20: warning: unused variable 'counter' [-Wunused-variable]
-  101 |         static int counter = 0;
-      |                    ^~~~~~~
-At top level:
-../Core/Src/main.c:101:20: warning: 'counter' defined but not used [-Wunused-variable]
-../Core/Src/main.c:415:13: warning: 'task_Supervision' defined but not used [-Wunused-function]
-  415 | static void task_Supervision(void *pvParameters)
-      |             ^~~~~~~~~~~~~~~~
-../Core/Src/main.c:360:13: warning: 'task_VL53' defined but not used [-Wunused-function]
-  360 | static void task_VL53(void *pvParameters)
-      |             ^~~~~~~~~
-../Core/Src/main.c:321:13: warning: 'task_Motor_Right' defined but not used [-Wunused-function]
-  321 | static void task_Motor_Right(void *pvParameters)
-      |             ^~~~~~~~~~~~~~~~
-../Core/Src/main.c:283:13: warning: 'task_Motor_Left' defined but not used [-Wunused-function]
-  283 | static void task_Motor_Left(void *pvParameters)
-      |             ^~~~~~~~~~~~~~~
-arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"C:\Users\Administrator\Documents\GitHub\ENIB_Robot_Mobile_Ros2\WORKSPACE_F411_uROS6\base_robot\STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"C:\Users\Administrator\Documents\GitHub\ENIB_Robot_Mobile_Ros2\WORKSPACE_F411_uROS6\base_robot\micro_ros_stm32cubemx_utils\microros_static_library\libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: base_robot.elf
- 
 arm-none-eabi-size   base_robot.elf 
-arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
    text	   data	    bss	    dec	    hex	filename
- 102912	    228	  60744	 163884	  2802c	base_robot.elf
+ 115524	    240	  61608	 177372	  2b4dc	base_robot.elf
 Finished building: default.size.stdout
- 
-Finished building: base_robot.list
  
