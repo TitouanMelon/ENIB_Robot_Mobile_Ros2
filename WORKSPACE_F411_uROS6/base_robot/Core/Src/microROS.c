@@ -2,24 +2,6 @@
 
 #define STRING 0
 
-void CHECKMRRET(rcl_ret_t ret, char* msg)
-{
-	if (ret != RCL_RET_OK)
-		printf("Error : %d\r\nMsg : %s\r\n", (int)ret, msg);
-}
-
-void SubscriberStringCallbackFunction(const void *msgin)
-{
-	std_msgs__msg__String * msg = (std_msgs__msg__String * )msgin;
-	printf("Message recue : %s\r\n", msg->data.data);
-}
-
-void SubscriberCallbackFunction(const void *msgin)
-{
-	std_msgs__msg__Int32 * msg = (std_msgs__msg__Int32 * )msgin;
-	printf("Message recue : %ld\r\n", msg->data);
-}
-
 void createPublisher(rcl_publisher_t* publisher,
 	const rcl_node_t* node,
 	const rosidl_message_type_support_t* type_support,
@@ -40,7 +22,7 @@ void createPublisher(rcl_publisher_t* publisher,
 }
 
 void createSubscriber(rcl_subscription_t* subscription,
-	rcl_node_t* node,
+	const rcl_node_t* node,
 	const rosidl_message_type_support_t* type_support,
 	const char* topic_name,
 	std_msgs__msg__Int32* msg)

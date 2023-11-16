@@ -1,5 +1,2 @@
-../Core/Src/microROS.c:5:6:CHECKMRRET	16	static
-../Core/Src/microROS.c:11:6:SubscriberStringCallbackFunction	24	static
-../Core/Src/microROS.c:17:6:SubscriberCallbackFunction	24	static
-../Core/Src/microROS.c:23:6:createPublisher	32	static
-../Core/Src/microROS.c:42:6:createSubscriber	32	static
+../Core/Src/microROS.c:5:6:createPublisher	32	static
+../Core/Src/microROS.c:24:6:createSubscriber	32	static

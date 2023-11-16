@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 #define USART2_IRQ_PRIO	9
 #define USART6_IRQ_PRIO	10
 //#define EXTI1_IRQ_PRIO	7
@@ -46,14 +47,14 @@ GPIO OUTPUT	-->	PB4
 ******************************************************************/
 void HAL_GPIO_MspInit(void)
 {
-	  GPIO_InitTypeDef  GPIO_InitStruct;
+	  //GPIO_InitTypeDef  GPIO_InitStruct;
 
-	  GPIO_InitStruct.Pin = GPIO_PIN_4;
-	  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP; // hal_gpio.h
-	  GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  GPIO_InitStruct.Speed = GPIO_SPEED_MEDIUM;
+	  //GPIO_InitStruct.Pin = GPIO_PIN_4;
+	  //GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP; // hal_gpio.h
+	  //GPIO_InitStruct.Pull = GPIO_NOPULL;
+	  //GPIO_InitStruct.Speed = GPIO_SPEED_MEDIUM;
 
-	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+	  //HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
 /******************************************************************
@@ -160,6 +161,10 @@ void HAL_PWM_Timer3_MspInit(void)
 
 	  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_3, 1);
+
+
+
+
 }
 
 /******************************************************************

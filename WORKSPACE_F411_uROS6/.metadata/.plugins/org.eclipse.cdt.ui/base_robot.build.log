@@ -1,10 +1,10 @@
-01:43:57 **** Incremental Build of configuration Debug for project base_robot ****
-make -j2 all 
+17:27:53 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
 arm-none-eabi-size   base_robot.elf 
    text	   data	    bss	    dec	    hex	filename
- 115524	    240	  61608	 177372	  2b4dc	base_robot.elf
+ 107492	    220	  60792	 168504	  29238	base_robot.elf
 Finished building: default.size.stdout
  
 
-01:43:59 Build Finished. 0 errors, 0 warnings. (took 2s.4ms)
+17:27:54 Build Finished. 0 errors, 0 warnings. (took 610ms)
 

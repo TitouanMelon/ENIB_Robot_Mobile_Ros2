@@ -272,14 +272,14 @@ uint8_t initVL53L0X( ){
   // -- VL53L0X_perform_vhv_calibration() begin
 
   writeReg(SYSTEM_SEQUENCE_CONFIG, 0x01);
-  if (performSingleRefCalibration(0x40)) { return false; }
+  if (performSingleRefCalibration(0x40)) { return 1; }
 
   // -- VL53L0X_perform_vhv_calibration() end
 
   // -- VL53L0X_perform_phase_calibration() begin
 
   writeReg(SYSTEM_SEQUENCE_CONFIG, 0x02);
-  if (performSingleRefCalibration(0x00)) { return false; }
+  if (performSingleRefCalibration(0x00)) { return 1; }
 
   // -- VL53L0X_perform_phase_calibration() end
 

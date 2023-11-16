@@ -1,5 +1,2 @@
-../Core/Src/microROS.c:5:6:CHECKMRRET	2
-../Core/Src/microROS.c:11:6:SubscriberStringCallbackFunction	1
-../Core/Src/microROS.c:17:6:SubscriberCallbackFunction	1
-../Core/Src/microROS.c:23:6:createPublisher	1
-../Core/Src/microROS.c:42:6:createSubscriber	1
+../Core/Src/microROS.c:5:6:createPublisher	1
+../Core/Src/microROS.c:24:6:createSubscriber	1
