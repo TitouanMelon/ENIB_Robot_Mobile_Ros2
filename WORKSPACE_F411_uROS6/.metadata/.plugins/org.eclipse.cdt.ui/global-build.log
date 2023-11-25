@@ -4070,3 +4070,162 @@ arm-none-eabi-size   base_robot.elf
  107492	    220	  60792	 168504	  29238	base_robot.elf
 Finished building: default.size.stdout
  
+10:46:44 **** Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107492	    220	  60792	 168504	  29238	base_robot.elf
+Finished building: default.size.stdout
+ 
+10:46:53 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107492	    220	  60792	 168504	  29238	base_robot.elf
+Finished building: default.size.stdout
+ 
+10:50:02 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107492	    220	  60792	 168504	  29238	base_robot.elf
+Finished building: default.size.stdout
+ 
+10:55:10 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107492	    220	  60792	 168504	  29238	base_robot.elf
+Finished building: default.size.stdout
+ 
+13:09:15 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Motor_Left':
+../Core/Src/main.c:346:13: warning: unused variable 'state' [-Wunused-variable]
+  346 |         int state = 0;
+      |             ^~~~~
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:493:13: warning: unused variable 'vl53' [-Wunused-variable]
+  493 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107492	    220	  60792	 168504	  29238	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+13:14:10 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Motor_Left':
+../Core/Src/main.c:352:13: warning: unused variable 'state' [-Wunused-variable]
+  352 |         int state = 0;
+      |             ^~~~~
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:499:13: warning: unused variable 'vl53' [-Wunused-variable]
+  499 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107516	    220	  60792	 168528	  29250	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+13:15:47 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Motor_Left':
+../Core/Src/main.c:352:13: warning: unused variable 'state' [-Wunused-variable]
+  352 |         int state = 0;
+      |             ^~~~~
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:499:13: warning: unused variable 'vl53' [-Wunused-variable]
+  499 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107516	    220	  60792	 168528	  29250	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+13:18:24 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Motor_Left':
+../Core/Src/main.c:352:13: warning: unused variable 'state' [-Wunused-variable]
+  352 |         int state = 0;
+      |             ^~~~~
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:499:13: warning: unused variable 'vl53' [-Wunused-variable]
+  499 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107516	    220	  60792	 168528	  29250	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+13:20:31 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Motor_Left':
+../Core/Src/main.c:352:13: warning: unused variable 'state' [-Wunused-variable]
+  352 |         int state = 0;
+      |             ^~~~~
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:499:13: warning: unused variable 'vl53' [-Wunused-variable]
+  499 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107516	    220	  60792	 168528	  29250	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+14:17:12 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107516	    220	  60792	 168528	  29250	base_robot.elf
+Finished building: default.size.stdout
+ 
+14:59:25 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107516	    220	  60792	 168528	  29250	base_robot.elf
+Finished building: default.size.stdout
+ 
+15:22:40 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107516	    220	  60792	 168528	  29250	base_robot.elf
+Finished building: default.size.stdout
+ 

@@ -40,6 +40,7 @@ enum {MODE_OBS, MODE_ZIG, MODE_CAM, LAST_MODE};
 enum {STOP_VIT, LOW, FAST, SONIC, LAST_SPEED};
 enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GAUCHE, RECULE_DROITE, LAST_DIR};
 
+#define ROS_DOMAIN_ID 0
 #define NB 200
 #define TEST_CORRECTOR_SPEED 150
 #define TEST_LEFT_MOTOR 1
@@ -150,6 +151,7 @@ void microros_task(void *argument)
 	rclc_support_t support;
 	rcl_allocator_t allocator;
 	rcl_node_t node;
+	rcl_node_options_t node_opt;
 	rclc_executor_t executor;
 
 	// micro-ROS configuration
@@ -175,7 +177,11 @@ void microros_task(void *argument)
 	//create init_options
 	CHECKMRRET(rclc_support_init(&support, 0, NULL, &allocator), "error on init support");
 	// create node
-	CHECKMRRET(rclc_node_init_default(&node, "STM32_node", "", &support), "error on init node");
+	//CHECKMRRET(rclc_node_init_default(&node, "STM32_node", "", &support), "error on init node");
+	node_opt = rcl_node_get_default_options();
+	node_opt.domain_id = ROS_DOMAIN_ID;
+	CHECKMRRET(rclc_node_init_with_options(&node, "STM32_node", "", &support, &node_opt), "error on init node");
+
 
 #if SYNCHRO_EX == EXSTARTUP
 	static int counter = 0;
