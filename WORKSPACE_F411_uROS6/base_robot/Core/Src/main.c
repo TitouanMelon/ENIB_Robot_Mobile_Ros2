@@ -30,9 +30,10 @@ const osThreadAttr_t defaultTask_attributes = {
 #define EXSTARTUP 0 //Kerhoas code
 #define EXTEST_UART2 1 //Just printf and scanf fonction
 #define EXCORRECTOR 2
-#define EXTEST_VL53 3 //send value of VL53 captor on uart2
-#define EXTEST_MICROROS 4 //Test send and receive Int32 msg
-#define EXFINAL 5 //final code
+#define EXTESTCORRECTOR 3
+#define EXTEST_VL53 4 //send value of VL53 captor on uart2
+#define EXTEST_MICROROS 5 //Test send and receive Int32 msg
+#define EXFINAL 6 //final code
 
 #define SYNCHRO_EX EXFINAL
 
@@ -42,7 +43,9 @@ enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GA
 
 #define ROS_DOMAIN_ID 0
 #define NB 200
-#define TEST_CORRECTOR_SPEED 150
+#define TEST_CORRECTOR_DUTY 150
+#define TEST_CORRECTOR_SPEEDL -100
+#define TEST_CORRECTOR_SPEEDR -100
 #define TEST_LEFT_MOTOR 1
 //#######################################################
 #define LCD 0
@@ -113,6 +116,7 @@ struct MicroRosSubMsg
 void test_print_uart2(void *pvParameters);
 void test_vl53(void *pvParameters);
 void test_motor(void *pvParameters);
+void test_correcteur(void *pvParameters);
 
 //Robot function
 void SystemClock_Config(void);
@@ -237,37 +241,36 @@ void microros_task(void *argument)
 	/* PUBLISHER */
 	//Use to publish the direction of robot in sensor mode
 	rcl_publisher_t capteur_dir_pub;
-	char* capteur_dir_topic = "capteur/dir";
+	char* capteur_dir_topic = CAPTEUR_DIR_TOPIC;
 	std_msgs__msg__Int32 capteur_dir_msg;
 	//Use to publish the actual mode of the robot
 	rcl_publisher_t etat_mode_pub;
-	char* etat_mode_topic = "etat/mode";
+	char* etat_mode_topic = ETAT_MODE_TOPIC;
 	std_msgs__msg__Int32 etat_mode_msg;
 	//Use to publish the actual speed of the robot
 	rcl_publisher_t etat_speed_pub;
-	char* etat_speed_topic = "etat/speed";
+	char* etat_speed_topic = ETAT_SPEED_TOPIC;
 	std_msgs__msg__Int32 etat_speed_msg;
-
 	/* SUBSCRIBER */
 	//Use to receive the x position of object see by the camera
 	rcl_subscription_t camera_x_sub;
-	char* camera_x_topic = "camera/x";
+	char* camera_x_topic = CAMERA_X_TOPIC;
 	std_msgs__msg__Int32 camera_x_msg;
 	//Use to receive the y position of object see by the camera
 	rcl_subscription_t camera_y_sub;
-	char* camera_y_topic = "camera/y";
+	char* camera_y_topic = CAMERA_Y_TOPIC;
 	std_msgs__msg__Int32 camera_y_msg;
 	//Use to receive the remote control in remote mode
 	rcl_subscription_t telecommande_dir_sub;
-	char* telecommande_dir_topic = "telecommande/dir";
+	char* telecommande_dir_topic = TELECOMMANDE_DIR_TOPIC;
 	std_msgs__msg__Int32 telecommande_dir_msg;
 	//Use to receive the mode config
 	rcl_subscription_t config_mode_sub;
-	char* config_mode_topic = "config/mode";
+	char* config_mode_topic = CONFIG_MODE_TOPIC;
 	std_msgs__msg__Int32 config_mode_msg;
 	//Use to receive the speed config
 	rcl_subscription_t config_speed_sub;
-	char* config_speed_topic = "config/speed";
+	char* config_speed_topic = CONFIG_SPEED_TOPIC;
 	std_msgs__msg__Int32 config_speed_msg;
 
 	// create publisher
@@ -348,8 +351,6 @@ static void task_Motor_Left(void *pvParameters)
 	float up = 0.0;
 	int err = 0;
 	int speed = 0;
-
-	int state = 0;
 
 	for (;;)
 	{
@@ -785,6 +786,11 @@ int main(void)
 	xTaskCreate(test_uart2, ( const portCHAR * ) "task print uart 2", 128 /* stack size */, NULL, tskIDLE_PRIORITY, NULL);
 #elif SYNCHRO_EX == EXCORRECTOR
 	xTaskCreate(test_motor, ( const portCHAR * ) "task test motor", 128 /* stack size */, NULL, tskIDLE_PRIORITY, NULL);
+#elif SYNCHRO_EX == EXTESTCORRECTOR
+	xTaskCreate(test_correcteur, ( const portCHAR * ) "task test correcteur", 128 /* stack size */, NULL, 27, NULL);
+	xTaskCreate(task_Motor_Left, ( const portCHAR * ) "task Motor Left", 128 /* stack size */, NULL, 25, NULL);
+	xTaskCreate(task_Motor_Right, ( const portCHAR * ) "task Motor Right", 128 /* stack size */, NULL, 26, NULL);
+
 #elif SYNCHRO_EX == EXTEST_VL53
 	xTaskCreate(test_vl53, ( const portCHAR * ) "test_vl53", 128 /* stack size */, NULL, tskIDLE_PRIORITY, NULL);
 #elif SYNCHRO_EX == EXTEST_MICROROS
@@ -850,7 +856,7 @@ void test_vl53(void *pvParameters)
 
 void test_motor(void *pvParameters)
 {
-	int16_t  consigne = TEST_CORRECTOR_SPEED;
+	int16_t  consigne = TEST_CORRECTOR_DUTY;
 	if (consigne < 0 || consigne > 200)
 		consigne = 150;
 	int speed = 0;
@@ -873,6 +879,23 @@ void test_motor(void *pvParameters)
 		}
 		else
 			printf("sampling end");
+		vTaskDelay(SAMPLING_PERIOD_ms);
+	}
+}
+
+void test_correcteur(void *pvParameters)
+{
+	int16_t speedLeft = TEST_CORRECTOR_SPEEDL;
+	int16_t speedRight = TEST_CORRECTOR_SPEEDR;
+
+	for (;;)
+	{
+		xQueueSend(q_mot_L, (void *)&speedLeft, portMAX_DELAY);
+		xSemaphoreTake(xSem_Supervision, portMAX_DELAY);
+
+		xQueueSend(q_mot_R, (void *)&speedRight, portMAX_DELAY);
+		xSemaphoreTake(xSem_Supervision, portMAX_DELAY);
+
 		vTaskDelay(SAMPLING_PERIOD_ms);
 	}
 }
