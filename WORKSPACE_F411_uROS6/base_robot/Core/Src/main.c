@@ -41,6 +41,10 @@ enum {MODE_OBS, MODE_ZIG, MODE_CAM, LAST_MODE};
 enum {STOP_VIT, LOW, FAST, SONIC, LAST_SPEED};
 enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GAUCHE, RECULE_DROITE, LAST_DIR};
 
+#define DEFAULT_MODE MODE_ZIG
+#define DEFAULT_SPEED LOW
+#define DEFAULT_DIR STOP
+
 #define ROS_DOMAIN_ID 0
 #define NB 200
 #define TEST_CORRECTOR_DUTY 150
@@ -57,12 +61,12 @@ enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GA
 #define CMD 1000
 #define VITESSE_KART CMD/2
 #define VITESSE_OBS CMD
-#define VITESSE_CAM CMD
+#define VITESSE_CAM CMD/3
 //#######################################################
 #define CAMERA_X_MIN 0
-#define CAMERA_X_MAX 1024
+#define CAMERA_X_MAX 640
 #define CAMERA_Y_MIN 0
-#define CAMERA_Y_MAX 1024
+#define CAMERA_Y_MAX 480
 #define CAMERA_X_TIER (CAMERA_X_MAX-CAMERA_X_MIN)/3
 #define CAMERA_Y_TIER (CAMERA_Y_MAX-CAMERA_Y_MIN)/3
 //#######################################################
@@ -237,7 +241,7 @@ void microros_task(void *argument)
 	}
 #elif SYNCHRO_EX == EXFINAL
 	MicroRosPubMsg MsgToPub = {'N', 0, 0};
-	MicroRosSubMsg SubToMsg = {STOP, 0, 0, MODE_OBS, LOW};
+	MicroRosSubMsg SubToMsg = {DEFAULT_DIR, 0, 0, DEFAULT_MODE, DEFAULT_SPEED};
 	/* PUBLISHER */
 	//Use to publish the direction of robot in sensor mode
 	rcl_publisher_t capteur_dir_pub;
@@ -501,9 +505,9 @@ static void task_Supervision(void *pvParameters)
 
 	static int obs = 0;
 	static char dir = 'f';
-	static int direction = STOP;
-	static int speed = LOW;
-	static int mode = MODE_OBS;
+	static int direction = DEFAULT_DIR;
+	static int speed = DEFAULT_SPEED;
+	static int mode = DEFAULT_MODE;
 	static int x = 0;
 	static int y = 0;
 
@@ -646,7 +650,18 @@ static void task_Supervision(void *pvParameters)
 			dir = 'N';
 			obs = 0;
 
-			if (x > CAMERA_X_MIN+CAMERA_X_TIER && x < CAMERA_X_MAX-CAMERA_X_TIER && y > CAMERA_Y_MIN && y <CAMERA_Y_MIN+CAMERA_Y_TIER) //AVANT
+			if(x < 0 || y < 0){
+				speedLeft = 0;
+				speedRight = 0;
+			}
+			else {
+				speedLeft = VITESSE_CAM - ((CAMERA_X_MAX/2 - x))/3; // (int) (((float) ((x-CAMERA_X_MAX/2)/CAMERA_X_MAX))*500);
+				speedRight = VITESSE_CAM + ((CAMERA_X_MAX/2 - x))/3; // (int) (((float) (x/CAMERA_X_MAX))*500);
+			}
+
+
+
+			/*if (x > CAMERA_X_MIN+CAMERA_X_TIER && x < CAMERA_X_MAX-CAMERA_X_TIER && y > CAMERA_Y_MIN && y <CAMERA_Y_MIN+CAMERA_Y_TIER) //AVANT
 			{
 				speedLeft = VITESSE_CAM;
 				speedRight = VITESSE_CAM;
@@ -695,7 +710,7 @@ static void task_Supervision(void *pvParameters)
 			{
 				speedLeft = 0;
 				speedRight = 0;
-			}
+			}*/
 		}
 
 		#if DEBUG_MOTOR
@@ -710,8 +725,8 @@ static void task_Supervision(void *pvParameters)
 
 	#if MICROROS
 		MsgToPub.dir = dir;
-		MsgToPub.mode = mode;
-		MsgToPub.speed = speed;
+		MsgToPub.mode = speedLeft; //mode;
+		MsgToPub.speed = speedRight; //speed;
 		if (!uxQueueMessagesWaiting(qhMR_pub))
 			xQueueSend(qhMR_pub, ( void * ) &MsgToPub, portMAX_DELAY);
 	#endif //MICROROS

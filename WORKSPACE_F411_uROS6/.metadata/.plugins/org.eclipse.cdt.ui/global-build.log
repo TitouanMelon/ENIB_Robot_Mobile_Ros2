@@ -65,3 +65,501 @@ Finished building: default.size.stdout
  
 Finished building: base_robot.list
  
+10:22:28 **** Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107500	    220	  60792	 168512	  29240	base_robot.elf
+Finished building: default.size.stdout
+ 
+10:24:56 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107500	    220	  60792	 168512	  29240	base_robot.elf
+Finished building: default.size.stdout
+ 
+10:52:35 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/VL53L0X.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/VL53L0X.d" -MT"Core/Src/VL53L0X.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/VL53L0X.o"
+arm-none-eabi-gcc "../Core/Src/captDistIR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/captDistIR.d" -MT"Core/Src/captDistIR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/captDistIR.o"
+arm-none-eabi-gcc "../Core/Src/dma_transport.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dma_transport.d" -MT"Core/Src/dma_transport.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma_transport.o"
+arm-none-eabi-gcc "../Core/Src/drv_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/drv_gpio.d" -MT"Core/Src/drv_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/drv_gpio.o"
+arm-none-eabi-gcc "../Core/Src/drv_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/drv_i2c.d" -MT"Core/Src/drv_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/drv_i2c.o"
+arm-none-eabi-gcc "../Core/Src/drv_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/drv_uart.d" -MT"Core/Src/drv_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/drv_uart.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/groveLCD.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/groveLCD.d" -MT"Core/Src/groveLCD.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/groveLCD.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/microROS.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/microROS.d" -MT"Core/Src/microROS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/microROS.o"
+arm-none-eabi-gcc "../Core/Src/motorCommand.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/motorCommand.d" -MT"Core/Src/motorCommand.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/motorCommand.o"
+arm-none-eabi-gcc "../Core/Src/quadEncoder.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/quadEncoder.d" -MT"Core/Src/quadEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/quadEncoder.o"
+../Core/Src/microROS.c: In function 'createSubscriber':
+../Core/Src/microROS.c:32:70: warning: passing argument 2 of 'rclc_subscription_init_default' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   32 |         rcl_ret_t ret = rclc_subscription_init_default(subscription, node,
+      |                                                                      ^~~~
+In file included from /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/rclc.h:31,
+                 from ../Core/Inc/main.h:93,
+                 from ../Core/Src/microROS.c:1:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/subscription.h:51:16: note: expected 'rcl_node_t *' but argument is of type 'const rcl_node_t *'
+   51 |   rcl_node_t * node,
+      |   ~~~~~~~~~~~~~^~~~
+../Core/Src/groveLCD.c: In function 'groveLCD_test':
+../Core/Src/groveLCD.c:23:46: warning: pointer targets in passing argument 3 of 'i2c1_WriteRegBuffer' differ in signedness [-Wpointer-sign]
+   23 |   i2c1_WriteRegBuffer(RGB_ADDRESS, REG_RED,  tab, 1);
+      |                                              ^~~
+      |                                              |
+      |                                              int8_t * {aka signed char *}
+In file included from ../Core/Inc/main.h:87,
+                 from ../Core/Inc/groveLCD.h:10,
+                 from ../Core/Src/groveLCD.c:8:
+../Core/Inc/drv_i2c.h:23:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int8_t *' {aka 'signed char *'}
+   23 | int i2c1_WriteRegBuffer(uint16_t addrSlave, uint8_t  regAddr,  uint8_t *data, int n_data);
+      |                                                                ~~~~~~~~~^~~~
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:500:13: warning: unused variable 'vl53' [-Wunused-variable]
+  500 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/systemclock.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/systemclock.d" -MT"Core/Src/systemclock.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/systemclock.o"
+arm-none-eabi-gcc "../Core/Src/util.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/util.d" -MT"Core/Src/util.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/util.o"
+../Core/Src/stm32f4xx_hal_msp.c: In function 'HAL_MspInit':
+../Core/Src/stm32f4xx_hal_msp.c:41:3: warning: implicit declaration of function 'HAL_GPIO_MspInit'; did you mean 'HAL_GPIO_DeInit'? [-Wimplicit-function-declaration]
+   41 |   HAL_GPIO_MspInit();
+      |   ^~~~~~~~~~~~~~~~
+      |   HAL_GPIO_DeInit
+../Core/Src/stm32f4xx_hal_msp.c: At top level:
+../Core/Src/stm32f4xx_hal_msp.c:48:6: warning: conflicting types for 'HAL_GPIO_MspInit'; have 'void(void)'
+   48 | void HAL_GPIO_MspInit(void)
+      |      ^~~~~~~~~~~~~~~~
+../Core/Src/stm32f4xx_hal_msp.c:41:3: note: previous implicit declaration of 'HAL_GPIO_MspInit' with type 'void(void)'
+   41 |   HAL_GPIO_MspInit();
+      |   ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107476	    220	  60792	 168488	  29228	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+10:53:42 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107476	    220	  60792	 168488	  29228	base_robot.elf
+Finished building: default.size.stdout
+ 
+11:05:07 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107476	    224	  60792	 168492	  2922c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+11:06:11 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107476	    224	  60792	 168492	  2922c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+11:09:37 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/VL53L0X.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/VL53L0X.d" -MT"Core/Src/VL53L0X.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/VL53L0X.o"
+arm-none-eabi-gcc "../Core/Src/captDistIR.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/captDistIR.d" -MT"Core/Src/captDistIR.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/captDistIR.o"
+arm-none-eabi-gcc "../Core/Src/dma_transport.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/dma_transport.d" -MT"Core/Src/dma_transport.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/dma_transport.o"
+arm-none-eabi-gcc "../Core/Src/drv_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/drv_gpio.d" -MT"Core/Src/drv_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/drv_gpio.o"
+arm-none-eabi-gcc "../Core/Src/drv_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/drv_i2c.d" -MT"Core/Src/drv_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/drv_i2c.o"
+arm-none-eabi-gcc "../Core/Src/drv_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/drv_uart.d" -MT"Core/Src/drv_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/drv_uart.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/groveLCD.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/groveLCD.d" -MT"Core/Src/groveLCD.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/groveLCD.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/microROS.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/microROS.d" -MT"Core/Src/microROS.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/microROS.o"
+arm-none-eabi-gcc "../Core/Src/motorCommand.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/motorCommand.d" -MT"Core/Src/motorCommand.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/motorCommand.o"
+arm-none-eabi-gcc "../Core/Src/quadEncoder.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/quadEncoder.d" -MT"Core/Src/quadEncoder.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/quadEncoder.o"
+../Core/Src/microROS.c: In function 'createSubscriber':
+../Core/Src/microROS.c:32:70: warning: passing argument 2 of 'rclc_subscription_init_default' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   32 |         rcl_ret_t ret = rclc_subscription_init_default(subscription, node,
+      |                                                                      ^~~~
+In file included from /home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/rclc.h:31,
+                 from ../Core/Inc/main.h:93,
+                 from ../Core/Src/microROS.c:1:
+/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include/rclc/subscription.h:51:16: note: expected 'rcl_node_t *' but argument is of type 'const rcl_node_t *'
+   51 |   rcl_node_t * node,
+      |   ~~~~~~~~~~~~~^~~~
+../Core/Src/groveLCD.c: In function 'groveLCD_test':
+../Core/Src/groveLCD.c:23:46: warning: pointer targets in passing argument 3 of 'i2c1_WriteRegBuffer' differ in signedness [-Wpointer-sign]
+   23 |   i2c1_WriteRegBuffer(RGB_ADDRESS, REG_RED,  tab, 1);
+      |                                              ^~~
+      |                                              |
+      |                                              int8_t * {aka signed char *}
+In file included from ../Core/Inc/main.h:87,
+                 from ../Core/Inc/groveLCD.h:10,
+                 from ../Core/Src/groveLCD.c:8:
+../Core/Inc/drv_i2c.h:23:73: note: expected 'uint8_t *' {aka 'unsigned char *'} but argument is of type 'int8_t *' {aka 'signed char *'}
+   23 | int i2c1_WriteRegBuffer(uint16_t addrSlave, uint8_t  regAddr,  uint8_t *data, int n_data);
+      |                                                                ~~~~~~~~~^~~~
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_hal_msp.d" -MT"Core/Src/stm32f4xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc "../Core/Src/systemclock.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/systemclock.d" -MT"Core/Src/systemclock.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/systemclock.o"
+arm-none-eabi-gcc "../Core/Src/util.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/util.d" -MT"Core/Src/util.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/util.o"
+../Core/Src/stm32f4xx_hal_msp.c: In function 'HAL_MspInit':
+../Core/Src/stm32f4xx_hal_msp.c:41:3: warning: implicit declaration of function 'HAL_GPIO_MspInit'; did you mean 'HAL_GPIO_DeInit'? [-Wimplicit-function-declaration]
+   41 |   HAL_GPIO_MspInit();
+      |   ^~~~~~~~~~~~~~~~
+      |   HAL_GPIO_DeInit
+../Core/Src/stm32f4xx_hal_msp.c: At top level:
+../Core/Src/stm32f4xx_hal_msp.c:48:6: warning: conflicting types for 'HAL_GPIO_MspInit'; have 'void(void)'
+   48 | void HAL_GPIO_MspInit(void)
+      |      ^~~~~~~~~~~~~~~~
+../Core/Src/stm32f4xx_hal_msp.c:41:3: note: previous implicit declaration of 'HAL_GPIO_MspInit' with type 'void(void)'
+   41 |   HAL_GPIO_MspInit();
+      |   ^~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107476	    224	  60792	 168492	  2922c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+11:11:41 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+11:12:38 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:506:13: warning: unused variable 'vl53' [-Wunused-variable]
+  506 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+11:13:48 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+11:39:37 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:506:13: warning: unused variable 'vl53' [-Wunused-variable]
+  506 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107540	    224	  60792	 168556	  2926c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+11:39:59 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107540	    224	  60792	 168556	  2926c	base_robot.elf
+Finished building: default.size.stdout
+ 
+11:41:08 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+11:46:34 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+12:28:23 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+12:30:12 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+12:55:30 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+13:23:42 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+13:24:02 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+14:54:04 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107444	    224	  60792	 168460	  2920c	base_robot.elf
+Finished building: default.size.stdout
+ 
+15:40:22 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+16:03:43 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+16:06:40 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107076	    224	  60792	 168092	  2909c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+16:07:23 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+16:10:05 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+16:10:23 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+16:10:38 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+16:10:53 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+16:11:05 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+16:11:45 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-size   base_robot.elf 
+   text	   data	    bss	    dec	    hex	filename
+ 107092	    224	  60792	 168108	  290ac	base_robot.elf
+Finished building: default.size.stdout
+ 
+16:24:42 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107012	    224	  60792	 168028	  2905c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 
+16:34:38 **** Incremental Build of configuration Debug for project base_robot ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F411xE -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros/microros_include" -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'task_Supervision':
+../Core/Src/main.c:504:13: warning: unused variable 'vl53' [-Wunused-variable]
+  504 |         int vl53 = 0;
+      |             ^~~~
+arm-none-eabi-gcc -o "base_robot.elf" @"objects.list"  -lmicroros -mcpu=cortex-m4 -T"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/STM32F411RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="base_robot.map" -Wl,--gc-sections -static -L"/home/titouan/ENIB/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cubemx_utils/microros_static_library/libmicroros" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: base_robot.elf
+ 
+arm-none-eabi-size   base_robot.elf 
+arm-none-eabi-objdump -h -S  base_robot.elf  > "base_robot.list"
+   text	   data	    bss	    dec	    hex	filename
+ 107044	    224	  60792	 168060	  2907c	base_robot.elf
+Finished building: default.size.stdout
+ 
+Finished building: base_robot.list
+ 

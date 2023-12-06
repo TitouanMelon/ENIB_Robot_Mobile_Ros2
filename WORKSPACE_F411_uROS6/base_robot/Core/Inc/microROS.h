@@ -6,11 +6,11 @@
 	#define CAPTEUR_DIR_TOPIC "capteur/dir"
 	#define ETAT_MODE_TOPIC "etat/mode"
 	#define ETAT_SPEED_TOPIC "etat/speed"
-	#define CAMERA_X_TOPIC "camera/x"
-	#define CAMERA_Y_TOPIC "camera/y"
-	#define TELECOMMANDE_DIR_TOPIC "telecommande/dir"
-	#define CONFIG_MODE_TOPIC "config/mode"
-	#define CONFIG_SPEED_TOPIC "config/speed"
+	#define CAMERA_X_TOPIC "camera/X"
+	#define CAMERA_Y_TOPIC "camera/Y"
+	#define TELECOMMANDE_DIR_TOPIC "direction" //"telecommande/dir"
+	#define CONFIG_MODE_TOPIC "mode" //"config/mode"
+	#define CONFIG_SPEED_TOPIC "speed" //"config/speed"
 
 	void createPublisher(rcl_publisher_t* publisher,
 			  const rcl_node_t* node,
