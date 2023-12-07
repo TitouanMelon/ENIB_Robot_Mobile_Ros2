@@ -1,4 +1,9 @@
-// https://github.com/lFatality/stm32_micro_ros_setup
+/**
+ * @mainpage main.c
+ * @author titouan melon
+ * @file main.c
+ * @brief file that contain the main code
+ */
 #include "main.h"
 
 #include "motorCommand.h"
@@ -6,8 +11,6 @@
 #include "captDistIR.h"
 #include "VL53L0X.h"
 #include "groveLCD.h"
-
-#define SAMPLING_PERIOD_ms 5
 
 extern UART_HandleTypeDef huart1;
 extern UART_HandleTypeDef huart2;
@@ -26,101 +29,122 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 
-//#######################################################
-#define EXSTARTUP 0 //Kerhoas code
-#define EXTEST_UART2 1 //Just printf and scanf fonction
-#define EXCORRECTOR 2
-#define EXTESTCORRECTOR 3
-#define EXTEST_VL53 4 //send value of VL53 captor on uart2
-#define EXTEST_MICROROS 5 //Test send and receive Int32 msg
-#define EXFINAL 6 //final code
-
-#define SYNCHRO_EX EXFINAL
-
+/** enumerate mode of robot */
 enum {MODE_OBS, MODE_ZIG, MODE_CAM, LAST_MODE};
+/** enumerate speed */
 enum {STOP_VIT, LOW, FAST, SONIC, LAST_SPEED};
+/** enumerate direction */
 enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GAUCHE, RECULE_DROITE, LAST_DIR};
 
-#define DEFAULT_MODE MODE_ZIG
-#define DEFAULT_SPEED LOW
-#define DEFAULT_DIR STOP
 
-#define ROS_DOMAIN_ID 0
-#define NB 200
-#define TEST_CORRECTOR_DUTY 150
-#define TEST_CORRECTOR_SPEEDL -100
-#define TEST_CORRECTOR_SPEEDR -100
-#define TEST_LEFT_MOTOR 1
-//#######################################################
-#define LCD 0
-#define VL53 0
-#define MICROROS 1
-#define DEBUG_PRINTF 0
-#define DEBUG_MOTOR 0
-//#######################################################
-#define CMD 1000
-#define VITESSE_KART CMD/2
-#define VITESSE_OBS CMD
-#define VITESSE_CAM CMD/3
-//#######################################################
-#define CAMERA_X_MIN 0
-#define CAMERA_X_MAX 640
-#define CAMERA_Y_MIN 0
-#define CAMERA_Y_MAX 480
-#define CAMERA_X_TIER (CAMERA_X_MAX-CAMERA_X_MIN)/3
-#define CAMERA_Y_TIER (CAMERA_Y_MAX-CAMERA_Y_MIN)/3
-//#######################################################
-#define Te 5
+#define SAMPLING_PERIOD_ms 5 /**< Define the delay beetween two execution of the same task */
+/**@{ @name config exo */
+#define EXSTARTUP 0 /**< startup code */
+#define EXTEST_UART2 1 /**< Just printf and scanf fonction */
+#define EXCORRECTOR 2 /**< */
+#define EXTESTCORRECTOR 3 /**< */
+#define EXTEST_VL53 4 /**< send value of VL53 captor on uart2 */
+#define EXTEST_MICROROS 5 /**< Test send and receive Int32 msg */
+#define EXFINAL 6 /**< final code */
 
-#define LKp 0.001
-#define LKi (5.0/(0.1*40.0))
-
-#define RKp 0.001
-#define RKi (5.0/(0.1*40.0))
-//#######################################################
+#define SYNCHRO_EX EXFINAL /**< use to choose wich fonction are called */
+/** @} */
+/** @{ @name config robot */
+#define ROS_DOMAIN_ID 0 /**< */
+#define LCD 0 /**< */
+#define VL53 0 /**< */
+#define MICROROS 1 /**< */
+#define DEBUG_PRINTF 0 /**< */
+#define DEBUG_MOTOR 0 /**< */
+/** @} */
+/** @{ @name config correcteur */
+#define Te SAMPLING_PERIOD_ms /**< */
+#define LKp 0.001 /**< */
+#define LKi (5.0/(0.1*40.0)) /**< */
+#define RKp 0.001 /**< */
+#define RKi (5.0/(0.1*40.0)) /**< */
+/** @} */
+/** @{ @name config default speed for each mode */
+#define CMD 1000 /**< */
+#define VITESSE_KART CMD/2 /**< */
+#define VITESSE_OBS CMD /**< */
+#define VITESSE_CAM CMD/3 /**< */
+/** @} */
+/** @{ @name config camera settings */
+#define CAMERA_X_MIN 0 /**< */
+#define CAMERA_X_MAX 640 /**< */
+#define CAMERA_Y_MIN 0 /**< */
+#define CAMERA_Y_MAX 480 /**< */
+#define CAMERA_X_TIER (CAMERA_X_MAX-CAMERA_X_MIN)/3 /**< */
+#define CAMERA_Y_TIER (CAMERA_Y_MAX-CAMERA_Y_MIN)/3 /**< */
+/** @} */
+/** @{ @name config default behaviour */
+#define DEFAULT_MODE MODE_ZIG /**< */
+#define DEFAULT_SPEED LOW /**< */
+#define DEFAULT_DIR STOP /**< */
+/** @} */
+/** @{ @name config test value */
+#define NB 200 /**< */
+#define TEST_CORRECTOR_DUTY 150 /**< */
+#define TEST_CORRECTOR_SPEEDL -100 /**< */
+#define TEST_CORRECTOR_SPEEDR -100 /**< */
+#define TEST_LEFT_MOTOR 1 /**< */
+/** @} */
 
 // Déclaration des objets synchronisants !! Ne pas oublier de les créer
-xSemaphoreHandle xSem_Supervision = NULL;
-xSemaphoreHandle xSem_MicroRos = NULL;
-xQueueHandle q_mot_L = NULL;
-xQueueHandle q_mot_R = NULL;
+/** @{ @name semaphore */
+xSemaphoreHandle xSem_Supervision = NULL; /**< */
+/** @} */
+/** @{ @name queueHandle */
+xQueueHandle q_mot_L = NULL; /**< */
+xQueueHandle q_mot_R = NULL; /**< */
+xQueueHandle qhMR_sub = NULL; /**< */
+xQueueHandle qhMR_pub = NULL; /**< */
+xQueueHandle qhLCD = NULL; /**< */
+xQueueHandle qhVl53 = NULL; /**< */
+/** @} */
 
-xQueueHandle qhMR_sub = NULL;
-xQueueHandle qhMR_pub = NULL;
-xQueueHandle qhLCD = NULL;
-xQueueHandle qhVl53 = NULL;
+int16_t tab_speed[NB]; /**< use to store speed of motor during test part */
 
-int16_t tab_speed[NB];
-
-typedef struct AMessage AMessage;
-struct AMessage
+/** @{ @name queue messages structures */
+/**
+ * Use to send data to lcd's task
+ */
+typedef struct
 {
-	char command;
-	int data;
-};
+	char command; /**< char that represente direction */
+	int data; /**< int represent the mode */
+} AMessage;
 
-typedef struct MicroRosPubMsg MicroRosPubMsg;
-struct MicroRosPubMsg
+/**
+ * Use to send data to mr's task
+ */
+typedef struct
 {
-	char dir;
-	int mode;
-	int speed;
-};
-typedef struct MicroRosSubMsg MicroRosSubMsg;
-struct MicroRosSubMsg
-{
-	int dir;
-	int x;
-	int y;
-	int mode;
-	int speed;
-};
+	char dir; /**< a char contain direction */
+	int mode; /**< an int contain mode */
+	int speed; /**< a int contain speed */
+} MicroRosPubMsg;
 
-//Test function
+/**
+ * Use to send data to decision's task
+ */
+typedef struct
+{
+	int dir; /**< tel dir */
+	int x; /**< cam x pos */
+	int y; /**< cam y pos */
+	int mode; /**< config mode */
+	int speed; /**< config speed */
+} MicroRosSubMsg;
+/** @} */
+
+/** @{ @name Test function */
 void test_print_uart2(void *pvParameters);
 void test_vl53(void *pvParameters);
 void test_motor(void *pvParameters);
 void test_correcteur(void *pvParameters);
+/** @} */
 
 //Robot function
 void SystemClock_Config(void);
@@ -136,11 +160,18 @@ void microros_deallocate(void * pointer, void * state);
 void * microros_reallocate(void * pointer, size_t size, void * state);
 void * microros_zero_allocate(size_t number_of_elements, size_t size_of_element, void * state);
 
-
+/** check if microRos function success else print msg in console
+ * @param ret return value of microRos function
+ * @param msg message to print if fail
+ */
 void CHECKMRRET(rcl_ret_t ret, char* msg){
 	if (ret != RCL_RET_OK){ printf("Error : %d\r\nMsg : %s\r\n", (int)ret, msg); }
 }
 
+/**
+ * callback call when a message is receive
+ * @param message receive
+ */
 void SubscriberCallbackFunction(const void *msgin){
 #if SYNCHRO_EX == EXTEST_MICROROS
 	std_msgs__msg__String * msg = (std_msgs__msg__String * )msgin;
@@ -152,7 +183,11 @@ void SubscriberCallbackFunction(const void *msgin){
 }
 
 
-
+// https://github.com/lFatality/stm32_micro_ros_setup
+/**
+ * task microRos : create node, subscribers and pulishers and
+ * exploit them
+ */
 void microros_task(void *argument)
 {
 	// micro-ROS app variable
