@@ -1,0 +1,111 @@
+\doxysection{retarget.\+c}
+\hypertarget{retarget_8c_source}{}\label{retarget_8c_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/retarget.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/retarget.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00001}00001\ \textcolor{comment}{//\ All\ credit\ to\ Carmine\ Noviello\ for\ this\ code}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00002}00002\ \textcolor{comment}{//\ https://github.com/cnoviello/mastering-\/stm32/blob/master/nucleo-\/f030R8/system/src/retarget/retarget.c}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <\_ansi.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ <\_syslist.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <errno.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <sys/time.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <sys/times.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <limits.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <signal.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <../Inc/retarget.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00015}00015\ \textcolor{preprocessor}{\#if\ !defined(OS\_USE\_SEMIHOSTING)}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00017}00017\ \textcolor{preprocessor}{\#define\ STDIN\_FILENO\ \ 0}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00018}00018\ \textcolor{preprocessor}{\#define\ STDOUT\_FILENO\ 1}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00019}00019\ \textcolor{preprocessor}{\#define\ STDERR\_FILENO\ 2}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00021}00021\ UART\_HandleTypeDef\ *gHuart;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00023}00023\ \textcolor{keywordtype}{void}\ RetargetInit(UART\_HandleTypeDef\ *huart)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00024}00024\ \ \ gHuart\ =\ huart;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00026}00026\ \ \ \textcolor{comment}{/*\ Disable\ I/O\ buffering\ for\ STDOUT\ stream,\ so\ that}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00027}00027\ \textcolor{comment}{\ \ \ *\ chars\ are\ sent\ out\ as\ soon\ as\ they\ are\ printed.\ */}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00028}00028\ \ \ setvbuf(stdout,\ NULL,\ \_IONBF,\ 0);}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00031}00031\ \textcolor{keywordtype}{int}\ \_isatty(\textcolor{keywordtype}{int}\ fd)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00032}00032\ \ \ \textcolor{keywordflow}{if}\ (fd\ >=\ STDIN\_FILENO\ \&\&\ fd\ <=\ STDERR\_FILENO)}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00035}00035\ \ \ errno\ =\ EBADF;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00036}00036\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00039}00039\ \textcolor{keywordtype}{int}\ \_write(\textcolor{keywordtype}{int}\ fd,\ \textcolor{keywordtype}{char}*\ ptr,\ \textcolor{keywordtype}{int}\ len)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00040}00040\ \ \ HAL\_StatusTypeDef\ hstatus;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00042}00042\ \ \ \textcolor{keywordflow}{if}\ (fd\ ==\ STDOUT\_FILENO\ ||\ fd\ ==\ STDERR\_FILENO)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00043}00043\ \ \ \ \ hstatus\ =\ HAL\_UART\_Transmit(gHuart,\ (uint8\_t\ *)\ ptr,\ len,\ HAL\_MAX\_DELAY);}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00044}00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (hstatus\ ==\ HAL\_OK)}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00045}00045\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ len;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00047}00047\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EIO;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00048}00048\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00049}00049\ \ \ errno\ =\ EBADF;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00050}00050\ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00051}00051\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00053}00053\ \textcolor{keywordtype}{int}\ \_close(\textcolor{keywordtype}{int}\ fd)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00054}00054\ \ \ \textcolor{keywordflow}{if}\ (fd\ >=\ STDIN\_FILENO\ \&\&\ fd\ <=\ STDERR\_FILENO)}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00057}00057\ \ \ errno\ =\ EBADF;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00058}00058\ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00059}00059\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00061}00061\ \textcolor{keywordtype}{int}\ \_lseek(\textcolor{keywordtype}{int}\ fd,\ \textcolor{keywordtype}{int}\ ptr,\ \textcolor{keywordtype}{int}\ dir)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00062}00062\ \ \ (void)\ fd;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00063}00063\ \ \ (void)\ ptr;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00064}00064\ \ \ (void)\ dir;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00066}00066\ \ \ errno\ =\ EBADF;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00067}00067\ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00070}00070\ \textcolor{keywordtype}{int}\ \_read(\textcolor{keywordtype}{int}\ fd,\ \textcolor{keywordtype}{char}*\ ptr,\ \textcolor{keywordtype}{int}\ len)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00071}00071\ \ \ HAL\_StatusTypeDef\ hstatus;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00073}00073\ \ \ \textcolor{keywordflow}{if}\ (fd\ ==\ STDIN\_FILENO)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00074}00074\ \ \ \ \ hstatus\ =\ HAL\_UART\_Receive(gHuart,\ (uint8\_t\ *)\ ptr,\ 1,\ HAL\_MAX\_DELAY);}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{if}\ (hstatus\ ==\ HAL\_OK)}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00076}00076\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00078}00078\ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ EIO;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00079}00079\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00080}00080\ \ \ errno\ =\ EBADF;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00081}00081\ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00084}00084\ \textcolor{keywordtype}{int}\ \_fstat(\textcolor{keywordtype}{int}\ fd,\ \textcolor{keyword}{struct}\ stat*\ st)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00085}00085\ \ \ \textcolor{keywordflow}{if}\ (fd\ >=\ STDIN\_FILENO\ \&\&\ fd\ <=\ STDERR\_FILENO)\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00086}00086\ \ \ \ \ st-\/>st\_mode\ =\ S\_IFCHR;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00087}00087\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00088}00088\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00090}00090\ \ \ errno\ =\ EBADF;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00091}00091\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00094}00094\ \textcolor{keywordtype}{int}\ \_getpid(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00095}00095\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00096}00096\ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00099}00099\ \textcolor{keywordtype}{int}\ \_kill(\textcolor{keywordtype}{int}\ pid,\ \textcolor{keywordtype}{int}\ sig)}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00100}00100\ \{}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00101}00101\ \ \ \ \ errno\ =\ EINVAL;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00103}00103\ \}}
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{retarget_8c_source_l00105}00105\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\#if\ !defined(OS\_USE\_SEMIHOSTING)}}
+
+\end{DoxyCode}

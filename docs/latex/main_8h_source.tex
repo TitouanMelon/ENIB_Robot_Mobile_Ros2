@@ -1,0 +1,118 @@
+\doxysection{main.\+h}
+\hypertarget{main_8h_source}{}\label{main_8h_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/main.h@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/main.h}}
+\mbox{\hyperlink{main_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00001}00001\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Header\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00045}00045\ \textcolor{comment}{/*\ USER\ CODE\ END\ Header\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00047}00047\ \textcolor{comment}{/*\ Define\ to\ prevent\ recursive\ inclusion\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00048}00048\ \textcolor{preprocessor}{\#ifndef\ \_\_MAIN\_H}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00049}00049\ \textcolor{preprocessor}{\#define\ \_\_MAIN\_H}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00051}00051\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00052}00052\ \textcolor{keyword}{extern}\ \textcolor{stringliteral}{"{}C"{}}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00053}00053\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00055}00055\ \textcolor{comment}{/*\ Includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00056}00056\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00058}00058\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00059}00059\ \textcolor{preprocessor}{\#include\ <rcl/rcl.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00060}00060\ \textcolor{preprocessor}{\#include\ <rcl/error\_handling.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00061}00061\ \textcolor{preprocessor}{\#include\ <rclc/rclc.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00062}00062\ \textcolor{preprocessor}{\#include\ <rclc/executor.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00063}00063\ \textcolor{preprocessor}{\#include\ <uxr/client/transport.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00064}00064\ \textcolor{preprocessor}{\#include\ <rmw\_microxrcedds\_c/config.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00065}00065\ \textcolor{preprocessor}{\#include\ <rmw\_microros/rmw\_microros.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00067}00067\ \textcolor{preprocessor}{\#include\ <std\_msgs/msg/int32.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00068}00068\ \textcolor{preprocessor}{\#include\ <std\_msgs/msg/string.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00069}00069\ \textcolor{preprocessor}{\#include\ <std\_msgs/msg/header.h>}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00071}00071\ \textcolor{preprocessor}{\#include\ "{}FreeRTOS.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00072}00072\ \textcolor{preprocessor}{\#include\ "{}task.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00073}00073\ \textcolor{preprocessor}{\#include\ "{}queue.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00074}00074\ \textcolor{preprocessor}{\#include\ "{}semphr.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00076}00076\ \textcolor{preprocessor}{\#include\ "{}systemclock.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00077}00077\ \textcolor{preprocessor}{\#include\ "{}drv\_uart.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00078}00078\ \textcolor{preprocessor}{\#include\ "{}drv\_gpio.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00079}00079\ \textcolor{preprocessor}{\#include\ "{}drv\_i2c.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00080}00080\ \textcolor{preprocessor}{\#include\ "{}cmsis\_os.h"{}}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00082}00082\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{micro_r_o_s_8h}{microROS.h}}"{}}\ \textcolor{comment}{//Custom\ microRos\ utils}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00083}00083\ \textcolor{preprocessor}{\#include\ "{}retarget.h"{}}\ \textcolor{comment}{//To\ redirect\ printf\ and\ scanf\ on\ UART2}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00085}00085\ \textcolor{comment}{/*\ Private\ includes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00086}00086\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Includes\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00088}00088\ \textcolor{comment}{/*\ USER\ CODE\ END\ Includes\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00090}00090\ \textcolor{comment}{/*\ Exported\ types\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00091}00091\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ ET\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00093}00093\ \textcolor{comment}{/*\ USER\ CODE\ END\ ET\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00095}00095\ \textcolor{comment}{/*\ Exported\ constants\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00096}00096\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ EC\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00098}00098\ \textcolor{comment}{/*\ USER\ CODE\ END\ EC\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00100}00100\ \textcolor{comment}{/*\ Exported\ macro\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00101}00101\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ EM\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00103}00103\ \textcolor{comment}{/*\ USER\ CODE\ END\ EM\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00104}00104\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00105}00105\ \textcolor{comment}{/*\ Exported\ functions\ prototypes\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00106}00106\ \textcolor{keywordtype}{void}\ Error\_Handler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00108}00108\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ EFP\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00113}00113\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a3f82047e1c93bff73e4db97a19f6ad2e}{CHECKMRRET}}(rcl\_ret\_t\ ret,\ \textcolor{keywordtype}{char}*\ msg);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00119}00119\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_afec8e194407d73381e7dfda42910309d}{SubscriberCallbackFunction}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{void}\ *msgin);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00139}00139\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a5aca40d972a3057895d59e61e0e69678}{microros\_task}}(\textcolor{keywordtype}{void}\ *argument);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00145}00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_aeaf40c2ad14431735bdc8432bf5e57de}{task\_Motor\_Left}}(\textcolor{keywordtype}{void}\ *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00146}00146\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00151}00151\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a81f652726bff3b9832ab014d3fc28d1e}{task\_Motor\_Right}}(\textcolor{keywordtype}{void}\ *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00157}\mbox{\hyperlink{main_8h_a0770d7007222fbff5f97c3ea3b3cbb5c}{00157}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a0770d7007222fbff5f97c3ea3b3cbb5c}{task\_VL53}}(\textcolor{keywordtype}{void}\ *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00167}\mbox{\hyperlink{main_8h_a0437f457b0f155ea2e19c99e841144f4}{00167}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a0437f457b0f155ea2e19c99e841144f4}{task\_Grove\_LCD}}(\textcolor{keywordtype}{void}\ *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00183}00183\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_aa20650615a802a253757e491905b6af9}{task\_Supervision}}(\textcolor{keywordtype}{void}\ *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00187}00187\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a0068220a4432a5ea9b4442d018b706f8}{test\_uart2}}(\textcolor{keywordtype}{void}\ *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00189}00189\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_a03356c29f7343d5cd605bcd3e80e27e0}{test\_vl53}}(\textcolor{keywordtype}{void}\ *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00191}00191\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8h_aac27f033a986ce7ecadc6f9532aa8c3a}{test\_motor}}(\textcolor{keywordtype}{void}\ *pvParameters);}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00211}00211\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8h_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00212}00212\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00213}00213\ \textcolor{comment}{/*\ USER\ CODE\ END\ EFP\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00215}00215\ \textcolor{comment}{/*\ Private\ defines\ -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00216}00216\ \textcolor{preprocessor}{\#define\ B1\_Pin\ GPIO\_PIN\_13}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00217}00217\ \textcolor{preprocessor}{\#define\ B1\_GPIO\_Port\ GPIOC}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00218}00218\ \textcolor{preprocessor}{\#define\ USART\_TX\_Pin\ GPIO\_PIN\_2}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00219}00219\ \textcolor{preprocessor}{\#define\ USART\_TX\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00220}00220\ \textcolor{preprocessor}{\#define\ USART\_RX\_Pin\ GPIO\_PIN\_3}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00221}00221\ \textcolor{preprocessor}{\#define\ USART\_RX\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00222}00222\ \textcolor{preprocessor}{\#define\ LD2\_Pin\ GPIO\_PIN\_5}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00223}00223\ \textcolor{preprocessor}{\#define\ LD2\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00224}00224\ \textcolor{preprocessor}{\#define\ TMS\_Pin\ GPIO\_PIN\_13}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00225}00225\ \textcolor{preprocessor}{\#define\ TMS\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00226}00226\ \textcolor{preprocessor}{\#define\ TCK\_Pin\ GPIO\_PIN\_14}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00227}00227\ \textcolor{preprocessor}{\#define\ TCK\_GPIO\_Port\ GPIOA}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00228}00228\ \textcolor{preprocessor}{\#define\ SWO\_Pin\ GPIO\_PIN\_3}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00229}00229\ \textcolor{preprocessor}{\#define\ SWO\_GPIO\_Port\ GPIOB}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00230}00230\ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ Private\ defines\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00232}00232\ \textcolor{comment}{/*\ USER\ CODE\ END\ Private\ defines\ */}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00234}00234\ \textcolor{preprocessor}{\#ifdef\ \_\_cplusplus}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00235}00235\ \}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00236}00236\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{main_8h_source_l00238}00238\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_MAIN\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

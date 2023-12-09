@@ -1,0 +1,56 @@
+\doxysection{microros\+\_\+allocators.\+c}
+\hypertarget{microros__allocators_8c_source}{}\label{microros__allocators_8c_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microros\_allocators.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microros\_allocators.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}cmsis\_os.h"{}}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00005}00005\ \textcolor{keywordtype}{int}\ absoluteUsedMemory\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00006}00006\ \textcolor{keywordtype}{int}\ usedMemory\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00008}00008\ \textcolor{keywordtype}{void}\ *pvPortMallocMicroROS(\ \textcolor{keywordtype}{size\_t}\ xWantedSize\ );}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00009}00009\ \textcolor{keywordtype}{void}\ vPortFreeMicroROS(\ \textcolor{keywordtype}{void}\ *pv\ );}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00010}00010\ \textcolor{keywordtype}{void}\ *pvPortReallocMicroROS(\ \textcolor{keywordtype}{void}\ *pv,\ \textcolor{keywordtype}{size\_t}\ xWantedSize\ );}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00011}00011\ \textcolor{keywordtype}{size\_t}\ getBlockSize(\ \textcolor{keywordtype}{void}\ *pv\ );}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00012}00012\ \textcolor{keywordtype}{void}\ *pvPortCallocMicroROS(\ \textcolor{keywordtype}{size\_t}\ num,\ \textcolor{keywordtype}{size\_t}\ xWantedSize\ );}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00014}00014\ \textcolor{keywordtype}{void}\ *\ microros\_allocate(\textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keywordtype}{void}\ *\ state)\{}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00015}00015\ \ \ (void)\ state;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00016}00016\ \ \ \textcolor{comment}{//\ printf("{}-\/-\/\ Alloc\ \%d\ (prev:\ \%d\ B)\(\backslash\)n"{},size,\ xPortGetFreeHeapSize());}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00017}00017\ \ \ absoluteUsedMemory\ +=\ size;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00018}00018\ \ \ usedMemory\ +=\ size;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00019}00019\ \ \ \textcolor{keywordflow}{return}\ pvPortMallocMicroROS(size);}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00022}00022\ \textcolor{keywordtype}{void}\ microros\_deallocate(\textcolor{keywordtype}{void}\ *\ pointer,\ \textcolor{keywordtype}{void}\ *\ state)\{}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00023}00023\ \ \ (void)\ state;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00024}00024\ \ \ \textcolor{comment}{//\ printf("{}-\/-\/\ Free\ \%d\ (prev:\ \%d\ B)\(\backslash\)n"{},getBlockSize(pointer),\ xPortGetFreeHeapSize());}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00025}00025\ \ \ \textcolor{keywordflow}{if}\ (NULL\ !=\ pointer)\{}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00026}00026\ \ \ \ \ usedMemory\ -\/=\ getBlockSize(pointer);}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00027}00027\ \ \ \ \ vPortFreeMicroROS(pointer);}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00028}00028\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00031}00031\ \textcolor{keywordtype}{void}\ *\ microros\_reallocate(\textcolor{keywordtype}{void}\ *\ pointer,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keywordtype}{void}\ *\ state)\{}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00032}00032\ \ \ (void)\ state;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00033}00033\ \ \ \textcolor{comment}{//\ printf("{}-\/-\/\ Realloc\ \%d\ -\/>\ \%d\ (prev:\ \%d\ B)\(\backslash\)n"{},getBlockSize(pointer),size,\ xPortGetFreeHeapSize());}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00034}00034\ \ \ absoluteUsedMemory\ +=\ size;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00035}00035\ \ \ usedMemory\ +=\ size;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00036}00036\ \ \ \textcolor{keywordflow}{if}\ (NULL\ ==\ pointer)\{}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ pvPortMallocMicroROS(size);}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00038}00038\ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00039}00039\ \ \ \ \ usedMemory\ -\/=\ getBlockSize(pointer);}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00040}00040\ \ \ \ \ \textcolor{keywordflow}{return}\ pvPortReallocMicroROS(pointer,size);}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00041}00041\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00044}00044\ \textcolor{keywordtype}{void}\ *\ microros\_zero\_allocate(\textcolor{keywordtype}{size\_t}\ number\_of\_elements,\ \textcolor{keywordtype}{size\_t}\ size\_of\_element,\ \textcolor{keywordtype}{void}\ *\ state)\{}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00045}00045\ \ \ (void)\ state;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00046}00046\ \ \ \textcolor{comment}{//\ printf("{}-\/-\/\ Calloc\ \%d\ x\ \%d\ =\ \%d\ -\/>\ (prev:\ \%d\ B)\(\backslash\)n"{},number\_of\_elements,size\_of\_element,\ number\_of\_elements*size\_of\_element,\ xPortGetFreeHeapSize());}}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00047}00047\ \ \ absoluteUsedMemory\ +=\ number\_of\_elements*size\_of\_element;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00048}00048\ \ \ usedMemory\ +=\ number\_of\_elements*size\_of\_element;}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00049}00049\ \ \ \textcolor{keywordflow}{return}\ pvPortCallocMicroROS(number\_of\_elements,size\_of\_element);}
+\DoxyCodeLine{\Hypertarget{microros__allocators_8c_source_l00050}00050\ \}}
+
+\end{DoxyCode}

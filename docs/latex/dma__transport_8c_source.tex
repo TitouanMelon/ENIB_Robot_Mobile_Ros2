@@ -1,0 +1,78 @@
+\doxysection{dma\+\_\+transport.\+c}
+\hypertarget{dma__transport_8c_source}{}\label{dma__transport_8c_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/dma\_transport.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/dma\_transport.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <uxr/client/transport.h>}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00003}00003\ \textcolor{preprocessor}{\#include\ <rmw\_microxrcedds\_c/config.h>}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}cmsis\_os.h"{}}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00011}00011\ \textcolor{preprocessor}{\#include\ <stdbool.h>}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00013}00013\ \textcolor{preprocessor}{\#ifdef\ RMW\_UXRCE\_TRANSPORT\_CUSTOM}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00015}00015\ \textcolor{comment}{//\ -\/-\/-\/\ micro-\/ROS\ Transports\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00016}00016\ \textcolor{preprocessor}{\#define\ UART\_DMA\_BUFFER\_SIZE\ 2048}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00018}00018\ \textcolor{keyword}{static}\ uint8\_t\ dma\_buffer[UART\_DMA\_BUFFER\_SIZE];}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00019}00019\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ dma\_head\ =\ 0,\ dma\_tail\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00021}00021\ \textcolor{keywordtype}{bool}\ cubemx\_transport\_open(\textcolor{keyword}{struct}\ uxrCustomTransport\ *\ transport)\{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00022}00022\ \ \ \ \ UART\_HandleTypeDef\ *\ uart\ =\ (UART\_HandleTypeDef*)\ transport-\/>args;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00023}00023\ \ \ \ \ HAL\_UART\_Receive\_DMA(uart,\ dma\_buffer,\ UART\_DMA\_BUFFER\_SIZE);}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00027}00027\ \textcolor{keywordtype}{bool}\ cubemx\_transport\_close(\textcolor{keyword}{struct}\ uxrCustomTransport\ *\ transport)\{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00028}00028\ \ \ \ \ UART\_HandleTypeDef\ *\ uart\ =\ (UART\_HandleTypeDef*)\ transport-\/>args;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00029}00029\ \ \ \ \ HAL\_UART\_DMAStop(uart);}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00033}00033\ \textcolor{keywordtype}{size\_t}\ cubemx\_transport\_write(\textcolor{keyword}{struct}\ uxrCustomTransport*\ transport,\ uint8\_t\ *\ buf,\ \textcolor{keywordtype}{size\_t}\ len,\ uint8\_t\ *\ err)\{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00034}00034\ \ \ \ \ UART\_HandleTypeDef\ *\ uart\ =\ (UART\_HandleTypeDef*)\ transport-\/>args;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00036}00036\ \ \ \ \ HAL\_StatusTypeDef\ ret;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{if}\ (uart-\/>gState\ ==\ HAL\_UART\_STATE\_READY)\{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ ret\ =\ HAL\_UART\_Transmit\_DMA(uart,\ buf,\ len);}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (ret\ ==\ HAL\_OK\ \&\&\ uart-\/>gState\ !=\ HAL\_UART\_STATE\_READY)\{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ osDelay(1);}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (ret\ ==\ HAL\_OK)\ ?\ len\ :\ 0;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00044}00044\ \ \ \ \ \}\textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00046}00046\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00049}00049\ \textcolor{keywordtype}{size\_t}\ cubemx\_transport\_read(\textcolor{keyword}{struct}\ uxrCustomTransport*\ transport,\ uint8\_t*\ buf,\ \textcolor{keywordtype}{size\_t}\ len,\ \textcolor{keywordtype}{int}\ timeout,\ uint8\_t*\ err)\{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00050}00050\ \ \ \ \ UART\_HandleTypeDef\ *\ uart\ =\ (UART\_HandleTypeDef*)\ transport-\/>args;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{int}\ ms\_used\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00054}00054\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ \_\_disable\_irq();}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ dma\_tail\ =\ UART\_DMA\_BUFFER\_SIZE\ -\/\ \_\_HAL\_DMA\_GET\_COUNTER(uart-\/>hdmarx);}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ \_\_enable\_irq();}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ ms\_used++;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00059}00059\ \ \ \ \ \ \ \ \ osDelay(portTICK\_RATE\_MS);}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00060}00060\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (dma\_head\ ==\ dma\_tail\ \&\&\ ms\_used\ <\ timeout);}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00061}00061\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ wrote\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00063}00063\ \ \ \ \ \textcolor{keywordflow}{while}\ ((dma\_head\ !=\ dma\_tail)\ \&\&\ (wrote\ <\ len))\{}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00064}00064\ \ \ \ \ \ \ \ \ buf[wrote]\ =\ dma\_buffer[dma\_head];}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00065}00065\ \ \ \ \ \ \ \ \ dma\_head\ =\ (dma\_head\ +\ 1)\ \%\ UART\_DMA\_BUFFER\_SIZE;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00066}00066\ \ \ \ \ \ \ \ \ wrote++;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{return}\ wrote;}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00071}00071\ }
+\DoxyCodeLine{\Hypertarget{dma__transport_8c_source_l00072}00072\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//RMW\_UXRCE\_TRANSPORT\_CUSTOM}}
+
+\end{DoxyCode}

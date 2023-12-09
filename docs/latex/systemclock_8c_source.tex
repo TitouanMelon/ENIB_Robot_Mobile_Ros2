@@ -1,0 +1,49 @@
+\doxysection{systemclock.\+c}
+\hypertarget{systemclock_8c_source}{}\label{systemclock_8c_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/systemclock.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/systemclock.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00002}00002\ \textcolor{comment}{\ *\ systemclock.c}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Mar\ 13,\ 2023}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ kerhoas}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00011}\mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{00011}}\ \textcolor{keywordtype}{void}\ SystemClock\_Config(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00013}00013\ \ \ RCC\_OscInitTypeDef\ RCC\_OscInitStruct\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00014}00014\ \ \ RCC\_ClkInitTypeDef\ RCC\_ClkInitStruct\ =\ \{0\};}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00018}00018\ \ \ \_\_HAL\_RCC\_PWR\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00019}00019\ \ \ \_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG(PWR\_REGULATOR\_VOLTAGE\_SCALE1);}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00024}00024\ \ \ RCC\_OscInitStruct.OscillatorType\ =\ RCC\_OSCILLATORTYPE\_HSE;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00025}00025\ \ \ RCC\_OscInitStruct.HSEState\ =\ RCC\_HSE\_BYPASS;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00026}00026\ \ \ RCC\_OscInitStruct.PLL.PLLState\ =\ RCC\_PLL\_ON;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00027}00027\ \ \ RCC\_OscInitStruct.PLL.PLLSource\ =\ RCC\_PLLSOURCE\_HSE;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00028}00028\ \ \ RCC\_OscInitStruct.PLL.PLLM\ =\ 8;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00029}00029\ \ \ RCC\_OscInitStruct.PLL.PLLN\ =\ 432;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00030}00030\ \ \ RCC\_OscInitStruct.PLL.PLLP\ =\ RCC\_PLLP\_DIV6;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00031}00031\ \ \ RCC\_OscInitStruct.PLL.PLLQ\ =\ 4;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00032}00032\ \ \ \textcolor{keywordflow}{if}\ (HAL\_RCC\_OscConfig(\&RCC\_OscInitStruct)\ !=\ HAL\_OK)}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00033}00033\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00034}00034\ \ \ \ \ Error\_Handler();}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00035}00035\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00039}00039\ \ \ RCC\_ClkInitStruct.ClockType\ =\ RCC\_CLOCKTYPE\_HCLK|RCC\_CLOCKTYPE\_SYSCLK}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ |RCC\_CLOCKTYPE\_PCLK1|RCC\_CLOCKTYPE\_PCLK2;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00041}00041\ \ \ RCC\_ClkInitStruct.SYSCLKSource\ =\ RCC\_SYSCLKSOURCE\_PLLCLK;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00042}00042\ \ \ RCC\_ClkInitStruct.AHBCLKDivider\ =\ RCC\_SYSCLK\_DIV1;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00043}00043\ \ \ RCC\_ClkInitStruct.APB1CLKDivider\ =\ RCC\_HCLK\_DIV4;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00044}00044\ \ \ RCC\_ClkInitStruct.APB2CLKDivider\ =\ RCC\_HCLK\_DIV4;}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00046}00046\ \ \ \textcolor{keywordflow}{if}\ (HAL\_RCC\_ClockConfig(\&RCC\_ClkInitStruct,\ FLASH\_LATENCY\_2)\ !=\ HAL\_OK)}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00047}00047\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00048}00048\ \ \ \ \ Error\_Handler();}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00049}00049\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{systemclock_8c_source_l00050}00050\ \}}
+
+\end{DoxyCode}

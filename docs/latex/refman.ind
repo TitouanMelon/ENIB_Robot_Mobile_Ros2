@@ -1,0 +1,661 @@
+\begin{theindex}
+
+  \item {\_\_attribute\_\_}
+    \subitem {syscalls.c}, \hyperpage{104}
+  \item {\_\_io\_getchar}
+    \subitem {syscalls.c}, \hyperpage{104}
+  \item {\_\_sbrk\_heap\_end}
+    \subitem {sysmem.c}, \hyperpage{111}
+  \item {\_close}
+    \subitem {syscalls.c}, \hyperpage{105}
+  \item {\_execve}
+    \subitem {syscalls.c}, \hyperpage{105}
+  \item {\_exit}
+    \subitem {syscalls.c}, \hyperpage{105}
+  \item {\_fork}
+    \subitem {syscalls.c}, \hyperpage{105}
+  \item {\_fstat}
+    \subitem {syscalls.c}, \hyperpage{105}
+  \item {\_getpid}
+    \subitem {syscalls.c}, \hyperpage{105}
+  \item {\_isatty}
+    \subitem {syscalls.c}, \hyperpage{106}
+  \item {\_kill}
+    \subitem {syscalls.c}, \hyperpage{106}
+  \item {\_link}
+    \subitem {syscalls.c}, \hyperpage{106}
+  \item {\_lseek}
+    \subitem {syscalls.c}, \hyperpage{106}
+  \item {\_open}
+    \subitem {syscalls.c}, \hyperpage{106}
+  \item {\_sbrk}
+    \subitem {sysmem.c}, \hyperpage{110}
+  \item {\_stat}
+    \subitem {syscalls.c}, \hyperpage{106}
+  \item {\_times}
+    \subitem {syscalls.c}, \hyperpage{107}
+  \item {\_unlink}
+    \subitem {syscalls.c}, \hyperpage{107}
+  \item {\_wait}
+    \subitem {syscalls.c}, \hyperpage{107}
+
+  \indexspace
+
+  \item {ambientCnt}
+    \subitem {statInfo\_t}, \hyperpage{13}
+  \item {AMessage}, \hyperpage{7}
+    \subitem {command}, \hyperpage{7}
+    \subitem {data}, \hyperpage{7}
+  \item {ARRAY\_LEN}
+    \subitem {microROS.h}, \hyperpage{30}
+
+  \indexspace
+
+  \item {B1\_GPIO\_Port}
+    \subitem {main.h}, \hyperpage{22}
+  \item {B1\_Pin}
+    \subitem {main.h}, \hyperpage{22}
+  \item {BusFault\_Handler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{39}
+
+  \indexspace
+
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/captDistIR.h}, 
+		\hyperpage{15}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/config.h}, 
+		\hyperpage{15}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/drv\_gpio.h}, 
+		\hyperpage{16}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/drv\_i2c.h}, 
+		\hyperpage{16}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/drv\_uart.h}, 
+		\hyperpage{17}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/FreeRTOSConfig.h}, 
+		\hyperpage{17}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/groveLCD.h}, 
+		\hyperpage{19}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/main.h}, 
+		\hyperpage{20}, \hyperpage{28}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/microROS.h}, 
+		\hyperpage{29}, \hyperpage{32}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/motorCommand.h}, 
+		\hyperpage{33}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/quadEncoder.h}, 
+		\hyperpage{33}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/retarget.h}, 
+		\hyperpage{33}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/stm32f4xx\_hal\_conf.h}, 
+		\hyperpage{34}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/stm32f4xx\_it.h}, 
+		\hyperpage{39}, \hyperpage{41}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/systemclock.h}, 
+		\hyperpage{42}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/util.h}, 
+		\hyperpage{42}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/VL53L0X.h}, 
+		\hyperpage{42}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/captDistIR.c}, 
+		\hyperpage{46}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/dma\_transport.c}, 
+		\hyperpage{47}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/drv\_gpio.c}, 
+		\hyperpage{48}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/drv\_i2c.c}, 
+		\hyperpage{49}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/drv\_uart.c}, 
+		\hyperpage{51}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/freertos.c}, 
+		\hyperpage{52}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/groveLCD.c}, 
+		\hyperpage{53}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/main.c}, 
+		\hyperpage{57}, \hyperpage{74}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microROS.c}, 
+		\hyperpage{85}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microros\_allocators.c}, 
+		\hyperpage{86}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microros\_time.c}, 
+		\hyperpage{87}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/motorCommand.c}, 
+		\hyperpage{87}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/quadEncoder.c}, 
+		\hyperpage{88}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/retarget.c}, 
+		\hyperpage{92}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/stm32f4xx\_hal\_msp.c}, 
+		\hyperpage{93}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/stm32f4xx\_hal\_timebase\_tim.c}, 
+		\hyperpage{98}, \hyperpage{100}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/stm32f4xx\_it.c}, 
+		\hyperpage{102}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/syscalls.c}, 
+		\hyperpage{103}, \hyperpage{108}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/sysmem.c}, 
+		\hyperpage{109}, \hyperpage{111}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/systemclock.c}, 
+		\hyperpage{111}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/util.c}, 
+		\hyperpage{112}
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/VL53L0X.c}, 
+		\hyperpage{114}
+  \item {CAMERA\_X\_MAX}
+    \subitem {main.c}, \hyperpage{60}
+  \item {CAMERA\_X\_MIN}
+    \subitem {main.c}, \hyperpage{60}
+  \item {CAMERA\_X\_TOPIC}
+    \subitem {microROS.h}, \hyperpage{30}
+  \item {CAMERA\_Y\_MAX}
+    \subitem {main.c}, \hyperpage{60}
+  \item {CAMERA\_Y\_MIN}
+    \subitem {main.c}, \hyperpage{60}
+  \item {CAMERA\_Y\_TOPIC}
+    \subitem {microROS.h}, \hyperpage{30}
+  \item {CAPTEUR\_DIR\_TOPIC}
+    \subitem {microROS.h}, \hyperpage{30}
+  \item {CHECKMRRET}
+    \subitem {main.c}, \hyperpage{66}
+    \subitem {main.h}, \hyperpage{23}
+  \item {CMD}
+    \subitem {main.c}, \hyperpage{60}
+  \item {command}
+    \subitem {AMessage}, \hyperpage{7}
+  \item {CONFIG\_MODE\_TOPIC}
+    \subitem {microROS.h}, \hyperpage{30}
+  \item {CONFIG\_SPEED\_TOPIC}
+    \subitem {microROS.h}, \hyperpage{31}
+  \item {createPublisher}
+    \subitem {microROS.h}, \hyperpage{31}
+  \item {createSubscriber}
+    \subitem {microROS.h}, \hyperpage{32}
+
+  \indexspace
+
+  \item {data}
+    \subitem {AMessage}, \hyperpage{7}
+  \item {DEBUG\_MOTOR}
+    \subitem {main.c}, \hyperpage{61}
+  \item {DEBUG\_PRINTF}
+    \subitem {main.c}, \hyperpage{61}
+  \item {DebugMon\_Handler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{39}
+  \item {DEFAULT\_DIR}
+    \subitem {main.c}, \hyperpage{61}
+  \item {DEFAULT\_MODE}
+    \subitem {main.c}, \hyperpage{61}
+  \item {DEFAULT\_SPEED}
+    \subitem {main.c}, \hyperpage{61}
+  \item {defaultTask\_attributes}
+    \subitem {main.c}, \hyperpage{72}
+  \item {defaultTaskHandle}
+    \subitem {main.c}, \hyperpage{72}
+  \item {dir}
+    \subitem {MicroRosPubMsg}, \hyperpage{8}
+    \subitem {MicroRosSubMsg}, \hyperpage{9}
+  \item {DMA1\_Stream5\_IRQHandler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{40}
+  \item {DMA1\_Stream6\_IRQHandler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{40}
+  \item {DMA2\_Stream2\_IRQHandler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{40}
+  \item {DMA2\_Stream7\_IRQHandler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{40}
+  \item {dss}
+    \subitem {SequenceStepEnables}, \hyperpage{10}
+
+  \indexspace
+
+  \item {environ}
+    \subitem {syscalls.c}, \hyperpage{107}
+  \item {Error\_Handler}
+    \subitem {main.c}, \hyperpage{67}
+    \subitem {main.h}, \hyperpage{24}
+  \item {ETAT\_MODE\_TOPIC}
+    \subitem {microROS.h}, \hyperpage{31}
+  \item {ETAT\_SPEED\_TOPIC}
+    \subitem {microROS.h}, \hyperpage{31}
+  \item {EXCORRECTOR}
+    \subitem {main.c}, \hyperpage{61}
+  \item {EXFINAL}
+    \subitem {main.c}, \hyperpage{62}
+  \item {EXSTARTUP}
+    \subitem {main.c}, \hyperpage{62}
+  \item {EXTEST\_MICROROS}
+    \subitem {main.c}, \hyperpage{62}
+  \item {EXTEST\_UART2}
+    \subitem {main.c}, \hyperpage{62}
+  \item {EXTEST\_VL53}
+    \subitem {main.c}, \hyperpage{62}
+  \item {EXTESTCORRECTOR}
+    \subitem {main.c}, \hyperpage{62}
+
+  \indexspace
+
+  \item {final\_range}
+    \subitem {SequenceStepEnables}, \hyperpage{10}
+  \item {final\_range\_mclks}
+    \subitem {SequenceStepTimeouts}, \hyperpage{11}
+  \item {final\_range\_us}
+    \subitem {SequenceStepTimeouts}, \hyperpage{11}
+  \item {final\_range\_vcsel\_period\_pclks}
+    \subitem {SequenceStepTimeouts}, \hyperpage{11}
+
+  \indexspace
+
+  \item {HAL\_InitTick}
+    \subitem {stm32f4xx\_hal\_timebase\_tim.c}, \hyperpage{99}
+  \item {HAL\_ResumeTick}
+    \subitem {stm32f4xx\_hal\_timebase\_tim.c}, \hyperpage{99}
+  \item {HAL\_SuspendTick}
+    \subitem {stm32f4xx\_hal\_timebase\_tim.c}, \hyperpage{100}
+  \item {HAL\_TIM\_PeriodElapsedCallback}
+    \subitem {main.c}, \hyperpage{67}
+  \item {HardFault\_Handler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{40}
+  \item {hdma\_usart1\_rx}
+    \subitem {main.c}, \hyperpage{72}
+  \item {hdma\_usart1\_tx}
+    \subitem {main.c}, \hyperpage{72}
+  \item {hdma\_usart2\_rx}
+    \subitem {main.c}, \hyperpage{72}
+  \item {hdma\_usart2\_tx}
+    \subitem {main.c}, \hyperpage{72}
+  \item {hi2c1}
+    \subitem {main.c}, \hyperpage{72}
+  \item {htim4}
+    \subitem {stm32f4xx\_hal\_timebase\_tim.c}, \hyperpage{100}
+  \item {huart1}
+    \subitem {main.c}, \hyperpage{72}
+  \item {huart2}
+    \subitem {main.c}, \hyperpage{73}
+
+  \indexspace
+
+  \item {initialise\_monitor\_handles}
+    \subitem {syscalls.c}, \hyperpage{107}
+
+  \indexspace
+
+  \item {LCD}
+    \subitem {main.c}, \hyperpage{63}
+  \item {LD2\_GPIO\_Port}
+    \subitem {main.h}, \hyperpage{22}
+  \item {LD2\_Pin}
+    \subitem {main.h}, \hyperpage{22}
+  \item {LKi}
+    \subitem {main.c}, \hyperpage{63}
+  \item {LKp}
+    \subitem {main.c}, \hyperpage{63}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.c}, \hyperpage{67}
+    \subitem {main.h}, \hyperpage{24}
+  \item {main.c}
+    \subitem {CAMERA\_X\_MAX}, \hyperpage{60}
+    \subitem {CAMERA\_X\_MIN}, \hyperpage{60}
+    \subitem {CAMERA\_Y\_MAX}, \hyperpage{60}
+    \subitem {CAMERA\_Y\_MIN}, \hyperpage{60}
+    \subitem {CHECKMRRET}, \hyperpage{66}
+    \subitem {CMD}, \hyperpage{60}
+    \subitem {DEBUG\_MOTOR}, \hyperpage{61}
+    \subitem {DEBUG\_PRINTF}, \hyperpage{61}
+    \subitem {DEFAULT\_DIR}, \hyperpage{61}
+    \subitem {DEFAULT\_MODE}, \hyperpage{61}
+    \subitem {DEFAULT\_SPEED}, \hyperpage{61}
+    \subitem {defaultTask\_attributes}, \hyperpage{72}
+    \subitem {defaultTaskHandle}, \hyperpage{72}
+    \subitem {Error\_Handler}, \hyperpage{67}
+    \subitem {EXCORRECTOR}, \hyperpage{61}
+    \subitem {EXFINAL}, \hyperpage{62}
+    \subitem {EXSTARTUP}, \hyperpage{62}
+    \subitem {EXTEST\_MICROROS}, \hyperpage{62}
+    \subitem {EXTEST\_UART2}, \hyperpage{62}
+    \subitem {EXTEST\_VL53}, \hyperpage{62}
+    \subitem {EXTESTCORRECTOR}, \hyperpage{62}
+    \subitem {HAL\_TIM\_PeriodElapsedCallback}, \hyperpage{67}
+    \subitem {hdma\_usart1\_rx}, \hyperpage{72}
+    \subitem {hdma\_usart1\_tx}, \hyperpage{72}
+    \subitem {hdma\_usart2\_rx}, \hyperpage{72}
+    \subitem {hdma\_usart2\_tx}, \hyperpage{72}
+    \subitem {hi2c1}, \hyperpage{72}
+    \subitem {huart1}, \hyperpage{72}
+    \subitem {huart2}, \hyperpage{73}
+    \subitem {LCD}, \hyperpage{63}
+    \subitem {LKi}, \hyperpage{63}
+    \subitem {LKp}, \hyperpage{63}
+    \subitem {main}, \hyperpage{67}
+    \subitem {MICROROS}, \hyperpage{63}
+    \subitem {microros\_allocate}, \hyperpage{68}
+    \subitem {microros\_deallocate}, \hyperpage{68}
+    \subitem {microros\_reallocate}, \hyperpage{68}
+    \subitem {microros\_task}, \hyperpage{68}
+    \subitem {microros\_zero\_allocate}, \hyperpage{69}
+    \subitem {NB}, \hyperpage{63}
+    \subitem {q\_mot\_L}, \hyperpage{73}
+    \subitem {q\_mot\_R}, \hyperpage{73}
+    \subitem {qhLCD}, \hyperpage{73}
+    \subitem {qhMR\_pub}, \hyperpage{73}
+    \subitem {qhMR\_sub}, \hyperpage{73}
+    \subitem {qhVl53}, \hyperpage{74}
+    \subitem {RKi}, \hyperpage{63}
+    \subitem {RKp}, \hyperpage{64}
+    \subitem {ROS\_DOMAIN\_ID}, \hyperpage{64}
+    \subitem {SAMPLING\_PERIOD\_ms}, \hyperpage{64}
+    \subitem {SubscriberCallbackFunction}, \hyperpage{69}
+    \subitem {SYNCHRO\_EX}, \hyperpage{64}
+    \subitem {SystemClock\_Config}, \hyperpage{70}
+    \subitem {tab\_speed}, \hyperpage{74}
+    \subitem {task\_Motor\_Left}, \hyperpage{70}
+    \subitem {task\_Motor\_Right}, \hyperpage{70}
+    \subitem {task\_Supervision}, \hyperpage{70}
+    \subitem {Te}, \hyperpage{64}
+    \subitem {TEST\_CORRECTOR\_DUTY}, \hyperpage{64}
+    \subitem {TEST\_CORRECTOR\_SPEEDL}, \hyperpage{65}
+    \subitem {TEST\_CORRECTOR\_SPEEDR}, \hyperpage{65}
+    \subitem {TEST\_LEFT\_MOTOR}, \hyperpage{65}
+    \subitem {test\_motor}, \hyperpage{71}
+    \subitem {test\_uart2}, \hyperpage{71}
+    \subitem {test\_vl53}, \hyperpage{71}
+    \subitem {VITESSE\_CAM}, \hyperpage{65}
+    \subitem {VITESSE\_KART}, \hyperpage{65}
+    \subitem {VITESSE\_OBS}, \hyperpage{65}
+    \subitem {VL53}, \hyperpage{66}
+    \subitem {xSem\_Supervision}, \hyperpage{74}
+  \item {main.h}
+    \subitem {B1\_GPIO\_Port}, \hyperpage{22}
+    \subitem {B1\_Pin}, \hyperpage{22}
+    \subitem {CHECKMRRET}, \hyperpage{23}
+    \subitem {Error\_Handler}, \hyperpage{24}
+    \subitem {LD2\_GPIO\_Port}, \hyperpage{22}
+    \subitem {LD2\_Pin}, \hyperpage{22}
+    \subitem {main}, \hyperpage{24}
+    \subitem {microros\_task}, \hyperpage{24}
+    \subitem {SubscriberCallbackFunction}, \hyperpage{25}
+    \subitem {SWO\_GPIO\_Port}, \hyperpage{22}
+    \subitem {SWO\_Pin}, \hyperpage{22}
+    \subitem {task\_Grove\_LCD}, \hyperpage{25}
+    \subitem {task\_Motor\_Left}, \hyperpage{26}
+    \subitem {task\_Motor\_Right}, \hyperpage{26}
+    \subitem {task\_Supervision}, \hyperpage{26}
+    \subitem {task\_VL53}, \hyperpage{27}
+    \subitem {TCK\_GPIO\_Port}, \hyperpage{22}
+    \subitem {TCK\_Pin}, \hyperpage{22}
+    \subitem {test\_motor}, \hyperpage{27}
+    \subitem {test\_uart2}, \hyperpage{27}
+    \subitem {test\_vl53}, \hyperpage{27}
+    \subitem {TMS\_GPIO\_Port}, \hyperpage{23}
+    \subitem {TMS\_Pin}, \hyperpage{23}
+    \subitem {USART\_RX\_GPIO\_Port}, \hyperpage{23}
+    \subitem {USART\_RX\_Pin}, \hyperpage{23}
+    \subitem {USART\_TX\_GPIO\_Port}, \hyperpage{23}
+    \subitem {USART\_TX\_Pin}, \hyperpage{23}
+  \item {MemManage\_Handler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{40}
+  \item {MICROROS}
+    \subitem {main.c}, \hyperpage{63}
+  \item {microROS.h}
+    \subitem {ARRAY\_LEN}, \hyperpage{30}
+    \subitem {CAMERA\_X\_TOPIC}, \hyperpage{30}
+    \subitem {CAMERA\_Y\_TOPIC}, \hyperpage{30}
+    \subitem {CAPTEUR\_DIR\_TOPIC}, \hyperpage{30}
+    \subitem {CONFIG\_MODE\_TOPIC}, \hyperpage{30}
+    \subitem {CONFIG\_SPEED\_TOPIC}, \hyperpage{31}
+    \subitem {createPublisher}, \hyperpage{31}
+    \subitem {createSubscriber}, \hyperpage{32}
+    \subitem {ETAT\_MODE\_TOPIC}, \hyperpage{31}
+    \subitem {ETAT\_SPEED\_TOPIC}, \hyperpage{31}
+    \subitem {TELECOMMANDE\_DIR\_TOPIC}, \hyperpage{31}
+  \item {microros\_allocate}
+    \subitem {main.c}, \hyperpage{68}
+  \item {microros\_deallocate}
+    \subitem {main.c}, \hyperpage{68}
+  \item {microros\_reallocate}
+    \subitem {main.c}, \hyperpage{68}
+  \item {microros\_task}
+    \subitem {main.c}, \hyperpage{68}
+    \subitem {main.h}, \hyperpage{24}
+  \item {microros\_zero\_allocate}
+    \subitem {main.c}, \hyperpage{69}
+  \item {MicroRosPubMsg}, \hyperpage{8}
+    \subitem {dir}, \hyperpage{8}
+    \subitem {mode}, \hyperpage{8}
+    \subitem {speed}, \hyperpage{8}
+  \item {MicroRosSubMsg}, \hyperpage{9}
+    \subitem {dir}, \hyperpage{9}
+    \subitem {mode}, \hyperpage{9}
+    \subitem {speed}, \hyperpage{9}
+    \subitem {x}, \hyperpage{9}
+    \subitem {y}, \hyperpage{9}
+  \item {mode}
+    \subitem {MicroRosPubMsg}, \hyperpage{8}
+    \subitem {MicroRosSubMsg}, \hyperpage{9}
+  \item {msrc}
+    \subitem {SequenceStepEnables}, \hyperpage{10}
+  \item {msrc\_dss\_tcc\_mclks}
+    \subitem {SequenceStepTimeouts}, \hyperpage{12}
+  \item {msrc\_dss\_tcc\_us}
+    \subitem {SequenceStepTimeouts}, \hyperpage{12}
+
+  \indexspace
+
+  \item {NB}
+    \subitem {main.c}, \hyperpage{63}
+  \item {NMI\_Handler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{40}
+
+  \indexspace
+
+  \item {pre\_range}
+    \subitem {SequenceStepEnables}, \hyperpage{10}
+  \item {pre\_range\_mclks}
+    \subitem {SequenceStepTimeouts}, \hyperpage{12}
+  \item {pre\_range\_us}
+    \subitem {SequenceStepTimeouts}, \hyperpage{12}
+  \item {pre\_range\_vcsel\_period\_pclks}
+    \subitem {SequenceStepTimeouts}, \hyperpage{12}
+
+  \indexspace
+
+  \item {q\_mot\_L}
+    \subitem {main.c}, \hyperpage{73}
+  \item {q\_mot\_R}
+    \subitem {main.c}, \hyperpage{73}
+  \item {qhLCD}
+    \subitem {main.c}, \hyperpage{73}
+  \item {qhMR\_pub}
+    \subitem {main.c}, \hyperpage{73}
+  \item {qhMR\_sub}
+    \subitem {main.c}, \hyperpage{73}
+  \item {qhVl53}
+    \subitem {main.c}, \hyperpage{74}
+
+  \indexspace
+
+  \item {rangeStatus}
+    \subitem {statInfo\_t}, \hyperpage{13}
+  \item {rawDistance}
+    \subitem {statInfo\_t}, \hyperpage{13}
+  \item {RKi}
+    \subitem {main.c}, \hyperpage{63}
+  \item {RKp}
+    \subitem {main.c}, \hyperpage{64}
+  \item {Robot ROS}, \hyperpage{1}
+  \item {ROS\_DOMAIN\_ID}
+    \subitem {main.c}, \hyperpage{64}
+
+  \indexspace
+
+  \item {SAMPLING\_PERIOD\_ms}
+    \subitem {main.c}, \hyperpage{64}
+  \item {SequenceStepEnables}, \hyperpage{10}
+    \subitem {dss}, \hyperpage{10}
+    \subitem {final\_range}, \hyperpage{10}
+    \subitem {msrc}, \hyperpage{10}
+    \subitem {pre\_range}, \hyperpage{10}
+    \subitem {tcc}, \hyperpage{11}
+  \item {SequenceStepTimeouts}, \hyperpage{11}
+    \subitem {final\_range\_mclks}, \hyperpage{11}
+    \subitem {final\_range\_us}, \hyperpage{11}
+    \subitem {final\_range\_vcsel\_period\_pclks}, \hyperpage{11}
+    \subitem {msrc\_dss\_tcc\_mclks}, \hyperpage{12}
+    \subitem {msrc\_dss\_tcc\_us}, \hyperpage{12}
+    \subitem {pre\_range\_mclks}, \hyperpage{12}
+    \subitem {pre\_range\_us}, \hyperpage{12}
+    \subitem {pre\_range\_vcsel\_period\_pclks}, \hyperpage{12}
+  \item {signalCnt}
+    \subitem {statInfo\_t}, \hyperpage{13}
+  \item {spadCnt}
+    \subitem {statInfo\_t}, \hyperpage{13}
+  \item {speed}
+    \subitem {MicroRosPubMsg}, \hyperpage{8}
+    \subitem {MicroRosSubMsg}, \hyperpage{9}
+  \item {statInfo\_t}, \hyperpage{12}
+    \subitem {ambientCnt}, \hyperpage{13}
+    \subitem {rangeStatus}, \hyperpage{13}
+    \subitem {rawDistance}, \hyperpage{13}
+    \subitem {signalCnt}, \hyperpage{13}
+    \subitem {spadCnt}, \hyperpage{13}
+  \item {stm32f4xx\_hal\_timebase\_tim.c}
+    \subitem {HAL\_InitTick}, \hyperpage{99}
+    \subitem {HAL\_ResumeTick}, \hyperpage{99}
+    \subitem {HAL\_SuspendTick}, \hyperpage{100}
+    \subitem {htim4}, \hyperpage{100}
+  \item {stm32f4xx\_it.h}
+    \subitem {BusFault\_Handler}, \hyperpage{39}
+    \subitem {DebugMon\_Handler}, \hyperpage{39}
+    \subitem {DMA1\_Stream5\_IRQHandler}, \hyperpage{40}
+    \subitem {DMA1\_Stream6\_IRQHandler}, \hyperpage{40}
+    \subitem {DMA2\_Stream2\_IRQHandler}, \hyperpage{40}
+    \subitem {DMA2\_Stream7\_IRQHandler}, \hyperpage{40}
+    \subitem {HardFault\_Handler}, \hyperpage{40}
+    \subitem {MemManage\_Handler}, \hyperpage{40}
+    \subitem {NMI\_Handler}, \hyperpage{40}
+    \subitem {UsageFault\_Handler}, \hyperpage{41}
+    \subitem {USART1\_IRQHandler}, \hyperpage{41}
+    \subitem {USART2\_IRQHandler}, \hyperpage{41}
+  \item {SubscriberCallbackFunction}
+    \subitem {main.c}, \hyperpage{69}
+    \subitem {main.h}, \hyperpage{25}
+  \item {SWO\_GPIO\_Port}
+    \subitem {main.h}, \hyperpage{22}
+  \item {SWO\_Pin}
+    \subitem {main.h}, \hyperpage{22}
+  \item {SYNCHRO\_EX}
+    \subitem {main.c}, \hyperpage{64}
+  \item {syscalls.c}
+    \subitem {\_\_attribute\_\_}, \hyperpage{104}
+    \subitem {\_\_io\_getchar}, \hyperpage{104}
+    \subitem {\_close}, \hyperpage{105}
+    \subitem {\_execve}, \hyperpage{105}
+    \subitem {\_exit}, \hyperpage{105}
+    \subitem {\_fork}, \hyperpage{105}
+    \subitem {\_fstat}, \hyperpage{105}
+    \subitem {\_getpid}, \hyperpage{105}
+    \subitem {\_isatty}, \hyperpage{106}
+    \subitem {\_kill}, \hyperpage{106}
+    \subitem {\_link}, \hyperpage{106}
+    \subitem {\_lseek}, \hyperpage{106}
+    \subitem {\_open}, \hyperpage{106}
+    \subitem {\_stat}, \hyperpage{106}
+    \subitem {\_times}, \hyperpage{107}
+    \subitem {\_unlink}, \hyperpage{107}
+    \subitem {\_wait}, \hyperpage{107}
+    \subitem {environ}, \hyperpage{107}
+    \subitem {initialise\_monitor\_handles}, \hyperpage{107}
+  \item {sysmem.c}
+    \subitem {\_\_sbrk\_heap\_end}, \hyperpage{111}
+    \subitem {\_sbrk}, \hyperpage{110}
+  \item {SystemClock\_Config}
+    \subitem {main.c}, \hyperpage{70}
+
+  \indexspace
+
+  \item {tab\_speed}
+    \subitem {main.c}, \hyperpage{74}
+  \item {task\_Grove\_LCD}
+    \subitem {main.h}, \hyperpage{25}
+  \item {task\_Motor\_Left}
+    \subitem {main.c}, \hyperpage{70}
+    \subitem {main.h}, \hyperpage{26}
+  \item {task\_Motor\_Right}
+    \subitem {main.c}, \hyperpage{70}
+    \subitem {main.h}, \hyperpage{26}
+  \item {task\_Supervision}
+    \subitem {main.c}, \hyperpage{70}
+    \subitem {main.h}, \hyperpage{26}
+  \item {task\_VL53}
+    \subitem {main.h}, \hyperpage{27}
+  \item {tcc}
+    \subitem {SequenceStepEnables}, \hyperpage{11}
+  \item {TCK\_GPIO\_Port}
+    \subitem {main.h}, \hyperpage{22}
+  \item {TCK\_Pin}
+    \subitem {main.h}, \hyperpage{22}
+  \item {Te}
+    \subitem {main.c}, \hyperpage{64}
+  \item {TELECOMMANDE\_DIR\_TOPIC}
+    \subitem {microROS.h}, \hyperpage{31}
+  \item {TEST\_CORRECTOR\_DUTY}
+    \subitem {main.c}, \hyperpage{64}
+  \item {TEST\_CORRECTOR\_SPEEDL}
+    \subitem {main.c}, \hyperpage{65}
+  \item {TEST\_CORRECTOR\_SPEEDR}
+    \subitem {main.c}, \hyperpage{65}
+  \item {TEST\_LEFT\_MOTOR}
+    \subitem {main.c}, \hyperpage{65}
+  \item {test\_motor}
+    \subitem {main.c}, \hyperpage{71}
+    \subitem {main.h}, \hyperpage{27}
+  \item {test\_uart2}
+    \subitem {main.c}, \hyperpage{71}
+    \subitem {main.h}, \hyperpage{27}
+  \item {test\_vl53}
+    \subitem {main.c}, \hyperpage{71}
+    \subitem {main.h}, \hyperpage{27}
+  \item {TMS\_GPIO\_Port}
+    \subitem {main.h}, \hyperpage{23}
+  \item {TMS\_Pin}
+    \subitem {main.h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {UsageFault\_Handler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{41}
+  \item {USART1\_IRQHandler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{41}
+  \item {USART2\_IRQHandler}
+    \subitem {stm32f4xx\_it.h}, \hyperpage{41}
+  \item {USART\_RX\_GPIO\_Port}
+    \subitem {main.h}, \hyperpage{23}
+  \item {USART\_RX\_Pin}
+    \subitem {main.h}, \hyperpage{23}
+  \item {USART\_TX\_GPIO\_Port}
+    \subitem {main.h}, \hyperpage{23}
+  \item {USART\_TX\_Pin}
+    \subitem {main.h}, \hyperpage{23}
+
+  \indexspace
+
+  \item {VITESSE\_CAM}
+    \subitem {main.c}, \hyperpage{65}
+  \item {VITESSE\_KART}
+    \subitem {main.c}, \hyperpage{65}
+  \item {VITESSE\_OBS}
+    \subitem {main.c}, \hyperpage{65}
+  \item {VL53}
+    \subitem {main.c}, \hyperpage{66}
+
+  \indexspace
+
+  \item {x}
+    \subitem {MicroRosSubMsg}, \hyperpage{9}
+  \item {xSem\_Supervision}
+    \subitem {main.c}, \hyperpage{74}
+
+  \indexspace
+
+  \item {y}
+    \subitem {MicroRosSubMsg}, \hyperpage{9}
+
+\end{theindex}

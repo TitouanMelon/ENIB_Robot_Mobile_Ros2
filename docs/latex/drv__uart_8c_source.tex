@@ -1,0 +1,72 @@
+\doxysection{drv\+\_\+uart.\+c}
+\hypertarget{drv__uart_8c_source}{}\label{drv__uart_8c_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/drv\_uart.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/drv\_uart.c}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}drv\_uart.h"{}}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00004}00004\ UART\_HandleTypeDef\ huart1;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00005}00005\ UART\_HandleTypeDef\ huart2;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00006}00006\ DMA\_HandleTypeDef\ hdma\_usart1\_rx;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00007}00007\ DMA\_HandleTypeDef\ hdma\_usart1\_tx;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00008}00008\ DMA\_HandleTypeDef\ hdma\_usart2\_rx;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00009}00009\ DMA\_HandleTypeDef\ hdma\_usart2\_tx;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00012}00012\ \textcolor{keywordtype}{void}\ MX\_USART1\_UART\_Init(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00014}00014\ \ \ huart1.Instance\ =\ USART1;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00015}00015\ \ \ huart1.Init.BaudRate\ =\ 115200;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00016}00016\ \ \ huart1.Init.WordLength\ =\ UART\_WORDLENGTH\_8B;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00017}00017\ \ \ huart1.Init.StopBits\ =\ UART\_STOPBITS\_1;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00018}00018\ \ \ huart1.Init.Parity\ =\ UART\_PARITY\_NONE;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00019}00019\ \ \ huart1.Init.Mode\ =\ UART\_MODE\_TX\_RX;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00020}00020\ \ \ huart1.Init.HwFlowCtl\ =\ UART\_HWCONTROL\_NONE;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00021}00021\ \ \ huart1.Init.OverSampling\ =\ UART\_OVERSAMPLING\_16;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00022}00022\ \ \ \textcolor{keywordflow}{if}\ (HAL\_UART\_Init(\&huart1)\ !=\ HAL\_OK)}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00023}00023\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00024}00024\ \ \ \ \ Error\_Handler();}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00025}00025\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00029}00029\ \textcolor{keywordtype}{void}\ MX\_USART2\_UART\_Init(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00030}00030\ \{}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00031}00031\ \ \ huart2.Instance\ =\ USART2;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00032}00032\ \ \ huart2.Init.BaudRate\ =\ 115200;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00033}00033\ \ \ huart2.Init.WordLength\ =\ UART\_WORDLENGTH\_8B;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00034}00034\ \ \ huart2.Init.StopBits\ =\ UART\_STOPBITS\_1;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00035}00035\ \ \ huart2.Init.Parity\ =\ UART\_PARITY\_NONE;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00036}00036\ \ \ huart2.Init.Mode\ =\ UART\_MODE\_TX\_RX;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00037}00037\ \ \ huart2.Init.HwFlowCtl\ =\ UART\_HWCONTROL\_NONE;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00038}00038\ \ \ huart2.Init.OverSampling\ =\ UART\_OVERSAMPLING\_16;}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00039}00039\ \ \ \textcolor{keywordflow}{if}\ (HAL\_UART\_Init(\&huart2)\ !=\ HAL\_OK)}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00040}00040\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00041}00041\ \ \ \ \ Error\_Handler();}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00042}00042\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00048}00048\ \textcolor{keywordtype}{void}\ MX\_DMA\_Init(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00049}00049\ \{}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00051}00051\ \ \ \textcolor{comment}{/*\ DMA\ controller\ clock\ enable\ */}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00052}00052\ \ \ \_\_HAL\_RCC\_DMA2\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00053}00053\ \ \ \_\_HAL\_RCC\_DMA1\_CLK\_ENABLE();}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00055}00055\ \ \ \textcolor{comment}{/*\ DMA\ interrupt\ init\ */}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00056}00056\ \ \ \textcolor{comment}{/*\ DMA1\_Stream5\_IRQn\ interrupt\ configuration\ */}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00057}00057\ \ \ HAL\_NVIC\_SetPriority(DMA1\_Stream5\_IRQn,\ 5,\ 0);}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00058}00058\ \ \ HAL\_NVIC\_EnableIRQ(DMA1\_Stream5\_IRQn);}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00059}00059\ \ \ \textcolor{comment}{/*\ DMA1\_Stream6\_IRQn\ interrupt\ configuration\ */}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00060}00060\ \ \ HAL\_NVIC\_SetPriority(DMA1\_Stream6\_IRQn,\ 5,\ 0);}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00061}00061\ \ \ HAL\_NVIC\_EnableIRQ(DMA1\_Stream6\_IRQn);}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00062}00062\ \ \ \textcolor{comment}{/*\ DMA2\_Stream2\_IRQn\ interrupt\ configuration\ */}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00063}00063\ \ \ HAL\_NVIC\_SetPriority(DMA2\_Stream2\_IRQn,\ 5,\ 0);}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00064}00064\ \ \ HAL\_NVIC\_EnableIRQ(DMA2\_Stream2\_IRQn);}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00065}00065\ \ \ \textcolor{comment}{/*\ DMA2\_Stream7\_IRQn\ interrupt\ configuration\ */}}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00066}00066\ \ \ HAL\_NVIC\_SetPriority(DMA2\_Stream7\_IRQn,\ 5,\ 0);}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00067}00067\ \ \ HAL\_NVIC\_EnableIRQ(DMA2\_Stream7\_IRQn);}
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{drv__uart_8c_source_l00069}00069\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,107 @@
+\doxysection{grove\+LCD.\+h}
+\hypertarget{grove_l_c_d_8h_source}{}\label{grove_l_c_d_8h_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/groveLCD.h@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/groveLCD.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00002}00002\ \textcolor{comment}{\ *\ groveLCD.h}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00003}00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00004}00004\ \textcolor{comment}{\ *\ \ Created\ on:\ Oct\ 16,\ 2019}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00005}00005\ \textcolor{comment}{\ *\ \ \ \ \ \ Author:\ kerhoas}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00006}00006\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00007}00007\ \textcolor{preprocessor}{\#ifndef\ INC\_GROVELCD\_H\_}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ INC\_GROVELCD\_H\_}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00012}00012\ \textcolor{comment}{//\ Device\ I2C\ Arress}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00013}00013\ \textcolor{preprocessor}{\#define\ LCD\_ADDRESS\ \ \ \ \ (0x7c)}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00014}00014\ \textcolor{preprocessor}{\#define\ RGB\_ADDRESS\ \ \ \ \ (0xc4)}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00017}00017\ \textcolor{comment}{//\ color\ define}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ WHITE\ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00019}00019\ \textcolor{preprocessor}{\#define\ RED\ \ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00020}00020\ \textcolor{preprocessor}{\#define\ GREEN\ \ \ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ BLUE\ \ \ \ \ \ \ \ \ \ \ \ 3}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ REG\_RED\ \ \ \ \ \ \ \ \ 0x04\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ pwm2}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00024}00024\ \textcolor{preprocessor}{\#define\ REG\_GREEN\ \ \ \ \ \ \ 0x03\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ pwm1}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00025}00025\ \textcolor{preprocessor}{\#define\ REG\_BLUE\ \ \ \ \ \ \ \ 0x02\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ pwm0}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00027}00027\ \textcolor{preprocessor}{\#define\ REG\_MODE1\ \ \ \ \ \ \ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00028}00028\ \textcolor{preprocessor}{\#define\ REG\_MODE2\ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00029}00029\ \textcolor{preprocessor}{\#define\ REG\_OUTPUT\ \ \ \ \ \ 0x08}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00031}00031\ \textcolor{comment}{//\ commands}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00032}00032\ \textcolor{preprocessor}{\#define\ LCD\_CLEARDISPLAY\ 0x01}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00033}00033\ \textcolor{preprocessor}{\#define\ LCD\_RETURNHOME\ 0x02}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00034}00034\ \textcolor{preprocessor}{\#define\ LCD\_ENTRYMODESET\ 0x04}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ LCD\_DISPLAYCONTROL\ 0x08}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00036}00036\ \textcolor{preprocessor}{\#define\ LCD\_CURSORSHIFT\ 0x10}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00037}00037\ \textcolor{preprocessor}{\#define\ LCD\_FUNCTIONSET\ 0x20}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00038}00038\ \textcolor{preprocessor}{\#define\ LCD\_SETCGRAMADDR\ 0x40}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00039}00039\ \textcolor{preprocessor}{\#define\ LCD\_SETDDRAMADDR\ 0x80}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00041}00041\ \textcolor{comment}{//\ flags\ for\ display\ entry\ mode}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00042}00042\ \textcolor{preprocessor}{\#define\ LCD\_ENTRYRIGHT\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00043}00043\ \textcolor{preprocessor}{\#define\ LCD\_ENTRYLEFT\ 0x02}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00044}00044\ \textcolor{preprocessor}{\#define\ LCD\_ENTRYSHIFTINCREMENT\ 0x01}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00045}00045\ \textcolor{preprocessor}{\#define\ LCD\_ENTRYSHIFTDECREMENT\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00047}00047\ \textcolor{comment}{//\ flags\ for\ display\ on/off\ control}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00048}00048\ \textcolor{preprocessor}{\#define\ LCD\_DISPLAYON\ 0x04}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00049}00049\ \textcolor{preprocessor}{\#define\ LCD\_DISPLAYOFF\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00050}00050\ \textcolor{preprocessor}{\#define\ LCD\_CURSORON\ 0x02}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00051}00051\ \textcolor{preprocessor}{\#define\ LCD\_CURSOROFF\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00052}00052\ \textcolor{preprocessor}{\#define\ LCD\_BLINKON\ 0x01}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00053}00053\ \textcolor{preprocessor}{\#define\ LCD\_BLINKOFF\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00055}00055\ \textcolor{comment}{//\ flags\ for\ display/cursor\ shift}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00056}00056\ \textcolor{preprocessor}{\#define\ LCD\_DISPLAYMOVE\ 0x08}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00057}00057\ \textcolor{preprocessor}{\#define\ LCD\_CURSORMOVE\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00058}00058\ \textcolor{preprocessor}{\#define\ LCD\_MOVERIGHT\ 0x04}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00059}00059\ \textcolor{preprocessor}{\#define\ LCD\_MOVELEFT\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00061}00061\ \textcolor{comment}{//\ flags\ for\ function\ set}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00062}00062\ \textcolor{preprocessor}{\#define\ LCD\_8BITMODE\ 0x10}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00063}00063\ \textcolor{preprocessor}{\#define\ LCD\_4BITMODE\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00064}00064\ \textcolor{preprocessor}{\#define\ LCD\_2LINE\ 0x08}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00065}00065\ \textcolor{preprocessor}{\#define\ LCD\_1LINE\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00066}00066\ \textcolor{preprocessor}{\#define\ LCD\_5x10DOTS\ 0x04}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00067}00067\ \textcolor{preprocessor}{\#define\ LCD\_5x8DOTS\ 0x00}}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00069}00069\ \textcolor{keywordtype}{void}\ groveLCD\_test();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00070}00070\ \textcolor{keywordtype}{void}\ groveLCD\_begin(uint8\_t\ cols,\ uint8\_t\ lines,\ uint8\_t\ dotsize);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00071}00071\ \textcolor{keywordtype}{void}\ groveLCD\_setColorAll();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00072}00072\ \textcolor{keywordtype}{void}\ groveLCD\_setColorWhite();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00073}00073\ \textcolor{keywordtype}{void}\ groveLCD\_clear();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00074}00074\ \textcolor{keywordtype}{void}\ groveLCD\_home();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00075}00075\ \textcolor{keywordtype}{void}\ groveLCD\_setCursor(uint8\_t\ col,\ uint8\_t\ row);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00076}00076\ \textcolor{keywordtype}{void}\ groveLCD\_noDisplay();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00077}00077\ \textcolor{keywordtype}{void}\ groveLCD\_display()\ ;}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00078}00078\ \textcolor{keywordtype}{void}\ groveLCD\_noCursor();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00079}00079\ \textcolor{keywordtype}{void}\ groveLCD\_cursor()\ ;}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00080}00080\ \textcolor{keywordtype}{void}\ groveLCD\_noBlink();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00081}00081\ \textcolor{keywordtype}{void}\ groveLCD\_blink();}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00082}00082\ \textcolor{keywordtype}{void}\ groveLCD\_scrollDisplayLeft(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00083}00083\ \textcolor{keywordtype}{void}\ groveLCD\_scrollDisplayRight(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00084}00084\ \textcolor{keywordtype}{void}\ groveLCD\_leftToRight(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00085}00085\ \textcolor{keywordtype}{void}\ groveLCD\_rightToLeft(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00086}00086\ \textcolor{keywordtype}{void}\ groveLCD\_autoscroll(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00087}00087\ \textcolor{keywordtype}{void}\ groveLCD\_noAutoscroll(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00088}00088\ \textcolor{keywordtype}{void}\ groveLCD\_createChar(uint8\_t\ location,\ uint8\_t\ charmap[]);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00089}00089\ \textcolor{keywordtype}{void}\ groveLCD\_blinkLED(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00090}00090\ \textcolor{keywordtype}{void}\ groveLCD\_noBlinkLED(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00091}00091\ \textcolor{keywordtype}{void}\ groveLCD\_command(uint8\_t\ value);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00092}00092\ \textcolor{keywordtype}{int}\ groveLCD\_write(uint8\_t\ value);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00093}00093\ \textcolor{keywordtype}{void}\ groveLCD\_setReg(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ addr,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ dta);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00094}00094\ \textcolor{keywordtype}{void}\ groveLCD\_setRGB(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ r,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ g,\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ b);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00095}00095\ \textcolor{keywordtype}{void}\ groveLCD\_setColor(\textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{char}\ color);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00096}00096\ \textcolor{keywordtype}{void}\ groveLCD\_putString(\textcolor{keywordtype}{char}*\ s);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00097}00097\ \textcolor{keywordtype}{void}\ groveLCD\_term\_printf(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fmt,\ ...);}
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{grove_l_c_d_8h_source_l00101}00101\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_GROVELCD\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

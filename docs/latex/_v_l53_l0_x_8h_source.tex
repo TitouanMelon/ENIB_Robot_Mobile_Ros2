@@ -1,0 +1,307 @@
+\doxysection{VL53\+L0\+X.\+h}
+\hypertarget{_v_l53_l0_x_8h_source}{}\label{_v_l53_l0_x_8h_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/VL53L0X.h@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/VL53L0X.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00001}00001\ \textcolor{comment}{//\#define\ bool\ \ uint8\_t}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00002}00002\ \textcolor{preprocessor}{\#define\ true\ \ 1}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00003}00003\ \textcolor{preprocessor}{\#define\ false\ 0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00005}00005\ \textcolor{preprocessor}{\#define\ SYSRANGE\_START\ 0x00}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00006}00006\ \textcolor{preprocessor}{\#define\ SYSTEM\_THRESH\_HIGH\ 0x0C}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00007}00007\ \textcolor{preprocessor}{\#define\ SYSTEM\_THRESH\_LOW\ 0x0E}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00008}00008\ \textcolor{preprocessor}{\#define\ SYSTEM\_SEQUENCE\_CONFIG\ 0x01}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00009}00009\ \textcolor{preprocessor}{\#define\ SYSTEM\_RANGE\_CONFIG\ 0x09}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00010}00010\ \textcolor{preprocessor}{\#define\ SYSTEM\_INTERMEASUREMENT\_PERIOD\ 0x04}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00013}00013\ \textcolor{preprocessor}{\#define\ SYSTEM\_INTERRUPT\_GPIO\_CONFIG\ 0x0A}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00015}00015\ \textcolor{comment}{//GPIO\ Config}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00016}00016\ \textcolor{preprocessor}{\#define\ GPIO\_HV\_MUX\_ACTIVE\_HIGH\ 0x84}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00017}00017\ \textcolor{preprocessor}{\#define\ SYSTEM\_INTERRUPT\_CLEAR\ 0x0B}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00018}00018\ \textcolor{preprocessor}{\#define\ I2C\_MODE\ 0x88}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00020}00020\ \textcolor{comment}{//\ Result\ registers}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00021}00021\ \textcolor{preprocessor}{\#define\ RESULT\_INTERRUPT\_STATUS\ 0x13}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00022}00022\ \textcolor{preprocessor}{\#define\ RESULT\_RANGE\_STATUS\ 0x14}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00023}00023\ \textcolor{preprocessor}{\#define\ RESULT\_CORE\_AMBIENT\_WINDOW\_EVENTS\_RTN\ 0xBC}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00024}00024\ \textcolor{preprocessor}{\#define\ RESULT\_CORE\_RANGING\_TOTAL\_EVENTS\_RTN\ 0xC0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00025}00025\ \textcolor{preprocessor}{\#define\ RESULT\_CORE\_AMBIENT\_WINDOW\_EVENTS\_REF\ 0xD0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00026}00026\ \textcolor{preprocessor}{\#define\ RESULT\_CORE\_RANGING\_TOTAL\_EVENTS\_REF\ 0xD4}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00027}00027\ \textcolor{preprocessor}{\#define\ RESULT\_PEAK\_SIGNAL\_RATE\_REF\ 0xB6}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00029}00029\ \textcolor{comment}{//Algo\ Register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00030}00030\ \textcolor{preprocessor}{\#define\ ALGO\_PART\_TO\_PART\_RANGE\_OFFSET\_MM\ 0x28}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00032}00032\ \textcolor{comment}{//Check\ limit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00033}00033\ \textcolor{preprocessor}{\#define\ MSRC\_CONFIG\_CONTROL\ 0x60}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00034}00034\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_CONFIG\_MIN\_SNR\ 0x27}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00035}00035\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_CONFIG\_VALID\_PHASE\_LOW\ 0x56}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00036}00036\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_CONFIG\_VALID\_PHASE\_HIGH\ 0x57}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00037}00037\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_MIN\_COUNT\_RATE\_RTN\_LIMIT\ 0x64}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00038}00038\ \textcolor{preprocessor}{\#define\ FINAL\_RANGE\_CONFIG\_MIN\_SNR\ 0x67}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00039}00039\ \textcolor{preprocessor}{\#define\ FINAL\_RANGE\_CONFIG\_VALID\_PHASE\_LOW\ 0x47}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00040}00040\ \textcolor{preprocessor}{\#define\ FINAL\_RANGE\_CONFIG\_VALID\_PHASE\_HIGH\ 0x48}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00041}00041\ \textcolor{preprocessor}{\#define\ FINAL\_RANGE\_CONFIG\_MIN\_COUNT\_RATE\_RTN\_LIMIT\ 0x44}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00043}00043\ \textcolor{comment}{//\ PRE\ RANGE\ registers}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00044}00044\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_CONFIG\_SIGMA\_THRESH\_HI\ 0x61}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00045}00045\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_CONFIG\_SIGMA\_THRESH\_LO\ 0x62}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00046}00046\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_CONFIG\_VCSEL\_PERIOD\ 0x50}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00047}00047\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_CONFIG\_TIMEOUT\_MACROP\_HI\ 0x51}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00048}00048\ \textcolor{preprocessor}{\#define\ PRE\_RANGE\_CONFIG\_TIMEOUT\_MACROP\_LO\ 0x52}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00050}00050\ \textcolor{comment}{//Internal\ tuning\ registers}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00051}00051\ \textcolor{preprocessor}{\#define\ INTERNAL\_TUNING\_1\ 0x91}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00052}00052\ \textcolor{preprocessor}{\#define\ INTERNAL\_TUNING\_2\ 0xFF}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00055}00055\ \textcolor{comment}{//Other\ registers}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00056}00056\ \textcolor{preprocessor}{\#define\ SYSTEM\_HISTOGRAM\_BIN\ 0x81}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00057}00057\ \textcolor{preprocessor}{\#define\ HISTOGRAM\_CONFIG\_INITIAL\_PHASE\_SELECT\ 0x33}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00058}00058\ \textcolor{preprocessor}{\#define\ HISTOGRAM\_CONFIG\_READOUT\_CTRL\ 0x55}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00059}00059\ \textcolor{preprocessor}{\#define\ FINAL\_RANGE\_CONFIG\_VCSEL\_PERIOD\ 0x70}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00060}00060\ \textcolor{preprocessor}{\#define\ FINAL\_RANGE\_CONFIG\_TIMEOUT\_MACROP\_HI\ 0x71}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00061}00061\ \textcolor{preprocessor}{\#define\ FINAL\_RANGE\_CONFIG\_TIMEOUT\_MACROP\_LO\ 0x72}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00062}00062\ \textcolor{preprocessor}{\#define\ CROSSTALK\_COMPENSATION\_PEAK\_RATE\_MCPS\ 0x20}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00063}00063\ \textcolor{preprocessor}{\#define\ MSRC\_CONFIG\_TIMEOUT\_MACROP\ 0x46}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00064}00064\ \textcolor{preprocessor}{\#define\ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF0\ 0x0B0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00065}00065\ \textcolor{preprocessor}{\#define\ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF1\ 0x0B1}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00066}00066\ \textcolor{preprocessor}{\#define\ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF2\ 0x0B2}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00067}00067\ \textcolor{preprocessor}{\#define\ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF3\ 0x0B3}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00068}00068\ \textcolor{preprocessor}{\#define\ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF4\ 0x0B4}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00069}00069\ \textcolor{preprocessor}{\#define\ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF5\ 0x0B5}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00070}00070\ \textcolor{preprocessor}{\#define\ GLOBAL\_CONFIG\_REF\_EN\_START\_SELECT\ 0xB6}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00071}00071\ \textcolor{preprocessor}{\#define\ DYNAMIC\_SPAD\_NUM\_REQUESTED\_REF\_SPAD\ 0x4E}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00072}00072\ \textcolor{preprocessor}{\#define\ DYNAMIC\_SPAD\_REF\_EN\_START\_OFFSET\ 0x4F}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00073}00073\ \textcolor{preprocessor}{\#define\ POWER\_MANAGEMENT\_GO1\_POWER\_FORCE\ 0x80}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00074}00074\ \textcolor{preprocessor}{\#define\ VHV\_CONFIG\_PAD\_SCL\_SDA\_\_EXTSUP\_HV\ 0x89}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00075}00075\ \textcolor{preprocessor}{\#define\ ALGO\_PHASECAL\_LIM\ 0x30}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00076}00076\ \textcolor{preprocessor}{\#define\ ALGO\_PHASECAL\_CONFIG\_TIMEOUT\ 0x30}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00077}00077\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00079}00079\ \textcolor{preprocessor}{\#define\ SYSTEM\_THRESH\_HIGH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0C}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00080}00080\ \textcolor{preprocessor}{\#define\ SYSTEM\_THRESH\_LOW\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0E}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00082}00082\ \textcolor{preprocessor}{\#define\ \ SYSTEM\_SEQUENCE\_CONFIG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x01}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00083}00083\ \textcolor{preprocessor}{\#define\ \ SYSTEM\_RANGE\_CONFIG\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x09}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00084}00084\ \textcolor{preprocessor}{\#define\ \ SYSTEM\_INTERMEASUREMENT\_PERIOD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x04}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00086}00086\ \textcolor{preprocessor}{\#define\ \ SYSTEM\_INTERRUPT\_CONFIG\_GPIO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0A}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00088}00088\ \textcolor{preprocessor}{\#define\ \ GPIO\_HV\_MUX\_ACTIVE\_HIGH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x84}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00090}00090\ \textcolor{preprocessor}{\#define\ \ SYSTEM\_INTERRUPT\_CLEAR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x0B}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00092}00092\ \textcolor{preprocessor}{\#define\ RESULT\_INTERRUPT\_STATUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x13}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00093}00093\ \textcolor{preprocessor}{\#define\ \ RESULT\_RANGE\_STATUS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x14}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00095}00095\ \textcolor{preprocessor}{\#define\ \ RESULT\_CORE\_AMBIENT\_WINDOW\_EVENTS\_RTN\ \ \ \ \ \ \ \ 0xBC}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00096}00096\ \textcolor{preprocessor}{\#define\ \ RESULT\_CORE\_RANGING\_TOTAL\_EVENTS\_RTN\ \ \ \ \ \ \ \ \ 0xC0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00097}00097\ \textcolor{preprocessor}{\#define\ \ RESULT\_CORE\_AMBIENT\_WINDOW\_EVENTS\_REF\ \ \ \ \ \ \ \ 0xD0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00098}00098\ \textcolor{preprocessor}{\#define\ \ RESULT\_CORE\_RANGING\_TOTAL\_EVENTS\_REF\ \ \ \ \ \ \ \ \ 0xD4}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00099}00099\ \textcolor{preprocessor}{\#define\ \ RESULT\_PEAK\_SIGNAL\_RATE\_REF\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xB6}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00101}00101\ \textcolor{preprocessor}{\#define\ \ ALGO\_PART\_TO\_PART\_RANGE\_OFFSET\_MM\ \ \ \ \ \ \ \ \ \ \ \ 0x28}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00102}00102\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00103}00103\ \textcolor{comment}{//\#define\ \ I2C\_SLAVE\_DEVICE\_ADDRESS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x8A\ \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00104}00104\ \textcolor{preprocessor}{\#define\ \ I2C\_SLAVE\_DEVICE\_ADDRESS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x53}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00105}00105\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00106}00106\ \textcolor{preprocessor}{\#define\ \ MSRC\_CONFIG\_CONTROL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x60}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00108}00108\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_CONFIG\_MIN\_SNR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x27}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00109}00109\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_CONFIG\_VALID\_PHASE\_LOW\ \ \ \ \ \ \ \ \ \ \ \ \ 0x56}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00110}00110\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_CONFIG\_VALID\_PHASE\_HIGH\ \ \ \ \ \ \ \ \ \ \ \ 0x57}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00111}00111\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_MIN\_COUNT\_RATE\_RTN\_LIMIT\ \ \ \ \ \ \ \ \ \ \ 0x64}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00113}00113\ \textcolor{preprocessor}{\#define\ \ FINAL\_RANGE\_CONFIG\_MIN\_SNR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x67}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00114}00114\ \textcolor{preprocessor}{\#define\ \ FINAL\_RANGE\_CONFIG\_VALID\_PHASE\_LOW\ \ \ \ \ \ \ \ \ \ \ 0x47}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00115}00115\ \textcolor{preprocessor}{\#define\ \ FINAL\_RANGE\_CONFIG\_VALID\_PHASE\_HIGH\ \ \ \ \ \ \ \ \ \ 0x48}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00116}00116\ \textcolor{preprocessor}{\#define\ \ FINAL\_RANGE\_CONFIG\_MIN\_COUNT\_RATE\_RTN\_LIMIT\ \ 0x44}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00118}00118\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_CONFIG\_SIGMA\_THRESH\_HI\ \ \ \ \ \ \ \ \ \ \ \ \ 0x61}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00119}00119\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_CONFIG\_SIGMA\_THRESH\_LO\ \ \ \ \ \ \ \ \ \ \ \ \ 0x62}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00121}00121\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_CONFIG\_VCSEL\_PERIOD\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x50}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00122}00122\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_CONFIG\_TIMEOUT\_MACROP\_HI\ \ \ \ \ \ \ \ \ \ 0x51}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00123}00123\ \textcolor{preprocessor}{\#define\ \ PRE\_RANGE\_CONFIG\_TIMEOUT\_MACROP\_LO\ \ \ \ \ \ \ \ \ \ \ 0x52}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00125}00125\ \textcolor{preprocessor}{\#define\ \ SYSTEM\_HISTOGRAM\_BIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x81}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00126}00126\ \textcolor{preprocessor}{\#define\ \ HISTOGRAM\_CONFIG\_INITIAL\_PHASE\_SELECT\ \ \ \ \ \ \ \ 0x33}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00127}00127\ \textcolor{preprocessor}{\#define\ \ HISTOGRAM\_CONFIG\_READOUT\_CTRL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x55}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00129}00129\ \textcolor{preprocessor}{\#define\ \ FINAL\_RANGE\_CONFIG\_VCSEL\_PERIOD\ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x70}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00130}00130\ \textcolor{preprocessor}{\#define\ \ FINAL\_RANGE\_CONFIG\_TIMEOUT\_MACROP\_HI\ \ \ \ \ \ \ \ \ 0x71}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00131}00131\ \textcolor{preprocessor}{\#define\ \ FINAL\_RANGE\_CONFIG\_TIMEOUT\_MACROP\_LO\ \ \ \ \ \ \ \ \ 0x72}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00132}00132\ \textcolor{preprocessor}{\#define\ CROSSTALK\_COMPENSATION\_PEAK\_RATE\_MCPS\ \ \ \ \ \ \ 0x20}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00134}00134\ \textcolor{preprocessor}{\#define\ MSRC\_CONFIG\_TIMEOUT\_MACROP\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x46}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00136}00136\ \textcolor{preprocessor}{\#define\ \ SOFT\_RESET\_GO2\_SOFT\_RESET\_N\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xBF}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00137}00137\ \textcolor{preprocessor}{\#define\ \ IDENTIFICATION\_MODEL\_ID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xC0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00138}00138\ \textcolor{preprocessor}{\#define\ \ IDENTIFICATION\_REVISION\_ID\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xC2}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00140}00140\ \textcolor{preprocessor}{\#define\ \ OSC\_CALIBRATE\_VAL\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0xF8}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00142}00142\ \textcolor{preprocessor}{\#define\ \ GLOBAL\_CONFIG\_VCSEL\_WIDTH\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x32}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00143}00143\ \textcolor{preprocessor}{\#define\ \ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF\_0\ \ \ \ \ \ \ \ \ \ \ \ \ 0xB0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00144}00144\ \textcolor{preprocessor}{\#define\ \ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF\_1\ \ \ \ \ \ \ \ \ \ \ \ \ 0xB1}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00145}00145\ \textcolor{preprocessor}{\#define\ \ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF\_2\ \ \ \ \ \ \ \ \ \ \ \ \ 0xB2}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00146}00146\ \textcolor{preprocessor}{\#define\ \ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF\_3\ \ \ \ \ \ \ \ \ \ \ \ 0xB3}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00147}00147\ \textcolor{preprocessor}{\#define\ \ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF\_4\ \ \ \ \ \ \ \ \ \ \ \ \ 0xB4}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00148}00148\ \textcolor{preprocessor}{\#define\ \ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF\_5\ \ \ \ \ \ \ \ \ \ \ \ \ 0xB5}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00149}00149\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00150}00150\ \textcolor{preprocessor}{\#define\ \ GLOBAL\_CONFIG\_REF\_EN\_START\_SELECT\ \ \ \ \ \ \ \ \ \ \ \ 0xB6}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00151}00151\ \textcolor{preprocessor}{\#define\ \ DYNAMIC\_SPAD\_NUM\_REQUESTED\_REF\_SPAD\ \ \ \ \ \ \ \ \ \ 0x4E}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00152}00152\ \textcolor{preprocessor}{\#define\ \ DYNAMIC\_SPAD\_REF\_EN\_START\_OFFSET\ \ \ \ \ \ \ \ \ \ \ \ \ 0x4F}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00153}00153\ \textcolor{preprocessor}{\#define\ \ POWER\_MANAGEMENT\_GO1\_POWER\_FORCE\ \ \ \ \ \ \ \ \ \ \ \ \ 0x80}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00154}00154\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00155}00155\ \textcolor{preprocessor}{\#define\ \ VHV\_CONFIG\_PAD\_SCL\_SDA\_\_EXTSUP\_HV\ \ \ \ \ \ \ \ \ \ \ \ 0x89}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00157}00157\ \textcolor{preprocessor}{\#define\ \ ALGO\_PHASECAL\_LIM\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x30}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00158}00158\ \textcolor{preprocessor}{\#define\ \ ALGO\_PHASECAL\_CONFIG\_TIMEOUT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x30}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00160}00160\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00161}00161\ \textcolor{comment}{//\ Defines}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00162}00162\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00163}00163\ \textcolor{comment}{//\ I\ use\ a\ 8-\/bit\ number\ for\ the\ address,\ LSB\ must\ be\ 0\ so\ that\ I\ can}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00164}00164\ \textcolor{comment}{//\ OR\ over\ the\ last\ bit\ correctly\ based\ on\ reads\ and\ writes}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00165}00165\ \textcolor{preprocessor}{\#define\ ADDRESS\_DEFAULT\ 0b01010010}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00167}00167\ \textcolor{comment}{//\ Record\ the\ current\ time\ to\ check\ an\ upcoming\ timeout\ against}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00168}00168\ \textcolor{preprocessor}{\#define\ startTimeout()\ (g\_timeoutStartMs\ =\ millis())}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00170}00170\ \textcolor{comment}{//\ Check\ if\ timeout\ is\ enabled\ (set\ to\ nonzero\ value)\ and\ has\ expired}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00171}00171\ \textcolor{preprocessor}{\#define\ checkTimeoutExpired()\ (g\_ioTimeout\ >\ 0\ \&\&\ ((uint16\_t)millis()\ -\/\ g\_timeoutStartMs)\ >\ g\_ioTimeout)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00173}00173\ \textcolor{comment}{//\ Decode\ VCSEL\ (vertical\ cavity\ surface\ emitting\ laser)\ pulse\ period\ in\ PCLKs}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00174}00174\ \textcolor{comment}{//\ from\ register\ value}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00175}00175\ \textcolor{comment}{//\ based\ on\ VL53L0X\_decode\_vcsel\_period()}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00176}00176\ \textcolor{preprocessor}{\#define\ decodeVcselPeriod(reg\_val)\ \ \ \ \ \ (((reg\_val)\ +\ 1)\ <<\ 1)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00178}00178\ \textcolor{comment}{//\ Encode\ VCSEL\ pulse\ period\ register\ value\ from\ period\ in\ PCLKs}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00179}00179\ \textcolor{comment}{//\ based\ on\ VL53L0X\_encode\_vcsel\_period()}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00180}00180\ \textcolor{preprocessor}{\#define\ encodeVcselPeriod(period\_pclks)\ (((period\_pclks)\ >>\ 1)\ -\/\ 1)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00182}00182\ \textcolor{comment}{//\ Calculate\ macro\ period\ in\ *nanoseconds*\ from\ VCSEL\ period\ in\ PCLKs}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00183}00183\ \textcolor{comment}{//\ based\ on\ VL53L0X\_calc\_macro\_period\_ps()}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00184}00184\ \textcolor{comment}{//\ PLL\_period\_ps\ =\ 1655;\ macro\_period\_vclks\ =\ 2304}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00185}00185\ \textcolor{preprocessor}{\#define\ calcMacroPeriod(vcsel\_period\_pclks)\ ((((uint32\_t)2304\ *\ (vcsel\_period\_pclks)\ *\ 1655)\ +\ 500)\ /\ 1000)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00187}00187\ \textcolor{comment}{//\ register\ addresses\ from\ API\ vl53l0x\_device.h\ (ordered\ as\ listed\ there)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00188}00188\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00190}00190\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{\ VcselPeriodPreRange,\ VcselPeriodFinalRange\ \}vcselPeriodType;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00191}00191\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00192}00192\ \textcolor{comment}{//\ Additional\ info\ for\ one\ measurement}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00193}\mbox{\hyperlink{structstat_info__t}{00193}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00194}00194\ \ \ uint16\_t\ rawDistance;\ \textcolor{comment}{//uncorrected\ distance\ \ [mm],\ \ \ uint16\_t}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00195}00195\ \ \ uint16\_t\ signalCnt;\ \ \ \textcolor{comment}{//Signal\ \ Counting\ Rate\ [mcps],\ uint16\_t,\ fixpoint9.7}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00196}00196\ \ \ uint16\_t\ ambientCnt;\ \ \textcolor{comment}{//Ambient\ Counting\ Rate\ [mcps],\ uint16\_t,\ fixpoint9.7}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00197}00197\ \ \ uint16\_t\ spadCnt;\ \ \ \ \ \textcolor{comment}{//Effective\ SPAD\ return\ count,\ \ uint16\_t,\ fixpoint8.8}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00198}00198\ \ \ uint8\_t\ \ rangeStatus;\ \textcolor{comment}{//Ranging\ status\ (0-\/15)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00199}00199\ \}\ \mbox{\hyperlink{structstat_info__t}{statInfo\_t}};}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00202}00202\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00203}00203\ \textcolor{comment}{//\ API\ Functions}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00204}00204\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00205}00205\ \textcolor{comment}{//\ configures\ chip\ i2c\ and\ lib\ for\ \`{}new\_addr`\ (8\ bit,\ LSB=0)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00206}00206\ \textcolor{keywordtype}{void}\ setAddress(uint8\_t\ new\_addr);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00207}00207\ \textcolor{comment}{//\ Returns\ the\ current\ I²C\ address.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00208}00208\ uint8\_t\ getAddress(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00209}00209\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00210}00210\ \textcolor{comment}{//\ Iniitializes\ and\ configures\ the\ sensor.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00211}00211\ \textcolor{comment}{//\ If\ the\ optional\ argument\ io\_2v8\ is\ 1,\ the\ sensor\ is\ configured\ for\ 2V8\ mode\ (2.8\ V\ I/O);}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00212}00212\ \textcolor{comment}{//\ if\ 0,\ the\ sensor\ is\ left\ in\ 1V8\ mode.\ Returns\ 1\ if\ the\ initialization\ completed\ successfully.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00213}00213\ uint8\_t\ initVL53L0X();}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00215}00215\ \textcolor{comment}{//\ Sets\ the\ return\ signal\ rate\ limit\ to\ the\ given\ value\ in\ units\ of\ MCPS\ (mega\ counts\ per\ second).}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00216}00216\ \textcolor{comment}{//\ This\ is\ the\ minimum\ amplitude\ of\ the\ signal\ reflected\ from\ the\ target\ and\ received\ by\ the\ sensor}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00217}00217\ \textcolor{comment}{//\ \ necessary\ for\ it\ to\ report\ a\ valid\ reading.\ Setting\ a\ lower\ limit\ increases\ the\ potential\ range}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00218}00218\ \textcolor{comment}{//\ of\ the\ sensor\ but\ also\ increases\ the\ likelihood\ of\ getting\ an\ inaccurate\ reading\ because\ of}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00219}00219\ \textcolor{comment}{//\ \ reflections\ from\ objects\ other\ than\ the\ intended\ target.\ This\ limit\ is\ initialized\ to\ 0.25\ MCPS}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00220}00220\ \textcolor{comment}{//\ \ by\ default.\ The\ return\ value\ is\ a\ boolean\ indicating\ whether\ the\ requested\ limit\ was\ valid.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00221}00221\ uint8\_t\ setSignalRateLimit(\textcolor{keywordtype}{float}\ limit\_Mcps);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00223}00223\ \textcolor{comment}{//\ Returns\ the\ current\ return\ signal\ rate\ limit\ in\ MCPS.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00224}00224\ \textcolor{keywordtype}{float}\ getSignalRateLimit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00226}00226\ \textcolor{comment}{//\ Set\ the\ measurement\ timing\ budget\ in\ microseconds,\ which\ is\ the\ time\ allowed}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00227}00227\ \textcolor{comment}{//\ for\ one\ measurement;\ the\ ST\ API\ and\ this\ library\ take\ care\ of\ splitting\ the}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00228}00228\ \textcolor{comment}{//\ timing\ budget\ among\ the\ sub-\/steps\ in\ the\ ranging\ sequence.\ A\ longer\ timing}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00229}00229\ \textcolor{comment}{//\ budget\ allows\ for\ more\ accurate\ measurements.\ Increasing\ the\ budget\ by\ a}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00230}00230\ \textcolor{comment}{//\ factor\ of\ N\ decreases\ the\ range\ measurement\ standard\ deviation\ by\ a\ factor\ of}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00231}00231\ \textcolor{comment}{//\ sqrt(N).\ Defaults\ to\ about\ 33\ milliseconds;\ the\ minimum\ is\ 20\ ms.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00232}00232\ \textcolor{comment}{//\ based\ on\ VL53L0X\_set\_measurement\_timing\_budget\_micro\_seconds()}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00233}00233\ uint8\_t\ setMeasurementTimingBudget(uint32\_t\ budget\_us);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00234}00234\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00235}00235\ \textcolor{comment}{//\ Returns\ the\ current\ measurement\ timing\ budget\ in\ microseconds.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00236}00236\ uint32\_t\ getMeasurementTimingBudget(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00237}00237\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00238}00238\ \textcolor{comment}{//\ Sets\ the\ VCSEL\ (vertical\ cavity\ surface\ emitting\ laser)\ pulse\ period\ for\ the\ given\ period\ type}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00239}00239\ \textcolor{comment}{//\ (VcselPeriodPreRange\ or\ VcselPeriodFinalRange)\ to\ the\ given\ value\ (in\ PCLKs).}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00240}00240\ \textcolor{comment}{//\ Longer\ periods\ increase\ the\ potential\ range\ of\ the\ sensor.\ Valid\ values\ are\ (even\ numbers\ only):}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00241}00241\ \textcolor{comment}{//\ Pre:\ 12\ to\ 18\ (initialized\ to\ 14\ by\ default)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00242}00242\ \textcolor{comment}{//\ Final:\ 8\ to\ 14\ (initialized\ to\ 10\ by\ default)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00243}00243\ \textcolor{comment}{//\ The\ return\ value\ is\ a\ boolean\ indicating\ whether\ the\ requested\ period\ was\ valid.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00244}00244\ uint8\_t\ setVcselPulsePeriod(vcselPeriodType\ type,\ uint8\_t\ period\_pclks);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00245}00245\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00246}00246\ \textcolor{comment}{//\ Returns\ the\ current\ VCSEL\ pulse\ period\ for\ the\ given\ period\ type.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00247}00247\ uint8\_t\ getVcselPulsePeriod(vcselPeriodType\ type);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00249}00249\ \textcolor{comment}{//\ Starts\ continuous\ ranging\ measurements.\ If\ the\ argument\ period\_ms\ is\ 0,}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00250}00250\ \textcolor{comment}{//\ continuous\ back-\/to-\/back\ mode\ is\ used\ (the\ sensor\ takes\ measurements\ as\ often\ as\ possible);}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00251}00251\ \textcolor{comment}{//\ if\ it\ is\ nonzero,\ continuous\ timed\ mode\ is\ used,\ with\ the\ specified\ inter-\/measurement\ period}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00252}00252\ \textcolor{comment}{//\ in\ milliseconds\ determining\ how\ often\ the\ sensor\ takes\ a\ measurement.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00253}00253\ \textcolor{keywordtype}{void}\ startContinuous(uint32\_t\ period\_ms);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00255}00255\ \textcolor{comment}{//\ Stops\ continuous\ mode.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00256}00256\ \textcolor{keywordtype}{void}\ stopContinuous(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00257}00257\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00258}00258\ \textcolor{comment}{//\ Returns\ a\ range\ reading\ in\ millimeters\ when\ continuous\ mode\ is\ active.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00259}00259\ \textcolor{comment}{//\ Additional\ measurement\ data\ will\ be\ copied\ into\ \`{}extraStats`\ if\ it\ is\ non-\/zero.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00260}00260\ uint16\_t\ readRangeContinuousMillimeters(\textcolor{comment}{/*\ statInfo\_t\ *extraStats*/}\ );}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00262}00262\ \textcolor{comment}{//\ Performs\ a\ single-\/shot\ ranging\ measurement\ and\ returns\ the\ reading\ in\ millimeters.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00263}00263\ \textcolor{comment}{//\ Additional\ measurement\ data\ will\ be\ copied\ into\ \`{}extraStats`\ if\ it\ is\ non-\/zero.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00264}00264\ uint16\_t\ readRangeSingleMillimeters(\ \textcolor{comment}{/*statInfo\_t\ *extraStats\ */});}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00265}00265\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00266}00266\ \textcolor{comment}{//\ Sets\ a\ timeout\ period\ in\ milliseconds\ after\ which\ read\ operations\ will\ abort}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00267}00267\ \textcolor{comment}{//\ if\ the\ sensor\ is\ not\ ready.\ A\ value\ of\ 0\ disables\ the\ timeout.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00268}00268\ \textcolor{keywordtype}{void}\ setTimeout(uint16\_t\ timeout);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00269}00269\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00270}00270\ \textcolor{comment}{//\ Returns\ the\ current\ timeout\ period\ setting.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00271}00271\ uint16\_t\ getTimeout(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00272}00272\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00273}00273\ \textcolor{comment}{//\ Indicates\ whether\ a\ read\ timeout\ has\ occurred\ since\ the\ last\ call\ to\ timeoutOccurred().}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00274}00274\ \textcolor{keywordtype}{bool}\ timeoutOccurred(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00275}00275\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00276}00276\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00277}00277\ \textcolor{comment}{//\ I2C\ communication\ Functions}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00278}00278\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00279}00279\ \textcolor{keywordtype}{void}\ writeReg(uint8\_t\ reg,\ uint8\_t\ value);\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Write\ an\ 8-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00280}00280\ \textcolor{keywordtype}{void}\ writeReg16Bit(uint8\_t\ reg,\ uint16\_t\ value);\ \ \textcolor{comment}{//\ Write\ a\ 16-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00281}00281\ \textcolor{keywordtype}{void}\ writeReg32Bit(uint8\_t\ reg,\ uint32\_t\ value);\ \ \textcolor{comment}{//\ Write\ a\ 32-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00282}00282\ uint8\_t\ readReg(uint8\_t\ reg);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ an\ 8-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00283}00283\ uint16\_t\ readReg16Bit(uint8\_t\ reg);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ a\ 16-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00284}00284\ uint32\_t\ readReg32Bit(uint8\_t\ reg);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Read\ a\ 32-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00285}00285\ \textcolor{comment}{//\ Write\ \`{}count`\ number\ of\ bytes\ from\ \`{}src`\ to\ the\ sensor,\ starting\ at\ \`{}reg`}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00286}00286\ \textcolor{keywordtype}{void}\ writeMulti(uint8\_t\ reg,\ uint8\_t\ \textcolor{keyword}{const}\ *src,\ uint8\_t\ count);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00288}00288\ \textcolor{comment}{//\ TCC:\ Target\ CentreCheck}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00289}00289\ \textcolor{comment}{//\ MSRC:\ Minimum\ Signal\ Rate\ Check}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00290}00290\ \textcolor{comment}{//\ DSS:\ Dynamic\ Spad\ Selection}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00291}\mbox{\hyperlink{struct_sequence_step_enables}{00291}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00292}00292\ \ \ uint8\_t\ tcc,\ msrc,\ dss,\ pre\_range,\ final\_range;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00293}00293\ \}\mbox{\hyperlink{struct_sequence_step_enables}{SequenceStepEnables}};}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00294}00294\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00295}\mbox{\hyperlink{struct_sequence_step_timeouts}{00295}}\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00296}00296\ \ \ uint16\_t\ pre\_range\_vcsel\_period\_pclks,\ final\_range\_vcsel\_period\_pclks;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00298}00298\ \ \ uint16\_t\ msrc\_dss\_tcc\_mclks,\ pre\_range\_mclks,\ final\_range\_mclks;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00299}00299\ \ \ uint32\_t\ msrc\_dss\_tcc\_us,\ \ \ \ pre\_range\_us,\ \ \ \ final\_range\_us;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00300}00300\ \}\mbox{\hyperlink{struct_sequence_step_timeouts}{SequenceStepTimeouts}};}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8h_source_l00301}00301\ }
+
+\end{DoxyCode}

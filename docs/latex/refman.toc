@@ -1,0 +1,277 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Robot ROS}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Principal function}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Secondary function}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Test function}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Config define}{2}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Config exo}{2}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Config param}{2}{subsection.1.4.2}%
+\contentsline {chapter}{\numberline {2}Data Structure Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Data Structures}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Data Structure Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}AMessage Struct Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{7}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Field Documentation}{7}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}command}{7}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}data}{7}{subsubsection.4.1.2.2}%
+\contentsline {section}{\numberline {4.2}Micro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Msg Struct Reference}{8}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{8}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Field Documentation}{8}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}dir}{8}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}mode}{8}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}speed}{8}{subsubsection.4.2.2.3}%
+\contentsline {section}{\numberline {4.3}Micro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sub\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Msg Struct Reference}{9}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{9}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Field Documentation}{9}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}dir}{9}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}mode}{9}{subsubsection.4.3.2.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.3}speed}{9}{subsubsection.4.3.2.3}%
+\contentsline {subsubsection}{\numberline {4.3.2.4}x}{9}{subsubsection.4.3.2.4}%
+\contentsline {subsubsection}{\numberline {4.3.2.5}y}{10}{subsubsection.4.3.2.5}%
+\contentsline {section}{\numberline {4.4}Sequence\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Step\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Enables Struct Reference}{10}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{10}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Field Documentation}{10}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}dss}{10}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}final\_range}{10}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}msrc}{10}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}pre\_range}{11}{subsubsection.4.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.4.2.5}tcc}{11}{subsubsection.4.4.2.5}%
+\contentsline {section}{\numberline {4.5}Sequence\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Step\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Timeouts Struct Reference}{11}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Detailed Description}{11}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.2}Field Documentation}{11}{subsection.4.5.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.1}final\_range\_mclks}{11}{subsubsection.4.5.2.1}%
+\contentsline {subsubsection}{\numberline {4.5.2.2}final\_range\_us}{11}{subsubsection.4.5.2.2}%
+\contentsline {subsubsection}{\numberline {4.5.2.3}final\_range\_vcsel\_period\_pclks}{12}{subsubsection.4.5.2.3}%
+\contentsline {subsubsection}{\numberline {4.5.2.4}msrc\_dss\_tcc\_mclks}{12}{subsubsection.4.5.2.4}%
+\contentsline {subsubsection}{\numberline {4.5.2.5}msrc\_dss\_tcc\_us}{12}{subsubsection.4.5.2.5}%
+\contentsline {subsubsection}{\numberline {4.5.2.6}pre\_range\_mclks}{12}{subsubsection.4.5.2.6}%
+\contentsline {subsubsection}{\numberline {4.5.2.7}pre\_range\_us}{12}{subsubsection.4.5.2.7}%
+\contentsline {subsubsection}{\numberline {4.5.2.8}pre\_range\_vcsel\_period\_pclks}{12}{subsubsection.4.5.2.8}%
+\contentsline {section}{\numberline {4.6}stat\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Info\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}t Struct Reference}{12}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Detailed Description}{13}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Field Documentation}{13}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}ambientCnt}{13}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}rangeStatus}{13}{subsubsection.4.6.2.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.3}rawDistance}{13}{subsubsection.4.6.2.3}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}signalCnt}{13}{subsubsection.4.6.2.4}%
+\contentsline {subsubsection}{\numberline {4.6.2.5}spadCnt}{13}{subsubsection.4.6.2.5}%
+\contentsline {chapter}{\numberline {5}File Documentation}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}capt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dist\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IR.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2}config.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3}drv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gpio.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.5.3}%
+\contentsline {section}{\numberline {5.4}drv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}i2c.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{16}{section.5.4}%
+\contentsline {section}{\numberline {5.5}drv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}uart.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Free\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}RTOSConfig.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{17}{section.5.6}%
+\contentsline {section}{\numberline {5.7}grove\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LCD.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{19}{section.5.7}%
+\contentsline {section}{\numberline {5.8}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Administrator/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ENIB\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Robot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mobile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WORKSPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}F411\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS6/base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}robot/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inc/main.h File Reference}{20}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{21}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Macro Definition Documentation}{22}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}B1\_GPIO\_Port}{22}{subsubsection.5.8.2.1}%
+\contentsline {subsubsection}{\numberline {5.8.2.2}B1\_Pin}{22}{subsubsection.5.8.2.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.3}LD2\_GPIO\_Port}{22}{subsubsection.5.8.2.3}%
+\contentsline {subsubsection}{\numberline {5.8.2.4}LD2\_Pin}{22}{subsubsection.5.8.2.4}%
+\contentsline {subsubsection}{\numberline {5.8.2.5}SWO\_GPIO\_Port}{22}{subsubsection.5.8.2.5}%
+\contentsline {subsubsection}{\numberline {5.8.2.6}SWO\_Pin}{22}{subsubsection.5.8.2.6}%
+\contentsline {subsubsection}{\numberline {5.8.2.7}TCK\_GPIO\_Port}{22}{subsubsection.5.8.2.7}%
+\contentsline {subsubsection}{\numberline {5.8.2.8}TCK\_Pin}{23}{subsubsection.5.8.2.8}%
+\contentsline {subsubsection}{\numberline {5.8.2.9}TMS\_GPIO\_Port}{23}{subsubsection.5.8.2.9}%
+\contentsline {subsubsection}{\numberline {5.8.2.10}TMS\_Pin}{23}{subsubsection.5.8.2.10}%
+\contentsline {subsubsection}{\numberline {5.8.2.11}USART\_RX\_GPIO\_Port}{23}{subsubsection.5.8.2.11}%
+\contentsline {subsubsection}{\numberline {5.8.2.12}USART\_RX\_Pin}{23}{subsubsection.5.8.2.12}%
+\contentsline {subsubsection}{\numberline {5.8.2.13}USART\_TX\_GPIO\_Port}{23}{subsubsection.5.8.2.13}%
+\contentsline {subsubsection}{\numberline {5.8.2.14}USART\_TX\_Pin}{23}{subsubsection.5.8.2.14}%
+\contentsline {subsection}{\numberline {5.8.3}Function Documentation}{23}{subsection.5.8.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.1}CHECKMRRET()}{23}{subsubsection.5.8.3.1}%
+\contentsline {subsubsection}{\numberline {5.8.3.2}Error\_Handler()}{24}{subsubsection.5.8.3.2}%
+\contentsline {subsubsection}{\numberline {5.8.3.3}main()}{24}{subsubsection.5.8.3.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.4}microros\_task()}{25}{subsubsection.5.8.3.4}%
+\contentsline {subsubsection}{\numberline {5.8.3.5}SubscriberCallbackFunction()}{25}{subsubsection.5.8.3.5}%
+\contentsline {subsubsection}{\numberline {5.8.3.6}task\_Grove\_LCD()}{25}{subsubsection.5.8.3.6}%
+\contentsline {subsubsection}{\numberline {5.8.3.7}task\_Motor\_Left()}{26}{subsubsection.5.8.3.7}%
+\contentsline {subsubsection}{\numberline {5.8.3.8}task\_Motor\_Right()}{26}{subsubsection.5.8.3.8}%
+\contentsline {subsubsection}{\numberline {5.8.3.9}task\_Supervision()}{26}{subsubsection.5.8.3.9}%
+\contentsline {subsubsection}{\numberline {5.8.3.10}task\_VL53()}{27}{subsubsection.5.8.3.10}%
+\contentsline {subsubsection}{\numberline {5.8.3.11}test\_motor()}{27}{subsubsection.5.8.3.11}%
+\contentsline {subsubsection}{\numberline {5.8.3.12}test\_uart2()}{27}{subsubsection.5.8.3.12}%
+\contentsline {subsubsection}{\numberline {5.8.3.13}test\_vl53()}{28}{subsubsection.5.8.3.13}%
+\contentsline {section}{\numberline {5.9}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{28}{section.5.9}%
+\contentsline {section}{\numberline {5.10}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Administrator/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ENIB\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Robot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mobile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WORKSPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}F411\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS6/base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}robot/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inc/micro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS.h File Reference}{29}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Detailed Description}{30}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Macro Definition Documentation}{30}{subsection.5.10.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.1}ARRAY\_LEN}{30}{subsubsection.5.10.2.1}%
+\contentsline {subsubsection}{\numberline {5.10.2.2}CAMERA\_X\_TOPIC}{30}{subsubsection.5.10.2.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.3}CAMERA\_Y\_TOPIC}{30}{subsubsection.5.10.2.3}%
+\contentsline {subsubsection}{\numberline {5.10.2.4}CAPTEUR\_DIR\_TOPIC}{30}{subsubsection.5.10.2.4}%
+\contentsline {subsubsection}{\numberline {5.10.2.5}CONFIG\_MODE\_TOPIC}{31}{subsubsection.5.10.2.5}%
+\contentsline {subsubsection}{\numberline {5.10.2.6}CONFIG\_SPEED\_TOPIC}{31}{subsubsection.5.10.2.6}%
+\contentsline {subsubsection}{\numberline {5.10.2.7}ETAT\_MODE\_TOPIC}{31}{subsubsection.5.10.2.7}%
+\contentsline {subsubsection}{\numberline {5.10.2.8}ETAT\_SPEED\_TOPIC}{31}{subsubsection.5.10.2.8}%
+\contentsline {subsubsection}{\numberline {5.10.2.9}TELECOMMANDE\_DIR\_TOPIC}{31}{subsubsection.5.10.2.9}%
+\contentsline {subsection}{\numberline {5.10.3}Function Documentation}{31}{subsection.5.10.3}%
+\contentsline {subsubsection}{\numberline {5.10.3.1}createPublisher()}{31}{subsubsection.5.10.3.1}%
+\contentsline {subsubsection}{\numberline {5.10.3.2}createSubscriber()}{32}{subsubsection.5.10.3.2}%
+\contentsline {section}{\numberline {5.11}micro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{32}{section.5.11}%
+\contentsline {section}{\numberline {5.12}motor\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.5.12}%
+\contentsline {section}{\numberline {5.13}quad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Encoder.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.5.13}%
+\contentsline {section}{\numberline {5.14}retarget.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{33}{section.5.14}%
+\contentsline {section}{\numberline {5.15}stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}conf.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{34}{section.5.15}%
+\contentsline {section}{\numberline {5.16}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Administrator/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ENIB\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Robot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mobile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WORKSPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}F411\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS6/base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}robot/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Inc/stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}it.h File Reference}{39}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Detailed Description}{39}{subsection.5.16.1}%
+\contentsline {subsection}{\numberline {5.16.2}Function Documentation}{39}{subsection.5.16.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.1}BusFault\_Handler()}{39}{subsubsection.5.16.2.1}%
+\contentsline {subsubsection}{\numberline {5.16.2.2}DebugMon\_Handler()}{40}{subsubsection.5.16.2.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.3}DMA1\_Stream5\_IRQHandler()}{40}{subsubsection.5.16.2.3}%
+\contentsline {subsubsection}{\numberline {5.16.2.4}DMA1\_Stream6\_IRQHandler()}{40}{subsubsection.5.16.2.4}%
+\contentsline {subsubsection}{\numberline {5.16.2.5}DMA2\_Stream2\_IRQHandler()}{40}{subsubsection.5.16.2.5}%
+\contentsline {subsubsection}{\numberline {5.16.2.6}DMA2\_Stream7\_IRQHandler()}{40}{subsubsection.5.16.2.6}%
+\contentsline {subsubsection}{\numberline {5.16.2.7}HardFault\_Handler()}{40}{subsubsection.5.16.2.7}%
+\contentsline {subsubsection}{\numberline {5.16.2.8}MemManage\_Handler()}{40}{subsubsection.5.16.2.8}%
+\contentsline {subsubsection}{\numberline {5.16.2.9}NMI\_Handler()}{41}{subsubsection.5.16.2.9}%
+\contentsline {subsubsection}{\numberline {5.16.2.10}UsageFault\_Handler()}{41}{subsubsection.5.16.2.10}%
+\contentsline {subsubsection}{\numberline {5.16.2.11}USART1\_IRQHandler()}{41}{subsubsection.5.16.2.11}%
+\contentsline {subsubsection}{\numberline {5.16.2.12}USART2\_IRQHandler()}{41}{subsubsection.5.16.2.12}%
+\contentsline {section}{\numberline {5.17}stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}it.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{41}{section.5.17}%
+\contentsline {section}{\numberline {5.18}systemclock.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.5.18}%
+\contentsline {section}{\numberline {5.19}util.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.5.19}%
+\contentsline {section}{\numberline {5.20}VL53\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L0\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}X.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{42}{section.5.20}%
+\contentsline {section}{\numberline {5.21}capt\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Dist\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}IR.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{46}{section.5.21}%
+\contentsline {section}{\numberline {5.22}dma\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}transport.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{47}{section.5.22}%
+\contentsline {section}{\numberline {5.23}drv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}gpio.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{48}{section.5.23}%
+\contentsline {section}{\numberline {5.24}drv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}i2c.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{49}{section.5.24}%
+\contentsline {section}{\numberline {5.25}drv\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}uart.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{51}{section.5.25}%
+\contentsline {section}{\numberline {5.26}freertos.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{52}{section.5.26}%
+\contentsline {section}{\numberline {5.27}grove\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LCD.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{53}{section.5.27}%
+\contentsline {section}{\numberline {5.28}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Administrator/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ENIB\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Robot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mobile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WORKSPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}F411\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS6/base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}robot/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Src/main.c File Reference}{57}{section.5.28}%
+\contentsline {subsection}{\numberline {5.28.1}Detailed Description}{60}{subsection.5.28.1}%
+\contentsline {subsection}{\numberline {5.28.2}Macro Definition Documentation}{60}{subsection.5.28.2}%
+\contentsline {subsubsection}{\numberline {5.28.2.1}CAMERA\_X\_MAX}{60}{subsubsection.5.28.2.1}%
+\contentsline {subsubsection}{\numberline {5.28.2.2}CAMERA\_X\_MIN}{60}{subsubsection.5.28.2.2}%
+\contentsline {subsubsection}{\numberline {5.28.2.3}CAMERA\_Y\_MAX}{60}{subsubsection.5.28.2.3}%
+\contentsline {subsubsection}{\numberline {5.28.2.4}CAMERA\_Y\_MIN}{60}{subsubsection.5.28.2.4}%
+\contentsline {subsubsection}{\numberline {5.28.2.5}CMD}{61}{subsubsection.5.28.2.5}%
+\contentsline {subsubsection}{\numberline {5.28.2.6}DEBUG\_MOTOR}{61}{subsubsection.5.28.2.6}%
+\contentsline {subsubsection}{\numberline {5.28.2.7}DEBUG\_PRINTF}{61}{subsubsection.5.28.2.7}%
+\contentsline {subsubsection}{\numberline {5.28.2.8}DEFAULT\_DIR}{61}{subsubsection.5.28.2.8}%
+\contentsline {subsubsection}{\numberline {5.28.2.9}DEFAULT\_MODE}{61}{subsubsection.5.28.2.9}%
+\contentsline {subsubsection}{\numberline {5.28.2.10}DEFAULT\_SPEED}{61}{subsubsection.5.28.2.10}%
+\contentsline {subsubsection}{\numberline {5.28.2.11}EXCORRECTOR}{62}{subsubsection.5.28.2.11}%
+\contentsline {subsubsection}{\numberline {5.28.2.12}EXFINAL}{62}{subsubsection.5.28.2.12}%
+\contentsline {subsubsection}{\numberline {5.28.2.13}EXSTARTUP}{62}{subsubsection.5.28.2.13}%
+\contentsline {subsubsection}{\numberline {5.28.2.14}EXTEST\_MICROROS}{62}{subsubsection.5.28.2.14}%
+\contentsline {subsubsection}{\numberline {5.28.2.15}EXTEST\_UART2}{62}{subsubsection.5.28.2.15}%
+\contentsline {subsubsection}{\numberline {5.28.2.16}EXTEST\_VL53}{62}{subsubsection.5.28.2.16}%
+\contentsline {subsubsection}{\numberline {5.28.2.17}EXTESTCORRECTOR}{63}{subsubsection.5.28.2.17}%
+\contentsline {subsubsection}{\numberline {5.28.2.18}LCD}{63}{subsubsection.5.28.2.18}%
+\contentsline {subsubsection}{\numberline {5.28.2.19}LKi}{63}{subsubsection.5.28.2.19}%
+\contentsline {subsubsection}{\numberline {5.28.2.20}LKp}{63}{subsubsection.5.28.2.20}%
+\contentsline {subsubsection}{\numberline {5.28.2.21}MICROROS}{63}{subsubsection.5.28.2.21}%
+\contentsline {subsubsection}{\numberline {5.28.2.22}NB}{63}{subsubsection.5.28.2.22}%
+\contentsline {subsubsection}{\numberline {5.28.2.23}RKi}{64}{subsubsection.5.28.2.23}%
+\contentsline {subsubsection}{\numberline {5.28.2.24}RKp}{64}{subsubsection.5.28.2.24}%
+\contentsline {subsubsection}{\numberline {5.28.2.25}ROS\_DOMAIN\_ID}{64}{subsubsection.5.28.2.25}%
+\contentsline {subsubsection}{\numberline {5.28.2.26}SAMPLING\_PERIOD\_ms}{64}{subsubsection.5.28.2.26}%
+\contentsline {subsubsection}{\numberline {5.28.2.27}SYNCHRO\_EX}{64}{subsubsection.5.28.2.27}%
+\contentsline {subsubsection}{\numberline {5.28.2.28}Te}{64}{subsubsection.5.28.2.28}%
+\contentsline {subsubsection}{\numberline {5.28.2.29}TEST\_CORRECTOR\_DUTY}{65}{subsubsection.5.28.2.29}%
+\contentsline {subsubsection}{\numberline {5.28.2.30}TEST\_CORRECTOR\_SPEEDL}{65}{subsubsection.5.28.2.30}%
+\contentsline {subsubsection}{\numberline {5.28.2.31}TEST\_CORRECTOR\_SPEEDR}{65}{subsubsection.5.28.2.31}%
+\contentsline {subsubsection}{\numberline {5.28.2.32}TEST\_LEFT\_MOTOR}{65}{subsubsection.5.28.2.32}%
+\contentsline {subsubsection}{\numberline {5.28.2.33}VITESSE\_CAM}{65}{subsubsection.5.28.2.33}%
+\contentsline {subsubsection}{\numberline {5.28.2.34}VITESSE\_KART}{65}{subsubsection.5.28.2.34}%
+\contentsline {subsubsection}{\numberline {5.28.2.35}VITESSE\_OBS}{66}{subsubsection.5.28.2.35}%
+\contentsline {subsubsection}{\numberline {5.28.2.36}VL53}{66}{subsubsection.5.28.2.36}%
+\contentsline {subsection}{\numberline {5.28.3}Enumeration Type Documentation}{66}{subsection.5.28.3}%
+\contentsline {subsubsection}{\numberline {5.28.3.1}anonymous enum}{66}{subsubsection.5.28.3.1}%
+\contentsline {subsubsection}{\numberline {5.28.3.2}anonymous enum}{66}{subsubsection.5.28.3.2}%
+\contentsline {subsubsection}{\numberline {5.28.3.3}anonymous enum}{66}{subsubsection.5.28.3.3}%
+\contentsline {subsection}{\numberline {5.28.4}Function Documentation}{66}{subsection.5.28.4}%
+\contentsline {subsubsection}{\numberline {5.28.4.1}CHECKMRRET()}{66}{subsubsection.5.28.4.1}%
+\contentsline {subsubsection}{\numberline {5.28.4.2}Error\_Handler()}{67}{subsubsection.5.28.4.2}%
+\contentsline {subsubsection}{\numberline {5.28.4.3}HAL\_TIM\_PeriodElapsedCallback()}{67}{subsubsection.5.28.4.3}%
+\contentsline {subsubsection}{\numberline {5.28.4.4}main()}{67}{subsubsection.5.28.4.4}%
+\contentsline {subsubsection}{\numberline {5.28.4.5}microros\_allocate()}{68}{subsubsection.5.28.4.5}%
+\contentsline {subsubsection}{\numberline {5.28.4.6}microros\_deallocate()}{68}{subsubsection.5.28.4.6}%
+\contentsline {subsubsection}{\numberline {5.28.4.7}microros\_reallocate()}{68}{subsubsection.5.28.4.7}%
+\contentsline {subsubsection}{\numberline {5.28.4.8}microros\_task()}{69}{subsubsection.5.28.4.8}%
+\contentsline {subsubsection}{\numberline {5.28.4.9}microros\_zero\_allocate()}{69}{subsubsection.5.28.4.9}%
+\contentsline {subsubsection}{\numberline {5.28.4.10}SubscriberCallbackFunction()}{69}{subsubsection.5.28.4.10}%
+\contentsline {subsubsection}{\numberline {5.28.4.11}SystemClock\_Config()}{70}{subsubsection.5.28.4.11}%
+\contentsline {subsubsection}{\numberline {5.28.4.12}task\_Motor\_Left()}{70}{subsubsection.5.28.4.12}%
+\contentsline {subsubsection}{\numberline {5.28.4.13}task\_Motor\_Right()}{70}{subsubsection.5.28.4.13}%
+\contentsline {subsubsection}{\numberline {5.28.4.14}task\_Supervision()}{70}{subsubsection.5.28.4.14}%
+\contentsline {subsubsection}{\numberline {5.28.4.15}test\_motor()}{71}{subsubsection.5.28.4.15}%
+\contentsline {subsubsection}{\numberline {5.28.4.16}test\_uart2()}{71}{subsubsection.5.28.4.16}%
+\contentsline {subsubsection}{\numberline {5.28.4.17}test\_vl53()}{71}{subsubsection.5.28.4.17}%
+\contentsline {subsection}{\numberline {5.28.5}Variable Documentation}{72}{subsection.5.28.5}%
+\contentsline {subsubsection}{\numberline {5.28.5.1}defaultTask\_attributes}{72}{subsubsection.5.28.5.1}%
+\contentsline {subsubsection}{\numberline {5.28.5.2}defaultTaskHandle}{72}{subsubsection.5.28.5.2}%
+\contentsline {subsubsection}{\numberline {5.28.5.3}hdma\_usart1\_rx}{72}{subsubsection.5.28.5.3}%
+\contentsline {subsubsection}{\numberline {5.28.5.4}hdma\_usart1\_tx}{72}{subsubsection.5.28.5.4}%
+\contentsline {subsubsection}{\numberline {5.28.5.5}hdma\_usart2\_rx}{72}{subsubsection.5.28.5.5}%
+\contentsline {subsubsection}{\numberline {5.28.5.6}hdma\_usart2\_tx}{72}{subsubsection.5.28.5.6}%
+\contentsline {subsubsection}{\numberline {5.28.5.7}hi2c1}{72}{subsubsection.5.28.5.7}%
+\contentsline {subsubsection}{\numberline {5.28.5.8}huart1}{73}{subsubsection.5.28.5.8}%
+\contentsline {subsubsection}{\numberline {5.28.5.9}huart2}{73}{subsubsection.5.28.5.9}%
+\contentsline {subsubsection}{\numberline {5.28.5.10}q\_mot\_L}{73}{subsubsection.5.28.5.10}%
+\contentsline {subsubsection}{\numberline {5.28.5.11}q\_mot\_R}{73}{subsubsection.5.28.5.11}%
+\contentsline {subsubsection}{\numberline {5.28.5.12}qhLCD}{73}{subsubsection.5.28.5.12}%
+\contentsline {subsubsection}{\numberline {5.28.5.13}qhMR\_pub}{73}{subsubsection.5.28.5.13}%
+\contentsline {subsubsection}{\numberline {5.28.5.14}qhMR\_sub}{74}{subsubsection.5.28.5.14}%
+\contentsline {subsubsection}{\numberline {5.28.5.15}qhVl53}{74}{subsubsection.5.28.5.15}%
+\contentsline {subsubsection}{\numberline {5.28.5.16}tab\_speed}{74}{subsubsection.5.28.5.16}%
+\contentsline {subsubsection}{\numberline {5.28.5.17}xSem\_Supervision}{74}{subsubsection.5.28.5.17}%
+\contentsline {section}{\numberline {5.29}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{74}{section.5.29}%
+\contentsline {section}{\numberline {5.30}micro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{85}{section.5.30}%
+\contentsline {section}{\numberline {5.31}microros\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}allocators.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{86}{section.5.31}%
+\contentsline {section}{\numberline {5.32}microros\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}time.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{87}{section.5.32}%
+\contentsline {section}{\numberline {5.33}motor\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{87}{section.5.33}%
+\contentsline {section}{\numberline {5.34}quad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Encoder.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{88}{section.5.34}%
+\contentsline {section}{\numberline {5.35}retarget.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{92}{section.5.35}%
+\contentsline {section}{\numberline {5.36}stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}msp.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{93}{section.5.36}%
+\contentsline {section}{\numberline {5.37}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Administrator/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ENIB\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Robot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mobile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WORKSPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}F411\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS6/base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}robot/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Src/stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}timebase\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tim.c File Reference}{98}{section.5.37}%
+\contentsline {subsection}{\numberline {5.37.1}Detailed Description}{99}{subsection.5.37.1}%
+\contentsline {subsection}{\numberline {5.37.2}Function Documentation}{99}{subsection.5.37.2}%
+\contentsline {subsubsection}{\numberline {5.37.2.1}HAL\_InitTick()}{99}{subsubsection.5.37.2.1}%
+\contentsline {subsubsection}{\numberline {5.37.2.2}HAL\_ResumeTick()}{99}{subsubsection.5.37.2.2}%
+\contentsline {subsubsection}{\numberline {5.37.2.3}HAL\_SuspendTick()}{100}{subsubsection.5.37.2.3}%
+\contentsline {subsection}{\numberline {5.37.3}Variable Documentation}{100}{subsection.5.37.3}%
+\contentsline {subsubsection}{\numberline {5.37.3.1}htim4}{100}{subsubsection.5.37.3.1}%
+\contentsline {section}{\numberline {5.38}stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}timebase\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tim.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{100}{section.5.38}%
+\contentsline {section}{\numberline {5.39}stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}it.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{102}{section.5.39}%
+\contentsline {section}{\numberline {5.40}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Administrator/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ENIB\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Robot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mobile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WORKSPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}F411\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS6/base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}robot/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Src/syscalls.c File Reference}{103}{section.5.40}%
+\contentsline {subsection}{\numberline {5.40.1}Detailed Description}{104}{subsection.5.40.1}%
+\contentsline {subsection}{\numberline {5.40.2}Function Documentation}{104}{subsection.5.40.2}%
+\contentsline {subsubsection}{\numberline {5.40.2.1}\_\_attribute\_\_()}{104}{subsubsection.5.40.2.1}%
+\contentsline {subsubsection}{\numberline {5.40.2.2}\_\_io\_getchar()}{105}{subsubsection.5.40.2.2}%
+\contentsline {subsubsection}{\numberline {5.40.2.3}\_close()}{105}{subsubsection.5.40.2.3}%
+\contentsline {subsubsection}{\numberline {5.40.2.4}\_execve()}{105}{subsubsection.5.40.2.4}%
+\contentsline {subsubsection}{\numberline {5.40.2.5}\_exit()}{105}{subsubsection.5.40.2.5}%
+\contentsline {subsubsection}{\numberline {5.40.2.6}\_fork()}{105}{subsubsection.5.40.2.6}%
+\contentsline {subsubsection}{\numberline {5.40.2.7}\_fstat()}{105}{subsubsection.5.40.2.7}%
+\contentsline {subsubsection}{\numberline {5.40.2.8}\_getpid()}{106}{subsubsection.5.40.2.8}%
+\contentsline {subsubsection}{\numberline {5.40.2.9}\_isatty()}{106}{subsubsection.5.40.2.9}%
+\contentsline {subsubsection}{\numberline {5.40.2.10}\_kill()}{106}{subsubsection.5.40.2.10}%
+\contentsline {subsubsection}{\numberline {5.40.2.11}\_link()}{106}{subsubsection.5.40.2.11}%
+\contentsline {subsubsection}{\numberline {5.40.2.12}\_lseek()}{106}{subsubsection.5.40.2.12}%
+\contentsline {subsubsection}{\numberline {5.40.2.13}\_open()}{106}{subsubsection.5.40.2.13}%
+\contentsline {subsubsection}{\numberline {5.40.2.14}\_stat()}{107}{subsubsection.5.40.2.14}%
+\contentsline {subsubsection}{\numberline {5.40.2.15}\_times()}{107}{subsubsection.5.40.2.15}%
+\contentsline {subsubsection}{\numberline {5.40.2.16}\_unlink()}{107}{subsubsection.5.40.2.16}%
+\contentsline {subsubsection}{\numberline {5.40.2.17}\_wait()}{107}{subsubsection.5.40.2.17}%
+\contentsline {subsubsection}{\numberline {5.40.2.18}initialise\_monitor\_handles()}{107}{subsubsection.5.40.2.18}%
+\contentsline {subsection}{\numberline {5.40.3}Variable Documentation}{107}{subsection.5.40.3}%
+\contentsline {subsubsection}{\numberline {5.40.3.1}environ}{107}{subsubsection.5.40.3.1}%
+\contentsline {section}{\numberline {5.41}syscalls.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{108}{section.5.41}%
+\contentsline {section}{\numberline {5.42}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Administrator/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ENIB\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Robot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mobile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WORKSPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}F411\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS6/base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}robot/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Src/sysmem.c File Reference}{109}{section.5.42}%
+\contentsline {subsection}{\numberline {5.42.1}Detailed Description}{110}{subsection.5.42.1}%
+\contentsline {subsection}{\numberline {5.42.2}Function Documentation}{110}{subsection.5.42.2}%
+\contentsline {subsubsection}{\numberline {5.42.2.1}\_sbrk()}{110}{subsubsection.5.42.2.1}%
+\contentsline {subsection}{\numberline {5.42.3}Variable Documentation}{111}{subsection.5.42.3}%
+\contentsline {subsubsection}{\numberline {5.42.3.1}\_\_sbrk\_heap\_end}{111}{subsubsection.5.42.3.1}%
+\contentsline {section}{\numberline {5.43}sysmem.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{111}{section.5.43}%
+\contentsline {section}{\numberline {5.44}systemclock.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{111}{section.5.44}%
+\contentsline {section}{\numberline {5.45}util.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{112}{section.5.45}%
+\contentsline {section}{\numberline {5.46}VL53\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L0\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}X.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{114}{section.5.46}%
+\contentsline {chapter}{Index}{119}{section*.23}%

@@ -1,0 +1,1129 @@
+\doxysection{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+ENIB\+\_\+\+Robot\+\_\+\+Mobile\+\_\+\+Ros2/\+WORKSPACE\+\_\+\+F411\+\_\+u\+ROS6/base\+\_\+robot/\+Core/\+Src/main.c File Reference}
+\hypertarget{main_8c}{}\label{main_8c}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/main.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/main.c}}
+
+
+file that contain the main code  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include "{}motor\+Command.\+h"{}}\newline
+{\ttfamily \#include "{}quad\+Encoder.\+h"{}}\newline
+{\ttfamily \#include "{}capt\+Dist\+IR.\+h"{}}\newline
+{\ttfamily \#include "{}VL53\+L0\+X.\+h"{}}\newline
+{\ttfamily \#include "{}grove\+LCD.\+h"{}}\newline
+\doxysubsubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_a_message}{AMessage}}
+\item 
+struct \mbox{\hyperlink{struct_micro_ros_pub_msg}{Micro\+Ros\+Pub\+Msg}}
+\item 
+struct \mbox{\hyperlink{struct_micro_ros_sub_msg}{Micro\+Ros\+Sub\+Msg}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\+\_\+\+PERIOD\+\_\+ms}}~5
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ config exo}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a515337f3365e5661ae661438b9e3287f}{EXSTARTUP}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_aa7a8b25b270619f1c6b15fd19a9454b7}{EXTEST\+\_\+\+UART2}}~1
+\item 
+\#define \mbox{\hyperlink{main_8c_af1effc30fa444fbfdd808d2cf02eee91}{EXCORRECTOR}}~2
+\item 
+\#define \mbox{\hyperlink{main_8c_a667f3a57a846fa3dd5c731e3540516be}{EXTESTCORRECTOR}}~3
+\item 
+\#define \mbox{\hyperlink{main_8c_a135f4fce99234202abb270c8e5593254}{EXTEST\+\_\+\+VL53}}~4
+\item 
+\#define \mbox{\hyperlink{main_8c_a078911f52c2ed596deab611e414f61b9}{EXTEST\+\_\+\+MICROROS}}~5
+\item 
+\#define \mbox{\hyperlink{main_8c_ae948c4c658b2bd925657c58f5b8f33ab}{EXFINAL}}~6
+\item 
+\#define \mbox{\hyperlink{main_8c_a81fc52cde1f4e885f6b60dca20bb031b}{SYNCHRO\+\_\+\+EX}}~\mbox{\hyperlink{main_8c_ae948c4c658b2bd925657c58f5b8f33ab}{EXFINAL}}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ config robot}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a3fd0b1ecf51c1cd847bb232b2fec904c}{ROS\+\_\+\+DOMAIN\+\_\+\+ID}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_abf2d80992dcfabfd1668184c3dff2733}{LCD}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_a39c8f0426010081d7f1fe74787adc164}{VL53}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_a96ea3637588f12d301b57f11d784daf3}{MICROROS}}~1
+\item 
+\#define \mbox{\hyperlink{main_8c_a2cc88864f2aaa74f3d4d09d76ac2961b}{DEBUG\+\_\+\+PRINTF}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_a86963c34eaf4aa7d9adc6e80a33871a7}{DEBUG\+\_\+\+MOTOR}}~0
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ config correcteur}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a6a156e181d5d76e0ddd73ecc409ac9c3}{Te}}~SAMPLING\+\_\+\+PERIOD\+\_\+ms
+\item 
+\#define \mbox{\hyperlink{main_8c_ad0a3d11e0c5a60ce313ba4264e6eaba8}{LKp}}~0.\+001
+\item 
+\#define \mbox{\hyperlink{main_8c_a9c4bf434152b94b6a99df877f3a70185}{LKi}}~(5.\+0/(0.\+1\texorpdfstring{$\ast$}{*}40.\+0))
+\item 
+\#define \mbox{\hyperlink{main_8c_a7438270e3e1220d8d0bd82120273af12}{RKp}}~0.\+001
+\item 
+\#define \mbox{\hyperlink{main_8c_a8192f3340491948157f63db6418769aa}{RKi}}~(5.\+0/(0.\+1\texorpdfstring{$\ast$}{*}40.\+0))
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ config default speed for each mode}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}{CMD}}~1000
+\item 
+\#define \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\+\_\+\+KART}}~\mbox{\hyperlink{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}{CMD}}/2
+\item 
+\#define \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\+\_\+\+OBS}}~\mbox{\hyperlink{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}{CMD}}
+\item 
+\#define \mbox{\hyperlink{main_8c_a83be4ba677a5b20cd4b969a5d2828f39}{VITESSE\+\_\+\+CAM}}~\mbox{\hyperlink{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}{CMD}}/3
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ config camera settings}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a4dee696e6f875ff0e01891dea054c4a1}{CAMERA\+\_\+\+X\+\_\+\+MIN}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_ab898595d41f7c7a6f5a7a7f2678c3bdd}{CAMERA\+\_\+\+X\+\_\+\+MAX}}~640
+\item 
+\#define \mbox{\hyperlink{main_8c_a9601c1b626116baa4ae182d8d32a7c41}{CAMERA\+\_\+\+Y\+\_\+\+MIN}}~0
+\item 
+\#define \mbox{\hyperlink{main_8c_a7f248c7643665aeacb8a58e541a60f50}{CAMERA\+\_\+\+Y\+\_\+\+MAX}}~480
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ config default behaviour}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_ab9c800875296f23bd616d7d273ff16d7}{DEFAULT\+\_\+\+MODE}}~MODE\+\_\+\+ZIG
+\item 
+\#define \mbox{\hyperlink{main_8c_afc945b2e8394478f97e2aabc7aebaf0e}{DEFAULT\+\_\+\+SPEED}}~LOW
+\item 
+\#define \mbox{\hyperlink{main_8c_a63ec0cea9c1f0ca8a7893c2c53d2fd81}{DEFAULT\+\_\+\+DIR}}~STOP
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ config test value}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58}{NB}}~200
+\item 
+\#define \mbox{\hyperlink{main_8c_a991a2b437e497b7c30f7c37f3da862c0}{TEST\+\_\+\+CORRECTOR\+\_\+\+DUTY}}~150
+\item 
+\#define \mbox{\hyperlink{main_8c_abfb9d3a25ca2e3a1dae1c814522ca875}{TEST\+\_\+\+CORRECTOR\+\_\+\+SPEEDL}}~-\/100
+\item 
+\#define \mbox{\hyperlink{main_8c_aafb3a6eb5ef46672cb007ee167d395a4}{TEST\+\_\+\+CORRECTOR\+\_\+\+SPEEDR}}~-\/100
+\item 
+\#define \mbox{\hyperlink{main_8c_ac8f0cb690a7ba18ff1d3bcac03a6205b}{TEST\+\_\+\+LEFT\+\_\+\+MOTOR}}~1
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \{ {\bfseries MODE\+\_\+\+OBS}
+, {\bfseries MODE\+\_\+\+ZIG}
+, {\bfseries MODE\+\_\+\+CAM}
+, {\bfseries LAST\+\_\+\+MODE}
+ \}
+\item 
+enum \{ \newline
+{\bfseries STOP\+\_\+\+VIT}
+, {\bfseries LOW}
+, {\bfseries FAST}
+, {\bfseries SONIC}
+, \newline
+{\bfseries LAST\+\_\+\+SPEED}
+ \}
+\item 
+enum \{ \newline
+{\bfseries AVANT}
+, {\bfseries GAUCHE}
+, {\bfseries RECULE}
+, {\bfseries DROITE}
+, \newline
+{\bfseries STOP}
+, {\bfseries AVANT\+\_\+\+GAUCHE}
+, {\bfseries AVANT\+\_\+\+DROITE}
+, {\bfseries RECULE\+\_\+\+GAUCHE}
+, \newline
+{\bfseries RECULE\+\_\+\+DROITE}
+, {\bfseries LAST\+\_\+\+DIR}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\item 
+\Hypertarget{main_8c_a2504decd83a590057f35cbf3fb3d8a24}\label{main_8c_a2504decd83a590057f35cbf3fb3d8a24} 
+bool {\bfseries cubemx\+\_\+transport\+\_\+open} (struct uxr\+Custom\+Transport \texorpdfstring{$\ast$}{*}transport)
+\item 
+\Hypertarget{main_8c_abbe7360a9584812682c8a6966a7f5f21}\label{main_8c_abbe7360a9584812682c8a6966a7f5f21} 
+bool {\bfseries cubemx\+\_\+transport\+\_\+close} (struct uxr\+Custom\+Transport \texorpdfstring{$\ast$}{*}transport)
+\item 
+\Hypertarget{main_8c_a15743751ea08f8597ba27fb2d26b568c}\label{main_8c_a15743751ea08f8597ba27fb2d26b568c} 
+size\+\_\+t {\bfseries cubemx\+\_\+transport\+\_\+write} (struct uxr\+Custom\+Transport \texorpdfstring{$\ast$}{*}transport, const uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t len, uint8\+\_\+t \texorpdfstring{$\ast$}{*}err)
+\item 
+\Hypertarget{main_8c_a607bea63774c226b5e25b7cc05921a72}\label{main_8c_a607bea63774c226b5e25b7cc05921a72} 
+size\+\_\+t {\bfseries cubemx\+\_\+transport\+\_\+read} (struct uxr\+Custom\+Transport \texorpdfstring{$\ast$}{*}transport, uint8\+\_\+t \texorpdfstring{$\ast$}{*}buf, size\+\_\+t len, int timeout, uint8\+\_\+t \texorpdfstring{$\ast$}{*}err)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_afbbd07004ef2541918f88b67c4af7a71}{microros\+\_\+allocate}} (size\+\_\+t size, void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{main_8c_aba9c00b570a317fad6f6d30220fada5b}{microros\+\_\+deallocate}} (void \texorpdfstring{$\ast$}{*}pointer, void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a3850b59e26ba636e5111bde82afafb01}{microros\+\_\+reallocate}} (void \texorpdfstring{$\ast$}{*}pointer, size\+\_\+t size, void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{main_8c_a74ab553464987a94faae5e414df0078a}{microros\+\_\+zero\+\_\+allocate}} (size\+\_\+t number\+\_\+of\+\_\+elements, size\+\_\+t size\+\_\+of\+\_\+element, void \texorpdfstring{$\ast$}{*}state)
+\item 
+void \mbox{\hyperlink{main_8c_a3f82047e1c93bff73e4db97a19f6ad2e}{CHECKMRRET}} (rcl\+\_\+ret\+\_\+t ret, char \texorpdfstring{$\ast$}{*}msg)
+\item 
+void \mbox{\hyperlink{main_8c_afec8e194407d73381e7dfda42910309d}{Subscriber\+Callback\+Function}} (const void \texorpdfstring{$\ast$}{*}msgin)
+\item 
+void \mbox{\hyperlink{main_8c_a5aca40d972a3057895d59e61e0e69678}{microros\+\_\+task}} (void \texorpdfstring{$\ast$}{*}argument)
+\item 
+void \mbox{\hyperlink{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}{task\+\_\+\+Motor\+\_\+\+Left}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_8c_a81f652726bff3b9832ab014d3fc28d1e}{task\+\_\+\+Motor\+\_\+\+Right}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\+\_\+\+Supervision}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\item 
+void \mbox{\hyperlink{main_8c_a0068220a4432a5ea9b4442d018b706f8}{test\+\_\+uart2}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_8c_a03356c29f7343d5cd605bcd3e80e27e0}{test\+\_\+vl53}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a}{test\+\_\+motor}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
+\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a34251392f0d5e2461e3aef615918c235}{hdma\+\_\+usart1\+\_\+rx}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a5af94ab36bfe698db3e6beea96d10a90}{hdma\+\_\+usart1\+\_\+tx}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a784aa25dc7e4580cfbf80658340f482c}{hdma\+\_\+usart2\+\_\+rx}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_a0083b476c2a75ab9fb2ccbed0048857e}{hdma\+\_\+usart2\+\_\+tx}}
+\item 
+I2\+C\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}{hi2c1}}
+\item 
+os\+Thread\+Id\+\_\+t \mbox{\hyperlink{main_8c_a6a263905468b0c37de4ee5e50ede4e74}{default\+Task\+Handle}}
+\item 
+const os\+Thread\+Attr\+\_\+t \mbox{\hyperlink{main_8c_a25fbb54afdba71c24ba51ed50166ac8d}{default\+Task\+\_\+attributes}}
+\item 
+int16\+\_\+t \mbox{\hyperlink{main_8c_a377891cff46d2f0a39f956b917366f95}{tab\+\_\+speed}} \mbox{[}\mbox{\hyperlink{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58}{NB}}\mbox{]}
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ semaphore}\par
+\begin{DoxyCompactItemize}
+\item 
+x\+Semaphore\+Handle \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{x\+Sem\+\_\+\+Supervision}} = NULL
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ queue\+Handle}\par
+\begin{DoxyCompactItemize}
+\item 
+x\+Queue\+Handle \mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\+\_\+mot\+\_\+L}} = NULL
+\item 
+x\+Queue\+Handle \mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\+\_\+mot\+\_\+R}} = NULL
+\item 
+x\+Queue\+Handle \mbox{\hyperlink{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}{qh\+MR\+\_\+sub}} = NULL
+\item 
+x\+Queue\+Handle \mbox{\hyperlink{main_8c_a2ec1e708e81871b5c6929cb901a69c51}{qh\+MR\+\_\+pub}} = NULL
+\item 
+x\+Queue\+Handle \mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qh\+LCD}} = NULL
+\item 
+x\+Queue\+Handle \mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qh\+Vl53}} = NULL
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+file that contain the main code 
+
+
+
+Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8c_ab898595d41f7c7a6f5a7a7f2678c3bdd}\label{main_8c_ab898595d41f7c7a6f5a7a7f2678c3bdd} 
+\index{main.c@{main.c}!CAMERA\_X\_MAX@{CAMERA\_X\_MAX}}
+\index{CAMERA\_X\_MAX@{CAMERA\_X\_MAX}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_X\_MAX}{CAMERA\_X\_MAX}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+X\+\_\+\+MAX~640}
+
+Define maximal x position return by camera 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00072}{72}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a4dee696e6f875ff0e01891dea054c4a1}\label{main_8c_a4dee696e6f875ff0e01891dea054c4a1} 
+\index{main.c@{main.c}!CAMERA\_X\_MIN@{CAMERA\_X\_MIN}}
+\index{CAMERA\_X\_MIN@{CAMERA\_X\_MIN}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_X\_MIN}{CAMERA\_X\_MIN}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+X\+\_\+\+MIN~0}
+
+Define minimal x position return by camera 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00071}{71}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a7f248c7643665aeacb8a58e541a60f50}\label{main_8c_a7f248c7643665aeacb8a58e541a60f50} 
+\index{main.c@{main.c}!CAMERA\_Y\_MAX@{CAMERA\_Y\_MAX}}
+\index{CAMERA\_Y\_MAX@{CAMERA\_Y\_MAX}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_Y\_MAX}{CAMERA\_Y\_MAX}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+Y\+\_\+\+MAX~480}
+
+Define maximal y position return by camera 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00074}{74}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a9601c1b626116baa4ae182d8d32a7c41}\label{main_8c_a9601c1b626116baa4ae182d8d32a7c41} 
+\index{main.c@{main.c}!CAMERA\_Y\_MIN@{CAMERA\_Y\_MIN}}
+\index{CAMERA\_Y\_MIN@{CAMERA\_Y\_MIN}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_Y\_MIN}{CAMERA\_Y\_MIN}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+Y\+\_\+\+MIN~0}
+
+Define minimal y position return by camera 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00073}{73}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}\label{main_8c_a0a5ceb9ceb914e08d345410b561cb37a} 
+\index{main.c@{main.c}!CMD@{CMD}}
+\index{CMD@{CMD}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CMD}{CMD}}
+{\footnotesize\ttfamily \#define CMD~1000}
+
+Can be use as default speed 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00065}{65}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a86963c34eaf4aa7d9adc6e80a33871a7}\label{main_8c_a86963c34eaf4aa7d9adc6e80a33871a7} 
+\index{main.c@{main.c}!DEBUG\_MOTOR@{DEBUG\_MOTOR}}
+\index{DEBUG\_MOTOR@{DEBUG\_MOTOR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_MOTOR}{DEBUG\_MOTOR}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+MOTOR~0}
+
+Activate motor debug print 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00055}{55}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2cc88864f2aaa74f3d4d09d76ac2961b}\label{main_8c_a2cc88864f2aaa74f3d4d09d76ac2961b} 
+\index{main.c@{main.c}!DEBUG\_PRINTF@{DEBUG\_PRINTF}}
+\index{DEBUG\_PRINTF@{DEBUG\_PRINTF}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DEBUG\_PRINTF}{DEBUG\_PRINTF}}
+{\footnotesize\ttfamily \#define DEBUG\+\_\+\+PRINTF~0}
+
+Activate debug print 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00054}{54}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a63ec0cea9c1f0ca8a7893c2c53d2fd81}\label{main_8c_a63ec0cea9c1f0ca8a7893c2c53d2fd81} 
+\index{main.c@{main.c}!DEFAULT\_DIR@{DEFAULT\_DIR}}
+\index{DEFAULT\_DIR@{DEFAULT\_DIR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_DIR}{DEFAULT\_DIR}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+DIR~STOP}
+
+Default direction at startup 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00081}{81}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_ab9c800875296f23bd616d7d273ff16d7}\label{main_8c_ab9c800875296f23bd616d7d273ff16d7} 
+\index{main.c@{main.c}!DEFAULT\_MODE@{DEFAULT\_MODE}}
+\index{DEFAULT\_MODE@{DEFAULT\_MODE}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_MODE}{DEFAULT\_MODE}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+MODE~MODE\+\_\+\+ZIG}
+
+Default mode at startup 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00079}{79}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_afc945b2e8394478f97e2aabc7aebaf0e}\label{main_8c_afc945b2e8394478f97e2aabc7aebaf0e} 
+\index{main.c@{main.c}!DEFAULT\_SPEED@{DEFAULT\_SPEED}}
+\index{DEFAULT\_SPEED@{DEFAULT\_SPEED}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DEFAULT\_SPEED}{DEFAULT\_SPEED}}
+{\footnotesize\ttfamily \#define DEFAULT\+\_\+\+SPEED~LOW}
+
+Default speed at startup 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00080}{80}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_af1effc30fa444fbfdd808d2cf02eee91}\label{main_8c_af1effc30fa444fbfdd808d2cf02eee91} 
+\index{main.c@{main.c}!EXCORRECTOR@{EXCORRECTOR}}
+\index{EXCORRECTOR@{EXCORRECTOR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXCORRECTOR}{EXCORRECTOR}}
+{\footnotesize\ttfamily \#define EXCORRECTOR~2}
+
+Code to calibrate your correcteur 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00041}{41}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_ae948c4c658b2bd925657c58f5b8f33ab}\label{main_8c_ae948c4c658b2bd925657c58f5b8f33ab} 
+\index{main.c@{main.c}!EXFINAL@{EXFINAL}}
+\index{EXFINAL@{EXFINAL}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXFINAL}{EXFINAL}}
+{\footnotesize\ttfamily \#define EXFINAL~6}
+
+Final code 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00045}{45}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a515337f3365e5661ae661438b9e3287f}\label{main_8c_a515337f3365e5661ae661438b9e3287f} 
+\index{main.c@{main.c}!EXSTARTUP@{EXSTARTUP}}
+\index{EXSTARTUP@{EXSTARTUP}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXSTARTUP}{EXSTARTUP}}
+{\footnotesize\ttfamily \#define EXSTARTUP~0}
+
+startup code 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00039}{39}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a078911f52c2ed596deab611e414f61b9}\label{main_8c_a078911f52c2ed596deab611e414f61b9} 
+\index{main.c@{main.c}!EXTEST\_MICROROS@{EXTEST\_MICROROS}}
+\index{EXTEST\_MICROROS@{EXTEST\_MICROROS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXTEST\_MICROROS}{EXTEST\_MICROROS}}
+{\footnotesize\ttfamily \#define EXTEST\+\_\+\+MICROROS~5}
+
+Test Micro ROS subscriber and publisher 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00044}{44}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_aa7a8b25b270619f1c6b15fd19a9454b7}\label{main_8c_aa7a8b25b270619f1c6b15fd19a9454b7} 
+\index{main.c@{main.c}!EXTEST\_UART2@{EXTEST\_UART2}}
+\index{EXTEST\_UART2@{EXTEST\_UART2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXTEST\_UART2}{EXTEST\_UART2}}
+{\footnotesize\ttfamily \#define EXTEST\+\_\+\+UART2~1}
+
+Test printf and scanf function 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00040}{40}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a135f4fce99234202abb270c8e5593254}\label{main_8c_a135f4fce99234202abb270c8e5593254} 
+\index{main.c@{main.c}!EXTEST\_VL53@{EXTEST\_VL53}}
+\index{EXTEST\_VL53@{EXTEST\_VL53}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXTEST\_VL53}{EXTEST\_VL53}}
+{\footnotesize\ttfamily \#define EXTEST\+\_\+\+VL53~4}
+
+Test VL530X sensor 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00043}{43}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a667f3a57a846fa3dd5c731e3540516be}\label{main_8c_a667f3a57a846fa3dd5c731e3540516be} 
+\index{main.c@{main.c}!EXTESTCORRECTOR@{EXTESTCORRECTOR}}
+\index{EXTESTCORRECTOR@{EXTESTCORRECTOR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{EXTESTCORRECTOR}{EXTESTCORRECTOR}}
+{\footnotesize\ttfamily \#define EXTESTCORRECTOR~3}
+
+Code to test your correcteur 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00042}{42}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_abf2d80992dcfabfd1668184c3dff2733}\label{main_8c_abf2d80992dcfabfd1668184c3dff2733} 
+\index{main.c@{main.c}!LCD@{LCD}}
+\index{LCD@{LCD}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{LCD}{LCD}}
+{\footnotesize\ttfamily \#define LCD~0}
+
+Activate LCD task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00051}{51}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a9c4bf434152b94b6a99df877f3a70185}\label{main_8c_a9c4bf434152b94b6a99df877f3a70185} 
+\index{main.c@{main.c}!LKi@{LKi}}
+\index{LKi@{LKi}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{LKi}{LKi}}
+{\footnotesize\ttfamily \#define LKi~(5.\+0/(0.\+1\texorpdfstring{$\ast$}{*}40.\+0))}
+
+Ki factor for the left motor 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00060}{60}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_ad0a3d11e0c5a60ce313ba4264e6eaba8}\label{main_8c_ad0a3d11e0c5a60ce313ba4264e6eaba8} 
+\index{main.c@{main.c}!LKp@{LKp}}
+\index{LKp@{LKp}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{LKp}{LKp}}
+{\footnotesize\ttfamily \#define LKp~0.\+001}
+
+Kp factor for the left motor 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00059}{59}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a96ea3637588f12d301b57f11d784daf3}\label{main_8c_a96ea3637588f12d301b57f11d784daf3} 
+\index{main.c@{main.c}!MICROROS@{MICROROS}}
+\index{MICROROS@{MICROROS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MICROROS}{MICROROS}}
+{\footnotesize\ttfamily \#define MICROROS~1}
+
+Activate Micro\+ROS task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00053}{53}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58}\label{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58} 
+\index{main.c@{main.c}!NB@{NB}}
+\index{NB@{NB}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{NB}{NB}}
+{\footnotesize\ttfamily \#define NB~200}
+
+Number of samples in correcteur calibration task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00084}{84}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a8192f3340491948157f63db6418769aa}\label{main_8c_a8192f3340491948157f63db6418769aa} 
+\index{main.c@{main.c}!RKi@{RKi}}
+\index{RKi@{RKi}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{RKi}{RKi}}
+{\footnotesize\ttfamily \#define RKi~(5.\+0/(0.\+1\texorpdfstring{$\ast$}{*}40.\+0))}
+
+Kp factor for the right motor 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00062}{62}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a7438270e3e1220d8d0bd82120273af12}\label{main_8c_a7438270e3e1220d8d0bd82120273af12} 
+\index{main.c@{main.c}!RKp@{RKp}}
+\index{RKp@{RKp}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{RKp}{RKp}}
+{\footnotesize\ttfamily \#define RKp~0.\+001}
+
+Kp factor for the right motor 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00061}{61}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a3fd0b1ecf51c1cd847bb232b2fec904c}\label{main_8c_a3fd0b1ecf51c1cd847bb232b2fec904c} 
+\index{main.c@{main.c}!ROS\_DOMAIN\_ID@{ROS\_DOMAIN\_ID}}
+\index{ROS\_DOMAIN\_ID@{ROS\_DOMAIN\_ID}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{ROS\_DOMAIN\_ID}{ROS\_DOMAIN\_ID}}
+{\footnotesize\ttfamily \#define ROS\+\_\+\+DOMAIN\+\_\+\+ID~0}
+
+Define ROS domain id 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00050}{50}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2e077c020d61734cb1ff60a0675673bd}\label{main_8c_a2e077c020d61734cb1ff60a0675673bd} 
+\index{main.c@{main.c}!SAMPLING\_PERIOD\_ms@{SAMPLING\_PERIOD\_ms}}
+\index{SAMPLING\_PERIOD\_ms@{SAMPLING\_PERIOD\_ms}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SAMPLING\_PERIOD\_ms}{SAMPLING\_PERIOD\_ms}}
+{\footnotesize\ttfamily \#define SAMPLING\+\_\+\+PERIOD\+\_\+ms~5}
+
+Define the delay beetween two execution of the same task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00037}{37}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a81fc52cde1f4e885f6b60dca20bb031b}\label{main_8c_a81fc52cde1f4e885f6b60dca20bb031b} 
+\index{main.c@{main.c}!SYNCHRO\_EX@{SYNCHRO\_EX}}
+\index{SYNCHRO\_EX@{SYNCHRO\_EX}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SYNCHRO\_EX}{SYNCHRO\_EX}}
+{\footnotesize\ttfamily \#define SYNCHRO\+\_\+\+EX~\mbox{\hyperlink{main_8c_ae948c4c658b2bd925657c58f5b8f33ab}{EXFINAL}}}
+
+Define wich config are executed 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00047}{47}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a6a156e181d5d76e0ddd73ecc409ac9c3}\label{main_8c_a6a156e181d5d76e0ddd73ecc409ac9c3} 
+\index{main.c@{main.c}!Te@{Te}}
+\index{Te@{Te}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Te}{Te}}
+{\footnotesize\ttfamily \#define Te~SAMPLING\+\_\+\+PERIOD\+\_\+ms}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00058}{58}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a991a2b437e497b7c30f7c37f3da862c0}\label{main_8c_a991a2b437e497b7c30f7c37f3da862c0} 
+\index{main.c@{main.c}!TEST\_CORRECTOR\_DUTY@{TEST\_CORRECTOR\_DUTY}}
+\index{TEST\_CORRECTOR\_DUTY@{TEST\_CORRECTOR\_DUTY}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_CORRECTOR\_DUTY}{TEST\_CORRECTOR\_DUTY}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+CORRECTOR\+\_\+\+DUTY~150}
+
+Duty cycle to apply to calibrate the correcteur 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00085}{85}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_abfb9d3a25ca2e3a1dae1c814522ca875}\label{main_8c_abfb9d3a25ca2e3a1dae1c814522ca875} 
+\index{main.c@{main.c}!TEST\_CORRECTOR\_SPEEDL@{TEST\_CORRECTOR\_SPEEDL}}
+\index{TEST\_CORRECTOR\_SPEEDL@{TEST\_CORRECTOR\_SPEEDL}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_CORRECTOR\_SPEEDL}{TEST\_CORRECTOR\_SPEEDL}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+CORRECTOR\+\_\+\+SPEEDL~-\/100}
+
+Speed to test the left correcteur 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00086}{86}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_aafb3a6eb5ef46672cb007ee167d395a4}\label{main_8c_aafb3a6eb5ef46672cb007ee167d395a4} 
+\index{main.c@{main.c}!TEST\_CORRECTOR\_SPEEDR@{TEST\_CORRECTOR\_SPEEDR}}
+\index{TEST\_CORRECTOR\_SPEEDR@{TEST\_CORRECTOR\_SPEEDR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_CORRECTOR\_SPEEDR}{TEST\_CORRECTOR\_SPEEDR}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+CORRECTOR\+\_\+\+SPEEDR~-\/100}
+
+Speed to test the right correcteur 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00087}{87}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_ac8f0cb690a7ba18ff1d3bcac03a6205b}\label{main_8c_ac8f0cb690a7ba18ff1d3bcac03a6205b} 
+\index{main.c@{main.c}!TEST\_LEFT\_MOTOR@{TEST\_LEFT\_MOTOR}}
+\index{TEST\_LEFT\_MOTOR@{TEST\_LEFT\_MOTOR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{TEST\_LEFT\_MOTOR}{TEST\_LEFT\_MOTOR}}
+{\footnotesize\ttfamily \#define TEST\+\_\+\+LEFT\+\_\+\+MOTOR~1}
+
+Calibrate left motor correcteur or not 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00088}{88}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a83be4ba677a5b20cd4b969a5d2828f39}\label{main_8c_a83be4ba677a5b20cd4b969a5d2828f39} 
+\index{main.c@{main.c}!VITESSE\_CAM@{VITESSE\_CAM}}
+\index{VITESSE\_CAM@{VITESSE\_CAM}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{VITESSE\_CAM}{VITESSE\_CAM}}
+{\footnotesize\ttfamily \#define VITESSE\+\_\+\+CAM~\mbox{\hyperlink{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}{CMD}}/3}
+
+Default speed for camera mode 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00068}{68}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_adad34192ac4bc13e73ed3be5a6309d53}\label{main_8c_adad34192ac4bc13e73ed3be5a6309d53} 
+\index{main.c@{main.c}!VITESSE\_KART@{VITESSE\_KART}}
+\index{VITESSE\_KART@{VITESSE\_KART}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{VITESSE\_KART}{VITESSE\_KART}}
+{\footnotesize\ttfamily \#define VITESSE\+\_\+\+KART~\mbox{\hyperlink{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}{CMD}}/2}
+
+Default speed for manual mode 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00066}{66}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}\label{main_8c_a71fa41f4b84f3fa3973737ac75e785a4} 
+\index{main.c@{main.c}!VITESSE\_OBS@{VITESSE\_OBS}}
+\index{VITESSE\_OBS@{VITESSE\_OBS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{VITESSE\_OBS}{VITESSE\_OBS}}
+{\footnotesize\ttfamily \#define VITESSE\+\_\+\+OBS~\mbox{\hyperlink{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}{CMD}}}
+
+Default speed for obstacle mode 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00067}{67}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a39c8f0426010081d7f1fe74787adc164}\label{main_8c_a39c8f0426010081d7f1fe74787adc164} 
+\index{main.c@{main.c}!VL53@{VL53}}
+\index{VL53@{VL53}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{VL53}{VL53}}
+{\footnotesize\ttfamily \#define VL53~0}
+
+Activate VL530X task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00052}{52}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8c_a06fc87d81c62e9abb8790b6e5713c55b}\label{main_8c_a06fc87d81c62e9abb8790b6e5713c55b} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+enumerate mode of robot 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00031}{31}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_adf764cbdea00d65edcd07bb9953ad2b7}\label{main_8c_adf764cbdea00d65edcd07bb9953ad2b7} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+enumerate speed 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00033}{33}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a99fb83031ce9923c84392b4e92f956b5}\label{main_8c_a99fb83031ce9923c84392b4e92f956b5} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+enumerate direction 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00035}{35}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8c_a3f82047e1c93bff73e4db97a19f6ad2e}\label{main_8c_a3f82047e1c93bff73e4db97a19f6ad2e} 
+\index{main.c@{main.c}!CHECKMRRET@{CHECKMRRET}}
+\index{CHECKMRRET@{CHECKMRRET}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CHECKMRRET()}{CHECKMRRET()}}
+{\footnotesize\ttfamily void CHECKMRRET (\begin{DoxyParamCaption}\item[{rcl\+\_\+ret\+\_\+t}]{ret,  }\item[{char \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+check if micro\+Ros function success else print msg in console 
+\begin{DoxyParams}{Parameters}
+{\em ret} & return value of micro\+Ros function \\
+\hline
+{\em msg} & message to print if fail \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00153}{153}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00941}{941}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}\label{main_8c_a8a3b0ad512a6e6c6157440b68d395eac} 
+\index{main.c@{main.c}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
+\index{HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_TIM\_PeriodElapsedCallback()}{HAL\_TIM\_PeriodElapsedCallback()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim }\end{DoxyParamCaption})}
+
+
+
+Period elapsed callback in non blocking mode. 
+
+\begin{DoxyNote}{Note}
+This function is called when TIM1 interrupt took place, inside HAL\+\_\+\+TIM\+\_\+\+IRQHandler(). It makes a direct call to HAL\+\_\+\+Inc\+Tick() to increment a global variable "{}uw\+Tick"{} used as application time base. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em htim} & \+: TIM handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00933}{933}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Init all GPIO and drivers, start the task, init semaphore and queue and launch the kernel
+\begin{DoxyItemize}
+\item Config EXSTARTUP
+\begin{DoxyItemize}
+\item Launch micro\+Ros, supervision, left motor, right motor and lcd task
+\end{DoxyItemize}
+\item Config EXTEST\+\_\+\+UART2
+\begin{DoxyItemize}
+\item Launch test\+\_\+uart2 task
+\end{DoxyItemize}
+\item Config EXCORRECTOR
+\begin{DoxyItemize}
+\item Launch test\+\_\+motor task
+\end{DoxyItemize}
+\item Config EXTESTCORRECTOR
+\begin{DoxyItemize}
+\item Launch supervision, left motor and right motor task
+\end{DoxyItemize}
+\item Config EXTEST\+\_\+\+VL53
+\begin{DoxyItemize}
+\item Launch test\+\_\+vl53 task
+\end{DoxyItemize}
+\item Config EXTEST\+\_\+\+MICROROS
+\begin{DoxyItemize}
+\item Launch micro\+Ros task
+\end{DoxyItemize}
+\item Config EXFINAL
+\begin{DoxyItemize}
+\item Launch micro\+Ros, supervision, left motor, right motor, vl53 and lcd task 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00775}{775}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_afbbd07004ef2541918f88b67c4af7a71}\label{main_8c_afbbd07004ef2541918f88b67c4af7a71} 
+\index{main.c@{main.c}!microros\_allocate@{microros\_allocate}}
+\index{microros\_allocate@{microros\_allocate}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{microros\_allocate()}{microros\_allocate()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} microros\+\_\+allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size,  }\item[{void \texorpdfstring{$\ast$}{*}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{microros__allocators_8c_source_l00014}{14}} of file \mbox{\hyperlink{microros__allocators_8c_source}{microros\+\_\+allocators.\+c}}.
+
+\Hypertarget{main_8c_aba9c00b570a317fad6f6d30220fada5b}\label{main_8c_aba9c00b570a317fad6f6d30220fada5b} 
+\index{main.c@{main.c}!microros\_deallocate@{microros\_deallocate}}
+\index{microros\_deallocate@{microros\_deallocate}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{microros\_deallocate()}{microros\_deallocate()}}
+{\footnotesize\ttfamily void microros\+\_\+deallocate (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pointer,  }\item[{void \texorpdfstring{$\ast$}{*}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{microros__allocators_8c_source_l00022}{22}} of file \mbox{\hyperlink{microros__allocators_8c_source}{microros\+\_\+allocators.\+c}}.
+
+\Hypertarget{main_8c_a3850b59e26ba636e5111bde82afafb01}\label{main_8c_a3850b59e26ba636e5111bde82afafb01} 
+\index{main.c@{main.c}!microros\_reallocate@{microros\_reallocate}}
+\index{microros\_reallocate@{microros\_reallocate}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{microros\_reallocate()}{microros\_reallocate()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} microros\+\_\+reallocate (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pointer,  }\item[{size\+\_\+t}]{size,  }\item[{void \texorpdfstring{$\ast$}{*}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{microros__allocators_8c_source_l00031}{31}} of file \mbox{\hyperlink{microros__allocators_8c_source}{microros\+\_\+allocators.\+c}}.
+
+\Hypertarget{main_8c_a5aca40d972a3057895d59e61e0e69678}\label{main_8c_a5aca40d972a3057895d59e61e0e69678} 
+\index{main.c@{main.c}!microros\_task@{microros\_task}}
+\index{microros\_task@{microros\_task}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{microros\_task()}{microros\_task()}}
+{\footnotesize\ttfamily void microros\+\_\+task (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{argument }\end{DoxyParamCaption})}
+
+
+\begin{DoxyItemize}
+\item All config
+\begin{DoxyItemize}
+\item Create the node {\itshape STM32\+\_\+node} 
+\item Set the Domain id of micro\+Ros
+\end{DoxyItemize}
+\item Config EXSTARTUP \+:
+\begin{DoxyItemize}
+\item Create a publisher and send a message on it
+\end{DoxyItemize}
+\item Config EXTEST\+\_\+\+MICROROS \+:
+\begin{DoxyItemize}
+\item Create a publisher, a subscriber and an executor
+\item Init the executor and add the subscriber to it
+\item Run the executor and send the receive message on the publisher
+\end{DoxyItemize}
+\item Config EXFINAL \+:
+\begin{DoxyItemize}
+\item Create 3 publishers, 5 subscriber and an executor
+\item Init the executor and add the 5 subscribers to it
+\item run the executor and if they are no elements waiting to be read by the task decision put the receive information in the queue If decison task send data then publish data to micro\+Ros 
+\begin{DoxyParams}{Parameters}
+{\em argument} & \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00166}{166}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a74ab553464987a94faae5e414df0078a}\label{main_8c_a74ab553464987a94faae5e414df0078a} 
+\index{main.c@{main.c}!microros\_zero\_allocate@{microros\_zero\_allocate}}
+\index{microros\_zero\_allocate@{microros\_zero\_allocate}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{microros\_zero\_allocate()}{microros\_zero\_allocate()}}
+{\footnotesize\ttfamily void \texorpdfstring{$\ast$}{*} microros\+\_\+zero\+\_\+allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{number\+\_\+of\+\_\+elements,  }\item[{size\+\_\+t}]{size\+\_\+of\+\_\+element,  }\item[{void \texorpdfstring{$\ast$}{*}}]{state }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{microros__allocators_8c_source_l00044}{44}} of file \mbox{\hyperlink{microros__allocators_8c_source}{microros\+\_\+allocators.\+c}}.
+
+\Hypertarget{main_8c_afec8e194407d73381e7dfda42910309d}\label{main_8c_afec8e194407d73381e7dfda42910309d} 
+\index{main.c@{main.c}!SubscriberCallbackFunction@{SubscriberCallbackFunction}}
+\index{SubscriberCallbackFunction@{SubscriberCallbackFunction}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SubscriberCallbackFunction()}{SubscriberCallbackFunction()}}
+{\footnotesize\ttfamily void Subscriber\+Callback\+Function (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{msgin }\end{DoxyParamCaption})}
+
+callback call by microros when a message is receive here use as debug and just print the receive msg 
+\begin{DoxyParams}{Parameters}
+{\em message} & receive \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00155}{155}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+Definition at line \mbox{\hyperlink{systemclock_8c_source_l00011}{11}} of file \mbox{\hyperlink{systemclock_8c_source}{systemclock.\+c}}.
+
+\Hypertarget{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}\label{main_8c_aeaf40c2ad14431735bdc8432bf5e57de} 
+\index{main.c@{main.c}!task\_Motor\_Left@{task\_Motor\_Left}}
+\index{task\_Motor\_Left@{task\_Motor\_Left}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{task\_Motor\_Left()}{task\_Motor\_Left()}}
+{\footnotesize\ttfamily void task\+\_\+\+Motor\+\_\+\+Left (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Task use to control the left motor of the robot 
+\begin{DoxyParams}{Parameters}
+{\em argument} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00365}{365}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a81f652726bff3b9832ab014d3fc28d1e}\label{main_8c_a81f652726bff3b9832ab014d3fc28d1e} 
+\index{main.c@{main.c}!task\_Motor\_Right@{task\_Motor\_Right}}
+\index{task\_Motor\_Right@{task\_Motor\_Right}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{task\_Motor\_Right()}{task\_Motor\_Right()}}
+{\footnotesize\ttfamily void task\+\_\+\+Motor\+\_\+\+Right (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Task use to control the right motor of the robot 
+\begin{DoxyParams}{Parameters}
+{\em argument} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00391}{391}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_aa20650615a802a253757e491905b6af9}\label{main_8c_aa20650615a802a253757e491905b6af9} 
+\index{main.c@{main.c}!task\_Supervision@{task\_Supervision}}
+\index{task\_Supervision@{task\_Supervision}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{task\_Supervision()}{task\_Supervision()}}
+{\footnotesize\ttfamily void task\+\_\+\+Supervision (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Brain of the robot. get information for Micro\+Ros and VL53 task, then send speed to left and right motor, lcd and micro\+Ros task
+\begin{DoxyItemize}
+\item Config EXSTARTUP \+:
+\begin{DoxyItemize}
+\item Make the robot drive forward until an obstacle are found
+\end{DoxyItemize}
+\item Config EXTESTCORRECTOR \+:
+\begin{DoxyItemize}
+\item Make the robot drive forward at speed set by config
+\end{DoxyItemize}
+\item Config EXFINAL \+:
+\begin{DoxyItemize}
+\item Make robot switch beetween 3 behaviour depending of the mode
+\item Obstacle \+: drive and avoid obstacles
+\item Manual \+: drive in direction set in ihm
+\item Camera \+: follow an object 
+\begin{DoxyParams}{Parameters}
+{\em argument} & \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00476}{476}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a}\label{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a} 
+\index{main.c@{main.c}!test\_motor@{test\_motor}}
+\index{test\_motor@{test\_motor}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{test\_motor()}{test\_motor()}}
+{\footnotesize\ttfamily void test\+\_\+motor (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Use to set the duty cycle and register the motor speed at each Te 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00895}{895}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a0068220a4432a5ea9b4442d018b706f8}\label{main_8c_a0068220a4432a5ea9b4442d018b706f8} 
+\index{main.c@{main.c}!test\_uart2@{test\_uart2}}
+\index{test\_uart2@{test\_uart2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{test\_uart2()}{test\_uart2()}}
+{\footnotesize\ttfamily void test\+\_\+uart2 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Use to test printf and scanf function 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00872}{872}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a03356c29f7343d5cd605bcd3e80e27e0}\label{main_8c_a03356c29f7343d5cd605bcd3e80e27e0} 
+\index{main.c@{main.c}!test\_vl53@{test\_vl53}}
+\index{test\_vl53@{test\_vl53}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{test\_vl53()}{test\_vl53()}}
+{\footnotesize\ttfamily void test\+\_\+vl53 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Use to test the VL53 sensor 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00884}{884}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8c_a25fbb54afdba71c24ba51ed50166ac8d}\label{main_8c_a25fbb54afdba71c24ba51ed50166ac8d} 
+\index{main.c@{main.c}!defaultTask\_attributes@{defaultTask\_attributes}}
+\index{defaultTask\_attributes@{defaultTask\_attributes}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{defaultTask\_attributes}{defaultTask\_attributes}}
+{\footnotesize\ttfamily const os\+Thread\+Attr\+\_\+t default\+Task\+\_\+attributes}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \{}
+\DoxyCodeLine{\ \ .name\ =\ \textcolor{stringliteral}{"{}defaultTask"{}},}
+\DoxyCodeLine{\ \ .stack\_size\ =\ 3000\ *\ 4,}
+\DoxyCodeLine{\ \ .priority\ =\ (osPriority\_t)\ osPriorityNormal,}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00024}{24}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a6a263905468b0c37de4ee5e50ede4e74}\label{main_8c_a6a263905468b0c37de4ee5e50ede4e74} 
+\index{main.c@{main.c}!defaultTaskHandle@{defaultTaskHandle}}
+\index{defaultTaskHandle@{defaultTaskHandle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{defaultTaskHandle}{defaultTaskHandle}}
+{\footnotesize\ttfamily os\+Thread\+Id\+\_\+t default\+Task\+Handle}
+
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00023}{23}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a34251392f0d5e2461e3aef615918c235}\label{main_8c_a34251392f0d5e2461e3aef615918c235} 
+\index{main.c@{main.c}!hdma\_usart1\_rx@{hdma\_usart1\_rx}}
+\index{hdma\_usart1\_rx@{hdma\_usart1\_rx}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart1\_rx}{hdma\_usart1\_rx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart1\+\_\+rx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00006}{6}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{main_8c_a5af94ab36bfe698db3e6beea96d10a90}\label{main_8c_a5af94ab36bfe698db3e6beea96d10a90} 
+\index{main.c@{main.c}!hdma\_usart1\_tx@{hdma\_usart1\_tx}}
+\index{hdma\_usart1\_tx@{hdma\_usart1\_tx}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart1\_tx}{hdma\_usart1\_tx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart1\+\_\+tx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00007}{7}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{main_8c_a784aa25dc7e4580cfbf80658340f482c}\label{main_8c_a784aa25dc7e4580cfbf80658340f482c} 
+\index{main.c@{main.c}!hdma\_usart2\_rx@{hdma\_usart2\_rx}}
+\index{hdma\_usart2\_rx@{hdma\_usart2\_rx}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart2\_rx}{hdma\_usart2\_rx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart2\+\_\+rx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00008}{8}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{main_8c_a0083b476c2a75ab9fb2ccbed0048857e}\label{main_8c_a0083b476c2a75ab9fb2ccbed0048857e} 
+\index{main.c@{main.c}!hdma\_usart2\_tx@{hdma\_usart2\_tx}}
+\index{hdma\_usart2\_tx@{hdma\_usart2\_tx}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart2\_tx}{hdma\_usart2\_tx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart2\+\_\+tx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00009}{9}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7}\label{main_8c_af7b2c26e44dadaaa798a5c3d82914ba7} 
+\index{main.c@{main.c}!hi2c1@{hi2c1}}
+\index{hi2c1@{hi2c1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{hi2c1}{hi2c1}}
+{\footnotesize\ttfamily I2\+C\+\_\+\+Handle\+Type\+Def hi2c1\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__i2c_8c_source_l00006}{6}} of file \mbox{\hyperlink{drv__i2c_8c_source}{drv\+\_\+i2c.\+c}}.
+
+\Hypertarget{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5}\label{main_8c_a2cf715bef37f7e8ef385a30974a5f0d5} 
+\index{main.c@{main.c}!huart1@{huart1}}
+\index{huart1@{huart1}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart1\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00004}{4}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{main_8c_aa9479c261d65eecedd3d9582f7f0f89c} 
+\index{main.c@{main.c}!huart2@{huart2}}
+\index{huart2@{huart2}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def huart2\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00005}{5}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{main_8c_a938902e735d5df04bf790f601801da8e}\label{main_8c_a938902e735d5df04bf790f601801da8e} 
+\index{main.c@{main.c}!q\_mot\_L@{q\_mot\_L}}
+\index{q\_mot\_L@{q\_mot\_L}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{q\_mot\_L}{q\_mot\_L}}
+{\footnotesize\ttfamily x\+Queue\+Handle q\+\_\+mot\+\_\+L = NULL}
+
+Queue to communicate with left motor task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00096}{96}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_aa26ca3e16f249f82045250c09e1cd053}\label{main_8c_aa26ca3e16f249f82045250c09e1cd053} 
+\index{main.c@{main.c}!q\_mot\_R@{q\_mot\_R}}
+\index{q\_mot\_R@{q\_mot\_R}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{q\_mot\_R}{q\_mot\_R}}
+{\footnotesize\ttfamily x\+Queue\+Handle q\+\_\+mot\+\_\+R = NULL}
+
+Queue to communicate with right motor task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00097}{97}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a494090d44b64e4d33b49a38031ede042}\label{main_8c_a494090d44b64e4d33b49a38031ede042} 
+\index{main.c@{main.c}!qhLCD@{qhLCD}}
+\index{qhLCD@{qhLCD}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{qhLCD}{qhLCD}}
+{\footnotesize\ttfamily x\+Queue\+Handle qh\+LCD = NULL}
+
+Queue to communicate with LCD task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00100}{100}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2ec1e708e81871b5c6929cb901a69c51}\label{main_8c_a2ec1e708e81871b5c6929cb901a69c51} 
+\index{main.c@{main.c}!qhMR\_pub@{qhMR\_pub}}
+\index{qhMR\_pub@{qhMR\_pub}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{qhMR\_pub}{qhMR\_pub}}
+{\footnotesize\ttfamily x\+Queue\+Handle qh\+MR\+\_\+pub = NULL}
+
+Queue to communicate with micro\+Ros task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00099}{99}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}\label{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a} 
+\index{main.c@{main.c}!qhMR\_sub@{qhMR\_sub}}
+\index{qhMR\_sub@{qhMR\_sub}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{qhMR\_sub}{qhMR\_sub}}
+{\footnotesize\ttfamily x\+Queue\+Handle qh\+MR\+\_\+sub = NULL}
+
+Queue to get information from micro\+Ros task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00098}{98}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}\label{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1} 
+\index{main.c@{main.c}!qhVl53@{qhVl53}}
+\index{qhVl53@{qhVl53}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{qhVl53}{qhVl53}}
+{\footnotesize\ttfamily x\+Queue\+Handle qh\+Vl53 = NULL}
+
+Queue to communicate with VL53 task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00101}{101}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a377891cff46d2f0a39f956b917366f95}\label{main_8c_a377891cff46d2f0a39f956b917366f95} 
+\index{main.c@{main.c}!tab\_speed@{tab\_speed}}
+\index{tab\_speed@{tab\_speed}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{tab\_speed}{tab\_speed}}
+{\footnotesize\ttfamily int16\+\_\+t tab\+\_\+speed\mbox{[}\mbox{\hyperlink{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58}{NB}}\mbox{]}}
+
+use to store speed of motor during calibration of the correcteur 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00104}{104}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}\label{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a} 
+\index{main.c@{main.c}!xSem\_Supervision@{xSem\_Supervision}}
+\index{xSem\_Supervision@{xSem\_Supervision}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{xSem\_Supervision}{xSem\_Supervision}}
+{\footnotesize\ttfamily x\+Semaphore\+Handle x\+Sem\+\_\+\+Supervision = NULL}
+
+Semaphore use in decision task 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00093}{93}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+

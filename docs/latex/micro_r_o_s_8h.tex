@@ -1,0 +1,187 @@
+\doxysection{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+ENIB\+\_\+\+Robot\+\_\+\+Mobile\+\_\+\+Ros2/\+WORKSPACE\+\_\+\+F411\+\_\+u\+ROS6/base\+\_\+robot/\+Core/\+Inc/micro\+ROS.h File Reference}
+\hypertarget{micro_r_o_s_8h}{}\label{micro_r_o_s_8h}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/microROS.h@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/microROS.h}}
+
+
+\+: Contain micro\+ROS topic and default creator for subscriber and publisher  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\+\_\+\+LEN}}~100
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_a8b8f64a33c26069e35762d0b2bddde8b}{CAPTEUR\+\_\+\+DIR\+\_\+\+TOPIC}}~"{}capteur/dir"{}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_ab017694853fcab0de03d88e8ed78f6d2}{ETAT\+\_\+\+MODE\+\_\+\+TOPIC}}~"{}etat/mode"{}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_a777e2c152e4698c99ef7424a3759b788}{ETAT\+\_\+\+SPEED\+\_\+\+TOPIC}}~"{}etat/speed"{}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_a92dacfb9414f411024f60a9f23e057a7}{CAMERA\+\_\+\+X\+\_\+\+TOPIC}}~"{}camera/X"{}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_a5658253b3d963a8983f07678725f8d18}{CAMERA\+\_\+\+Y\+\_\+\+TOPIC}}~"{}camera/Y"{}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_ac4d7d1ee286ca6f3f5cb898689dbc24f}{TELECOMMANDE\+\_\+\+DIR\+\_\+\+TOPIC}}~"{}direction"{}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_ab14756e0df7daa77ff0321450cc43a86}{CONFIG\+\_\+\+MODE\+\_\+\+TOPIC}}~"{}mode"{}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8h_a0767b81cfb4fe4fccc1881d491c5b866}{CONFIG\+\_\+\+SPEED\+\_\+\+TOPIC}}~"{}speed"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{micro_r_o_s_8h_a890a219b2095c02f9ad37f507e6e1bcb}{create\+Publisher}} (rcl\+\_\+publisher\+\_\+t \texorpdfstring{$\ast$}{*}publisher, const rcl\+\_\+node\+\_\+t \texorpdfstring{$\ast$}{*}node, const rosidl\+\_\+message\+\_\+type\+\_\+support\+\_\+t \texorpdfstring{$\ast$}{*}type\+\_\+support, const char \texorpdfstring{$\ast$}{*}topic\+\_\+name, std\+\_\+msgs\+\_\+\+\_\+msg\+\_\+\+\_\+\+Int32 \texorpdfstring{$\ast$}{*}msg)
+\item 
+void \mbox{\hyperlink{micro_r_o_s_8h_aa2d2993f945f17986c10ad57863224b5}{create\+Subscriber}} (rcl\+\_\+subscription\+\_\+t \texorpdfstring{$\ast$}{*}subscription, rcl\+\_\+node\+\_\+t \texorpdfstring{$\ast$}{*}node, const rosidl\+\_\+message\+\_\+type\+\_\+support\+\_\+t \texorpdfstring{$\ast$}{*}type\+\_\+support, const char \texorpdfstring{$\ast$}{*}topic\+\_\+name, std\+\_\+msgs\+\_\+\+\_\+msg\+\_\+\+\_\+\+Int32 \texorpdfstring{$\ast$}{*}msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Contain micro\+ROS topic and default creator for subscriber and publisher 
+
+
+
+Definition in file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}\label{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892} 
+\index{microROS.h@{microROS.h}!ARRAY\_LEN@{ARRAY\_LEN}}
+\index{ARRAY\_LEN@{ARRAY\_LEN}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{ARRAY\_LEN}{ARRAY\_LEN}}
+{\footnotesize\ttfamily \#define ARRAY\+\_\+\+LEN~100}
+
+Length of string messages 
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00010}{10}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+\Hypertarget{micro_r_o_s_8h_a92dacfb9414f411024f60a9f23e057a7}\label{micro_r_o_s_8h_a92dacfb9414f411024f60a9f23e057a7} 
+\index{microROS.h@{microROS.h}!CAMERA\_X\_TOPIC@{CAMERA\_X\_TOPIC}}
+\index{CAMERA\_X\_TOPIC@{CAMERA\_X\_TOPIC}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_X\_TOPIC}{CAMERA\_X\_TOPIC}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+X\+\_\+\+TOPIC~"{}camera/X"{}}
+
+Topic name of x camera subscriber 
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00014}{14}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+\Hypertarget{micro_r_o_s_8h_a5658253b3d963a8983f07678725f8d18}\label{micro_r_o_s_8h_a5658253b3d963a8983f07678725f8d18} 
+\index{microROS.h@{microROS.h}!CAMERA\_Y\_TOPIC@{CAMERA\_Y\_TOPIC}}
+\index{CAMERA\_Y\_TOPIC@{CAMERA\_Y\_TOPIC}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{CAMERA\_Y\_TOPIC}{CAMERA\_Y\_TOPIC}}
+{\footnotesize\ttfamily \#define CAMERA\+\_\+\+Y\+\_\+\+TOPIC~"{}camera/Y"{}}
+
+Topic name of y camera subscriber 
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00015}{15}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+\Hypertarget{micro_r_o_s_8h_a8b8f64a33c26069e35762d0b2bddde8b}\label{micro_r_o_s_8h_a8b8f64a33c26069e35762d0b2bddde8b} 
+\index{microROS.h@{microROS.h}!CAPTEUR\_DIR\_TOPIC@{CAPTEUR\_DIR\_TOPIC}}
+\index{CAPTEUR\_DIR\_TOPIC@{CAPTEUR\_DIR\_TOPIC}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{CAPTEUR\_DIR\_TOPIC}{CAPTEUR\_DIR\_TOPIC}}
+{\footnotesize\ttfamily \#define CAPTEUR\+\_\+\+DIR\+\_\+\+TOPIC~"{}capteur/dir"{}}
+
+Topic name of direction publisher 
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00011}{11}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+\Hypertarget{micro_r_o_s_8h_ab14756e0df7daa77ff0321450cc43a86}\label{micro_r_o_s_8h_ab14756e0df7daa77ff0321450cc43a86} 
+\index{microROS.h@{microROS.h}!CONFIG\_MODE\_TOPIC@{CONFIG\_MODE\_TOPIC}}
+\index{CONFIG\_MODE\_TOPIC@{CONFIG\_MODE\_TOPIC}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{CONFIG\_MODE\_TOPIC}{CONFIG\_MODE\_TOPIC}}
+{\footnotesize\ttfamily \#define CONFIG\+\_\+\+MODE\+\_\+\+TOPIC~"{}mode"{}}
+
+
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00017}{17}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+\Hypertarget{micro_r_o_s_8h_a0767b81cfb4fe4fccc1881d491c5b866}\label{micro_r_o_s_8h_a0767b81cfb4fe4fccc1881d491c5b866} 
+\index{microROS.h@{microROS.h}!CONFIG\_SPEED\_TOPIC@{CONFIG\_SPEED\_TOPIC}}
+\index{CONFIG\_SPEED\_TOPIC@{CONFIG\_SPEED\_TOPIC}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{CONFIG\_SPEED\_TOPIC}{CONFIG\_SPEED\_TOPIC}}
+{\footnotesize\ttfamily \#define CONFIG\+\_\+\+SPEED\+\_\+\+TOPIC~"{}speed"{}}
+
+
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00018}{18}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+\Hypertarget{micro_r_o_s_8h_ab017694853fcab0de03d88e8ed78f6d2}\label{micro_r_o_s_8h_ab017694853fcab0de03d88e8ed78f6d2} 
+\index{microROS.h@{microROS.h}!ETAT\_MODE\_TOPIC@{ETAT\_MODE\_TOPIC}}
+\index{ETAT\_MODE\_TOPIC@{ETAT\_MODE\_TOPIC}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{ETAT\_MODE\_TOPIC}{ETAT\_MODE\_TOPIC}}
+{\footnotesize\ttfamily \#define ETAT\+\_\+\+MODE\+\_\+\+TOPIC~"{}etat/mode"{}}
+
+Topic name of mode publisher 
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00012}{12}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+\Hypertarget{micro_r_o_s_8h_a777e2c152e4698c99ef7424a3759b788}\label{micro_r_o_s_8h_a777e2c152e4698c99ef7424a3759b788} 
+\index{microROS.h@{microROS.h}!ETAT\_SPEED\_TOPIC@{ETAT\_SPEED\_TOPIC}}
+\index{ETAT\_SPEED\_TOPIC@{ETAT\_SPEED\_TOPIC}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{ETAT\_SPEED\_TOPIC}{ETAT\_SPEED\_TOPIC}}
+{\footnotesize\ttfamily \#define ETAT\+\_\+\+SPEED\+\_\+\+TOPIC~"{}etat/speed"{}}
+
+Topic name of speed publisher 
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00013}{13}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+\Hypertarget{micro_r_o_s_8h_ac4d7d1ee286ca6f3f5cb898689dbc24f}\label{micro_r_o_s_8h_ac4d7d1ee286ca6f3f5cb898689dbc24f} 
+\index{microROS.h@{microROS.h}!TELECOMMANDE\_DIR\_TOPIC@{TELECOMMANDE\_DIR\_TOPIC}}
+\index{TELECOMMANDE\_DIR\_TOPIC@{TELECOMMANDE\_DIR\_TOPIC}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{TELECOMMANDE\_DIR\_TOPIC}{TELECOMMANDE\_DIR\_TOPIC}}
+{\footnotesize\ttfamily \#define TELECOMMANDE\+\_\+\+DIR\+\_\+\+TOPIC~"{}direction"{}}
+
+
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8h_source_l00016}{16}} of file \mbox{\hyperlink{micro_r_o_s_8h_source}{micro\+ROS.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{micro_r_o_s_8h_a890a219b2095c02f9ad37f507e6e1bcb}\label{micro_r_o_s_8h_a890a219b2095c02f9ad37f507e6e1bcb} 
+\index{microROS.h@{microROS.h}!createPublisher@{createPublisher}}
+\index{createPublisher@{createPublisher}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{createPublisher()}{createPublisher()}}
+{\footnotesize\ttfamily void create\+Publisher (\begin{DoxyParamCaption}\item[{rcl\+\_\+publisher\+\_\+t \texorpdfstring{$\ast$}{*}}]{publisher,  }\item[{const rcl\+\_\+node\+\_\+t \texorpdfstring{$\ast$}{*}}]{node,  }\item[{const rosidl\+\_\+message\+\_\+type\+\_\+support\+\_\+t \texorpdfstring{$\ast$}{*}}]{type\+\_\+support,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{topic\+\_\+name,  }\item[{std\+\_\+msgs\+\_\+\+\_\+msg\+\_\+\+\_\+\+Int32 \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+Create a publisher with default options 
+\begin{DoxyParams}{Parameters}
+{\em publisher} & micro\+Ros structure that represent a publisher \\
+\hline
+{\em node} & micro\+Ros structure that represent a node \\
+\hline
+{\em type\+\_\+support} & micro\+Ros structure that represent the type of message \\
+\hline
+{\em topic\+\_\+name} & The name of the topic \\
+\hline
+{\em msg} & micro\+Ros structure that represent the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8c_source_l00005}{5}} of file \mbox{\hyperlink{micro_r_o_s_8c_source}{micro\+ROS.\+c}}.
+
+\Hypertarget{micro_r_o_s_8h_aa2d2993f945f17986c10ad57863224b5}\label{micro_r_o_s_8h_aa2d2993f945f17986c10ad57863224b5} 
+\index{microROS.h@{microROS.h}!createSubscriber@{createSubscriber}}
+\index{createSubscriber@{createSubscriber}!microROS.h@{microROS.h}}
+\doxysubsubsection{\texorpdfstring{createSubscriber()}{createSubscriber()}}
+{\footnotesize\ttfamily void create\+Subscriber (\begin{DoxyParamCaption}\item[{rcl\+\_\+subscription\+\_\+t \texorpdfstring{$\ast$}{*}}]{subscription,  }\item[{rcl\+\_\+node\+\_\+t \texorpdfstring{$\ast$}{*}}]{node,  }\item[{const rosidl\+\_\+message\+\_\+type\+\_\+support\+\_\+t \texorpdfstring{$\ast$}{*}}]{type\+\_\+support,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{topic\+\_\+name,  }\item[{std\+\_\+msgs\+\_\+\+\_\+msg\+\_\+\+\_\+\+Int32 \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+Create a subscriber with default options 
+\begin{DoxyParams}{Parameters}
+{\em subscription} & micro\+Ros structure that represent a subscriber \\
+\hline
+{\em node} & micro\+Ros structure that represent a node \\
+\hline
+{\em type\+\_\+support} & micro\+Ros structure that represent the type of message \\
+\hline
+{\em topic\+\_\+name} & The name of the topic \\
+\hline
+{\em msg} & micro\+Ros structure that represent the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8c_source_l00024}{24}} of file \mbox{\hyperlink{micro_r_o_s_8c_source}{micro\+ROS.\+c}}.
+
