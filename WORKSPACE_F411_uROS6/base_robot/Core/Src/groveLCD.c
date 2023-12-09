@@ -18,9 +18,9 @@
 //=================================================================
 void groveLCD_test()
 {
-	int8_t tab[1];
+	uint8_t tab[2];
 	tab[1] = 100;
-  i2c1_WriteRegBuffer(RGB_ADDRESS, REG_RED,  tab, 1);
+  i2c1_WriteRegBuffer(RGB_ADDRESS, REG_RED, tab, 1);
 
 }
 //=================================================================

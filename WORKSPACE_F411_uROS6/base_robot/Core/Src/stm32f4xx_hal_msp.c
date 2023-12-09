@@ -1,6 +1,5 @@
 #include "main.h"
 
-
 #define USART2_IRQ_PRIO	9
 #define USART6_IRQ_PRIO	10
 //#define EXTI1_IRQ_PRIO	7
@@ -38,25 +37,8 @@ void HAL_MspInit(void)
   HAL_Encoder_Timer1_MspInit();
   HAL_Encoder_Timer2_MspInit();
   HAL_adcir_MspInit();
-  HAL_GPIO_MspInit();
-
 }
-/******************************************************************
-			GPIO : contrôle période d'échantillonage
-GPIO OUTPUT	-->	PB4
-******************************************************************/
-void HAL_GPIO_MspInit(void)
-{
-	  //GPIO_InitTypeDef  GPIO_InitStruct;
 
-	  //GPIO_InitStruct.Pin = GPIO_PIN_4;
-	  //GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP; // hal_gpio.h
-	  //GPIO_InitStruct.Pull = GPIO_NOPULL;
-	  //GPIO_InitStruct.Speed = GPIO_SPEED_MEDIUM;
-
-	  //HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
-}
 /******************************************************************
 			ENCODER - TIMER1
 PWM1/1	-->	PA8		-- Encodeur Voie A

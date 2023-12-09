@@ -1,0 +1,186 @@
+/* USER CODE BEGIN Header */
+/**
+  ******************************************************************************
+  * @file           : main.h
+  * @brief          : Header for main.c file.
+  *                   This file contains the common defines of the application.
+  ******************************************************************************
+  * @attention
+  *
+  * Copyright (c) 2022 STMicroelectronics.
+  * All rights reserved.
+  *
+  * This software is licensed under terms that can be found in the LICENSE file
+  * in the root directory of this software component.
+  * If no LICENSE file comes with this software, it is provided AS-IS.
+  *
+  ******************************************************************************
+  */
+/* USER CODE END Header */
+
+/* Define to prevent recursive inclusion -------------------------------------*/
+#ifndef __MAIN_H
+#define __MAIN_H
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+/* Includes ------------------------------------------------------------------*/
+#include "stm32f4xx_hal.h"
+
+/* Private includes ----------------------------------------------------------*/
+/* USER CODE BEGIN Includes */
+
+/* USER CODE END Includes */
+
+/* Exported types ------------------------------------------------------------*/
+/* USER CODE BEGIN ET */
+
+/* USER CODE END ET */
+
+/* Exported constants --------------------------------------------------------*/
+/* USER CODE BEGIN EC */
+
+/* USER CODE END EC */
+
+/* Exported macro ------------------------------------------------------------*/
+/* USER CODE BEGIN EM */
+
+/* USER CODE END EM */
+
+/* Exported functions prototypes ---------------------------------------------*/
+void Error_Handler(void);
+
+/* USER CODE BEGIN EFP */
+/** check if microRos function success else print msg in console
+ * @param ret return value of microRos function
+ * @param msg message to print if fail
+ */
+void CHECKMRRET(rcl_ret_t ret, char* msg);
+
+/**
+ * callback call by microros when a message is receive here use as debug and just print the receive msg
+ * @param message receive
+ */
+void SubscriberCallbackFunction(const void *msgin);
+
+/**
+ * - All config
+ * 	- Create the node \a STM32_node
+ * 	- Set the Domain id of microRos
+ * - Config EXSTARTUP :
+ * 	- Create a publisher and send a message on it
+ * - Config EXTEST_MICROROS :
+ * 	- Create a publisher, a subscriber and an executor
+ * 	- Init the executor and add the subscriber to it
+ * 	- Run the executor and send the receive message on the publisher
+ * - Config EXFINAL :
+ * 	- Create 3 publishers, 5 subscriber and an executor
+ * 	- Init the executor and add the 5 subscribers to it
+ * 	- run the executor and if they are no elements waiting to be read by the task
+ * 	decision put the receive information in the queue
+ * 	If decison task send data then publish data to microRos
+ * @param argument
+ */
+void microros_task(void *argument);
+
+/**
+ * Task use to control the left motor of the robot
+ * @param argument
+ */
+void task_Motor_Left(void *pvParameters);
+
+/**
+ * Task use to control the right motor of the robot
+ * @param argument
+ */
+void task_Motor_Right(void *pvParameters);
+
+/**
+ * task that get the value of the VL53 sensor and put it on the VL53 queue
+ * @param argument
+ */
+void task_VL53(void *pvParameters);
+
+/**
+ * Task use to write information on LCD depending of the data in the LCD queue
+ * - Config EXSTARTUP :
+ * 	- Print 'TEST' LCD on screen
+ * - Config EXFINAL :
+ * 	- Print different messages depending of the actual mode
+ * @param argument
+ */
+void task_Grove_LCD(void *pvParameters);
+
+/**
+ * Brain of the robot. get information for MicroRos and VL53 task, then send speed to
+ * left and right motor, lcd and microRos task
+ * - Config EXSTARTUP :
+ * 	- Make the robot drive forward until an obstacle are found
+ * - Config EXTESTCORRECTOR :
+ * 	- Make the robot drive forward at speed set by config
+ * - Config EXFINAL :
+ *  - Make robot switch beetween 3 behaviour depending of the mode
+ *  - Obstacle : drive and avoid obstacles
+ *  - Manual : drive in direction set in ihm
+ *  - Camera : follow an object
+ * @param argument
+ */
+void task_Supervision(void *pvParameters);
+
+/* USER CODE END EFP */
+
+/* Private defines -----------------------------------------------------------*/
+#define B1_Pin GPIO_PIN_13
+#define B1_GPIO_Port GPIOC
+#define USART_TX_Pin GPIO_PIN_2
+#define USART_TX_GPIO_Port GPIOA
+#define USART_RX_Pin GPIO_PIN_3
+#define USART_RX_GPIO_Port GPIOA
+#define LD2_Pin GPIO_PIN_5
+#define LD2_GPIO_Port GPIOA
+#define TMS_Pin GPIO_PIN_13
+#define TMS_GPIO_Port GPIOA
+#define TCK_Pin GPIO_PIN_14
+#define TCK_GPIO_Port GPIOA
+#define SWO_Pin GPIO_PIN_3
+#define SWO_GPIO_Port GPIOB
+/* USER CODE BEGIN Private defines */
+
+#include <stdio.h>
+#include "retarget.h"
+
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "semphr.h"
+
+#include "systemclock.h"
+#include "drv_uart.h"
+#include "drv_gpio.h"
+#include "drv_i2c.h"
+
+#include "cmsis_os.h"
+
+#include <rcl/rcl.h>
+#include <rcl/error_handling.h>
+#include <rclc/rclc.h>
+#include <rclc/executor.h>
+#include <uxr/client/transport.h>
+#include <rmw_microxrcedds_c/config.h>
+#include <rmw_microros/rmw_microros.h>
+
+#include <std_msgs/msg/int32.h>
+#include <std_msgs/msg/string.h>
+#include <std_msgs/msg/header.h>
+
+#include "microROS.h"
+
+/* USER CODE END Private defines */
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* __MAIN_H */

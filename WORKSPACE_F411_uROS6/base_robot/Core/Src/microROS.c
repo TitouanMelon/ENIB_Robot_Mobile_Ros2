@@ -22,7 +22,7 @@ void createPublisher(rcl_publisher_t* publisher,
 }
 
 void createSubscriber(rcl_subscription_t* subscription,
-	const rcl_node_t* node,
+	rcl_node_t* node,
 	const rosidl_message_type_support_t* type_support,
 	const char* topic_name,
 	std_msgs__msg__Int32* msg)

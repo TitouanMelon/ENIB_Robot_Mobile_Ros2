@@ -1,6 +1,4 @@
 /**
- * @mainpage main.c
- * @author titouan melon
  * @file main.c
  * @brief file that contain the main code
  */
@@ -36,75 +34,74 @@ enum {STOP_VIT, LOW, FAST, SONIC, LAST_SPEED};
 /** enumerate direction */
 enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GAUCHE, RECULE_DROITE, LAST_DIR};
 
-
 #define SAMPLING_PERIOD_ms 5 /**< Define the delay beetween two execution of the same task */
 /**@{ @name config exo */
 #define EXSTARTUP 0 /**< startup code */
-#define EXTEST_UART2 1 /**< Just printf and scanf fonction */
-#define EXCORRECTOR 2 /**< */
-#define EXTESTCORRECTOR 3 /**< */
-#define EXTEST_VL53 4 /**< send value of VL53 captor on uart2 */
-#define EXTEST_MICROROS 5 /**< Test send and receive Int32 msg */
-#define EXFINAL 6 /**< final code */
+#define EXTEST_UART2 1 /**< Test printf and scanf function */
+#define EXCORRECTOR 2 /**< Code to calibrate your correcteur */
+#define EXTESTCORRECTOR 3 /**< Code to test your correcteur */
+#define EXTEST_VL53 4 /**< Test VL530X sensor */
+#define EXTEST_MICROROS 5 /**< Test Micro ROS subscriber and publisher */
+#define EXFINAL 6 /**< Final code */
 
-#define SYNCHRO_EX EXFINAL /**< use to choose wich fonction are called */
+#define SYNCHRO_EX EXFINAL /**< Define wich config are executed */
 /** @} */
 /** @{ @name config robot */
-#define ROS_DOMAIN_ID 0 /**< */
-#define LCD 0 /**< */
-#define VL53 0 /**< */
-#define MICROROS 1 /**< */
-#define DEBUG_PRINTF 0 /**< */
-#define DEBUG_MOTOR 0 /**< */
+#define ROS_DOMAIN_ID 0 /**< Define ROS domain id*/
+#define LCD 0 /**< Activate LCD task */
+#define VL53 0 /**< Activate VL530X task */
+#define MICROROS 1 /**< Activate MicroROS task*/
+#define DEBUG_PRINTF 0 /**< Activate debug print */
+#define DEBUG_MOTOR 0 /**< Activate motor debug print */
 /** @} */
 /** @{ @name config correcteur */
 #define Te SAMPLING_PERIOD_ms /**< */
-#define LKp 0.001 /**< */
-#define LKi (5.0/(0.1*40.0)) /**< */
-#define RKp 0.001 /**< */
-#define RKi (5.0/(0.1*40.0)) /**< */
+#define LKp 0.001 /**< Kp factor for the left motor */
+#define LKi (5.0/(0.1*40.0)) /**< Ki factor for the left motor */
+#define RKp 0.001 /**< Kp factor for the right motor */
+#define RKi (5.0/(0.1*40.0)) /**< Kp factor for the right motor */
 /** @} */
 /** @{ @name config default speed for each mode */
-#define CMD 1000 /**< */
-#define VITESSE_KART CMD/2 /**< */
-#define VITESSE_OBS CMD /**< */
-#define VITESSE_CAM CMD/3 /**< */
+#define CMD 1000 /**< Can be use as default speed */
+#define VITESSE_KART CMD/2 /**< Default speed for manual mode */
+#define VITESSE_OBS CMD /**< Default speed for obstacle mode */
+#define VITESSE_CAM CMD/3 /**< Default speed for camera mode */
 /** @} */
 /** @{ @name config camera settings */
-#define CAMERA_X_MIN 0 /**< */
-#define CAMERA_X_MAX 640 /**< */
-#define CAMERA_Y_MIN 0 /**< */
-#define CAMERA_Y_MAX 480 /**< */
-#define CAMERA_X_TIER (CAMERA_X_MAX-CAMERA_X_MIN)/3 /**< */
-#define CAMERA_Y_TIER (CAMERA_Y_MAX-CAMERA_Y_MIN)/3 /**< */
+#define CAMERA_X_MIN 0 /**< Define minimal x position return by camera */
+#define CAMERA_X_MAX 640 /**< Define maximal x position return by camera */
+#define CAMERA_Y_MIN 0 /**< Define minimal y position return by camera */
+#define CAMERA_Y_MAX 480 /**< Define maximal y position return by camera */
+//#define CAMERA_X_TIER (CAMERA_X_MAX-CAMERA_X_MIN)/3 /**< */
+//#define CAMERA_Y_TIER (CAMERA_Y_MAX-CAMERA_Y_MIN)/3 /**< */
 /** @} */
 /** @{ @name config default behaviour */
-#define DEFAULT_MODE MODE_ZIG /**< */
-#define DEFAULT_SPEED LOW /**< */
-#define DEFAULT_DIR STOP /**< */
+#define DEFAULT_MODE MODE_ZIG /**< Default mode at startup */
+#define DEFAULT_SPEED LOW /**< Default speed at startup */
+#define DEFAULT_DIR STOP /**< Default direction at startup */
 /** @} */
 /** @{ @name config test value */
-#define NB 200 /**< */
-#define TEST_CORRECTOR_DUTY 150 /**< */
-#define TEST_CORRECTOR_SPEEDL -100 /**< */
-#define TEST_CORRECTOR_SPEEDR -100 /**< */
-#define TEST_LEFT_MOTOR 1 /**< */
+#define NB 200 /**< Number of samples in correcteur calibration task */
+#define TEST_CORRECTOR_DUTY 150 /**< Duty cycle to apply to calibrate the correcteur */
+#define TEST_CORRECTOR_SPEEDL -100 /**< Speed to test the left correcteur */
+#define TEST_CORRECTOR_SPEEDR -100 /**< Speed to test the right correcteur */
+#define TEST_LEFT_MOTOR 1 /**< Calibrate left motor correcteur or not */
 /** @} */
 
 // Déclaration des objets synchronisants !! Ne pas oublier de les créer
 /** @{ @name semaphore */
-xSemaphoreHandle xSem_Supervision = NULL; /**< */
+xSemaphoreHandle xSem_Supervision = NULL; /**< Semaphore use in decision task */
 /** @} */
 /** @{ @name queueHandle */
-xQueueHandle q_mot_L = NULL; /**< */
-xQueueHandle q_mot_R = NULL; /**< */
-xQueueHandle qhMR_sub = NULL; /**< */
-xQueueHandle qhMR_pub = NULL; /**< */
-xQueueHandle qhLCD = NULL; /**< */
-xQueueHandle qhVl53 = NULL; /**< */
+xQueueHandle q_mot_L = NULL; /**< Queue to communicate with left motor task */
+xQueueHandle q_mot_R = NULL; /**< Queue to communicate with right motor task */
+xQueueHandle qhMR_sub = NULL; /**< Queue to get information from microRos task */
+xQueueHandle qhMR_pub = NULL; /**< Queue to communicate with microRos task */
+xQueueHandle qhLCD = NULL; /**< Queue to communicate with LCD task */
+xQueueHandle qhVl53 = NULL; /**< Queue to communicate with VL53 task */
 /** @} */
 
-int16_t tab_speed[NB]; /**< use to store speed of motor during test part */
+int16_t tab_speed[NB]; /**< use to store speed of motor during calibration of the correcteur */
 
 /** @{ @name queue messages structures */
 /**
@@ -112,38 +109,31 @@ int16_t tab_speed[NB]; /**< use to store speed of motor during test part */
  */
 typedef struct
 {
-	char command; /**< char that represente direction */
-	int data; /**< int represent the mode */
+	char command; /**< Represent the direction of the robot */
+	int data; /**< Represent the mode of the robot */
 } AMessage;
 
 /**
- * Use to send data to mr's task
+ * Use to send information from the task decision to microRos task
  */
 typedef struct
 {
-	char dir; /**< a char contain direction */
-	int mode; /**< an int contain mode */
-	int speed; /**< a int contain speed */
+	char dir; /**< Represent the direction of the robot */
+	int mode; /**< Represent the mode of the robot */
+	int speed; /**< Represent the speed of the robot */
 } MicroRosPubMsg;
 
 /**
- * Use to send data to decision's task
+ * Use to send information get by microRos to decision task
  */
 typedef struct
 {
-	int dir; /**< tel dir */
-	int x; /**< cam x pos */
-	int y; /**< cam y pos */
-	int mode; /**< config mode */
-	int speed; /**< config speed */
+	int dir; /**< Represent the direction send by the IHM */
+	int x; /**< Represent the x position send by the camera */
+	int y; /**< Represent the y position send by the camera */
+	int mode; /**< Represent the mode send by the IHM */
+	int speed; /**< Represent the speed send by the IHM */
 } MicroRosSubMsg;
-/** @} */
-
-/** @{ @name Test function */
-void test_print_uart2(void *pvParameters);
-void test_vl53(void *pvParameters);
-void test_motor(void *pvParameters);
-void test_correcteur(void *pvParameters);
 /** @} */
 
 //Robot function
@@ -160,18 +150,8 @@ void microros_deallocate(void * pointer, void * state);
 void * microros_reallocate(void * pointer, size_t size, void * state);
 void * microros_zero_allocate(size_t number_of_elements, size_t size_of_element, void * state);
 
-/** check if microRos function success else print msg in console
- * @param ret return value of microRos function
- * @param msg message to print if fail
- */
-void CHECKMRRET(rcl_ret_t ret, char* msg){
-	if (ret != RCL_RET_OK){ printf("Error : %d\r\nMsg : %s\r\n", (int)ret, msg); }
-}
+void CHECKMRRET(rcl_ret_t ret, char* msg){if (ret != RCL_RET_OK){ printf("Error : %d\r\nMsg : %s\r\n", (int)ret, msg); }}
 
-/**
- * callback call when a message is receive
- * @param message receive
- */
 void SubscriberCallbackFunction(const void *msgin){
 #if SYNCHRO_EX == EXTEST_MICROROS
 	std_msgs__msg__String * msg = (std_msgs__msg__String * )msgin;
@@ -182,20 +162,15 @@ void SubscriberCallbackFunction(const void *msgin){
 #endif //SYNCHRO_EX
 }
 
-
 // https://github.com/lFatality/stm32_micro_ros_setup
-/**
- * task microRos : create node, subscribers and pulishers and
- * exploit them
- */
 void microros_task(void *argument)
 {
 	// micro-ROS app variable
-	rclc_support_t support;
+	rclc_support_t support; //Contain information about
 	rcl_allocator_t allocator;
-	rcl_node_t node;
-	rcl_node_options_t node_opt;
-	rclc_executor_t executor;
+	rcl_node_t node; //microRos structure wich represent a node ROS
+	rcl_node_options_t node_opt; //microRos structure wich represent option of a node ROS
+	rclc_executor_t executor; //The executor is use to receive message
 
 	// micro-ROS configuration
 	rmw_uros_set_custom_transport(
@@ -275,6 +250,7 @@ void microros_task(void *argument)
 		vTaskDelay(SAMPLING_PERIOD_ms);
 	}
 #elif SYNCHRO_EX == EXFINAL
+	//Init the queue mesage
 	MicroRosPubMsg MsgToPub = {'N', 0, 0};
 	MicroRosSubMsg SubToMsg = {DEFAULT_DIR, 0, 0, DEFAULT_MODE, DEFAULT_SPEED};
 	/* PUBLISHER */
@@ -326,27 +302,30 @@ void microros_task(void *argument)
 		etat_speed_topic, &etat_speed_msg);
 
 	//create subscriber
-	createSubscriber(&camera_x_sub,&node,
+	createSubscriber(&camera_x_sub, &node,
 		ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
 		camera_x_topic, &camera_x_msg);
 
-	createSubscriber(&camera_y_sub,&node,
+	createSubscriber(&camera_y_sub, &node,
 			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
 			camera_y_topic, &camera_y_msg);
 
-	createSubscriber(&telecommande_dir_sub,&node,
+	createSubscriber(&telecommande_dir_sub, &node,
 			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
 			telecommande_dir_topic, &telecommande_dir_msg);
 
-	createSubscriber(&config_mode_sub,&node,
+	createSubscriber(&config_mode_sub, &node,
 			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
 			config_mode_topic, &config_mode_msg);
 
-	createSubscriber(&config_speed_sub,&node,
+	createSubscriber(&config_speed_sub, &node,
 			ROSIDL_GET_MSG_TYPE_SUPPORT(std_msgs, msg, Int32),
 			config_speed_topic, &config_speed_msg);
 
+	//Init the executor
 	CHECKMRRET(rclc_executor_init(&executor, &support.context, 5, &allocator), "Error on init executor");
+	/*Add subscriber to executor to let it check if message is receive on this
+	topic and store the data on the message structure after call the callback*/
 	CHECKMRRET(rclc_executor_add_subscription(&executor, &camera_x_sub, &camera_x_msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add camera_x_sub");
 	CHECKMRRET(rclc_executor_add_subscription(&executor, &camera_y_sub, &camera_y_msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add camera_y_sub");
 	CHECKMRRET(rclc_executor_add_subscription(&executor, &telecommande_dir_sub, &telecommande_dir_msg, &SubscriberCallbackFunction, ON_NEW_DATA), "error add telecommande_dir_sub");
@@ -355,21 +334,22 @@ void microros_task(void *argument)
 
 	for(;;)
 	{
-		if (!uxQueueMessagesWaiting(qhMR_sub))
+		if (!uxQueueMessagesWaiting(qhMR_sub)) //If no message in 'output' queue
 			xQueueSend(qhMR_sub, ( void * ) &SubToMsg, portMAX_DELAY);
-		rclc_executor_spin_some(&executor, 1*1000*1000);
+		rclc_executor_spin_some(&executor, 1*1000*1000); //Execute executor
 		SubToMsg.dir = telecommande_dir_msg.data;
 		SubToMsg.x = camera_x_msg.data;
 		SubToMsg.y = camera_y_msg.data;
 		SubToMsg.mode = config_mode_msg.data;
 		SubToMsg.speed = config_speed_msg.data;
 
-		if (uxQueueMessagesWaiting(qhMR_pub))
+		if (uxQueueMessagesWaiting(qhMR_pub)) //If no message in 'input' queue
 		{
-			xQueueReceive(qhMR_pub, &MsgToPub, portMAX_DELAY);
+			xQueueReceive(qhMR_pub, &MsgToPub, portMAX_DELAY); //Receive data
 			capteur_dir_msg.data = (int)MsgToPub.dir;
 			etat_mode_msg.data = MsgToPub.mode;
 			etat_speed_msg.data = MsgToPub.speed;
+			//Publish data
 			CHECKMRRET(rcl_publish(&capteur_dir_pub, &capteur_dir_msg, NULL), "erreur publish capteur_dir_pub");
 			CHECKMRRET(rcl_publish(&etat_mode_pub, &etat_mode_msg, NULL), "erreur publish etat_mode_pub");
 			CHECKMRRET(rcl_publish(&etat_speed_pub, &etat_speed_msg, NULL), "erreur publish etat_speed_pub");
@@ -381,61 +361,61 @@ void microros_task(void *argument)
 	}
 #endif //SYNCHRO_EX
 }
-//========================================================================
-static void task_Motor_Left(void *pvParameters)
-{
-	int16_t consigne = 0;
 
-	float ui = 0.0;
-	float up = 0.0;
-	int err = 0;
-	int speed = 0;
+void task_Motor_Left(void *pvParameters)
+{
+	int16_t consigne = 0; //Store the desirate speed
+
+	float ui = 0.0; //Integral term of the correcteur
+	float up = 0.0; //Proportionnal term of the correcteur
+	int err = 0; //Error term of the correcteur
+	int speed = 0; //Actual speed of motor
 
 	for (;;)
 	{
-		xQueueReceive(q_mot_L, &consigne, portMAX_DELAY);
+		xQueueReceive(q_mot_L, &consigne, portMAX_DELAY); //receive wanted speed
 
-		speed = quadEncoder_GetSpeedL();
+		speed = quadEncoder_GetSpeedL(); //Get actual speed
+		//Calculate term of correcteur
 		err=consigne-speed;
 		up=LKp*(float)err;
 		ui=ui+LKp*LKi*(float)err;
 
-		motorLeft_SetDuty(100+(int)(up+ui));
+		motorLeft_SetDuty(100+(int)(up+ui)); //Set duty cycle of the motor
 
-		xSemaphoreGive(xSem_Supervision);
+		xSemaphoreGive(xSem_Supervision); //Give semaphore to liberate the decision task
 		vTaskDelay(SAMPLING_PERIOD_ms);
 	}
 }
 
-//=========================================================================
-static void task_Motor_Right(void *pvParameters)
+void task_Motor_Right(void *pvParameters)
 {
-	int16_t consigne = 0;
+	int16_t consigne = 0; //Store the desirate speed
 
-	float ui= 0.0;
-	float up = 0.0;
-	int err = 0;
-	int speed = 0;
+	float ui = 0.0; //Integral term of the correcteur
+	float up = 0.0; //Proportionnal term of the correcteur
+	int err = 0; //Error term of the correcteur
+	int speed = 0; //Actual speed of motor
 
 	for (;;)
 	{
-		xQueueReceive(q_mot_R, &consigne, portMAX_DELAY);
+		xQueueReceive(q_mot_R, &consigne, portMAX_DELAY); //receive wanted speed
 
-		speed = quadEncoder_GetSpeedR();
+		speed = quadEncoder_GetSpeedR(); //Get actual speed
+		//Calculate term of correcteur
 		err=consigne-speed;
 		up=RKp*(float)err;
 		ui=ui+RKp*RKi*(float)err;
 
-		motorRight_SetDuty(100+(int)(up+ui));
+		motorRight_SetDuty(100+(int)(up+ui)); //Set duty cycle of the motor
 
-		xSemaphoreGive(xSem_Supervision);
+		xSemaphoreGive(xSem_Supervision);//Give semaphore to liberate the decision task
 		vTaskDelay(SAMPLING_PERIOD_ms);
 	}
 }
 
-//=========================================================================
 #if VL53
-static void task_VL53(void *pvParameters)
+void task_VL53(void *pvParameters)
 {
 	static uint16_t dist;
 	static const int SEUIL = 20;
@@ -455,13 +435,20 @@ static void task_VL53(void *pvParameters)
 		vTaskDelay(SAMPLING_PERIOD_ms);
 	}
 }
-#endif
+#endif //VL53
 
-//=========================================================================
+
 #if LCD
-static void task_Grove_LCD(void *pvParameters)
+void task_Grove_LCD(void *pvParameters)
 {
-#if SYNCHRO_EX == EXFINAL
+#if SYNCHRO_EX == EXSTARTUP
+	for (;;)
+	{
+		 groveLCD_setCursor(0,0);
+		 groveLCD_term_printf("TEST LCD");
+		 vTaskDelay(100);
+	}
+#elif SYNCHRO_EX == EXFINAL
 	AMessage pxRxedMessage;
 
 	for(;;)
@@ -475,26 +462,18 @@ static void task_Grove_LCD(void *pvParameters)
 			if (mode == MODE_OBS)
 				groveLCD_term_printf("M:Obstacle  D:%c", direction);
 			else if (mode == MODE_ZIG)
-				groveLCD_term_printf("M:Zigbee        ");
+				groveLCD_term_printf("M:Manuel        ");
 			else if (mode == MODE_CAM)
 				groveLCD_term_printf("M:Camera        ");
 		}
 
 		vTaskDelay(SAMPLING_PERIOD_ms);
 	}
-#elif SYNCHRO_EX == EXSTARTUP
-	for (;;)
-	{
-		 groveLCD_setCursor(0,0);
-		 groveLCD_term_printf("TEST LCD");
-		 vTaskDelay(100);
-	}
-#endif
+#endif //SYNCHRO_EX
 }
-#endif
+#endif //LCD
 
-//=========================================================================
-static void task_Supervision(void *pvParameters)
+void task_Supervision(void *pvParameters)
 {
 #if SYNCHRO_EX == EXSTARTUP
 	int16_t consigne_G=0;
@@ -506,8 +485,6 @@ static void task_Supervision(void *pvParameters)
 	vTaskDelay(100);
 	for (;;)
 	{
-	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 1);
-
 	    captDistIR_Get(tab_mes_ir);
 	    //mes_vl53 = readRangeSingleMillimeters()/10;
 
@@ -528,7 +505,20 @@ static void task_Supervision(void *pvParameters)
 		xQueueSend( q_mot_R, ( void * ) &consigne_D,  portMAX_DELAY );
 		xSemaphoreTake( xSem_Supervision, portMAX_DELAY );
 
-		HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, 0);
+		vTaskDelay(SAMPLING_PERIOD_ms);
+	}
+#elif SYNCHRO_EX == EXTESTCORRECTOR
+	int16_t speedLeft = TEST_CORRECTOR_SPEEDL;
+	int16_t speedRight = TEST_CORRECTOR_SPEEDR;
+
+	for (;;)
+	{
+		xQueueSend(q_mot_L, (void *)&speedLeft, portMAX_DELAY);
+		xSemaphoreTake(xSem_Supervision, portMAX_DELAY);
+
+		xQueueSend(q_mot_R, (void *)&speedRight, portMAX_DELAY);
+		xSemaphoreTake(xSem_Supervision, portMAX_DELAY);
+
 		vTaskDelay(SAMPLING_PERIOD_ms);
 	}
 #elif SYNCHRO_EX == EXFINAL
@@ -536,7 +526,9 @@ static void task_Supervision(void *pvParameters)
 	int16_t speedRight;
 
 	int table[2];
+	#if VL53
 	int vl53 = 0;
+	#endif //VL53
 
 	static int obs = 0;
 	static char dir = 'f';
@@ -780,7 +772,6 @@ static void task_Supervision(void *pvParameters)
 #endif //SYNCHRO_EX
 }
 
-//=========================================================================
 int main(void)
 {
   HAL_Init();
@@ -807,7 +798,7 @@ int main(void)
 	  printf("%d\r\n", readRangeSingleMillimeters()/10);
   }
   HAL_Delay(500);
-#endif
+#endif //VL53
 
   // Test Ecran LCD
 #if LCD
@@ -817,7 +808,7 @@ int main(void)
   groveLCD_setColor(1);
   groveLCD_term_printf("Titouan//Jeremy//Louanne");
   HAL_Delay(1000);
-#endif
+#endif //LCD
 
   osKernelInitialize();
   //defaultTaskHandle = osThreadNew(microros_task, NULL, &defaultTask_attributes);
@@ -837,10 +828,9 @@ int main(void)
 #elif SYNCHRO_EX == EXCORRECTOR
 	xTaskCreate(test_motor, ( const portCHAR * ) "task test motor", 128 /* stack size */, NULL, tskIDLE_PRIORITY, NULL);
 #elif SYNCHRO_EX == EXTESTCORRECTOR
-	xTaskCreate(test_correcteur, ( const portCHAR * ) "task test correcteur", 128 /* stack size */, NULL, 27, NULL);
+	xTaskCreate(task_Supervision, ( const portCHAR * ) "task Supervision", 128 /* stack size */, NULL, 27, NULL);
 	xTaskCreate(task_Motor_Left, ( const portCHAR * ) "task Motor Left", 128 /* stack size */, NULL, 25, NULL);
 	xTaskCreate(task_Motor_Right, ( const portCHAR * ) "task Motor Right", 128 /* stack size */, NULL, 26, NULL);
-
 #elif SYNCHRO_EX == EXTEST_VL53
 	xTaskCreate(test_vl53, ( const portCHAR * ) "test_vl53", 128 /* stack size */, NULL, tskIDLE_PRIORITY, NULL);
 #elif SYNCHRO_EX == EXTEST_MICROROS
@@ -855,15 +845,14 @@ int main(void)
 
 	#if VL53
 	xTaskCreate(task_VL53, ( const portCHAR * ) "task VL53", 128 /* stack size */, NULL, 23, NULL);
-	#endif
+	#endif //VL53
 
 	#if LCD
 	xTaskCreate(task_Grove_LCD, ( const portCHAR * ) "task LCD", 128 /* stack size */, NULL, 23, NULL);
-	#endif
-#endif
+	#endif //LCD
+#endif //SYNCHRO_EX
 
     vSemaphoreCreateBinary(xSem_Supervision);
-    xSemaphoreTake( xSem_Supervision, portMAX_DELAY );
 
     q_mot_L = xQueueCreate(1, sizeof(int16_t));
     q_mot_R = xQueueCreate(1, sizeof(int16_t));
@@ -880,7 +869,6 @@ int main(void)
   }
 }
 
-//=========================================================================
 void test_uart2(void *pvParameters)
 {
 	char buf[100] = "";
@@ -929,23 +917,6 @@ void test_motor(void *pvParameters)
 		}
 		else
 			printf("sampling end");
-		vTaskDelay(SAMPLING_PERIOD_ms);
-	}
-}
-
-void test_correcteur(void *pvParameters)
-{
-	int16_t speedLeft = TEST_CORRECTOR_SPEEDL;
-	int16_t speedRight = TEST_CORRECTOR_SPEEDR;
-
-	for (;;)
-	{
-		xQueueSend(q_mot_L, (void *)&speedLeft, portMAX_DELAY);
-		xSemaphoreTake(xSem_Supervision, portMAX_DELAY);
-
-		xQueueSend(q_mot_R, (void *)&speedRight, portMAX_DELAY);
-		xSemaphoreTake(xSem_Supervision, portMAX_DELAY);
-
 		vTaskDelay(SAMPLING_PERIOD_ms);
 	}
 }
