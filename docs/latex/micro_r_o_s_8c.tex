@@ -1,0 +1,91 @@
+\doxysection{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+ENIB\+\_\+\+Robot\+\_\+\+Mobile\+\_\+\+Ros2/\+WORKSPACE\+\_\+\+F411\+\_\+u\+ROS6/base\+\_\+robot/\+Core/\+Src/micro\+ROS.c File Reference}
+\hypertarget{micro_r_o_s_8c}{}\label{micro_r_o_s_8c}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microROS.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microROS.c}}
+
+
+\+: Contain micro\+ROS default custom creator for subscriber and publisher  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{micro_r_o_s_8c_a0f4d394a3ab4e09bff60f714c66dc5ee}{STRING}}~0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{micro_r_o_s_8c_a890a219b2095c02f9ad37f507e6e1bcb}{create\+Publisher}} (rcl\+\_\+publisher\+\_\+t \texorpdfstring{$\ast$}{*}publisher, const rcl\+\_\+node\+\_\+t \texorpdfstring{$\ast$}{*}node, const rosidl\+\_\+message\+\_\+type\+\_\+support\+\_\+t \texorpdfstring{$\ast$}{*}type\+\_\+support, const char \texorpdfstring{$\ast$}{*}topic\+\_\+name, std\+\_\+msgs\+\_\+\+\_\+msg\+\_\+\+\_\+\+Int32 \texorpdfstring{$\ast$}{*}msg)
+\item 
+void \mbox{\hyperlink{micro_r_o_s_8c_aa2d2993f945f17986c10ad57863224b5}{create\+Subscriber}} (rcl\+\_\+subscription\+\_\+t \texorpdfstring{$\ast$}{*}subscription, rcl\+\_\+node\+\_\+t \texorpdfstring{$\ast$}{*}node, const rosidl\+\_\+message\+\_\+type\+\_\+support\+\_\+t \texorpdfstring{$\ast$}{*}type\+\_\+support, const char \texorpdfstring{$\ast$}{*}topic\+\_\+name, std\+\_\+msgs\+\_\+\+\_\+msg\+\_\+\+\_\+\+Int32 \texorpdfstring{$\ast$}{*}msg)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Contain micro\+ROS default custom creator for subscriber and publisher 
+
+
+
+Definition in file \mbox{\hyperlink{micro_r_o_s_8c_source}{micro\+ROS.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{micro_r_o_s_8c_a0f4d394a3ab4e09bff60f714c66dc5ee}\label{micro_r_o_s_8c_a0f4d394a3ab4e09bff60f714c66dc5ee} 
+\index{microROS.c@{microROS.c}!STRING@{STRING}}
+\index{STRING@{STRING}!microROS.c@{microROS.c}}
+\doxysubsubsection{\texorpdfstring{STRING}{STRING}}
+{\footnotesize\ttfamily \#define STRING~0}
+
+
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8c_source_l00008}{8}} of file \mbox{\hyperlink{micro_r_o_s_8c_source}{micro\+ROS.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{micro_r_o_s_8c_a890a219b2095c02f9ad37f507e6e1bcb}\label{micro_r_o_s_8c_a890a219b2095c02f9ad37f507e6e1bcb} 
+\index{microROS.c@{microROS.c}!createPublisher@{createPublisher}}
+\index{createPublisher@{createPublisher}!microROS.c@{microROS.c}}
+\doxysubsubsection{\texorpdfstring{createPublisher()}{createPublisher()}}
+{\footnotesize\ttfamily void create\+Publisher (\begin{DoxyParamCaption}\item[{rcl\+\_\+publisher\+\_\+t \texorpdfstring{$\ast$}{*}}]{publisher,  }\item[{const rcl\+\_\+node\+\_\+t \texorpdfstring{$\ast$}{*}}]{node,  }\item[{const rosidl\+\_\+message\+\_\+type\+\_\+support\+\_\+t \texorpdfstring{$\ast$}{*}}]{type\+\_\+support,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{topic\+\_\+name,  }\item[{std\+\_\+msgs\+\_\+\+\_\+msg\+\_\+\+\_\+\+Int32 \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+Create a publisher with default options 
+\begin{DoxyParams}{Parameters}
+{\em publisher} & micro\+Ros structure that represent a publisher \\
+\hline
+{\em node} & micro\+Ros structure that represent a node \\
+\hline
+{\em type\+\_\+support} & micro\+Ros structure that represent the type of message \\
+\hline
+{\em topic\+\_\+name} & The name of the topic \\
+\hline
+{\em msg} & micro\+Ros structure that represent the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8c_source_l00010}{10}} of file \mbox{\hyperlink{micro_r_o_s_8c_source}{micro\+ROS.\+c}}.
+
+\Hypertarget{micro_r_o_s_8c_aa2d2993f945f17986c10ad57863224b5}\label{micro_r_o_s_8c_aa2d2993f945f17986c10ad57863224b5} 
+\index{microROS.c@{microROS.c}!createSubscriber@{createSubscriber}}
+\index{createSubscriber@{createSubscriber}!microROS.c@{microROS.c}}
+\doxysubsubsection{\texorpdfstring{createSubscriber()}{createSubscriber()}}
+{\footnotesize\ttfamily void create\+Subscriber (\begin{DoxyParamCaption}\item[{rcl\+\_\+subscription\+\_\+t \texorpdfstring{$\ast$}{*}}]{subscription,  }\item[{rcl\+\_\+node\+\_\+t \texorpdfstring{$\ast$}{*}}]{node,  }\item[{const rosidl\+\_\+message\+\_\+type\+\_\+support\+\_\+t \texorpdfstring{$\ast$}{*}}]{type\+\_\+support,  }\item[{const char \texorpdfstring{$\ast$}{*}}]{topic\+\_\+name,  }\item[{std\+\_\+msgs\+\_\+\+\_\+msg\+\_\+\+\_\+\+Int32 \texorpdfstring{$\ast$}{*}}]{msg }\end{DoxyParamCaption})}
+
+Create a subscriber with default options 
+\begin{DoxyParams}{Parameters}
+{\em subscription} & micro\+Ros structure that represent a subscriber \\
+\hline
+{\em node} & micro\+Ros structure that represent a node \\
+\hline
+{\em type\+\_\+support} & micro\+Ros structure that represent the type of message \\
+\hline
+{\em topic\+\_\+name} & The name of the topic \\
+\hline
+{\em msg} & micro\+Ros structure that represent the message \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{micro_r_o_s_8c_source_l00029}{29}} of file \mbox{\hyperlink{micro_r_o_s_8c_source}{micro\+ROS.\+c}}.
+

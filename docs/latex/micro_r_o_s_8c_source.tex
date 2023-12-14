@@ -1,49 +1,50 @@
 \doxysection{micro\+ROS.\+c}
 \hypertarget{micro_r_o_s_8c_source}{}\label{micro_r_o_s_8c_source}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microROS.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microROS.c}}
-
+\mbox{\hyperlink{micro_r_o_s_8c}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00003}00003\ \textcolor{preprocessor}{\#define\ STRING\ 0}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00004}00004\ }
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00005}\mbox{\hyperlink{micro_r_o_s_8h_a890a219b2095c02f9ad37f507e6e1bcb}{00005}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{micro_r_o_s_8h_a890a219b2095c02f9ad37f507e6e1bcb}{createPublisher}}(rcl\_publisher\_t*\ publisher,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00006}00006\ \ \ \ \ \textcolor{keyword}{const}\ rcl\_node\_t*\ node,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{const}\ rosidl\_message\_type\_support\_t*\ type\_support,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ topic\_name,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00009}00009\ \ \ \ \ std\_msgs\_\_msg\_\_Int32*\ msg)}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00010}00010\ \{}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00011}00011\ \ \ \ \ rcl\_ret\_t\ ret\ =\ rclc\_publisher\_init\_default(publisher,\ node,\ type\_support,\ topic\_name);}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00012}00012\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Publisher\ \%s\ is\ created\ with\ result\ \%d\(\backslash\)r\(\backslash\)n"{}},\ topic\_name,\ (\textcolor{keywordtype}{int})ret);}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00013}00013\ }
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00014}00014\ \textcolor{preprocessor}{\#if\ STRING\ ==\ 1}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00015}00015\ \ \ \ \ (*msg).data.data\ =\ (\textcolor{keywordtype}{char}\ *\ )\ malloc(\mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\_LEN}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00016}00016\ \ \ \ \ (*msg).data.size\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00017}00017\ \ \ \ \ (*msg).data.capacity\ =\ \mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\_LEN}};}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00018}00018\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00019}00019\ \ \ \ \ (*msg).data\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00020}00020\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00021}00021\ }
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00022}00022\ \}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00023}00023\ }
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00024}\mbox{\hyperlink{micro_r_o_s_8h_aa2d2993f945f17986c10ad57863224b5}{00024}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{micro_r_o_s_8h_aa2d2993f945f17986c10ad57863224b5}{createSubscriber}}(rcl\_subscription\_t*\ subscription,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00025}00025\ \ \ \ \ rcl\_node\_t*\ node,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{const}\ rosidl\_message\_type\_support\_t*\ type\_support,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00027}00027\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ topic\_name,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00028}00028\ \ \ \ \ std\_msgs\_\_msg\_\_Int32*\ msg)}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00029}00029\ \{}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00030}00030\ \ \ \ \ *subscription\ =\ rcl\_get\_zero\_initialized\_subscription();}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00031}00031\ }
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00032}00032\ \ \ \ \ rcl\_ret\_t\ ret\ =\ rclc\_subscription\_init\_default(subscription,\ node,}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00033}00033\ \ \ \ \ \ \ \ \ type\_support,\ topic\_name);}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00034}00034\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Subscription\ \%s\ is\ created\ with\ result\ \%d\(\backslash\)r\(\backslash\)n"{}},\ topic\_name,\ (\textcolor{keywordtype}{int})ret);}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00035}00035\ }
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00036}00036\ \textcolor{preprocessor}{\#if\ STRING\ ==\ 1}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00037}00037\ \ \ \ \ (*msg).data.data\ =\ (\textcolor{keywordtype}{char}\ *\ )\ malloc(\mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\_LEN}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00038}00038\ \ \ \ \ (*msg).data.size\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00039}00039\ \ \ \ \ (*msg).data.capacity\ =\ \mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\_LEN}};}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00040}00040\ \textcolor{preprocessor}{\#else}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00041}00041\ \ \ \ \ (*msg).data\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00042}00042\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00008}00008\ \textcolor{preprocessor}{\#define\ STRING\ 0}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00010}\mbox{\hyperlink{micro_r_o_s_8h_a890a219b2095c02f9ad37f507e6e1bcb}{00010}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{micro_r_o_s_8c_a890a219b2095c02f9ad37f507e6e1bcb}{createPublisher}}(rcl\_publisher\_t*\ publisher,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{const}\ rcl\_node\_t*\ node,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{const}\ rosidl\_message\_type\_support\_t*\ type\_support,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ topic\_name,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00014}00014\ \ \ \ \ std\_msgs\_\_msg\_\_Int32*\ msg)}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00015}00015\ \{}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00016}00016\ \ \ \ \ rcl\_ret\_t\ ret\ =\ rclc\_publisher\_init\_default(publisher,\ node,\ type\_support,\ topic\_name);}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00017}00017\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Publisher\ \%s\ is\ created\ with\ result\ \%d\(\backslash\)r\(\backslash\)n"{}},\ topic\_name,\ (\textcolor{keywordtype}{int})ret);}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00019}00019\ \textcolor{preprocessor}{\#if\ STRING\ ==\ 1}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00020}00020\ \ \ \ \ (*msg).data.data\ =\ (\textcolor{keywordtype}{char}\ *\ )\ malloc(\mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\_LEN}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00021}00021\ \ \ \ \ (*msg).data.size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00022}00022\ \ \ \ \ (*msg).data.capacity\ =\ \mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\_LEN}};}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00023}00023\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00024}00024\ \ \ \ \ (*msg).data\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00025}00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00029}\mbox{\hyperlink{micro_r_o_s_8h_aa2d2993f945f17986c10ad57863224b5}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{micro_r_o_s_8c_aa2d2993f945f17986c10ad57863224b5}{createSubscriber}}(rcl\_subscription\_t*\ subscription,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00030}00030\ \ \ \ \ rcl\_node\_t*\ node,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00031}00031\ \ \ \ \ \textcolor{keyword}{const}\ rosidl\_message\_type\_support\_t*\ type\_support,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00032}00032\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ topic\_name,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00033}00033\ \ \ \ \ std\_msgs\_\_msg\_\_Int32*\ msg)}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00034}00034\ \{}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00035}00035\ \ \ \ \ *subscription\ =\ rcl\_get\_zero\_initialized\_subscription();}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00037}00037\ \ \ \ \ rcl\_ret\_t\ ret\ =\ rclc\_subscription\_init\_default(subscription,\ node,}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00038}00038\ \ \ \ \ \ \ \ \ type\_support,\ topic\_name);}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00039}00039\ \ \ \ \ printf(\textcolor{stringliteral}{"{}Subscription\ \%s\ is\ created\ with\ result\ \%d\(\backslash\)r\(\backslash\)n"{}},\ topic\_name,\ (\textcolor{keywordtype}{int})ret);}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00041}00041\ \textcolor{preprocessor}{\#if\ STRING\ ==\ 1}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00042}00042\ \ \ \ \ (*msg).data.data\ =\ (\textcolor{keywordtype}{char}\ *\ )\ malloc(\mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\_LEN}}\ *\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{char}));}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00043}00043\ \ \ \ \ (*msg).data.size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00044}00044\ \ \ \ \ (*msg).data.capacity\ =\ \mbox{\hyperlink{micro_r_o_s_8h_abc6e4c7c6eb484462c07c2c5098cb892}{ARRAY\_LEN}};}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00045}00045\ \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00046}00046\ \ \ \ \ (*msg).data\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00047}00047\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{micro_r_o_s_8c_source_l00048}00048\ \}}
 
 \end{DoxyCode}

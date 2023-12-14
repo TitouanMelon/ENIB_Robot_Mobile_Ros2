@@ -48,11 +48,13 @@ struct \mbox{\hyperlink{struct_micro_ros_sub_msg}{Micro\+Ros\+Sub\+Msg}}
 \begin{Indent}\textbf{ config robot}\par
 \begin{DoxyCompactItemize}
 \item 
+\#define \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\+\_\+\+DIST\+\_\+\+SENSOR}}~800
+\item 
 \#define \mbox{\hyperlink{main_8c_a3fd0b1ecf51c1cd847bb232b2fec904c}{ROS\+\_\+\+DOMAIN\+\_\+\+ID}}~0
 \item 
-\#define \mbox{\hyperlink{main_8c_abf2d80992dcfabfd1668184c3dff2733}{LCD}}~0
+\#define \mbox{\hyperlink{main_8c_abf2d80992dcfabfd1668184c3dff2733}{LCD}}~1
 \item 
-\#define \mbox{\hyperlink{main_8c_a39c8f0426010081d7f1fe74787adc164}{VL53}}~0
+\#define \mbox{\hyperlink{main_8c_a39c8f0426010081d7f1fe74787adc164}{VL53}}~1
 \item 
 \#define \mbox{\hyperlink{main_8c_a96ea3637588f12d301b57f11d784daf3}{MICROROS}}~1
 \item 
@@ -138,7 +140,7 @@ enum \{ \newline
 , {\bfseries FAST}
 , {\bfseries SONIC}
 , \newline
-{\bfseries LAST\+\_\+\+SPEED}
+{\bfseries LAST\+\_\+\+SPEED} =100
  \}
 \item 
 enum \{ \newline
@@ -191,6 +193,10 @@ void \mbox{\hyperlink{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}{task\+\_\+\+Mot
 \item 
 void \mbox{\hyperlink{main_8c_a81f652726bff3b9832ab014d3fc28d1e}{task\+\_\+\+Motor\+\_\+\+Right}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
 \item 
+void \mbox{\hyperlink{main_8c_a0770d7007222fbff5f97c3ea3b3cbb5c}{task\+\_\+\+VL53}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
+void \mbox{\hyperlink{main_8c_a0437f457b0f155ea2e19c99e841144f4}{task\+\_\+\+Grove\+\_\+\+LCD}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
+\item 
 void \mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\+\_\+\+Supervision}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
 \item 
 int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
@@ -202,7 +208,7 @@ void \mbox{\hyperlink{main_8c_a03356c29f7343d5cd605bcd3e80e27e0}{test\+\_\+vl53}
 void \mbox{\hyperlink{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a}{test\+\_\+motor}} (void \texorpdfstring{$\ast$}{*}pv\+Parameters)
 \item 
 void \mbox{\hyperlink{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
-\begin{DoxyCompactList}\small\item\em Period elapsed callback in non blocking mode. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
@@ -270,7 +276,7 @@ Definition in file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 Define maximal x position return by camera 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00072}{72}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00073}{73}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a4dee696e6f875ff0e01891dea054c4a1}\label{main_8c_a4dee696e6f875ff0e01891dea054c4a1} 
 \index{main.c@{main.c}!CAMERA\_X\_MIN@{CAMERA\_X\_MIN}}
@@ -280,7 +286,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00072}{72}} of file \mbox{\h
 
 Define minimal x position return by camera 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00071}{71}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00072}{72}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a7f248c7643665aeacb8a58e541a60f50}\label{main_8c_a7f248c7643665aeacb8a58e541a60f50} 
 \index{main.c@{main.c}!CAMERA\_Y\_MAX@{CAMERA\_Y\_MAX}}
@@ -290,7 +296,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00071}{71}} of file \mbox{\h
 
 Define maximal y position return by camera 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00074}{74}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00075}{75}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a9601c1b626116baa4ae182d8d32a7c41}\label{main_8c_a9601c1b626116baa4ae182d8d32a7c41} 
 \index{main.c@{main.c}!CAMERA\_Y\_MIN@{CAMERA\_Y\_MIN}}
@@ -300,7 +306,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00074}{74}} of file \mbox{\h
 
 Define minimal y position return by camera 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00073}{73}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00074}{74}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a0a5ceb9ceb914e08d345410b561cb37a}\label{main_8c_a0a5ceb9ceb914e08d345410b561cb37a} 
 \index{main.c@{main.c}!CMD@{CMD}}
@@ -310,7 +316,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00073}{73}} of file \mbox{\h
 
 Can be use as default speed 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00065}{65}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00066}{66}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a86963c34eaf4aa7d9adc6e80a33871a7}\label{main_8c_a86963c34eaf4aa7d9adc6e80a33871a7} 
 \index{main.c@{main.c}!DEBUG\_MOTOR@{DEBUG\_MOTOR}}
@@ -320,7 +326,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00065}{65}} of file \mbox{\h
 
 Activate motor debug print 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00055}{55}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00056}{56}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a2cc88864f2aaa74f3d4d09d76ac2961b}\label{main_8c_a2cc88864f2aaa74f3d4d09d76ac2961b} 
 \index{main.c@{main.c}!DEBUG\_PRINTF@{DEBUG\_PRINTF}}
@@ -330,7 +336,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00055}{55}} of file \mbox{\h
 
 Activate debug print 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00054}{54}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00055}{55}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a63ec0cea9c1f0ca8a7893c2c53d2fd81}\label{main_8c_a63ec0cea9c1f0ca8a7893c2c53d2fd81} 
 \index{main.c@{main.c}!DEFAULT\_DIR@{DEFAULT\_DIR}}
@@ -340,7 +346,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00054}{54}} of file \mbox{\h
 
 Default direction at startup 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00081}{81}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00082}{82}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_ab9c800875296f23bd616d7d273ff16d7}\label{main_8c_ab9c800875296f23bd616d7d273ff16d7} 
 \index{main.c@{main.c}!DEFAULT\_MODE@{DEFAULT\_MODE}}
@@ -350,7 +356,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00081}{81}} of file \mbox{\h
 
 Default mode at startup 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00079}{79}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00080}{80}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_afc945b2e8394478f97e2aabc7aebaf0e}\label{main_8c_afc945b2e8394478f97e2aabc7aebaf0e} 
 \index{main.c@{main.c}!DEFAULT\_SPEED@{DEFAULT\_SPEED}}
@@ -360,7 +366,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00079}{79}} of file \mbox{\h
 
 Default speed at startup 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00080}{80}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00081}{81}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_af1effc30fa444fbfdd808d2cf02eee91}\label{main_8c_af1effc30fa444fbfdd808d2cf02eee91} 
 \index{main.c@{main.c}!EXCORRECTOR@{EXCORRECTOR}}
@@ -436,11 +442,11 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00042}{42}} of file \mbox{\h
 \index{main.c@{main.c}!LCD@{LCD}}
 \index{LCD@{LCD}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{LCD}{LCD}}
-{\footnotesize\ttfamily \#define LCD~0}
+{\footnotesize\ttfamily \#define LCD~1}
 
 Activate LCD task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00051}{51}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00052}{52}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a9c4bf434152b94b6a99df877f3a70185}\label{main_8c_a9c4bf434152b94b6a99df877f3a70185} 
 \index{main.c@{main.c}!LKi@{LKi}}
@@ -450,7 +456,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00051}{51}} of file \mbox{\h
 
 Ki factor for the left motor 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00060}{60}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00061}{61}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_ad0a3d11e0c5a60ce313ba4264e6eaba8}\label{main_8c_ad0a3d11e0c5a60ce313ba4264e6eaba8} 
 \index{main.c@{main.c}!LKp@{LKp}}
@@ -460,7 +466,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00060}{60}} of file \mbox{\h
 
 Kp factor for the left motor 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00059}{59}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00060}{60}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a96ea3637588f12d301b57f11d784daf3}\label{main_8c_a96ea3637588f12d301b57f11d784daf3} 
 \index{main.c@{main.c}!MICROROS@{MICROROS}}
@@ -470,7 +476,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00059}{59}} of file \mbox{\h
 
 Activate Micro\+ROS task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00053}{53}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00054}{54}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58}\label{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58} 
 \index{main.c@{main.c}!NB@{NB}}
@@ -480,7 +486,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00053}{53}} of file \mbox{\h
 
 Number of samples in correcteur calibration task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00084}{84}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00085}{85}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a8192f3340491948157f63db6418769aa}\label{main_8c_a8192f3340491948157f63db6418769aa} 
 \index{main.c@{main.c}!RKi@{RKi}}
@@ -490,7 +496,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00084}{84}} of file \mbox{\h
 
 Kp factor for the right motor 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00062}{62}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00063}{63}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a7438270e3e1220d8d0bd82120273af12}\label{main_8c_a7438270e3e1220d8d0bd82120273af12} 
 \index{main.c@{main.c}!RKp@{RKp}}
@@ -500,7 +506,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00062}{62}} of file \mbox{\h
 
 Kp factor for the right motor 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00061}{61}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00062}{62}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a3fd0b1ecf51c1cd847bb232b2fec904c}\label{main_8c_a3fd0b1ecf51c1cd847bb232b2fec904c} 
 \index{main.c@{main.c}!ROS\_DOMAIN\_ID@{ROS\_DOMAIN\_ID}}
@@ -510,7 +516,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00061}{61}} of file \mbox{\h
 
 Define ROS domain id 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00050}{50}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00051}{51}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a2e077c020d61734cb1ff60a0675673bd}\label{main_8c_a2e077c020d61734cb1ff60a0675673bd} 
 \index{main.c@{main.c}!SAMPLING\_PERIOD\_ms@{SAMPLING\_PERIOD\_ms}}
@@ -521,6 +527,16 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00050}{50}} of file \mbox{\h
 Define the delay beetween two execution of the same task 
 
 Definition at line \mbox{\hyperlink{main_8c_source_l00037}{37}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a6c7b89fa170faf81cf0702509bc7caef}\label{main_8c_a6c7b89fa170faf81cf0702509bc7caef} 
+\index{main.c@{main.c}!SEUIL\_DIST\_SENSOR@{SEUIL\_DIST\_SENSOR}}
+\index{SEUIL\_DIST\_SENSOR@{SEUIL\_DIST\_SENSOR}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SEUIL\_DIST\_SENSOR}{SEUIL\_DIST\_SENSOR}}
+{\footnotesize\ttfamily \#define SEUIL\+\_\+\+DIST\+\_\+\+SENSOR~800}
+
+Define the trigger for forward sensors4 
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00050}{50}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a81fc52cde1f4e885f6b60dca20bb031b}\label{main_8c_a81fc52cde1f4e885f6b60dca20bb031b} 
 \index{main.c@{main.c}!SYNCHRO\_EX@{SYNCHRO\_EX}}
@@ -540,7 +556,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00047}{47}} of file \mbox{\h
 
 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00058}{58}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00059}{59}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a991a2b437e497b7c30f7c37f3da862c0}\label{main_8c_a991a2b437e497b7c30f7c37f3da862c0} 
 \index{main.c@{main.c}!TEST\_CORRECTOR\_DUTY@{TEST\_CORRECTOR\_DUTY}}
@@ -550,7 +566,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00058}{58}} of file \mbox{\h
 
 Duty cycle to apply to calibrate the correcteur 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00085}{85}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00086}{86}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_abfb9d3a25ca2e3a1dae1c814522ca875}\label{main_8c_abfb9d3a25ca2e3a1dae1c814522ca875} 
 \index{main.c@{main.c}!TEST\_CORRECTOR\_SPEEDL@{TEST\_CORRECTOR\_SPEEDL}}
@@ -560,7 +576,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00085}{85}} of file \mbox{\h
 
 Speed to test the left correcteur 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00086}{86}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00087}{87}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_aafb3a6eb5ef46672cb007ee167d395a4}\label{main_8c_aafb3a6eb5ef46672cb007ee167d395a4} 
 \index{main.c@{main.c}!TEST\_CORRECTOR\_SPEEDR@{TEST\_CORRECTOR\_SPEEDR}}
@@ -570,7 +586,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00086}{86}} of file \mbox{\h
 
 Speed to test the right correcteur 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00087}{87}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00088}{88}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_ac8f0cb690a7ba18ff1d3bcac03a6205b}\label{main_8c_ac8f0cb690a7ba18ff1d3bcac03a6205b} 
 \index{main.c@{main.c}!TEST\_LEFT\_MOTOR@{TEST\_LEFT\_MOTOR}}
@@ -580,7 +596,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00087}{87}} of file \mbox{\h
 
 Calibrate left motor correcteur or not 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00088}{88}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00089}{89}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a83be4ba677a5b20cd4b969a5d2828f39}\label{main_8c_a83be4ba677a5b20cd4b969a5d2828f39} 
 \index{main.c@{main.c}!VITESSE\_CAM@{VITESSE\_CAM}}
@@ -590,7 +606,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00088}{88}} of file \mbox{\h
 
 Default speed for camera mode 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00068}{68}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00069}{69}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_adad34192ac4bc13e73ed3be5a6309d53}\label{main_8c_adad34192ac4bc13e73ed3be5a6309d53} 
 \index{main.c@{main.c}!VITESSE\_KART@{VITESSE\_KART}}
@@ -600,7 +616,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00068}{68}} of file \mbox{\h
 
 Default speed for manual mode 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00066}{66}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00067}{67}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}\label{main_8c_a71fa41f4b84f3fa3973737ac75e785a4} 
 \index{main.c@{main.c}!VITESSE\_OBS@{VITESSE\_OBS}}
@@ -610,17 +626,17 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00066}{66}} of file \mbox{\h
 
 Default speed for obstacle mode 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00067}{67}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00068}{68}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a39c8f0426010081d7f1fe74787adc164}\label{main_8c_a39c8f0426010081d7f1fe74787adc164} 
 \index{main.c@{main.c}!VL53@{VL53}}
 \index{VL53@{VL53}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{VL53}{VL53}}
-{\footnotesize\ttfamily \#define VL53~0}
+{\footnotesize\ttfamily \#define VL53~1}
 
 Activate VL530X task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00052}{52}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00053}{53}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 
 
@@ -667,7 +683,7 @@ check if micro\+Ros function success else print msg in console
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00153}{153}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00154}{154}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9} 
 \index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
@@ -677,7 +693,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00153}{153}} of file \mbox{\
 
 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00941}{941}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00926}{926}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a8a3b0ad512a6e6c6157440b68d395eac}\label{main_8c_a8a3b0ad512a6e6c6157440b68d395eac} 
 \index{main.c@{main.c}!HAL\_TIM\_PeriodElapsedCallback@{HAL\_TIM\_PeriodElapsedCallback}}
@@ -687,24 +703,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00941}{941}} of file \mbox{\
 
 
 
-Period elapsed callback in non blocking mode. 
-
-\begin{DoxyNote}{Note}
-This function is called when TIM1 interrupt took place, inside HAL\+\_\+\+TIM\+\_\+\+IRQHandler(). It makes a direct call to HAL\+\_\+\+Inc\+Tick() to increment a global variable "{}uw\+Tick"{} used as application time base. 
-\end{DoxyNote}
-
-\begin{DoxyParams}{Parameters}
-{\em htim} & \+: TIM handle \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyRetVals}{Return values}
-{\em None} & \\
-\hline
-\end{DoxyRetVals}
-
-
-Definition at line \mbox{\hyperlink{main_8c_source_l00933}{933}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00918}{918}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
 \index{main.c@{main.c}!main@{main}}
@@ -744,7 +743,7 @@ Init all GPIO and drivers, start the task, init semaphore and queue and launch t
 \end{DoxyItemize}
 \end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00775}{775}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00760}{760}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_afbbd07004ef2541918f88b67c4af7a71}\label{main_8c_afbbd07004ef2541918f88b67c4af7a71} 
 \index{main.c@{main.c}!microros\_allocate@{microros\_allocate}}
@@ -812,7 +811,7 @@ Definition at line \mbox{\hyperlink{microros__allocators_8c_source_l00031}{31}} 
 \end{DoxyItemize}
 \end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00166}{166}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00168}{168}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a74ab553464987a94faae5e414df0078a}\label{main_8c_a74ab553464987a94faae5e414df0078a} 
 \index{main.c@{main.c}!microros\_zero\_allocate@{microros\_zero\_allocate}}
@@ -837,7 +836,7 @@ callback call by microros when a message is receive here use as debug and just p
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00155}{155}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00156}{156}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920} 
 \index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
@@ -853,6 +852,31 @@ Initializes the CPU, AHB and APB buses clocks
 
 Definition at line \mbox{\hyperlink{systemclock_8c_source_l00011}{11}} of file \mbox{\hyperlink{systemclock_8c_source}{systemclock.\+c}}.
 
+\Hypertarget{main_8c_a0437f457b0f155ea2e19c99e841144f4}\label{main_8c_a0437f457b0f155ea2e19c99e841144f4} 
+\index{main.c@{main.c}!task\_Grove\_LCD@{task\_Grove\_LCD}}
+\index{task\_Grove\_LCD@{task\_Grove\_LCD}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{task\_Grove\_LCD()}{task\_Grove\_LCD()}}
+{\footnotesize\ttfamily void task\+\_\+\+Grove\+\_\+\+LCD (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+Task use to write information on LCD depending of the data in the LCD queue
+\begin{DoxyItemize}
+\item Config EXSTARTUP \+:
+\begin{DoxyItemize}
+\item Print \textquotesingle{}TEST\textquotesingle{} LCD on screen
+\end{DoxyItemize}
+\item Config EXFINAL \+:
+\begin{DoxyItemize}
+\item Print different messages depending of the actual mode 
+\begin{DoxyParams}{Parameters}
+{\em argument} & \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00473}{473}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
 \Hypertarget{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}\label{main_8c_aeaf40c2ad14431735bdc8432bf5e57de} 
 \index{main.c@{main.c}!task\_Motor\_Left@{task\_Motor\_Left}}
 \index{task\_Motor\_Left@{task\_Motor\_Left}!main.c@{main.c}}
@@ -866,7 +890,7 @@ Task use to control the left motor of the robot
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00365}{365}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00385}{385}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a81f652726bff3b9832ab014d3fc28d1e}\label{main_8c_a81f652726bff3b9832ab014d3fc28d1e} 
 \index{main.c@{main.c}!task\_Motor\_Right@{task\_Motor\_Right}}
@@ -881,7 +905,7 @@ Task use to control the right motor of the robot
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00391}{391}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00411}{411}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_aa20650615a802a253757e491905b6af9}\label{main_8c_aa20650615a802a253757e491905b6af9} 
 \index{main.c@{main.c}!task\_Supervision@{task\_Supervision}}
@@ -913,7 +937,22 @@ Brain of the robot. get information for Micro\+Ros and VL53 task, then send spee
 \end{DoxyItemize}
 \end{DoxyItemize}
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00476}{476}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00508}{508}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+
+\Hypertarget{main_8c_a0770d7007222fbff5f97c3ea3b3cbb5c}\label{main_8c_a0770d7007222fbff5f97c3ea3b3cbb5c} 
+\index{main.c@{main.c}!task\_VL53@{task\_VL53}}
+\index{task\_VL53@{task\_VL53}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{task\_VL53()}{task\_VL53()}}
+{\footnotesize\ttfamily void task\+\_\+\+VL53 (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{pv\+Parameters }\end{DoxyParamCaption})}
+
+task that get the value of the VL53 sensor and put it on the VL53 queue 
+\begin{DoxyParams}{Parameters}
+{\em argument} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8c_source_l00438}{438}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a}\label{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a} 
 \index{main.c@{main.c}!test\_motor@{test\_motor}}
@@ -923,7 +962,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00476}{476}} of file \mbox{\
 
 Use to set the duty cycle and register the motor speed at each Te 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00895}{895}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00880}{880}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a0068220a4432a5ea9b4442d018b706f8}\label{main_8c_a0068220a4432a5ea9b4442d018b706f8} 
 \index{main.c@{main.c}!test\_uart2@{test\_uart2}}
@@ -933,7 +972,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00895}{895}} of file \mbox{\
 
 Use to test printf and scanf function 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00872}{872}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00857}{857}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a03356c29f7343d5cd605bcd3e80e27e0}\label{main_8c_a03356c29f7343d5cd605bcd3e80e27e0} 
 \index{main.c@{main.c}!test\_vl53@{test\_vl53}}
@@ -943,7 +982,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00872}{872}} of file \mbox{\
 
 Use to test the VL53 sensor 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00884}{884}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00869}{869}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 
 
@@ -1055,7 +1094,7 @@ Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00005}{5}} of file \mbo
 
 Queue to communicate with left motor task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00096}{96}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00097}{97}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_aa26ca3e16f249f82045250c09e1cd053}\label{main_8c_aa26ca3e16f249f82045250c09e1cd053} 
 \index{main.c@{main.c}!q\_mot\_R@{q\_mot\_R}}
@@ -1065,7 +1104,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00096}{96}} of file \mbox{\h
 
 Queue to communicate with right motor task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00097}{97}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00098}{98}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a494090d44b64e4d33b49a38031ede042}\label{main_8c_a494090d44b64e4d33b49a38031ede042} 
 \index{main.c@{main.c}!qhLCD@{qhLCD}}
@@ -1075,7 +1114,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00097}{97}} of file \mbox{\h
 
 Queue to communicate with LCD task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00100}{100}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00101}{101}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a2ec1e708e81871b5c6929cb901a69c51}\label{main_8c_a2ec1e708e81871b5c6929cb901a69c51} 
 \index{main.c@{main.c}!qhMR\_pub@{qhMR\_pub}}
@@ -1085,7 +1124,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00100}{100}} of file \mbox{\
 
 Queue to communicate with micro\+Ros task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00099}{99}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00100}{100}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}\label{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a} 
 \index{main.c@{main.c}!qhMR\_sub@{qhMR\_sub}}
@@ -1095,7 +1134,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00099}{99}} of file \mbox{\h
 
 Queue to get information from micro\+Ros task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00098}{98}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00099}{99}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}\label{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1} 
 \index{main.c@{main.c}!qhVl53@{qhVl53}}
@@ -1105,7 +1144,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00098}{98}} of file \mbox{\h
 
 Queue to communicate with VL53 task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00101}{101}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00102}{102}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a377891cff46d2f0a39f956b917366f95}\label{main_8c_a377891cff46d2f0a39f956b917366f95} 
 \index{main.c@{main.c}!tab\_speed@{tab\_speed}}
@@ -1115,7 +1154,7 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00101}{101}} of file \mbox{\
 
 use to store speed of motor during calibration of the correcteur 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00104}{104}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00105}{105}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 
 \Hypertarget{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}\label{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a} 
 \index{main.c@{main.c}!xSem\_Supervision@{xSem\_Supervision}}
@@ -1125,5 +1164,5 @@ Definition at line \mbox{\hyperlink{main_8c_source_l00104}{104}} of file \mbox{\
 
 Semaphore use in decision task 
 
-Definition at line \mbox{\hyperlink{main_8c_source_l00093}{93}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
+Definition at line \mbox{\hyperlink{main_8c_source_l00094}{94}} of file \mbox{\hyperlink{main_8c_source}{main.\+c}}.
 

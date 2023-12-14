@@ -1,0 +1,267 @@
+\doxysection{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+ENIB\+\_\+\+Robot\+\_\+\+Mobile\+\_\+\+Ros2/\+WORKSPACE\+\_\+\+F411\+\_\+u\+ROS6/base\+\_\+robot/\+Core/\+Src/\+VL53\+L0X.c File Reference}
+\hypertarget{_v_l53_l0_x_8c}{}\label{_v_l53_l0_x_8c}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/VL53L0X.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/VL53L0X.c}}
+
+
+\+: VL53\+L0X API STSW-\/\+IMG005 portage Most of the functionality of this library is based on the VL53\+L0X API provided by ST (STSW-\/\+IMG005), and some of the explanatory comments are quoted or paraphrased from the API source code, API user manual (UM2039), and the VL53\+L0X datasheet.  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}VL53\+L0\+X.\+h"{}}\newline
+{\ttfamily \#include "{}drv\+\_\+i2c.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_v_l53_l0_x_8c_a4b19f214c60c75fdebd40fab2ab214d8}{ACTIVE\+\_\+\+WHILE}}~0
+\item 
+\#define \mbox{\hyperlink{_v_l53_l0_x_8c_ad8b608ea82f1d76f3ccf33b658cec012}{IO\+\_\+2\+V8}}~0
+\item 
+\#define \mbox{\hyperlink{_v_l53_l0_x_8c_a280feb883e9d4a7edcc69c8bcb9f38f2}{ADDRESS}}~ADDRESS\+\_\+\+DEFAULT2
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_ab0a8b6cd53ad23f5cee2941472eff9da}{perform\+Single\+Ref\+Calibration}} (uint8\+\_\+t vhv\+\_\+init\+\_\+byte)
+\item 
+void \mbox{\hyperlink{_v_l53_l0_x_8c_ad6179041819c85cb36e331f40ebf3652}{write\+Reg}} (uint8\+\_\+t reg, uint8\+\_\+t value)
+\item 
+void \mbox{\hyperlink{_v_l53_l0_x_8c_a7413a862a6adb50d11147aac61ad89c1}{write\+Reg16\+Bit}} (uint8\+\_\+t reg, uint16\+\_\+t value)
+\item 
+void \mbox{\hyperlink{_v_l53_l0_x_8c_ab0ecb60286f81e766d67571ffe192eb9}{write\+Reg32\+Bit}} (uint8\+\_\+t reg, uint32\+\_\+t value)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_a2e9db5636b09511a0663c21aab12a20d}{read\+Reg}} (uint8\+\_\+t reg)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_ab6e1db40be06c0b2a0a24140e7530db0}{read\+Reg16\+Bit}} (uint8\+\_\+t reg)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_abca216a4ac4b799fdfacfbb302d4ae76}{read\+Reg32\+Bit}} (uint8\+\_\+t reg)
+\item 
+void \mbox{\hyperlink{_v_l53_l0_x_8c_ae752ee027a82b5abc44574086f49dbf1}{write\+Multi}} (uint8\+\_\+t reg, uint8\+\_\+t const \texorpdfstring{$\ast$}{*}src, uint8\+\_\+t count)
+\item 
+void \mbox{\hyperlink{_v_l53_l0_x_8c_a8db5deeec4ee773d049e20205eb3325c}{set\+Address}} (uint8\+\_\+t new\+\_\+addr)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_ad807db55d059e313d15b9d3db47db7d2}{get\+Address}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_a48968728ebf3f96fe8408e24871c5edf}{init\+VL53\+L0X}} ()
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_a946eb216c97fd492238b1bcda70de2fc}{set\+Signal\+Rate\+Limit}} (float limit\+\_\+\+Mcps)
+\item 
+float \mbox{\hyperlink{_v_l53_l0_x_8c_a8a245f240513893a09d74055fc2c9ad1}{get\+Signal\+Rate\+Limit}} (void)
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_a3e1989fd43b7a20b5366d6ff68ee2788}{read\+Range\+Single\+Millimeters}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_ac2ebf1aa766207c115a7f67cb6cdb0f2}{g\+\_\+i2c\+Addr}} = ADDRESS
+\item 
+uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_a50099b66ab2504517a7a2e5130a41cb0}{g\+\_\+stop\+Variable}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: VL53\+L0X API STSW-\/\+IMG005 portage Most of the functionality of this library is based on the VL53\+L0X API provided by ST (STSW-\/\+IMG005), and some of the explanatory comments are quoted or paraphrased from the API source code, API user manual (UM2039), and the VL53\+L0X datasheet. 
+
+
+
+Definition in file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{_v_l53_l0_x_8c_a4b19f214c60c75fdebd40fab2ab214d8}\label{_v_l53_l0_x_8c_a4b19f214c60c75fdebd40fab2ab214d8} 
+\index{VL53L0X.c@{VL53L0X.c}!ACTIVE\_WHILE@{ACTIVE\_WHILE}}
+\index{ACTIVE\_WHILE@{ACTIVE\_WHILE}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{ACTIVE\_WHILE}{ACTIVE\_WHILE}}
+{\footnotesize\ttfamily \#define ACTIVE\+\_\+\+WHILE~0}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00019}{19}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a280feb883e9d4a7edcc69c8bcb9f38f2}\label{_v_l53_l0_x_8c_a280feb883e9d4a7edcc69c8bcb9f38f2} 
+\index{VL53L0X.c@{VL53L0X.c}!ADDRESS@{ADDRESS}}
+\index{ADDRESS@{ADDRESS}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{ADDRESS}{ADDRESS}}
+{\footnotesize\ttfamily \#define ADDRESS~ADDRESS\+\_\+\+DEFAULT2}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00021}{21}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_ad8b608ea82f1d76f3ccf33b658cec012}\label{_v_l53_l0_x_8c_ad8b608ea82f1d76f3ccf33b658cec012} 
+\index{VL53L0X.c@{VL53L0X.c}!IO\_2V8@{IO\_2V8}}
+\index{IO\_2V8@{IO\_2V8}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{IO\_2V8}{IO\_2V8}}
+{\footnotesize\ttfamily \#define IO\+\_\+2\+V8~0}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00020}{20}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_v_l53_l0_x_8c_ad807db55d059e313d15b9d3db47db7d2}\label{_v_l53_l0_x_8c_ad807db55d059e313d15b9d3db47db7d2} 
+\index{VL53L0X.c@{VL53L0X.c}!getAddress@{getAddress}}
+\index{getAddress@{getAddress}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{getAddress()}{getAddress()}}
+{\footnotesize\ttfamily uint8\+\_\+t get\+Address (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00102}{102}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a8a245f240513893a09d74055fc2c9ad1}\label{_v_l53_l0_x_8c_a8a245f240513893a09d74055fc2c9ad1} 
+\index{VL53L0X.c@{VL53L0X.c}!getSignalRateLimit@{getSignalRateLimit}}
+\index{getSignalRateLimit@{getSignalRateLimit}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{getSignalRateLimit()}{getSignalRateLimit()}}
+{\footnotesize\ttfamily float get\+Signal\+Rate\+Limit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00328}{328}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a48968728ebf3f96fe8408e24871c5edf}\label{_v_l53_l0_x_8c_a48968728ebf3f96fe8408e24871c5edf} 
+\index{VL53L0X.c@{VL53L0X.c}!initVL53L0X@{initVL53L0X}}
+\index{initVL53L0X@{initVL53L0X}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{initVL53L0X()}{initVL53L0X()}}
+{\footnotesize\ttfamily uint8\+\_\+t init\+VL53\+L0X (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00114}{114}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_ab0a8b6cd53ad23f5cee2941472eff9da}\label{_v_l53_l0_x_8c_ab0a8b6cd53ad23f5cee2941472eff9da} 
+\index{VL53L0X.c@{VL53L0X.c}!performSingleRefCalibration@{performSingleRefCalibration}}
+\index{performSingleRefCalibration@{performSingleRefCalibration}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{performSingleRefCalibration()}{performSingleRefCalibration()}}
+{\footnotesize\ttfamily uint8\+\_\+t perform\+Single\+Ref\+Calibration (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{vhv\+\_\+init\+\_\+byte }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00369}{369}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a3e1989fd43b7a20b5366d6ff68ee2788}\label{_v_l53_l0_x_8c_a3e1989fd43b7a20b5366d6ff68ee2788} 
+\index{VL53L0X.c@{VL53L0X.c}!readRangeSingleMillimeters@{readRangeSingleMillimeters}}
+\index{readRangeSingleMillimeters@{readRangeSingleMillimeters}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{readRangeSingleMillimeters()}{readRangeSingleMillimeters()}}
+{\footnotesize\ttfamily uint16\+\_\+t read\+Range\+Single\+Millimeters (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00341}{341}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a2e9db5636b09511a0663c21aab12a20d}\label{_v_l53_l0_x_8c_a2e9db5636b09511a0663c21aab12a20d} 
+\index{VL53L0X.c@{VL53L0X.c}!readReg@{readReg}}
+\index{readReg@{readReg}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{readReg()}{readReg()}}
+{\footnotesize\ttfamily uint8\+\_\+t read\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00062}{62}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_ab6e1db40be06c0b2a0a24140e7530db0}\label{_v_l53_l0_x_8c_ab6e1db40be06c0b2a0a24140e7530db0} 
+\index{VL53L0X.c@{VL53L0X.c}!readReg16Bit@{readReg16Bit}}
+\index{readReg16Bit@{readReg16Bit}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{readReg16Bit()}{readReg16Bit()}}
+{\footnotesize\ttfamily uint16\+\_\+t read\+Reg16\+Bit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00069}{69}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_abca216a4ac4b799fdfacfbb302d4ae76}\label{_v_l53_l0_x_8c_abca216a4ac4b799fdfacfbb302d4ae76} 
+\index{VL53L0X.c@{VL53L0X.c}!readReg32Bit@{readReg32Bit}}
+\index{readReg32Bit@{readReg32Bit}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{readReg32Bit()}{readReg32Bit()}}
+{\footnotesize\ttfamily uint32\+\_\+t read\+Reg32\+Bit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00077}{77}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a8db5deeec4ee773d049e20205eb3325c}\label{_v_l53_l0_x_8c_a8db5deeec4ee773d049e20205eb3325c} 
+\index{VL53L0X.c@{VL53L0X.c}!setAddress@{setAddress}}
+\index{setAddress@{setAddress}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{setAddress()}{setAddress()}}
+{\footnotesize\ttfamily void set\+Address (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{new\+\_\+addr }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00097}{97}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a946eb216c97fd492238b1bcda70de2fc}\label{_v_l53_l0_x_8c_a946eb216c97fd492238b1bcda70de2fc} 
+\index{VL53L0X.c@{VL53L0X.c}!setSignalRateLimit@{setSignalRateLimit}}
+\index{setSignalRateLimit@{setSignalRateLimit}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{setSignalRateLimit()}{setSignalRateLimit()}}
+{\footnotesize\ttfamily uint8\+\_\+t set\+Signal\+Rate\+Limit (\begin{DoxyParamCaption}\item[{float}]{limit\+\_\+\+Mcps }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00318}{318}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_ae752ee027a82b5abc44574086f49dbf1}\label{_v_l53_l0_x_8c_ae752ee027a82b5abc44574086f49dbf1} 
+\index{VL53L0X.c@{VL53L0X.c}!writeMulti@{writeMulti}}
+\index{writeMulti@{writeMulti}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{writeMulti()}{writeMulti()}}
+{\footnotesize\ttfamily void write\+Multi (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t const \texorpdfstring{$\ast$}{*}}]{src,  }\item[{uint8\+\_\+t}]{count }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00086}{86}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_ad6179041819c85cb36e331f40ebf3652}\label{_v_l53_l0_x_8c_ad6179041819c85cb36e331f40ebf3652} 
+\index{VL53L0X.c@{VL53L0X.c}!writeReg@{writeReg}}
+\index{writeReg@{writeReg}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{writeReg()}{writeReg()}}
+{\footnotesize\ttfamily void write\+Reg (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint8\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00038}{38}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a7413a862a6adb50d11147aac61ad89c1}\label{_v_l53_l0_x_8c_a7413a862a6adb50d11147aac61ad89c1} 
+\index{VL53L0X.c@{VL53L0X.c}!writeReg16Bit@{writeReg16Bit}}
+\index{writeReg16Bit@{writeReg16Bit}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{writeReg16Bit()}{writeReg16Bit()}}
+{\footnotesize\ttfamily void write\+Reg16\+Bit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint16\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00044}{44}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_ab0ecb60286f81e766d67571ffe192eb9}\label{_v_l53_l0_x_8c_ab0ecb60286f81e766d67571ffe192eb9} 
+\index{VL53L0X.c@{VL53L0X.c}!writeReg32Bit@{writeReg32Bit}}
+\index{writeReg32Bit@{writeReg32Bit}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{writeReg32Bit()}{writeReg32Bit()}}
+{\footnotesize\ttfamily void write\+Reg32\+Bit (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{reg,  }\item[{uint32\+\_\+t}]{value }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00052}{52}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{_v_l53_l0_x_8c_ac2ebf1aa766207c115a7f67cb6cdb0f2}\label{_v_l53_l0_x_8c_ac2ebf1aa766207c115a7f67cb6cdb0f2} 
+\index{VL53L0X.c@{VL53L0X.c}!g\_i2cAddr@{g\_i2cAddr}}
+\index{g\_i2cAddr@{g\_i2cAddr}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{g\_i2cAddr}{g\_i2cAddr}}
+{\footnotesize\ttfamily uint8\+\_\+t g\+\_\+i2c\+Addr = ADDRESS}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00026}{26}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
+\Hypertarget{_v_l53_l0_x_8c_a50099b66ab2504517a7a2e5130a41cb0}\label{_v_l53_l0_x_8c_a50099b66ab2504517a7a2e5130a41cb0} 
+\index{VL53L0X.c@{VL53L0X.c}!g\_stopVariable@{g\_stopVariable}}
+\index{g\_stopVariable@{g\_stopVariable}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{g\_stopVariable}{g\_stopVariable}}
+{\footnotesize\ttfamily uint8\+\_\+t g\+\_\+stop\+Variable}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00027}{27}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+

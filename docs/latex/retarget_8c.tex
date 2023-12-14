@@ -1,0 +1,205 @@
+\doxysection{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+ENIB\+\_\+\+Robot\+\_\+\+Mobile\+\_\+\+Ros2/\+WORKSPACE\+\_\+\+F411\+\_\+u\+ROS6/base\+\_\+robot/\+Core/\+Src/retarget.c File Reference}
+\hypertarget{retarget_8c}{}\label{retarget_8c}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/retarget.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/retarget.c}}
+
+
+\+: Contain function to add printf and scanf function use the UART2 All credit to Carmine Noviello for this code \href{https://github.com/cnoviello/mastering-stm32/blob/master/nucleo-f030R8/system/src/retarget/}{\texttt{ https\+://github.\+com/cnoviello/mastering-\/stm32/blob/master/nucleo-\/f030\+R8/system/src/retarget/}}  
+
+
+{\ttfamily \#include $<$\+\_\+ansi.\+h$>$}\newline
+{\ttfamily \#include $<$\+\_\+syslist.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/time.\+h$>$}\newline
+{\ttfamily \#include $<$sys/times.\+h$>$}\newline
+{\ttfamily \#include $<$limits.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$../\+Inc/retarget.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{retarget_8c_afcf80a6d91178952d107ad00b165752b}{STDIN\+\_\+\+FILENO}}~0
+\item 
+\#define \mbox{\hyperlink{retarget_8c_abd165ee6474b5b75bf075842fff13a04}{STDOUT\+\_\+\+FILENO}}~1
+\item 
+\#define \mbox{\hyperlink{retarget_8c_ae2fe1725bb5e9823d089c46b9ed5266e}{STDERR\+\_\+\+FILENO}}~2
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{retarget_8c_ac7028227e5051dfa3bb8fabb0edd07c8}{Retarget\+Init}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\item 
+int \mbox{\hyperlink{retarget_8c_a4284676ccba12d7f2061d338001f71fb}{\+\_\+isatty}} (int fd)
+\item 
+int \mbox{\hyperlink{retarget_8c_a0c1fa2d02c07b22bf2ebd769a028b852}{\+\_\+write}} (int fd, char \texorpdfstring{$\ast$}{*}ptr, int len)
+\item 
+int \mbox{\hyperlink{retarget_8c_a58a559c63748012aab165d5f82af766d}{\+\_\+close}} (int fd)
+\item 
+int \mbox{\hyperlink{retarget_8c_a883d6c1f92ad3c6f19731e7b57b2c458}{\+\_\+lseek}} (int fd, int ptr, int dir)
+\item 
+int \mbox{\hyperlink{retarget_8c_ab60e5acd5530805f1421802fc0dc1d35}{\+\_\+read}} (int fd, char \texorpdfstring{$\ast$}{*}ptr, int len)
+\item 
+int \mbox{\hyperlink{retarget_8c_a6e8d95db883bc4efe10c487d74e96b06}{\+\_\+fstat}} (int fd, struct stat \texorpdfstring{$\ast$}{*}st)
+\item 
+int \mbox{\hyperlink{retarget_8c_a945e539df8e0f66d3c73c533fe1968ee}{\+\_\+getpid}} (void)
+\item 
+int \mbox{\hyperlink{retarget_8c_a062a5101199c3128edd5170f2575bb10}{\+\_\+kill}} (int pid, int sig)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{retarget_8c_af8d99acb61924bc42b4652c2316c1b20}{g\+Huart}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Contain function to add printf and scanf function use the UART2 All credit to Carmine Noviello for this code \href{https://github.com/cnoviello/mastering-stm32/blob/master/nucleo-f030R8/system/src/retarget/}{\texttt{ https\+://github.\+com/cnoviello/mastering-\/stm32/blob/master/nucleo-\/f030\+R8/system/src/retarget/}} 
+
+
+
+Definition in file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{retarget_8c_ae2fe1725bb5e9823d089c46b9ed5266e}\label{retarget_8c_ae2fe1725bb5e9823d089c46b9ed5266e} 
+\index{retarget.c@{retarget.c}!STDERR\_FILENO@{STDERR\_FILENO}}
+\index{STDERR\_FILENO@{STDERR\_FILENO}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{STDERR\_FILENO}{STDERR\_FILENO}}
+{\footnotesize\ttfamily \#define STDERR\+\_\+\+FILENO~2}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00023}{23}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_afcf80a6d91178952d107ad00b165752b}\label{retarget_8c_afcf80a6d91178952d107ad00b165752b} 
+\index{retarget.c@{retarget.c}!STDIN\_FILENO@{STDIN\_FILENO}}
+\index{STDIN\_FILENO@{STDIN\_FILENO}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{STDIN\_FILENO}{STDIN\_FILENO}}
+{\footnotesize\ttfamily \#define STDIN\+\_\+\+FILENO~0}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00021}{21}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_abd165ee6474b5b75bf075842fff13a04}\label{retarget_8c_abd165ee6474b5b75bf075842fff13a04} 
+\index{retarget.c@{retarget.c}!STDOUT\_FILENO@{STDOUT\_FILENO}}
+\index{STDOUT\_FILENO@{STDOUT\_FILENO}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{STDOUT\_FILENO}{STDOUT\_FILENO}}
+{\footnotesize\ttfamily \#define STDOUT\+\_\+\+FILENO~1}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00022}{22}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{retarget_8c_a58a559c63748012aab165d5f82af766d}\label{retarget_8c_a58a559c63748012aab165d5f82af766d} 
+\index{retarget.c@{retarget.c}!\_close@{\_close}}
+\index{\_close@{\_close}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{\_close()}{\_close()}}
+{\footnotesize\ttfamily int \+\_\+close (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00057}{57}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_a6e8d95db883bc4efe10c487d74e96b06}\label{retarget_8c_a6e8d95db883bc4efe10c487d74e96b06} 
+\index{retarget.c@{retarget.c}!\_fstat@{\_fstat}}
+\index{\_fstat@{\_fstat}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{\_fstat()}{\_fstat()}}
+{\footnotesize\ttfamily int \+\_\+fstat (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{struct stat \texorpdfstring{$\ast$}{*}}]{st }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00088}{88}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_a945e539df8e0f66d3c73c533fe1968ee}\label{retarget_8c_a945e539df8e0f66d3c73c533fe1968ee} 
+\index{retarget.c@{retarget.c}!\_getpid@{\_getpid}}
+\index{\_getpid@{\_getpid}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{\_getpid()}{\_getpid()}}
+{\footnotesize\ttfamily int \+\_\+getpid (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00098}{98}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_a4284676ccba12d7f2061d338001f71fb}\label{retarget_8c_a4284676ccba12d7f2061d338001f71fb} 
+\index{retarget.c@{retarget.c}!\_isatty@{\_isatty}}
+\index{\_isatty@{\_isatty}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{\_isatty()}{\_isatty()}}
+{\footnotesize\ttfamily int \+\_\+isatty (\begin{DoxyParamCaption}\item[{int}]{fd }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00035}{35}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_a062a5101199c3128edd5170f2575bb10}\label{retarget_8c_a062a5101199c3128edd5170f2575bb10} 
+\index{retarget.c@{retarget.c}!\_kill@{\_kill}}
+\index{\_kill@{\_kill}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{\_kill()}{\_kill()}}
+{\footnotesize\ttfamily int \+\_\+kill (\begin{DoxyParamCaption}\item[{int}]{pid,  }\item[{int}]{sig }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00103}{103}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_a883d6c1f92ad3c6f19731e7b57b2c458}\label{retarget_8c_a883d6c1f92ad3c6f19731e7b57b2c458} 
+\index{retarget.c@{retarget.c}!\_lseek@{\_lseek}}
+\index{\_lseek@{\_lseek}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{\_lseek()}{\_lseek()}}
+{\footnotesize\ttfamily int \+\_\+lseek (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{int}]{ptr,  }\item[{int}]{dir }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00065}{65}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_ab60e5acd5530805f1421802fc0dc1d35}\label{retarget_8c_ab60e5acd5530805f1421802fc0dc1d35} 
+\index{retarget.c@{retarget.c}!\_read@{\_read}}
+\index{\_read@{\_read}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{\_read()}{\_read()}}
+{\footnotesize\ttfamily int \+\_\+read (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00074}{74}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_a0c1fa2d02c07b22bf2ebd769a028b852}\label{retarget_8c_a0c1fa2d02c07b22bf2ebd769a028b852} 
+\index{retarget.c@{retarget.c}!\_write@{\_write}}
+\index{\_write@{\_write}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{\_write()}{\_write()}}
+{\footnotesize\ttfamily int \+\_\+write (\begin{DoxyParamCaption}\item[{int}]{fd,  }\item[{char \texorpdfstring{$\ast$}{*}}]{ptr,  }\item[{int}]{len }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00043}{43}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+\Hypertarget{retarget_8c_ac7028227e5051dfa3bb8fabb0edd07c8}\label{retarget_8c_ac7028227e5051dfa3bb8fabb0edd07c8} 
+\index{retarget.c@{retarget.c}!RetargetInit@{RetargetInit}}
+\index{RetargetInit@{RetargetInit}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{RetargetInit()}{RetargetInit()}}
+{\footnotesize\ttfamily void Retarget\+Init (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+Reconfigure stdin, stdout and stderr to use UART 
+\begin{DoxyParams}{Parameters}
+{\em huart} & Structure wich represent an UART \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00027}{27}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{retarget_8c_af8d99acb61924bc42b4652c2316c1b20}\label{retarget_8c_af8d99acb61924bc42b4652c2316c1b20} 
+\index{retarget.c@{retarget.c}!gHuart@{gHuart}}
+\index{gHuart@{gHuart}!retarget.c@{retarget.c}}
+\doxysubsubsection{\texorpdfstring{gHuart}{gHuart}}
+{\footnotesize\ttfamily UART\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} g\+Huart}
+
+
+
+Definition at line \mbox{\hyperlink{retarget_8c_source_l00025}{25}} of file \mbox{\hyperlink{retarget_8c_source}{retarget.\+c}}.
+

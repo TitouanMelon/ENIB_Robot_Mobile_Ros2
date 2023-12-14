@@ -13,6 +13,6 @@ var searchData=
   ['config_20define_10',['Config define',['../index.html#Config',1,'']]],
   ['config_20exo_11',['Config exo',['../index.html#Exo',1,'']]],
   ['config_20param_12',['Config param',['../index.html#Param',1,'']]],
-  ['createpublisher_13',['createPublisher',['../micro_r_o_s_8h.html#a890a219b2095c02f9ad37f507e6e1bcb',1,'microROS.c']]],
-  ['createsubscriber_14',['createSubscriber',['../micro_r_o_s_8h.html#aa2d2993f945f17986c10ad57863224b5',1,'microROS.c']]]
+  ['createpublisher_13',['createpublisher',['../micro_r_o_s_8h.html#a890a219b2095c02f9ad37f507e6e1bcb',1,'createPublisher(rcl_publisher_t *publisher, const rcl_node_t *node, const rosidl_message_type_support_t *type_support, const char *topic_name, std_msgs__msg__Int32 *msg):&#160;microROS.c'],['../micro_r_o_s_8c.html#a890a219b2095c02f9ad37f507e6e1bcb',1,'createPublisher(rcl_publisher_t *publisher, const rcl_node_t *node, const rosidl_message_type_support_t *type_support, const char *topic_name, std_msgs__msg__Int32 *msg):&#160;microROS.c']]],
+  ['createsubscriber_14',['createsubscriber',['../micro_r_o_s_8h.html#aa2d2993f945f17986c10ad57863224b5',1,'createSubscriber(rcl_subscription_t *subscription, rcl_node_t *node, const rosidl_message_type_support_t *type_support, const char *topic_name, std_msgs__msg__Int32 *msg):&#160;microROS.c'],['../micro_r_o_s_8c.html#aa2d2993f945f17986c10ad57863224b5',1,'createSubscriber(rcl_subscription_t *subscription, rcl_node_t *node, const rosidl_message_type_support_t *type_support, const char *topic_name, std_msgs__msg__Int32 *msg):&#160;microROS.c']]]
 ];

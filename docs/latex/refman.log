@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.9)  9 DEC 2023 13:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.9)  14 DEC 2023 20:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,7 +729,184 @@ File: l3backend-pdftex.def 2023-11-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count343
 \l__pdf_internal_box=\box123
 )
-(./refman.aux)
+(./refman.aux
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_aa2e9e03cdf06111f2b11e09e306760c4' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_ae1a60036fb03564b63b0ec16677cc0a9' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a820e8fa7723077ffda211953f1243c37' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_ae99d1a42cc4f2c921eeff9c69a866200' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_aa788277256137dac0b82c0565140de54' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a821a6c8b87fa2723f5410928bf796e12' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a169be6dc1891aa49fddcc22fb7340db4' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a54b83b68e77225d34f98cb247b94adf3' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_ac48f0c7483af856f9fe1783ab33b93a5' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a267ca5ee8d8b347b0956daf611339dc4' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_ac6e3d1cd347360cb8928fcb4bd48e2d1' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a375bd2b4e8d7c3e8130f8758fc5b7fc3' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a296f98fd1eb5b788d4100d3b0a9a3727' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a0bad2a324b2ea2a5c7fcf555a5dac53d' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_ac96f0353f6896b6a6c9bfeaa69da2214' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a6200cd477285263cdee2c0813d5673a6' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a8bec46444dd7f7b66f69a8ff573a0e7b' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a4bcc4d65d5299670fe82e115758583a5' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a132ff4b1e969e27e56e29ed916f2412c' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a66856ac71254a56880038bca04664b24' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a69e4db4503e4c0da0ff292682a2737b9' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a918118c0fdf1ea393e0a20e371310e9a' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a93889a4512c1bab706e6b2f145989da8' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_ae3fcc6d82c746084b932c7ac125cbf8f' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a6637ed1d278711ab5553e98ff99aec57' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a1640fbe4a7b31d02b8d3b416921eb2ff' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a323906602ac50d67cd54019bf6befdb9' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a576ad3a7d21c21b25c4745c21df040e8' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a0c136a7040d79a926de866f5676df6f6' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_aa4662894211ed1f810668d8c64a5616e' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_ad655d862c529a55e17a20d401e7d967c' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a84179ae2a32adeb1c2df4f5336208d8a' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a8b8d1a3aac3d65ba4518ce14b0b58537' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_af40e16604cc2cef5bc5bbed72000ae87' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a8c340bcd85cffaac810ee47a0241706c' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a6429722d22fe6ca66ef3d8470d066ceb' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a6d3e0fc7c392cea736c4114fa1233b4c' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a31c96b7ce1d07686e72a3b9642c3f4bc' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a74241935b17022399d0348e1c9b136f8' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a76b774b2c00ba9412c301d70f7050115' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a2e37298ac5ecbe7ca0900315e71e9375' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_abe305ff4b6e18509568202e772bd4810' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_aafa1b54eb9121c8a9f18ca154db8e6d4' multipl
+y defined.
+
+
+LaTeX Warning: Label `_v_l53_l0_x_8h_a8609aa80574602a7cbfb02d6ba9f9bae' multipl
+y defined.
+
+)
 \openout1 = `refman.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 183.
@@ -871,37 +1048,71 @@ ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.16 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ [][] [][]\T1/phv/m/n/10 5.14 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
 ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
  []
 
 [3]
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.28 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
- []
-
-[4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.37 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ [][] [][]\T1/phv/m/n/10 5.17 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
 ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.40 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ [][] [][]\T1/phv/m/n/10 5.21 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
 ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
  []
 
-[6]
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 7.19995pt on input line 204.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 20
+4.
+(c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [4] [5] [6] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.42 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ [][] [][]\T1/phv/m/n/10 5.30 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
 ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
  []
 
-[7] [8
+[8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+ [][] [][]\T1/phv/m/n/10 5.32 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ []
 
-]
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+ [][] [][]\T1/phv/m/n/10 5.38 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+ [][] [][]\T1/phv/m/n/10 5.41 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+ [][] [][]\T1/phv/m/n/10 5.44 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+ [][] [][]\T1/phv/m/n/10 5.46 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+ [][] [][]\T1/phv/m/n/10 5.50 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ []
+
+[12]
 Package hyperref Info: Option `pageanchor' set `true' on input line 207.
  (./index.tex
 Chapter 1.
@@ -931,6 +1142,7 @@ Underfull \hbox (badness 10000) detected at line 23
 
 [1
 
+
 ]
 Underfull \hbox (badness 10000) detected at line 26
 [][][]
@@ -944,66 +1156,71 @@ Chapter 2.
 
 ]
 Chapter 3.
-(./files.tex [5]) [6]
+(./files.tex
+Overfull \hbox (92.37648pt too wide) in paragraph at lines 14--14
+ \T1/phv/m/n/10 for this code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnovie
+llo/mastering-stm32/blob/master/nucleo-f030[] 
+ []
+
+[5]
+Overfull \hbox (92.37648pt too wide) in paragraph at lines 33--33
+ \T1/phv/m/n/10 for this code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnovie
+llo/mastering-stm32/blob/master/nucleo-f030[] 
+ []
+
+[6]) [7] [8
+
+]
 Chapter 4.
 (./struct_a_message.tex
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 24.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 24
-.
- (c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
 Underfull \hbox (badness 10000) in paragraph at lines 44--44
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
 ][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
  []
 
-) (./struct_micro_ros_pub_msg.tex [7
-
-]
+) (./struct_micro_ros_pub_msg.tex [9]
 Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
 ][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
  []
 
-) (./struct_micro_ros_sub_msg.tex [8]
+) (./struct_micro_ros_sub_msg.tex [10]
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
 ][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
  []
 
-) (./struct_sequence_step_enables.tex [9]
+) (./struct_sequence_step_enables.tex [11]
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
 ][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
  []
 
-[10]) (./struct_sequence_step_timeouts.tex [11]
+[12]) (./struct_sequence_step_timeouts.tex [13]
 Underfull \hbox (badness 10000) in paragraph at lines 116--116
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
 ][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
  []
 
-) (./structstat_info__t.tex [12]
+) (./structstat_info__t.tex [14]
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
 ][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
  []
 
-) [13] [14
+) [15] [16
 
 ]
 Chapter 5.
-(./capt_dist_i_r_8h_source.tex) (./config_8h_source.tex [15])
+(./capt_dist_i_r_8h_source.tex) (./config_8h_source.tex [17])
 (./drv__gpio_8h_source.tex) (./drv__i2c_8h_source.tex)
-(./drv__uart_8h_source.tex [16]) (./_free_r_t_o_s_config_8h_source.tex [17]
-[18]) (./grove_l_c_d_8h_source.tex [19]) (./main_8h.tex
+(./drv__uart_8h_source.tex [18]) (./_free_r_t_o_s_config_8h_source.tex [19]
+[20]) (./grove_l_c_d_8h_source.tex [21]) (./main_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--31
 
  []
 
-[20]
+[22]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1012,7 +1229,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[21] [22]
+[23] [24]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 254.
 
@@ -1024,12 +1241,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[23]
+[25]
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 327.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 6.29996pt on input line 327.
- [24]
+ [26]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 374.
 
@@ -1041,7 +1258,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[25] [26]) (./main_8h_source.tex
+[27] [28]) (./main_8h_source.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1050,7 +1267,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[27] [28]) (./micro_r_o_s_8h.tex
+[29] [30]) (./micro_r_o_s_8h.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
@@ -1063,7 +1280,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[29] [30]
+[31] [32]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1072,10 +1289,35 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[31]) (./micro_r_o_s_8h_source.tex [32]) (./motor_command_8h_source.tex)
-(./quad_encoder_8h_source.tex) (./retarget_8h_source.tex [33])
-(./stm32f4xx__hal__conf_8h_source.tex [34] [35] [36] [37] [38])
-(./stm32f4xx__it_8h.tex
+[33]) (./micro_r_o_s_8h_source.tex [34]) (./motor_command_8h_source.tex)
+(./quad_encoder_8h_source.tex) (./retarget_8h.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
+ing-stm32/blob/master/nucleo-f030[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
+
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+\T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
+ing-stm32/blob/master/nucleo-f030[]
+ []
+
+[36]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[37]) (./retarget_8h_source.tex) (./stm32f4xx__hal__conf_8h_source.tex [38]
+[39] [40] [41] [42]) (./stm32f4xx__it_8h.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 20.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -1095,12 +1337,432 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[39] [40]) (./stm32f4xx__it_8h_source.tex [41]) (./systemclock_8h_source.tex)
-(./util_8h_source.tex) (./_v_l53_l0_x_8h_source.tex [42] [43] [44] [45])
-(./capt_dist_i_r_8c_source.tex [46]) (./dma__transport_8c_source.tex [47])
-(./drv__gpio_8c_source.tex) (./drv__i2c_8c_source.tex [48] [49] [50])
-(./drv__uart_8c_source.tex [51]) (./freertos_8c_source.tex [52])
-(./grove_l_c_d_8c_source.tex [53] [54] [55] [56]) (./main_8c.tex
+[43] [44]) (./stm32f4xx__it_8h_source.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[45]) (./systemclock_8h_source.tex [46]) (./util_8h_source.tex)
+(./_v_l53_l0_x_8h.tex [47] [48]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[49]
+LaTeX Font Info:    Font shape `T1/phv/b/n' will be
+(Font)              scaled to size 7.19995pt on input line 363.
+ [50]
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+|   \T1/pcr/m/sl/8 vcsel[]_[]period[]_[]pclks \T1/pcr/m/n/8 ) ((((uint32[]_[]t)
+2304 $\OMS/cmsy/m/n/8 ^^C$ \T1/pcr/m/n/8 (vcsel[]_[]period[]_[]pclks) $\OMS/cms
+y/m/n/8 ^^C$ \T1/pcr/m/n/8 1655) + 500) /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 434--435
+\T1/pcr/m/n/8 #define check[]Timeout[]Expired( ) (g[]_[]io[]Timeout $\OML/cmm/m
+/it/8 >$ \T1/pcr/m/n/8 0 && ((uint16[]_[]t)millis() - g[]_[]timeout[]Start[]Ms)
+ $\OML/cmm/m/it/8 >$
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[51
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_aa2e9e03cdf06111f2b11e09e306760c4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.453 \doxysubsubsection
+                        {\texorpdfstring{CROSSTALK\_COMPENSATION\_PEAK\_RATE...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_ae1a60036fb03564b63b0ec16677cc0a9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.453 \doxysubsubsection
+                        {\texorpdfstring{CROSSTALK\_COMPENSATION\_PEAK\_RATE...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a820e8fa7723077ffda211953f1243c37}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.453 \doxysubsubsection
+                        {\texorpdfstring{CROSSTALK\_COMPENSATION\_PEAK\_RATE...
+] [52
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_ae99d1a42cc4f2c921eeff9c69a866200}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.515 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_aa788277256137dac0b82c0565140de54}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.515 
+      ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[53
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a821a6c8b87fa2723f5410928bf796e12}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.598 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00070}{70}}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a169be6dc1891aa49fddcc22fb7340db4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.598 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00070}{70}}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a54b83b68e77225d34f98cb247b94adf3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.598 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00070}{70}}...
+] [54
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_ac48f0c7483af856f9fe1783ab33b93a5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.668 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00068}{68}}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a267ca5ee8d8b347b0956daf611339dc4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.668 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00068}{68}}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_ac6e3d1cd347360cb8928fcb4bd48e2d1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.668 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00068}{68}}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a375bd2b4e8d7c3e8130f8758fc5b7fc3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.668 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00068}{68}}...
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[55
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a296f98fd1eb5b788d4100d3b0a9a3727}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.748 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00078}{78}}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a0bad2a324b2ea2a5c7fcf555a5dac53d}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.748 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00078}{78}}...
+] [56]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[57
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_ac96f0353f6896b6a6c9bfeaa69da2214}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.908 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00146}{146}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a6200cd477285263cdee2c0813d5673a6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.908 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00146}{146}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a8bec46444dd7f7b66f69a8ff573a0e7b}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.908 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00146}{146}...
+] [58
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a4bcc4d65d5299670fe82e115758583a5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.988 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00149}{149}...
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[59
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a132ff4b1e969e27e56e29ed916f2412c}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1068 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00054}{54}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a66856ac71254a56880038bca04664b24}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1068 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00054}{54}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a69e4db4503e4c0da0ff292682a2737b9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1068 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00054}{54}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a918118c0fdf1ea393e0a20e371310e9a}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1068 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00054}{54}...
+] [60
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a93889a4512c1bab706e6b2f145989da8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1148 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00044}{44}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_ae3fcc6d82c746084b932c7ac125cbf8f}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1148 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00044}{44}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a6637ed1d278711ab5553e98ff99aec57}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1148 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00044}{44}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a1640fbe4a7b31d02b8d3b416921eb2ff}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1148 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00044}{44}...
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[61
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a323906602ac50d67cd54019bf6befdb9}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1228 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00032}{32}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a576ad3a7d21c21b25c4745c21df040e8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1228 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00032}{32}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a0c136a7040d79a926de866f5676df6f6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1228 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00032}{32}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_aa4662894211ed1f810668d8c64a5616e}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1228 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00032}{32}...
+] [62
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_ad655d862c529a55e17a20d401e7d967c}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1308 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00036}{36}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a84179ae2a32adeb1c2df4f5336208d8a}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1308 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00036}{36}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a8b8d1a3aac3d65ba4518ce14b0b58537}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1308 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00036}{36}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_af40e16604cc2cef5bc5bbed72000ae87}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1308 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00036}{36}...
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[63
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a8c340bcd85cffaac810ee47a0241706c}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1388 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00019}{19}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a6429722d22fe6ca66ef3d8470d066ceb}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1388 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00019}{19}...
+] [64
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a6d3e0fc7c392cea736c4114fa1233b4c}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1468 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00017}{17}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a31c96b7ce1d07686e72a3b9642c3f4bc}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1468 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00017}{17}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a74241935b17022399d0348e1c9b136f8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1468 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00017}{17}...
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[65
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a76b774b2c00ba9412c301d70f7050115}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1548 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00083}{83}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a2e37298ac5ecbe7ca0900315e71e9375}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1548 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00083}{83}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_abe305ff4b6e18509568202e772bd4810}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1548 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00083}{83}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_aafa1b54eb9121c8a9f18ca154db8e6d4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1548 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00083}{83}...
+] [66
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a8609aa80574602a7cbfb02d6ba9f9bae}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1621 
+       ]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[67]) (./_v_l53_l0_x_8h_source.tex [68] [69] [70] [71])
+(./capt_dist_i_r_8c_source.tex) (./dma__transport_8c_source.tex [72])
+(./drv__gpio_8c_source.tex [73]) (./drv__i2c_8c_source.tex [74] [75] [76])
+(./drv__uart_8c_source.tex [77]) (./freertos_8c_source.tex)
+(./grove_l_c_d_8c_source.tex [78] [79] [80] [81] [82]) (./main_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
@@ -1113,7 +1775,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[57] [58]
+[83] [84]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1122,7 +1784,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[59] [60]
+[85] [86]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1131,7 +1793,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[61] [62]
+[87] [88]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1140,7 +1802,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[63] [64]
+[89] [90]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1149,9 +1811,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[65] [66]
-Underfull \hbox (badness 10000) detected at line 692
-[][][]
+[91] [92]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[93] [94]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[95] [96]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[97] [98]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[99]) (./main_8c_source.tex [100] [101] [102] [103] [104] [105] [106] [107]
+[108] [109] [110]) (./micro_r_o_s_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
  []
 
 
@@ -1162,9 +1861,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[67] [68]
-Overfull \vbox (5.6647pt too high) has occurred while \output is active []
-
+[111] [112]) (./micro_r_o_s_8c_source.tex)
+(./microros__allocators_8c_source.tex [113]) (./microros__time_8c_source.tex
+[114]) (./motor_command_8c_source.tex [115]) (./quad_encoder_8c_source.tex
+[116] [117] [118]) (./retarget_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
+ing-stm32/blob/master/nucleo-f030[]
+ []
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1174,7 +1878,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[69] [70]
+[119]
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+\T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
+ing-stm32/blob/master/nucleo-f030[]
+ []
+
+[120]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1183,27 +1898,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[71] [72]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[73]) (./main_8c_source.tex [74] [75] [76] [77] [78] [79] [80] [81] [82]
-[83] [84]) (./micro_r_o_s_8c_source.tex [85])
-(./microros__allocators_8c_source.tex) (./microros__time_8c_source.tex [86])
-(./motor_command_8c_source.tex [87]) (./quad_encoder_8c_source.tex [88]
-[89] [90] [91]) (./retarget_8c_source.tex [92])
-(./stm32f4xx__hal__msp_8c_source.tex [93] [94] [95] [96] [97])
+[121] [122]) (./retarget_8c_source.tex [123])
+(./stm32f4xx__hal__msp_8c_source.tex [124] [125] [126] [127] [128])
 (./stm32f4xx__hal__timebase__tim_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-[98]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[129]
 Underfull \hbox (badness 10000) detected at line 29
 [][][]
  []
@@ -1218,34 +1928,18 @@ Underfull \hbox (badness 10000) detected at line 78
 [][][]
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[99]
+[130]
 Underfull \hbox (badness 10000) detected at line 105
 [][][]
  []
 
-) (./stm32f4xx__hal__timebase__tim_8c_source.tex [100])
-(./stm32f4xx__it_8c_source.tex [101] [102]) (./syscalls_8c.tex
+) (./stm32f4xx__hal__timebase__tim_8c_source.tex [131])
+(./stm32f4xx__it_8c_source.tex [132] [133]) (./syscalls_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[103]
+[134]
 Underfull \hbox (badness 10000) detected at line 68
 [][][]
  []
@@ -1255,7 +1949,6 @@ Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
 
-[104]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1264,7 +1957,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[105] [106]) (./syscalls_8c_source.tex
+[135] [136]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1273,20 +1966,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[107] [108]) (./sysmem_8c.tex
+[137]) (./syscalls_8c_source.tex [138] [139]) (./sysmem_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[109]
+[140]
 Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
@@ -1301,282 +1986,387 @@ Underfull \hbox (badness 10000) detected at line 69
 [][][]
  []
 
-[110]) (./sysmem_8c_source.tex) (./systemclock_8c_source.tex [111])
-(./util_8c_source.tex [112] [113]) (./_v_l53_l0_x_8c_source.tex [114] [115]
-[116] [117]) [118] (./refman.ind
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[141]) (./sysmem_8c_source.tex) (./systemclock_8c_source.tex [142])
+(./util_8c_source.tex [143] [144]) (./_v_l53_l0_x_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--13
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[145] [146]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[147]) (./_v_l53_l0_x_8c_source.tex [148] [149] [150] [151] [152]) [153]
+[154
+
+] (./refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 
-Overfull \hbox (313.74979pt too wide) in paragraph at lines 63--65
+Overfull \hbox (313.74979pt too wide) in paragraph at lines 97--99
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/captDistIR.h,
  []
 
 
-Overfull \hbox (296.25421pt too wide) in paragraph at lines 65--67
+Overfull \hbox (296.25421pt too wide) in paragraph at lines 99--101
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/config.h,
  []
 
 
-Overfull \hbox (306.66695pt too wide) in paragraph at lines 67--69
+Overfull \hbox (306.66695pt too wide) in paragraph at lines 101--103
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_gpio.h,
  []
 
 
-Overfull \hbox (301.51903pt too wide) in paragraph at lines 69--71
+Overfull \hbox (301.51903pt too wide) in paragraph at lines 103--105
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_i2c.h,
  []
 
 
-Overfull \hbox (305.88374pt too wide) in paragraph at lines 71--73
+Overfull \hbox (305.88374pt too wide) in paragraph at lines 105--107
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_uart.h,
  []
 
 
-Overfull \hbox (340.72264pt too wide) in paragraph at lines 73--75
+Overfull \hbox (340.72264pt too wide) in paragraph at lines 107--109
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/FreeRTOSConfig.h,
  []
 
 
-Overfull \hbox (311.67105pt too wide) in paragraph at lines 75--77
+Overfull \hbox (311.67105pt too wide) in paragraph at lines 109--111
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/groveLCD.h,
  []
 
+[155
 
-Overfull \hbox (291.74522pt too wide) in paragraph at lines 77--79
+
+]
+Overfull \hbox (291.74522pt too wide) in paragraph at lines 111--113
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/main.h,
  []
 
 
-Overfull \hbox (313.38097pt too wide) in paragraph at lines 79--81
+Overfull \hbox (313.38097pt too wide) in paragraph at lines 113--115
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/microROS.h,
  []
 
 
-Overfull \hbox (336.75345pt too wide) in paragraph at lines 81--83
+Overfull \hbox (336.75345pt too wide) in paragraph at lines 115--117
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/motorCommand.h,
  []
 
 
-Overfull \hbox (325.32358pt too wide) in paragraph at lines 83--85
+Overfull \hbox (325.32358pt too wide) in paragraph at lines 117--119
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/quadEncoder.h,
  []
 
 
-Overfull \hbox (303.25583pt too wide) in paragraph at lines 85--87
+Overfull \hbox (303.25583pt too wide) in paragraph at lines 119--121
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/retarget.h,
  []
 
 
-Overfull \hbox (352.00818pt too wide) in paragraph at lines 87--89
+Overfull \hbox (352.00818pt too wide) in paragraph at lines 121--123
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/stm32f4xx_hal_conf.h,
  []
 
 
-Overfull \hbox (322.75862pt too wide) in paragraph at lines 89--91
+Overfull \hbox (322.75862pt too wide) in paragraph at lines 123--125
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/stm32f4xx_it.h,
  []
 
 
-Overfull \hbox (321.06697pt too wide) in paragraph at lines 91--93
+Overfull \hbox (321.06697pt too wide) in paragraph at lines 125--127
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/systemclock.h,
  []
 
 
-Overfull \hbox (283.74426pt too wide) in paragraph at lines 93--95
+Overfull \hbox (283.74426pt too wide) in paragraph at lines 127--129
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/util.h,
  []
 
 
-Overfull \hbox (309.26785pt too wide) in paragraph at lines 95--97
+Overfull \hbox (309.26785pt too wide) in paragraph at lines 129--131
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/VL53L0X.h,
  []
 
 
-Overfull \hbox (314.73987pt too wide) in paragraph at lines 97--99
+Overfull \hbox (314.73987pt too wide) in paragraph at lines 131--133
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/captDistIR.c,
  []
 
 
-Overfull \hbox (331.52441pt too wide) in paragraph at lines 99--101
+Overfull \hbox (331.52441pt too wide) in paragraph at lines 133--135
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/dma_transport.c,
  []
 
 
-Overfull \hbox (307.65703pt too wide) in paragraph at lines 101--103
+Overfull \hbox (307.65703pt too wide) in paragraph at lines 135--137
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_gpio.c,
  []
 
 
-Overfull \hbox (302.50911pt too wide) in paragraph at lines 103--105
+Overfull \hbox (302.50911pt too wide) in paragraph at lines 137--139
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_i2c.c,
  []
 
 
-Overfull \hbox (306.87383pt too wide) in paragraph at lines 105--107
+Overfull \hbox (306.87383pt too wide) in paragraph at lines 139--141
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_uart.c,
  []
 
 
-Overfull \hbox (303.96696pt too wide) in paragraph at lines 107--109
+Overfull \hbox (303.96696pt too wide) in paragraph at lines 141--143
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/freertos.c,
  []
 
 
-Overfull \hbox (312.66113pt too wide) in paragraph at lines 109--111
+Overfull \hbox (312.66113pt too wide) in paragraph at lines 143--145
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/groveLCD.c,
  []
 
-[119
 
-
-
-]
-Overfull \hbox (292.7353pt too wide) in paragraph at lines 111--113
+Overfull \hbox (292.7353pt too wide) in paragraph at lines 145--147
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/main.c,
  []
 
 
-Overfull \hbox (314.37105pt too wide) in paragraph at lines 113--115
+Overfull \hbox (314.37105pt too wide) in paragraph at lines 147--149
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/microROS.c,
  []
 
 
-Overfull \hbox (351.1084pt too wide) in paragraph at lines 115--117
+Overfull \hbox (351.1084pt too wide) in paragraph at lines 149--151
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/microros_allocators.c,
  []
 
 
-Overfull \hbox (329.59875pt too wide) in paragraph at lines 117--119
+Overfull \hbox (329.59875pt too wide) in paragraph at lines 151--153
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/microros_time.c,
  []
 
 
-Overfull \hbox (337.74353pt too wide) in paragraph at lines 119--121
+Overfull \hbox (337.74353pt too wide) in paragraph at lines 153--155
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/motorCommand.c,
  []
 
 
-Overfull \hbox (326.31366pt too wide) in paragraph at lines 121--123
+Overfull \hbox (326.31366pt too wide) in paragraph at lines 155--157
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/quadEncoder.c,
  []
 
 
-Overfull \hbox (304.24591pt too wide) in paragraph at lines 123--125
+Overfull \hbox (304.24591pt too wide) in paragraph at lines 157--159
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/retarget.c,
  []
 
 
-Overfull \hbox (352.94432pt too wide) in paragraph at lines 125--127
+Overfull \hbox (352.94432pt too wide) in paragraph at lines 159--161
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_hal_msp.c,
  []
 
 
-Overfull \hbox (389.77153pt too wide) in paragraph at lines 127--129
+Overfull \hbox (389.77153pt too wide) in paragraph at lines 161--163
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_hal_timebase_tim.c,
  []
 
 
-Overfull \hbox (323.7487pt too wide) in paragraph at lines 129--131
+Overfull \hbox (323.7487pt too wide) in paragraph at lines 163--165
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_it.c,
  []
 
 
-Overfull \hbox (304.59738pt too wide) in paragraph at lines 131--133
+Overfull \hbox (304.59738pt too wide) in paragraph at lines 165--167
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/syscalls.c,
  []
 
 
-Overfull \hbox (306.73026pt too wide) in paragraph at lines 133--135
+Overfull \hbox (306.73026pt too wide) in paragraph at lines 167--169
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/sysmem.c,
  []
 
 
-Overfull \hbox (322.05705pt too wide) in paragraph at lines 135--137
+Overfull \hbox (322.05705pt too wide) in paragraph at lines 169--171
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/systemclock.c,
  []
 
 
-Overfull \hbox (284.73434pt too wide) in paragraph at lines 137--139
+Overfull \hbox (284.73434pt too wide) in paragraph at lines 171--173
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/util.c,
  []
 
 
-Overfull \hbox (310.25793pt too wide) in paragraph at lines 139--141
+Overfull \hbox (310.25793pt too wide) in paragraph at lines 173--175
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/VL53L0X.c,
  []
 
-[120] [121] [122] [123] [124
+[156]
+Overfull \hbox (17.55711pt too wide) in paragraph at lines 287--288
+[]\T1/phv/m/n/10 FINAL_RANGE_CONFIG_MIN_COUNT_RATE_RTN_LIMIT 
+ []
 
-]) (./refman.aux)
+[157] [158] [159] [160] [161]
+Underfull \hbox (badness 10000) in paragraph at lines 943--944
+[]| \T1/phv/m/n/10 ALGO_PART_TO_PART_RANGE_OFFSET_MM,
+ []
+
+
+Overfull \hbox (18.00928pt too wide) in paragraph at lines 948--950
+[]| \T1/phv/m/n/10 CROSSTALK_COMPENSATION_PEAK_RATE_MCPS,
+ []
+
+
+Overfull \hbox (40.059pt too wide) in paragraph at lines 956--958
+[]| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_MIN_COUNT_RATE_RTN_LIMIT,
+ []
+
+[162]
+Underfull \hbox (badness 10000) in paragraph at lines 963--964
+[]| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_VALID_PHASE_HIGH,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 964--965
+[]| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_VALID_PHASE_LOW,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 968--969
+[]| \T1/phv/m/n/10 GLOBAL_CONFIG_REF_EN_START_SELECT,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 999--1000
+[]| \T1/phv/m/n/10 PRE_RANGE_CONFIG_SIGMA_THRESH_LO,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
+[]| \T1/phv/m/n/10 PRE_RANGE_CONFIG_TIMEOUT_MACROP_HI,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
+[]| \T1/phv/m/n/10 PRE_RANGE_CONFIG_VALID_PHASE_HIGH,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
+[]| \T1/phv/m/n/10 PRE_RANGE_MIN_COUNT_RATE_RTN_LIMIT,
+ []
+
+
+Overfull \hbox (18.64836pt too wide) in paragraph at lines 1010--1012
+[]| \T1/phv/m/n/10 RE-SULT_CORE_AMBIENT_WINDOW_EVENTS_REF,
+ []
+
+
+Overfull \hbox (18.87346pt too wide) in paragraph at lines 1012--1014
+[]| \T1/phv/m/n/10 RE-SULT_CORE_AMBIENT_WINDOW_EVENTS_RTN,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
+[]| \T1/phv/m/n/10 VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV,
+ []
+
+[163]) (./refman.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 0ADD36600BCF64880291F0C7E06F1044;55088.
+(rerunfilecheck)             Checksum: 85F0CB71E83179C53076D33FF305E058;111616.
+
  ) 
 Here is how much of TeX's memory you used:
- 24684 strings out of 474266
- 474010 string characters out of 5751444
- 1994558 words of memory out of 5000000
- 40488 multiletter control sequences out of 15000+600000
- 612413 words of font info for 103 fonts, out of 8000000 for 9000
+ 25507 strings out of 474266
+ 499573 string characters out of 5751444
+ 2007558 words of memory out of 5000000
+ 40879 multiletter control sequences out of 15000+600000
+ 614667 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,16n,117p,2303b,750s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,117p,2304b,963s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2023/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8
-a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texli
-ve/2023/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-d
-ist/fonts/type1/urw/helvetic/uhvb8ac.pfb><c:/texlive/2023/texmf-dist/fonts/type
-1/urw/helvetic/uhvr8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/
-uhvro8a.pfb>
-Output written on refman.pdf (134 pages, 547963 bytes).
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2023/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb><c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb><c:/
+texlive/2023/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb><c:/texlive/2023/tex
+mf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2023/texmf-dist/fonts/t
+ype1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvet
+ic/uhvb8ac.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+<c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
+Output written on refman.pdf (177 pages, 674001 bytes).
 PDF statistics:
- 10309 PDF objects out of 10688 (max. 8388607)
- 10048 compressed objects within 101 object streams
- 5973 named destinations out of 6186 (max. 500000)
- 2209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 12696 PDF objects out of 12825 (max. 8388607)
+ 12365 compressed objects within 124 object streams
+ 6393 named destinations out of 7423 (max. 500000)
+ 3857 words of extra memory for PDF output out of 10000 (max. 10000000)
 

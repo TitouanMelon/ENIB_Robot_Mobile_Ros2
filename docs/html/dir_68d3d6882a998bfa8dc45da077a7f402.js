@@ -8,12 +8,12 @@ var dir_68d3d6882a998bfa8dc45da077a7f402 =
     [ "freertos.c", "freertos_8c_source.html", null ],
     [ "groveLCD.c", "grove_l_c_d_8c_source.html", null ],
     [ "main.c", "main_8c.html", "main_8c" ],
-    [ "microROS.c", "micro_r_o_s_8c_source.html", null ],
+    [ "microROS.c", "micro_r_o_s_8c.html", "micro_r_o_s_8c" ],
     [ "microros_allocators.c", "microros__allocators_8c_source.html", null ],
     [ "microros_time.c", "microros__time_8c_source.html", null ],
     [ "motorCommand.c", "motor_command_8c_source.html", null ],
     [ "quadEncoder.c", "quad_encoder_8c_source.html", null ],
-    [ "retarget.c", "retarget_8c_source.html", null ],
+    [ "retarget.c", "retarget_8c.html", "retarget_8c" ],
     [ "stm32f4xx_hal_msp.c", "stm32f4xx__hal__msp_8c_source.html", null ],
     [ "stm32f4xx_hal_timebase_tim.c", "stm32f4xx__hal__timebase__tim_8c.html", "stm32f4xx__hal__timebase__tim_8c" ],
     [ "stm32f4xx_it.c", "stm32f4xx__it_8c_source.html", null ],
@@ -21,5 +21,5 @@ var dir_68d3d6882a998bfa8dc45da077a7f402 =
     [ "sysmem.c", "sysmem_8c.html", "sysmem_8c" ],
     [ "systemclock.c", "systemclock_8c_source.html", null ],
     [ "util.c", "util_8c_source.html", null ],
-    [ "VL53L0X.c", "_v_l53_l0_x_8c_source.html", null ]
+    [ "VL53L0X.c", "_v_l53_l0_x_8c.html", null ]
 ];
