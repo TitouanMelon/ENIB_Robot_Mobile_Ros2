@@ -1,5 +1,9 @@
-// All credit to Carmine Noviello for this code
-// https://github.com/cnoviello/mastering-stm32/blob/master/nucleo-f030R8/system/src/retarget/retarget.c
+/**
+ * @file : retarget.c
+ * @brief : Contain function to add printf and scanf function use the UART2
+ * All credit to Carmine Noviello for this code
+ * https://github.com/cnoviello/mastering-stm32/blob/master/nucleo-f030R8/system/src/retarget/
+ */
 
 #include <_ansi.h>
 #include <_syslist.h>

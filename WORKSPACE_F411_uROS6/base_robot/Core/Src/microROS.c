@@ -1,3 +1,8 @@
+/**
+ * @file : microROS.c
+ * @brief : Contain microROS default custom creator for subscriber and publisher
+ */
+
 #include "main.h"
 
 #define STRING 0

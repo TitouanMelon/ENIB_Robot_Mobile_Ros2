@@ -1,6 +1,6 @@
 /**
  * @file : microROS.h
- * @brief : Contain microROS topic and default creator for subscriber and publisher
+ * @brief : Contain microROS topic and default custom creator for subscriber and publisher
  */
 
 #ifndef DEF_MICROROS

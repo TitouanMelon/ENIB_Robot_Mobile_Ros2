@@ -1,15 +1,12 @@
-/*
- * retarget.h
- *
- *  Created on: Oct 10, 2023
- *      Author: rospc
+/**
+ * @file : retarget.h
+ * @brief : Contain function to add printf and scanf function use the UART2
+ * All credit to Carmine Noviello for this code
+ * https://github.com/cnoviello/mastering-stm32/blob/master/nucleo-f030R8/system/src/retarget/
  */
 
 #ifndef INC_RETARGET_H_
 #define INC_RETARGET_H_
-
-// All credit to Carmine Noviello for this code
-// https://github.com/cnoviello/mastering-stm32/blob/master/nucleo-f030R8/system/include/retarget/retarget.h
 
 #ifndef _RETARGET_H__
 #define _RETARGET_H__
@@ -17,6 +14,10 @@
 #include "stm32f4xx_hal.h"
 #include <sys/stat.h>
 
+/**
+ * Reconfigure stdin, stdout and stderr to use UART
+ * @param huart Structure wich represent an UART
+ */
 void RetargetInit(UART_HandleTypeDef *huart);
 int _isatty(int fd);
 int _write(int fd, char* ptr, int len);
