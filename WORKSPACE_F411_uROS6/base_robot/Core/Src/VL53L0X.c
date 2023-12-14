@@ -1,20 +1,29 @@
+/**
+ * @file : VL53L0X.c
+ * @brief : VL53L0X API STSW-IMG005 portage
+ * Most of the functionality of this library is based on the VL53L0X API
+ * provided by ST (STSW-IMG005), and some of the explanatory comments are quoted
+ * or paraphrased from the API source code, API user manual (UM2039), and the
+ * VL53L0X datasheet.
+ */
 
+//"${workspace_loc:/${ProjName}/Drivers/vl53l0x}" into include path of c++ buider properties
 
 #include "main.h"
 #include <unistd.h>
-	// Most of the functionality of this library is based on the VL53L0X API
-// provided by ST (STSW-IMG005), and some of the explanatory comments are quoted
-// or paraphrased from the API source code, API user manual (UM2039), and the
-// VL53L0X datasheet.
 
 #include <stdint.h>
 #include "VL53L0X.h"
 #include "drv_i2c.h"
 
+#define ACTIVE_WHILE 0
+#define IO_2V8 0
+#define ADDRESS ADDRESS_DEFAULT2
+
 //---------------------------------------------------------
 // Local variables within this file (private)
 //---------------------------------------------------------
-uint8_t g_i2cAddr = ADDRESS_DEFAULT;
+uint8_t g_i2cAddr = ADDRESS;
 uint8_t g_stopVariable; // read by init and used when starting measurement; is StopVariable field of VL53L0X_DevData_t structure in API
 
 
@@ -27,8 +36,8 @@ uint8_t performSingleRefCalibration(uint8_t vhv_init_byte);
 //---------------------------------------------------------
 // Write an 8-bit register
 void writeReg(uint8_t reg, uint8_t value) {
-	i2c1_WriteRegBuffer(0x53,reg,&value,1);
-
+	int status = i2c1_WriteRegBuffer((uint16_t)g_i2cAddr,reg,&value,1);
+	printf("write reg return status : %d\r\n", status);
 }
 
 // Write a 16-bit register
@@ -36,8 +45,7 @@ void writeReg16Bit(uint8_t reg, uint16_t value){
 	uint8_t tab[2];
 	tab[0]= ((value >> 8));
 	tab[1] = ((value ) & 0xFF);
-	i2c1_WriteRegBuffer(0x53,reg,tab,2);
-
+	i2c1_WriteRegBuffer((uint16_t)g_i2cAddr,reg,tab,2);
 }
 
 // Write a 32-bit register
@@ -47,20 +55,20 @@ void writeReg32Bit(uint8_t reg, uint32_t value){
 		tab[2]= ((value >> 16) & 0xFF);
 		tab[1]= ((value >> 8) & 0xFF);
 		tab[0] = ((value ) & 0xFF);
-		i2c1_WriteRegBuffer(0x53,reg,tab,4);
+		i2c1_WriteRegBuffer((uint16_t)g_i2cAddr,reg,tab,4);
 }
 
 // Read an 8-bit register
 uint8_t readReg(uint8_t reg) {
   	uint8_t value=0;
-  	i2c1_ReadRegBuffer(0x53,reg,&value,1);
+  	i2c1_ReadRegBuffer((uint16_t)g_i2cAddr,reg,&value,1);
   	return value;
 }
 
 // Read a 16-bit register
 uint16_t readReg16Bit(uint8_t reg) {
 	uint8_t tab[2];
-	i2c1_ReadRegBuffer(0x53,reg,tab,2);
+	i2c1_ReadRegBuffer((uint16_t)g_i2cAddr,reg,tab,2);
   	uint16_t value= ((uint16_t)tab[0] << 8) | (uint16_t)tab[1];
   	return value;
 }
@@ -68,7 +76,7 @@ uint16_t readReg16Bit(uint8_t reg) {
 // Read a 32-bit register
 uint32_t readReg32Bit(uint8_t reg) {
   uint8_t tab[4];
-  i2c1_ReadRegBuffer(0x53,reg,tab,4);
+  i2c1_ReadRegBuffer((uint16_t)g_i2cAddr,reg,tab,4);
   uint32_t value= (tab[3] << 24) | (tab[2] << 16 ) | (tab[1] << 8) | tab[0];
   return value;
 }
@@ -78,7 +86,7 @@ uint32_t readReg32Bit(uint8_t reg) {
 void writeMulti(uint8_t reg, uint8_t const *src, uint8_t count){
 
   while ( count-- > 0 ) {
-    i2c1_WriteRegBuffer(0x53,reg,(uint8_t *)src,1);
+    i2c1_WriteRegBuffer((uint16_t)g_i2cAddr,reg,(uint8_t *)src,1);
   }
 }
 
@@ -105,6 +113,14 @@ uint8_t getAddress() {
 // mode.
 uint8_t initVL53L0X( ){
   // VL53L0X_DataInit() begin
+
+
+  // sensor uses 1V8 mode for I/O by default; switch to 2V8 mode if necessary
+  if (IO_2V8)
+  {
+    writeReg(VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV,
+    readReg(VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV) | 0x01); // set bit 0
+  }
 
   // "Set I2C standard mode"
   writeReg(0x88, 0x00);
@@ -334,11 +350,15 @@ uint16_t readRangeSingleMillimeters( /*statInfo_t *extraStats */) {
 
   uint16_t temp;
 
-    // assumptions: Linearity Corrective Gain is 1000 (default);
-    // fractional ranging is not enabled
-  	  temp = readReg16Bit(RESULT_RANGE_STATUS + 10);
-
-  	  temp+=0;
+  if (ACTIVE_WHILE)
+  {
+	  while (readReg(SYSRANGE_START) & 0x01){};
+	  while ((readReg(RESULT_INTERRUPT_STATUS) & 0x07) == 0){};
+  }
+  // assumptions: Linearity Corrective Gain is 1000 (default);
+  // fractional ranging is not enabled
+  temp = readReg16Bit(RESULT_RANGE_STATUS + 10);
+  temp+=0;
 
   writeReg(SYSTEM_INTERRUPT_CLEAR, 0x01);
   return temp;
@@ -350,7 +370,8 @@ uint8_t performSingleRefCalibration(uint8_t vhv_init_byte)
 {
   writeReg(SYSRANGE_START, 0x01 | vhv_init_byte); // VL53L0X_REG_SYSRANGE_MODE_START_STOP
 
-
+  if (ACTIVE_WHILE)
+	  while ((readReg(RESULT_INTERRUPT_STATUS) & 0x07) == 0){};
 
   writeReg(SYSTEM_INTERRUPT_CLEAR, 0x01);
 

@@ -1,3 +1,12 @@
+/**
+ * @file : VL53L0X.h
+ * @brief : VL53L0X API STSW-IMG005 portage
+ * Most of the functionality of this library is based on the VL53L0X API
+ * provided by ST (STSW-IMG005), and some of the explanatory comments are quoted
+ * or paraphrased from the API source code, API user manual (UM2039), and the
+ * VL53L0X datasheet.
+ */
+
 //#define bool  uint8_t
 #define true  1
 #define false 0
@@ -100,8 +109,8 @@
 
 #define  ALGO_PART_TO_PART_RANGE_OFFSET_MM            0x28
 
-//#define  I2C_SLAVE_DEVICE_ADDRESS                     0x8A #################
-#define  I2C_SLAVE_DEVICE_ADDRESS                     0x53
+#define  I2C_SLAVE_DEVICE_ADDRESS                     0x8A
+//#define  I2C_SLAVE_DEVICE_ADDRESS                     0x53
 
 #define  MSRC_CONFIG_CONTROL                          0x60
 
@@ -163,7 +172,7 @@
 // I use a 8-bit number for the address, LSB must be 0 so that I can
 // OR over the last bit correctly based on reads and writes
 #define ADDRESS_DEFAULT 0b01010010
-
+#define ADDRESS_DEFAULT2 0b00101001
 // Record the current time to check an upcoming timeout against
 #define startTimeout() (g_timeoutStartMs = millis())
 
