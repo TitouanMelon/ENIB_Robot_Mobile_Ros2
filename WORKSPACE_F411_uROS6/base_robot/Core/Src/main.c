@@ -30,7 +30,7 @@ const osThreadAttr_t defaultTask_attributes = {
 /** enumerate mode of robot */
 enum {MODE_OBS, MODE_ZIG, MODE_CAM, LAST_MODE};
 /** enumerate speed */
-enum {STOP_VIT, LOW, FAST, SONIC, LAST_SPEED};
+enum {STOP_VIT, LOW, FAST, SONIC, LAST_SPEED=100};
 /** enumerate direction */
 enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GAUCHE, RECULE_DROITE, LAST_DIR};
 
@@ -47,9 +47,10 @@ enum {AVANT, GAUCHE, RECULE, DROITE, STOP, AVANT_GAUCHE, AVANT_DROITE, RECULE_GA
 #define SYNCHRO_EX EXFINAL /**< Define wich config are executed */
 /** @} */
 /** @{ @name config robot */
+#define SEUIL_DIST_SENSOR 800 /**< Define the trigger for forward sensors */
 #define ROS_DOMAIN_ID 0 /**< Define ROS domain id*/
-#define LCD 0 /**< Activate LCD task */
-#define VL53 0 /**< Activate VL530X task */
+#define LCD 1 /**< Activate LCD task */
+#define VL53 1 /**< Activate VL530X task */
 #define MICROROS 1 /**< Activate MicroROS task*/
 #define DEBUG_PRINTF 0 /**< Activate debug print */
 #define DEBUG_MOTOR 0 /**< Activate motor debug print */
@@ -150,7 +151,7 @@ void microros_deallocate(void * pointer, void * state);
 void * microros_reallocate(void * pointer, size_t size, void * state);
 void * microros_zero_allocate(size_t number_of_elements, size_t size_of_element, void * state);
 
-void CHECKMRRET(rcl_ret_t ret, char* msg){if (ret != RCL_RET_OK){ printf("Error : %d\r\nMsg : %s\r\n", (int)ret, msg); }}
+void CHECKMRRET(rcl_ret_t ret, char* msg){if (ret != RCL_RET_OK){ if (DEBUG_PRINTF){printf("Error : %d\r\nMsg : %s\r\n", (int)ret, msg); }}}
 
 void SubscriberCallbackFunction(const void *msgin){
 #if SYNCHRO_EX == EXTEST_MICROROS
@@ -158,7 +159,8 @@ void SubscriberCallbackFunction(const void *msgin){
 	printf("\r\nMessage recue : %s\r\n", msg->data->data);
 #elif SYNCHRO_EX == EXFINAL
 	std_msgs__msg__Int32 * msg = (std_msgs__msg__Int32 * )msgin;
-	printf("\r\nMessage recue : %ld\r\n", msg->data);
+	if (DEBUG_PRINTF)
+		printf("\r\nMessage recue : %ld\r\n", msg->data);
 #endif //SYNCHRO_EX
 }
 
@@ -421,9 +423,20 @@ void task_VL53(void *pvParameters)
 	static const int SEUIL = 20;
 	int obs = 0;
 
+	int tmp = 0;
+
 	for(;;)
 	{
 		dist = readRangeSingleMillimeters()/10;
+
+		if (tmp > 10000)
+		{
+			printf("Valeur VL53 : %d\r\n", dist);
+			tmp = 0;
+		}
+		else
+			tmp++;
+
 		if (dist < SEUIL && dist != 0)
 			obs = 1;
 		else
@@ -578,36 +591,36 @@ void task_Supervision(void *pvParameters)
 					speedRight = 0;
 					break;
 				case AVANT:
-					speedLeft = VITESSE_KART*speed;
-					speedRight = VITESSE_KART*speed;
+					speedLeft = VITESSE_KART+(8*(speed-50));
+					speedRight = VITESSE_KART+(8*(speed-50));
 					break;
 				case RECULE:
-					speedLeft = -VITESSE_KART*speed;
-					speedRight = -VITESSE_KART*speed;
+					speedLeft = -(VITESSE_KART+(8*(speed-50)));
+					speedRight = -(VITESSE_KART+(8*(speed-50)));
 					break;
 				case DROITE:
-					speedLeft = VITESSE_KART*speed;
-					speedRight = -VITESSE_KART*speed;
+					speedLeft = VITESSE_KART+(8*(speed-50));
+					speedRight = -(VITESSE_KART+(8*(speed-50)));
 					break;
 				case GAUCHE:
-					speedLeft = -VITESSE_KART*speed;
-					speedRight = VITESSE_KART*speed;
+					speedLeft = -(VITESSE_KART+(8*(speed-50)));
+					speedRight = VITESSE_KART+(8*(speed-50));
 					break;
 				case AVANT_GAUCHE:
-					speedLeft = (VITESSE_KART/2)*speed;
-					speedRight = VITESSE_KART*speed;
+					speedLeft = (VITESSE_KART/2)+(8*(speed-50));
+					speedRight = VITESSE_KART+(8*(speed-50));
 					break;
 				case AVANT_DROITE:
-					speedLeft = VITESSE_KART*speed;
-					speedRight = (VITESSE_KART/2)*speed;
+					speedLeft = VITESSE_KART+(8*(speed-50));
+					speedRight = (VITESSE_KART/2)+(8*(speed-50));
 					break;
 				case RECULE_GAUCHE:
-					speedLeft = -VITESSE_KART*speed;
-					speedRight = (-VITESSE_KART/2)*speed;
+					speedLeft = -(VITESSE_KART+(8*(speed-50)));
+					speedRight = -((VITESSE_KART/2)+(8*(speed-50)));
 					break;
 				case RECULE_DROITE:
-					speedLeft = (-VITESSE_KART/2)*speed;
-					speedRight = -VITESSE_KART*speed;
+					speedLeft = -((VITESSE_KART/2)+(8*(speed-50)));
+					speedRight = -(VITESSE_KART+(8*(speed-50)));
 					break;
 				default:
 					speedLeft = 0;
@@ -633,11 +646,11 @@ void task_Supervision(void *pvParameters)
 			}
 			else
 			#endif //VL53
-			if (table[0] > 1000 || table[1] > 1000)
+			if (table[0] > SEUIL_DIST_SENSOR || table[1] > SEUIL_DIST_SENSOR)
 			{
 				if (obs > 10)
 				{
-					speedLeft = VITESSE_OBS;
+					speedLeft = VITESSE_OBS/2;
 					speedRight = -VITESSE_OBS/2;
 					dir = 'G';
 				}
@@ -646,19 +659,19 @@ void task_Supervision(void *pvParameters)
 					speedLeft = 0;
 					speedRight = 0;
 
-					if (table[0] > table[1] && table[0] > 1000)
+					if (table[0] > table[1] && table[0] > SEUIL_DIST_SENSOR)
 					{
 						dir = 'G';
-						speedLeft = VITESSE_OBS/2;
-						speedRight = -VITESSE_OBS/2;
+						speedLeft = -VITESSE_OBS/2;
+						speedRight = VITESSE_OBS/2;
 						if (obs%2 == 0)
 							obs++;
 					}
-					else if (table[0] < table[1] && table[1] > 1000)
+					else if (table[0] < table[1] && table[1] > SEUIL_DIST_SENSOR)
 					{
 						dir = 'D';
-						speedLeft = -VITESSE_OBS/2;
-						speedRight = VITESSE_OBS/2;
+						speedLeft = VITESSE_OBS/2;
+						speedRight = -VITESSE_OBS/2;
 						if (obs%2 == 1)
 							obs++;
 					}
@@ -752,8 +765,8 @@ void task_Supervision(void *pvParameters)
 
 	#if MICROROS
 		MsgToPub.dir = dir;
-		MsgToPub.mode = speedLeft; //mode;
-		MsgToPub.speed = speedRight; //speed;
+		MsgToPub.mode = mode;
+		MsgToPub.speed = speed;
 		if (!uxQueueMessagesWaiting(qhMR_pub))
 			xQueueSend(qhMR_pub, ( void * ) &MsgToPub, portMAX_DELAY);
 	#endif //MICROROS
@@ -783,7 +796,7 @@ int main(void)
   MX_USART1_UART_Init();
 
   RetargetInit(&huart2); //make printf and scanf work with uart2
-  printf("%cc%c[2J%c[0;0HTitouan//Jeremy//Louanne\r\n", 0x1b, 0x1b, 0x1b);
+  printf("%cc%c[2J%c[0;0HTitouan//Jeremy//Louanne//Donald\r\n", 0x1b, 0x1b, 0x1b);
 
   motorCommand_Init();
   quadEncoder_Init();

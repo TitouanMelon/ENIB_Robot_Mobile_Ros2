@@ -4,7 +4,6 @@
  */
  
 #include <stdlib.h>
-#include <string.h>
 
 /* Defining MPU_WRAPPERS_INCLUDED_FROM_API_FILE prevents task.h from redefining
 all the API functions to use the MPU wrappers.  That should only be done when
@@ -294,17 +293,22 @@ void *pvPortReallocMicroROS( void *pv, size_t xWantedSize )
 	vTaskSuspendAll();
 
 	void * newmem = pvPortMallocMicroROS(xWantedSize);
-	if (newmem != NULL && pv != NULL)
-	{
-		size_t count = getBlockSize(pv) - xHeapStructSize;
-		if (xWantedSize < count)
-		{
-			count = xWantedSize;
-		}
-		memcpy(newmem, pv, count);
 
-		vPortFreeMicroROS(pv);
-	}
+	uint8_t *puc = ( uint8_t * ) pv;
+	BlockLink_t *pxLink;
+
+	puc -= xHeapStructSize;
+	pxLink = ( void * ) puc;
+
+
+	char *in_src = (char*)pv;
+  	char *in_dest = (char*)newmem;
+	size_t count = pxLink->xBlockSize & ~xBlockAllocatedBit;
+
+  	while(count--)
+    	*in_dest++ = *in_src++;
+
+	vPortFreeMicroROS(pv);
 
 	( void ) xTaskResumeAll();
 
