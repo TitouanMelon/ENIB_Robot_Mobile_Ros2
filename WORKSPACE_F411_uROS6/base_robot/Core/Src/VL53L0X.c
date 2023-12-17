@@ -17,8 +17,8 @@
 #include "drv_i2c.h"
 
 #define ACTIVE_WHILE 0
-#define IO_2V8 0
-#define ADDRESS ADDRESS_DEFAULT2
+#define IO_2V8 1
+#define ADDRESS 0x52
 
 //---------------------------------------------------------
 // Local variables within this file (private)
@@ -26,6 +26,7 @@
 uint8_t g_i2cAddr = ADDRESS;
 uint8_t g_stopVariable; // read by init and used when starting measurement; is StopVariable field of VL53L0X_DevData_t structure in API
 
+uint16_t addr_read = 0;
 
 //---------------------------------------------------------
 // Locally used functions (private)
@@ -36,8 +37,7 @@ uint8_t performSingleRefCalibration(uint8_t vhv_init_byte);
 //---------------------------------------------------------
 // Write an 8-bit register
 void writeReg(uint8_t reg, uint8_t value) {
-	int status = i2c1_WriteRegBuffer((uint16_t)g_i2cAddr,reg,&value,1);
-	printf("write reg return status : %d\r\n", status);
+	i2c1_WriteRegBuffer(g_i2cAddr,reg,&value,1);
 }
 
 // Write a 16-bit register
@@ -45,7 +45,7 @@ void writeReg16Bit(uint8_t reg, uint16_t value){
 	uint8_t tab[2];
 	tab[0]= ((value >> 8));
 	tab[1] = ((value ) & 0xFF);
-	i2c1_WriteRegBuffer((uint16_t)g_i2cAddr,reg,tab,2);
+	i2c1_WriteRegBuffer(g_i2cAddr,reg,tab,2);
 }
 
 // Write a 32-bit register
@@ -55,20 +55,22 @@ void writeReg32Bit(uint8_t reg, uint32_t value){
 		tab[2]= ((value >> 16) & 0xFF);
 		tab[1]= ((value >> 8) & 0xFF);
 		tab[0] = ((value ) & 0xFF);
-		i2c1_WriteRegBuffer((uint16_t)g_i2cAddr,reg,tab,4);
+		i2c1_WriteRegBuffer(g_i2cAddr,reg,tab,4);
 }
 
 // Read an 8-bit register
 uint8_t readReg(uint8_t reg) {
   	uint8_t value=0;
-  	i2c1_ReadRegBuffer((uint16_t)g_i2cAddr,reg,&value,1);
+  	i2c1_WriteBuffer(g_i2cAddr, &reg, 1);
+	i2c1_ReadBuffer(g_i2cAddr|0x01, &value, 1);
   	return value;
 }
 
 // Read a 16-bit register
 uint16_t readReg16Bit(uint8_t reg) {
 	uint8_t tab[2];
-	i2c1_ReadRegBuffer((uint16_t)g_i2cAddr,reg,tab,2);
+	i2c1_WriteBuffer(g_i2cAddr, &reg, 1);
+	i2c1_ReadBuffer(g_i2cAddr|0x01, tab, 2);
   	uint16_t value= ((uint16_t)tab[0] << 8) | (uint16_t)tab[1];
   	return value;
 }
@@ -76,7 +78,8 @@ uint16_t readReg16Bit(uint8_t reg) {
 // Read a 32-bit register
 uint32_t readReg32Bit(uint8_t reg) {
   uint8_t tab[4];
-  i2c1_ReadRegBuffer((uint16_t)g_i2cAddr,reg,tab,4);
+  i2c1_WriteBuffer(g_i2cAddr, &reg, 1);
+  i2c1_ReadBuffer(g_i2cAddr|0x01, tab, 4);
   uint32_t value= (tab[3] << 24) | (tab[2] << 16 ) | (tab[1] << 8) | tab[0];
   return value;
 }
@@ -84,16 +87,14 @@ uint32_t readReg32Bit(uint8_t reg) {
 // Write an arbitrary number of bytes from the given array to the sensor,
 // starting at the given register
 void writeMulti(uint8_t reg, uint8_t const *src, uint8_t count){
-
   while ( count-- > 0 ) {
-    i2c1_WriteRegBuffer((uint16_t)g_i2cAddr,reg,(uint8_t *)src,1);
+    i2c1_WriteRegBuffer(g_i2cAddr,reg,(uint8_t *)src,1);
   }
 }
 
 
 
 // Public Methods //////////////////////////////////////////////////////////////
-
 void setAddress(uint8_t new_addr) {
   writeReg( I2C_SLAVE_DEVICE_ADDRESS, (new_addr>>1) & 0x7F );
   g_i2cAddr = new_addr;
@@ -360,7 +361,6 @@ uint16_t readRangeSingleMillimeters( /*statInfo_t *extraStats */) {
   temp = readReg16Bit(RESULT_RANGE_STATUS + 10);
   temp+=0;
 
-  writeReg(SYSTEM_INTERRUPT_CLEAR, 0x01);
   return temp;
 }
 

@@ -441,19 +441,9 @@ void task_VL53(void *pvParameters)
 	static const int SEUIL = 20; //Trigger
 	int obs = 0; //Bool to indicate if we detect an obstacle or not
 
-	int tmp = 0; //For debug purpose
-
 	for(;;)
 	{
 		dist = readRangeSingleMillimeters()/10; //Get the distance from the sensor
-
-		if (tmp > 10000)
-		{
-			printf("Valeur VL53 : %d\r\n", dist);
-			tmp = 0;
-		}
-		else
-			tmp++;
 
 		if (dist < SEUIL && dist != 0) //If distance is less than the trigger
 			obs = 1; //We detect an obstacle
@@ -662,6 +652,8 @@ void task_Supervision(void *pvParameters)
 
 			if (vl53 == 1) //if an obstacle is detected on the back we stop
 			{
+				if (dir != 'S')
+					printf("Detection d'un obstacle à l'arrièrre");
 				speedLeft = 0;
 				speedRight = 0;
 				dir = 'S';
@@ -778,10 +770,6 @@ int main(void)
 
 #if VL53
   initVL53L0X();
-  for (int i=0 ; i<20 ; i++)
-  {
-	  printf("%d\r\n", readRangeSingleMillimeters()/10);
-  }
   HAL_Delay(500);
 #endif //VL53
 
