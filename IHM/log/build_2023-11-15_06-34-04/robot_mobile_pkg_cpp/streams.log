@@ -1,0 +1,30 @@
+[0.351s] Invoking command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2
+[0.508s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[1.521s] [ 20%] Built target my_node_ihm_autogen
+[1.573s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[1.694s] [ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o[0m
+[1.702s] [ 60%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o[0m
+[20.690s] [ 80%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[49.890s] [100%] [32m[1mLinking CXX executable my_node_ihm[0m
+[52.420s] [100%] Built target my_node_ihm
+[52.444s] Invoked command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2
+[52.539s] Invoking command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --install /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp
+[52.555s] -- Install configuration: "Debug"
+[52.556s] -- Installing: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm
+[52.625s] -- Set runtime path of "/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm" to ""
+[52.626s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/package_run_dependencies/robot_mobile_pkg_cpp
+[52.626s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/parent_prefix_path/robot_mobile_pkg_cpp
+[52.626s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.sh
+[52.626s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.dsv
+[52.626s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.sh
+[52.627s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.dsv
+[52.627s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.bash
+[52.627s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.sh
+[52.627s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.zsh
+[52.628s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.dsv
+[52.628s] -- Installing: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.dsv
+[52.628s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/packages/robot_mobile_pkg_cpp
+[52.628s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig.cmake
+[52.628s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig-version.cmake
+[52.628s] -- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.xml
+[52.634s] Invoked command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --install /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp

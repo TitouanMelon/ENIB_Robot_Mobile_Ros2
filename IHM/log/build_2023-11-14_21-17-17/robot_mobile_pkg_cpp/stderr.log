@@ -1,0 +1,32 @@
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:16:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+   13 |     ui(new Ui::[01;31m[KMainWindow[m[K)
+      |                [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/../include/mainwindow.hpp:15:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+   15 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+      |                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:24:7:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+   24 |     ui[01;31m[K->[m[KsetupUi(this);
+      |       [01;31m[K^~[m[K
+In file included from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/../include/mainwindow.hpp:15:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+   15 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+      |                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In destructor ‘[01m[Kvirtual MainWindow::~MainWindow()[m[K’:
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:62:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+   62 |     [01;35m[Kdelete ui[m[K;
+      |     [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:62:12:[m[K [01;35m[Kwarning: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+   62 |     delete [01;35m[Kui[m[K;
+      |            [01;35m[K^~[m[K
+In file included from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/../include/mainwindow.hpp:15:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+   15 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+      |                      [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:62:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+   62 |     [01;36m[Kdelete ui[m[K;
+      |     [01;36m[K^~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104: CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/my_node_ihm.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

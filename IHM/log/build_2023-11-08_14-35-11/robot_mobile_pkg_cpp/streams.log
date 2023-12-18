@@ -1,0 +1,11 @@
+[0.097s] Invoking command in '/home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.148s] [ 33%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.168s] [ 33%] Built target my_node_ihm_autogen
+[0.189s] [ 66%] [32m[1mLinking CXX executable my_node_ihm[0m
+[0.284s] /usr/bin/ld : /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o : dans la fonction « _start » :
+[0.284s] (.text+0x1b) : référence indéfinie vers « main »
+[0.286s] collect2: error: ld returned 1 exit status
+[0.288s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:162 : my_node_ihm] Erreur 1
+[0.288s] gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+[0.289s] gmake: *** [Makefile:146 : all] Erreur 2
+[0.291s] Invoked command in '/home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

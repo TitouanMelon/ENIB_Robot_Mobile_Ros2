@@ -1,0 +1,19 @@
+[0.131s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.180s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[0.181s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.200s] [ 22%] Built target my_img_pub_node_autogen
+[0.202s] [ 22%] Built target my_node_ihm_autogen
+[0.217s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.226s] [ 55%] Built target my_img_pub_node
+[0.247s] [ 66%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[3.918s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::onButton_Publish()[m[K’:
+[3.918s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:74:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kclicked[m[K’ was not declared in this scope
+[3.918s]    74 |     static int count_(0);[01;31m[Kclicked[m[K
+[3.918s]       |                          [01;31m[K^~~~~~~[m[K
+[3.924s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:76:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmessage[m[K’ was not declared in this scope
+[3.924s]    76 |     [01;31m[Kmessage[m[K.data = "Hello, world! " + std::to_string(count_++);
+[3.925s]       |     [01;31m[K^~~~~~~[m[K
+[7.653s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+[7.654s] gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+[7.654s] gmake: *** [Makefile:146 : all] Erreur 2
+[7.656s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

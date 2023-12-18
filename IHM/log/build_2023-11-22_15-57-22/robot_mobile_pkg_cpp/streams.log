@@ -1,0 +1,58 @@
+[0.132s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.182s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.182s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[0.202s] [ 22%] Built target my_img_pub_node_autogen
+[0.204s] [ 22%] Built target my_node_ihm_autogen
+[0.220s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.228s] [ 55%] Built target my_img_pub_node
+[0.249s] [ 66%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[3.974s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::rgb_onSliderValueChanged(int)[m[K’:
+[3.974s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:302:39:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_low[0][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.974s]   302 |         rgb_data_low.data = {[01;35m[Krgb_low[0][m[K, rgb_low[1], rgb_low[2]};
+[3.974s]       |                              [01;35m[K~~~~~~~~~^[m[K
+[3.974s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:302:39:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_low[0][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.974s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:302:51:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_low[1][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.974s]   302 |         rgb_data_low.data = {rgb_low[0], [01;35m[Krgb_low[1][m[K, rgb_low[2]};
+[3.974s]       |                                          [01;35m[K~~~~~~~~~^[m[K
+[3.975s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:302:51:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_low[1][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.975s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:302:63:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_low[2][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.975s]   302 |         rgb_data_low.data = {rgb_low[0], rgb_low[1], [01;35m[Krgb_low[2][m[K};
+[3.975s]       |                                                      [01;35m[K~~~~~~~~~^[m[K
+[3.975s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:302:63:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_low[2][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.975s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:303:41:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_high[0][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.975s]   303 |         rgb_data_high.data = {[01;35m[Krgb_high[0][m[K, rgb_high[1], rgb_high[2]};
+[3.975s]       |                               [01;35m[K~~~~~~~~~~^[m[K
+[3.975s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:303:41:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_high[0][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.976s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:303:54:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_high[1][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.976s]   303 |         rgb_data_high.data = {rgb_high[0], [01;35m[Krgb_high[1][m[K, rgb_high[2]};
+[3.976s]       |                                            [01;35m[K~~~~~~~~~~^[m[K
+[3.976s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:303:54:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_high[1][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.976s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:303:67:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_high[2][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[3.976s]   303 |     rgb_data_high.data = {rgb_high[0], rgb_high[1], [01;35m[Krgb_high[2][m[K};
+[3.976s]       |                                                     [01;35m[K~~~~~~~~~~^[m[K
+[3.976s] 
+[3.976s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:303:67:[m[K [01;35m[Kwarning: [m[Knarrowing conversion of ‘[01m[Krgb_high[2][m[K’ from ‘[01m[Kuint8_t[m[K’ {aka ‘[01m[Kunsigned char[m[K’} to ‘[01m[Ksigned char[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wnarrowing-Wnarrowing]8;;[m[K]
+[15.659s] [ 77%] [32m[1mLinking CXX executable my_node_ihm[0m
+[16.945s] [100%] Built target my_node_ihm
+[16.956s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[17.007s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp
+[17.014s] -- Install configuration: "Debug"
+[17.014s] -- Installing: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm
+[17.050s] -- Set runtime path of "/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm" to ""
+[17.050s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_img_pub_node
+[17.050s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/package_run_dependencies/robot_mobile_pkg_cpp
+[17.050s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/parent_prefix_path/robot_mobile_pkg_cpp
+[17.051s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.sh
+[17.051s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.dsv
+[17.051s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.sh
+[17.051s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.dsv
+[17.051s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.bash
+[17.051s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.sh
+[17.051s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.zsh
+[17.052s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.dsv
+[17.052s] -- Installing: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.dsv
+[17.052s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/packages/robot_mobile_pkg_cpp
+[17.052s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig.cmake
+[17.052s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig-version.cmake
+[17.052s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.xml
+[17.054s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp

@@ -1,0 +1,4 @@
+Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp
+Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp

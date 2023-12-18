@@ -1,0 +1,60 @@
+[0.251s] Invoking command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2
+[0.370s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.416s] [ 20%] Built target my_node_ihm_autogen
+[0.484s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.581s] [ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[10.687s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[10.688s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[10.688s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[10.688s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[10.689s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[10.689s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[10.689s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[10.689s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[10.690s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[10.690s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[10.690s]                  from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:11[m[K,
+[10.691s]                  from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[10.691s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[10.691s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::Node[m[K’ {aka ‘[01m[Kclass rclcpp::Node[m[K’} has no member named ‘[01m[Kgetlogger[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+[10.691s]    41 |     RCLCPP_INFO(node -> [01;31m[Kgetlogger[m[K(), "Robot Gui Started !");
+[10.692s]       |                         [01;31m[K^~~~~~~~~[m[K
+[10.695s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::Node[m[K’ {aka ‘[01m[Kclass rclcpp::Node[m[K’} has no member named ‘[01m[Kgetlogger[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+[10.699s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[10.700s]    41 |     [01;31m[KRCLCPP_INFO[m[K(node -> getlogger(), "Robot Gui Started !");
+[10.701s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[10.702s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[10.703s]    41 |     [01;31m[KRCLCPP_INFO[m[K(node -> getlogger(), "Robot Gui Started !");
+[10.704s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[10.705s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[10.706s]    41 |     [01;31m[KRCLCPP_INFO[m[K(node -> getlogger(), "Robot Gui Started !");
+[10.708s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[10.710s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:[m[K [01;31m[Kerror: [m[K‘[01m[K<declaration error>[m[K’ is not a template [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+[10.712s]    41 |     [01;31m[KRCLCPP_INFO[m[K(node -> getlogger(), "Robot Gui Started !");
+[10.713s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[10.716s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[10.718s]    41 |     [01;31m[KRCLCPP_INFO[m[K(node -> getlogger(), "Robot Gui Started !");
+[10.720s]       |     [01;31m[K^~~~~~~~~~~[m[K
+[10.721s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[10.723s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[10.724s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[10.727s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[10.729s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[10.730s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[10.731s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[10.732s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[10.734s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[10.735s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[10.736s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[10.737s]                  from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:11[m[K,
+[10.737s]                  from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[10.738s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::Node[m[K’ {aka ‘[01m[Kclass rclcpp::Node[m[K’} has no member named ‘[01m[Kgetlogger[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+[10.752s]    41 |     RCLCPP_INFO(node -> [01;31m[Kgetlogger[m[K(), "Robot Gui Started !");
+[10.752s]       |                         [01;31m[K^~~~~~~~~[m[K
+[10.753s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = class rclcpp::Node[m[K’ {aka ‘[01m[Kclass rclcpp::Node[m[K’} has no member named ‘[01m[Kgetlogger[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+[10.753s]    41 |     RCLCPP_INFO(node -> [01;31m[Kgetlogger[m[K(), "Robot Gui Started !");
+[10.753s]       |                         [01;31m[K^~~~~~~~~[m[K
+[17.311s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104: CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Error 1
+[17.313s] gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/my_node_ihm.dir/all] Error 2
+[17.314s] gmake: *** [Makefile:146: all] Error 2
+[17.324s] Invoked command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2

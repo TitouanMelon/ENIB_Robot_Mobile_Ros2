@@ -1,0 +1,6 @@
+[0.097s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.104s] [0mCMake Error: The current CMakeCache.txt directory /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/CMakeCache.txt is different than the directory /home/rospc/Téléchargements/robot_mobile_ihm_V3/robot_mobile_ihm/build/robot_mobile_pkg_cpp where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.115s] [0mCMake Error: The source directory "/home/rospc/Téléchargements/robot_mobile_ihm_V3/robot_mobile_ihm/src/robot_mobile_pkg_cpp" does not exist.
+[0.115s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.116s] gmake: *** [Makefile:335 : cmake_check_build_system] Erreur 1
+[0.118s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

@@ -1,0 +1,35 @@
+[0.131s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.181s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.204s] [ 20%] Built target my_node_ihm_autogen
+[0.220s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.248s] [ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[3.836s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_radioButton_Man_toggled(bool)[m[K’:
+[3.836s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:137:5:[m[K [01;35m[Kwarning: [m[Kthis ‘[01m[Kif[m[K’ clause does not guard... [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wmisleading-indentation-Wmisleading-indentation]8;;[m[K]
+[3.836s]   137 |     [01;35m[Kif[m[K(checked)
+[3.836s]       |     [01;35m[K^~[m[K
+[3.836s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:139:9:[m[K [01;36m[Knote: [m[K...this statement, but the latter is misleadingly indented as if it were guarded by the ‘[01m[Kif[m[K’
+[3.837s]   139 |         [01;36m[K([m[K*ui).pushButton_Down->setEnabled(!checked);
+[3.837s]       |         [01;36m[K^[m[K
+[12.381s] [ 60%] [32m[1mLinking CXX executable my_node_ihm[0m
+[13.331s] [100%] Built target my_node_ihm
+[13.343s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[13.385s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp
+[13.393s] -- Install configuration: "Debug"
+[13.393s] -- Installing: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm
+[13.415s] -- Set runtime path of "/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm" to ""
+[13.415s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/package_run_dependencies/robot_mobile_pkg_cpp
+[13.415s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/parent_prefix_path/robot_mobile_pkg_cpp
+[13.416s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.sh
+[13.416s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.dsv
+[13.416s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.sh
+[13.416s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.dsv
+[13.416s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.bash
+[13.416s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.sh
+[13.416s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.zsh
+[13.417s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.dsv
+[13.417s] -- Installing: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.dsv
+[13.417s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/packages/robot_mobile_pkg_cpp
+[13.417s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig.cmake
+[13.417s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig-version.cmake
+[13.417s] -- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.xml
+[13.419s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp

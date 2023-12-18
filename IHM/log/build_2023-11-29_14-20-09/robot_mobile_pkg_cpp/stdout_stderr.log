@@ -1,0 +1,14 @@
+[ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 20%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:34:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass Ui::Form[m[K’ has no member named ‘[01m[KhorizontalLayout_11[m[K’; did you mean ‘[01m[KhorizontalLayout_10[m[K’?
+   34 |     ui->[01;31m[KhorizontalLayout_11[m[K->setAlignment(Qt::AlignCenter);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[KhorizontalLayout_10[m[K
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

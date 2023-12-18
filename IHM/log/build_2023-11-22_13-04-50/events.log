@@ -1,0 +1,210 @@
+[0.000000] (-) TimerEvent: {}
+[0.000159] (robot_mobile_pkg_cpp) JobQueued: {'identifier': 'robot_mobile_pkg_cpp', 'dependencies': OrderedDict()}
+[0.000563] (robot_mobile_pkg_cpp) JobStarted: {'identifier': 'robot_mobile_pkg_cpp'}
+[0.100004] (-) TimerEvent: {}
+[0.128970] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'cmake'}
+[0.129576] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'build'}
+[0.130298] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', '--', '-j8', '-l8'], 'cwd': '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rospc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rospc'), ('OLDPWD', '/home/rospc'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1230'), ('SYSTEMD_EXEC_PID', '1419'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5905'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rospc/IHM/robot_mobile_ihm/install:/home/rospc/qt_ros_ws2/install:/home/rospc/robot_ihm_widget/install:/home/rospc/robot_mobile_ihm/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rospc'), ('JOURNAL_STREAM', '8:26184'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rospc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rospc:@/tmp/.ICE-unix/1389,unix/rospc:/tmp/.ICE-unix/1389'), ('INVOCATION_ID', 'e30eefd61c9f45b79146ec742791be22'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VSJPE2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:ca356f86-536e-4401-bf12-8d51d43c3ed7'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble')]), 'shell': False}
+[0.183421] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_node_ihm\x1b[0m\n'}
+[0.183598] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_img_pub_node\x1b[0m\n'}
+[0.200115] (-) TimerEvent: {}
+[0.202713] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] Built target my_img_pub_node_autogen\n'}
+[0.210631] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] Built target my_node_ihm_autogen\n'}
+[0.227180] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_node_ihm\x1b[0m\n'}
+[0.229378] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 55%] Built target my_img_pub_node\n'}
+[0.261415] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[0.261712] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o\x1b[0m\n'}
+[0.262200] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.300231] (-) TimerEvent: {}
+[0.400594] (-) TimerEvent: {}
+[0.500938] (-) TimerEvent: {}
+[0.601302] (-) TimerEvent: {}
+[0.701664] (-) TimerEvent: {}
+[0.802018] (-) TimerEvent: {}
+[0.902336] (-) TimerEvent: {}
+[1.002681] (-) TimerEvent: {}
+[1.102998] (-) TimerEvent: {}
+[1.203301] (-) TimerEvent: {}
+[1.303651] (-) TimerEvent: {}
+[1.403931] (-) TimerEvent: {}
+[1.504218] (-) TimerEvent: {}
+[1.604504] (-) TimerEvent: {}
+[1.704797] (-) TimerEvent: {}
+[1.805079] (-) TimerEvent: {}
+[1.905377] (-) TimerEvent: {}
+[2.005663] (-) TimerEvent: {}
+[2.105960] (-) TimerEvent: {}
+[2.206265] (-) TimerEvent: {}
+[2.306563] (-) TimerEvent: {}
+[2.406868] (-) TimerEvent: {}
+[2.507164] (-) TimerEvent: {}
+[2.607454] (-) TimerEvent: {}
+[2.707747] (-) TimerEvent: {}
+[2.808012] (-) TimerEvent: {}
+[2.908306] (-) TimerEvent: {}
+[3.008587] (-) TimerEvent: {}
+[3.108882] (-) TimerEvent: {}
+[3.209175] (-) TimerEvent: {}
+[3.309469] (-) TimerEvent: {}
+[3.409772] (-) TimerEvent: {}
+[3.510073] (-) TimerEvent: {}
+[3.610391] (-) TimerEvent: {}
+[3.710705] (-) TimerEvent: {}
+[3.811010] (-) TimerEvent: {}
+[3.911308] (-) TimerEvent: {}
+[4.011608] (-) TimerEvent: {}
+[4.111874] (-) TimerEvent: {}
+[4.212162] (-) TimerEvent: {}
+[4.312450] (-) TimerEvent: {}
+[4.412738] (-) TimerEvent: {}
+[4.513036] (-) TimerEvent: {}
+[4.613328] (-) TimerEvent: {}
+[4.713628] (-) TimerEvent: {}
+[4.813914] (-) TimerEvent: {}
+[4.914195] (-) TimerEvent: {}
+[5.014479] (-) TimerEvent: {}
+[5.114763] (-) TimerEvent: {}
+[5.215066] (-) TimerEvent: {}
+[5.315385] (-) TimerEvent: {}
+[5.415703] (-) TimerEvent: {}
+[5.516008] (-) TimerEvent: {}
+[5.616321] (-) TimerEvent: {}
+[5.716640] (-) TimerEvent: {}
+[5.816956] (-) TimerEvent: {}
+[5.917281] (-) TimerEvent: {}
+[6.017634] (-) TimerEvent: {}
+[6.117953] (-) TimerEvent: {}
+[6.218206] (-) TimerEvent: {}
+[6.318493] (-) TimerEvent: {}
+[6.418770] (-) TimerEvent: {}
+[6.519119] (-) TimerEvent: {}
+[6.619418] (-) TimerEvent: {}
+[6.719737] (-) TimerEvent: {}
+[6.820059] (-) TimerEvent: {}
+[6.920364] (-) TimerEvent: {}
+[7.020673] (-) TimerEvent: {}
+[7.120984] (-) TimerEvent: {}
+[7.221294] (-) TimerEvent: {}
+[7.321603] (-) TimerEvent: {}
+[7.421907] (-) TimerEvent: {}
+[7.522214] (-) TimerEvent: {}
+[7.622520] (-) TimerEvent: {}
+[7.722826] (-) TimerEvent: {}
+[7.823129] (-) TimerEvent: {}
+[7.923432] (-) TimerEvent: {}
+[8.023743] (-) TimerEvent: {}
+[8.124059] (-) TimerEvent: {}
+[8.224365] (-) TimerEvent: {}
+[8.324674] (-) TimerEvent: {}
+[8.424980] (-) TimerEvent: {}
+[8.525286] (-) TimerEvent: {}
+[8.625577] (-) TimerEvent: {}
+[8.725852] (-) TimerEvent: {}
+[8.826142] (-) TimerEvent: {}
+[8.926442] (-) TimerEvent: {}
+[9.026729] (-) TimerEvent: {}
+[9.127024] (-) TimerEvent: {}
+[9.227325] (-) TimerEvent: {}
+[9.327630] (-) TimerEvent: {}
+[9.427960] (-) TimerEvent: {}
+[9.528259] (-) TimerEvent: {}
+[9.628559] (-) TimerEvent: {}
+[9.728865] (-) TimerEvent: {}
+[9.829167] (-) TimerEvent: {}
+[9.929466] (-) TimerEvent: {}
+[10.029766] (-) TimerEvent: {}
+[10.130067] (-) TimerEvent: {}
+[10.230367] (-) TimerEvent: {}
+[10.330664] (-) TimerEvent: {}
+[10.430960] (-) TimerEvent: {}
+[10.531271] (-) TimerEvent: {}
+[10.631567] (-) TimerEvent: {}
+[10.731865] (-) TimerEvent: {}
+[10.832168] (-) TimerEvent: {}
+[10.932425] (-) TimerEvent: {}
+[11.032727] (-) TimerEvent: {}
+[11.133025] (-) TimerEvent: {}
+[11.233326] (-) TimerEvent: {}
+[11.333617] (-) TimerEvent: {}
+[11.433917] (-) TimerEvent: {}
+[11.534214] (-) TimerEvent: {}
+[11.634515] (-) TimerEvent: {}
+[11.734785] (-) TimerEvent: {}
+[11.835092] (-) TimerEvent: {}
+[11.935387] (-) TimerEvent: {}
+[12.035687] (-) TimerEvent: {}
+[12.136021] (-) TimerEvent: {}
+[12.236323] (-) TimerEvent: {}
+[12.336625] (-) TimerEvent: {}
+[12.436919] (-) TimerEvent: {}
+[12.537221] (-) TimerEvent: {}
+[12.637517] (-) TimerEvent: {}
+[12.737814] (-) TimerEvent: {}
+[12.838116] (-) TimerEvent: {}
+[12.938410] (-) TimerEvent: {}
+[13.038701] (-) TimerEvent: {}
+[13.139003] (-) TimerEvent: {}
+[13.239306] (-) TimerEvent: {}
+[13.339600] (-) TimerEvent: {}
+[13.439936] (-) TimerEvent: {}
+[13.540227] (-) TimerEvent: {}
+[13.640509] (-) TimerEvent: {}
+[13.740816] (-) TimerEvent: {}
+[13.841211] (-) TimerEvent: {}
+[13.941483] (-) TimerEvent: {}
+[14.041795] (-) TimerEvent: {}
+[14.142097] (-) TimerEvent: {}
+[14.242407] (-) TimerEvent: {}
+[14.342719] (-) TimerEvent: {}
+[14.443027] (-) TimerEvent: {}
+[14.543333] (-) TimerEvent: {}
+[14.643636] (-) TimerEvent: {}
+[14.743913] (-) TimerEvent: {}
+[14.844215] (-) TimerEvent: {}
+[14.944507] (-) TimerEvent: {}
+[15.044803] (-) TimerEvent: {}
+[15.145120] (-) TimerEvent: {}
+[15.245430] (-) TimerEvent: {}
+[15.345715] (-) TimerEvent: {}
+[15.374889] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable my_node_ihm\x1b[0m\n'}
+[15.445845] (-) TimerEvent: {}
+[15.546092] (-) TimerEvent: {}
+[15.646403] (-) TimerEvent: {}
+[15.746705] (-) TimerEvent: {}
+[15.847011] (-) TimerEvent: {}
+[15.947313] (-) TimerEvent: {}
+[16.047630] (-) TimerEvent: {}
+[16.147911] (-) TimerEvent: {}
+[16.248197] (-) TimerEvent: {}
+[16.348488] (-) TimerEvent: {}
+[16.448750] (-) TimerEvent: {}
+[16.549066] (-) TimerEvent: {}
+[16.620141] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[100%] Built target my_node_ihm\n'}
+[16.631428] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 0}
+[16.649155] (-) TimerEvent: {}
+[16.669596] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'install'}
+[16.679223] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp'], 'cwd': '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rospc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rospc'), ('OLDPWD', '/home/rospc'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1230'), ('SYSTEMD_EXEC_PID', '1419'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5905'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rospc/IHM/robot_mobile_ihm/install:/home/rospc/qt_ros_ws2/install:/home/rospc/robot_ihm_widget/install:/home/rospc/robot_mobile_ihm/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rospc'), ('JOURNAL_STREAM', '8:26184'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rospc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rospc:@/tmp/.ICE-unix/1389,unix/rospc:/tmp/.ICE-unix/1389'), ('INVOCATION_ID', 'e30eefd61c9f45b79146ec742791be22'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VSJPE2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:ca356f86-536e-4401-bf12-8d51d43c3ed7'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble')]), 'shell': False}
+[16.686982] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[16.687254] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Installing: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm\n'}
+[16.721101] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm" to ""\n'}
+[16.721353] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_img_pub_node\n'}
+[16.721564] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/package_run_dependencies/robot_mobile_pkg_cpp\n'}
+[16.721669] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/parent_prefix_path/robot_mobile_pkg_cpp\n'}
+[16.721828] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.sh\n'}
+[16.722039] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.dsv\n'}
+[16.722149] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.sh\n'}
+[16.722221] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.dsv\n'}
+[16.722302] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.bash\n'}
+[16.722390] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.sh\n'}
+[16.722469] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.zsh\n'}
+[16.722534] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.dsv\n'}
+[16.722597] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Installing: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.dsv\n'}
+[16.722662] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/packages/robot_mobile_pkg_cpp\n'}
+[16.722725] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig.cmake\n'}
+[16.722789] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig-version.cmake\n'}
+[16.722852] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.xml\n'}
+[16.725021] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 0}
+[16.749407] (-) TimerEvent: {}
+[16.850133] (-) TimerEvent: {}
+[16.889247] (robot_mobile_pkg_cpp) JobEnded: {'identifier': 'robot_mobile_pkg_cpp', 'rc': 0}
+[16.889910] (-) EventReactorShutdown: {}

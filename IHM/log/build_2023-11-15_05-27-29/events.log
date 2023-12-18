@@ -1,0 +1,228 @@
+[0.000000] (-) TimerEvent: {}
+[0.000835] (robot_mobile_pkg_cpp) JobQueued: {'identifier': 'robot_mobile_pkg_cpp', 'dependencies': OrderedDict()}
+[0.000968] (robot_mobile_pkg_cpp) JobStarted: {'identifier': 'robot_mobile_pkg_cpp'}
+[0.099747] (-) TimerEvent: {}
+[0.200869] (-) TimerEvent: {}
+[0.224865] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'cmake'}
+[0.227242] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'build'}
+[0.239167] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp', '--', '-j2', '-l2'], 'cwd': '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dony'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dony'), ('OLDPWD', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1137'), ('SYSTEMD_EXEC_PID', '1312'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3142'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install:/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install:/home/dony/ROS_UDEMY/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dony'), ('JOURNAL_STREAM', '8:22557'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dony'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/dony/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dony-VirtualBox:@/tmp/.ICE-unix/1290,unix/dony-VirtualBox:/tmp/.ICE-unix/1290'), ('INVOCATION_ID', '0b2e4c2636714a29bf5c2d83aab1bbef'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.3PFJE2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install/my_package:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/my_cpp_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:24ca8f45-7ecc-4d3b-89b8-5a6245374651'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install/my_package:/home/dony/ROS_UDEMY/ros2_ws/install/my_cpp_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_cpp:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble')]), 'shell': False}
+[0.301272] (-) TimerEvent: {}
+[0.342479] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_node_ihm\x1b[0m\n'}
+[0.394443] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 20%] Built target my_node_ihm_autogen\n'}
+[0.401452] (-) TimerEvent: {}
+[0.458660] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_node_ihm\x1b[0m\n'}
+[0.501997] (-) TimerEvent: {}
+[0.541338] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.602432] (-) TimerEvent: {}
+[0.702996] (-) TimerEvent: {}
+[0.803610] (-) TimerEvent: {}
+[0.904279] (-) TimerEvent: {}
+[1.005746] (-) TimerEvent: {}
+[1.106245] (-) TimerEvent: {}
+[1.206897] (-) TimerEvent: {}
+[1.307395] (-) TimerEvent: {}
+[1.407973] (-) TimerEvent: {}
+[1.508665] (-) TimerEvent: {}
+[1.609949] (-) TimerEvent: {}
+[1.710756] (-) TimerEvent: {}
+[1.811325] (-) TimerEvent: {}
+[1.911808] (-) TimerEvent: {}
+[2.012480] (-) TimerEvent: {}
+[2.113835] (-) TimerEvent: {}
+[2.216119] (-) TimerEvent: {}
+[2.316809] (-) TimerEvent: {}
+[2.417720] (-) TimerEvent: {}
+[2.518355] (-) TimerEvent: {}
+[2.618862] (-) TimerEvent: {}
+[2.719505] (-) TimerEvent: {}
+[2.820155] (-) TimerEvent: {}
+[2.920813] (-) TimerEvent: {}
+[3.021321] (-) TimerEvent: {}
+[3.121939] (-) TimerEvent: {}
+[3.223935] (-) TimerEvent: {}
+[3.324787] (-) TimerEvent: {}
+[3.425344] (-) TimerEvent: {}
+[3.525998] (-) TimerEvent: {}
+[3.626465] (-) TimerEvent: {}
+[3.727076] (-) TimerEvent: {}
+[3.827658] (-) TimerEvent: {}
+[3.929214] (-) TimerEvent: {}
+[4.030765] (-) TimerEvent: {}
+[4.132367] (-) TimerEvent: {}
+[4.232871] (-) TimerEvent: {}
+[4.337696] (-) TimerEvent: {}
+[4.438286] (-) TimerEvent: {}
+[4.538825] (-) TimerEvent: {}
+[4.639625] (-) TimerEvent: {}
+[4.740213] (-) TimerEvent: {}
+[4.840739] (-) TimerEvent: {}
+[4.941367] (-) TimerEvent: {}
+[5.041850] (-) TimerEvent: {}
+[5.142396] (-) TimerEvent: {}
+[5.242886] (-) TimerEvent: {}
+[5.344585] (-) TimerEvent: {}
+[5.447121] (-) TimerEvent: {}
+[5.547675] (-) TimerEvent: {}
+[5.648310] (-) TimerEvent: {}
+[5.749506] (-) TimerEvent: {}
+[5.850400] (-) TimerEvent: {}
+[5.950938] (-) TimerEvent: {}
+[6.052485] (-) TimerEvent: {}
+[6.154015] (-) TimerEvent: {}
+[6.255566] (-) TimerEvent: {}
+[6.356110] (-) TimerEvent: {}
+[6.456667] (-) TimerEvent: {}
+[6.557290] (-) TimerEvent: {}
+[6.657849] (-) TimerEvent: {}
+[6.758364] (-) TimerEvent: {}
+[6.858845] (-) TimerEvent: {}
+[6.959482] (-) TimerEvent: {}
+[7.061124] (-) TimerEvent: {}
+[7.162377] (-) TimerEvent: {}
+[7.263316] (-) TimerEvent: {}
+[7.364891] (-) TimerEvent: {}
+[7.466393] (-) TimerEvent: {}
+[7.567002] (-) TimerEvent: {}
+[7.668499] (-) TimerEvent: {}
+[7.769096] (-) TimerEvent: {}
+[7.870174] (-) TimerEvent: {}
+[7.970715] (-) TimerEvent: {}
+[8.071277] (-) TimerEvent: {}
+[8.171828] (-) TimerEvent: {}
+[8.272435] (-) TimerEvent: {}
+[8.373965] (-) TimerEvent: {}
+[8.474536] (-) TimerEvent: {}
+[8.575309] (-) TimerEvent: {}
+[8.676321] (-) TimerEvent: {}
+[8.776993] (-) TimerEvent: {}
+[8.877687] (-) TimerEvent: {}
+[8.978711] (-) TimerEvent: {}
+[9.079556] (-) TimerEvent: {}
+[9.180901] (-) TimerEvent: {}
+[9.282922] (-) TimerEvent: {}
+[9.383703] (-) TimerEvent: {}
+[9.478600] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[9.479693] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[9.479956] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[9.481156] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[9.481701] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[9.481917] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[9.482125] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[9.482343] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[9.482551] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[9.482753] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[9.482957] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:11\x1b[m\x1b[K,\n'}
+[9.483161] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[9.487899] (-) TimerEvent: {}
+[9.488908] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMainWindow::MainWindow(QWidget*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[9.489281] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kgetlogger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.489459] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   41 |     RCLCPP_INFO(this -> \x1b[01;31m\x1b[Kgetlogger\x1b[m\x1b[K(), "Robot Gui Started !");\n'}
+[9.489646] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[9.489805] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kgetlogger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.489965] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[9.490160] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   41 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this -> getlogger(), "Robot Gui Started !");\n'}
+[9.490318] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.490475] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K<declaration error>\x1b[m\x1b[K\xe2\x80\x99 is not a template [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[9.490648] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   41 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this -> getlogger(), "Robot Gui Started !");\n'}
+[9.490840] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.491027] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[9.491195] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   41 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this -> getlogger(), "Robot Gui Started !");\n'}
+[9.491353] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.491509] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[K<declaration error>\x1b[m\x1b[K\xe2\x80\x99 is not a template [\x1b[01;31m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive\x07-fpermissive\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[9.491692] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   41 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this -> getlogger(), "Robot Gui Started !");\n'}
+[9.491850] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.492035] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[9.492197] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   41 |     \x1b[01;31m\x1b[KRCLCPP_INFO\x1b[m\x1b[K(this -> getlogger(), "Robot Gui Started !");\n'}
+[9.492354] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[9.492509] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[9.492686] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[9.492843] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[9.493044] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[9.502694] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[9.502936] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[9.503100] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[9.503261] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[9.503419] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[9.503577] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[9.503768] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[9.503928] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:11\x1b[m\x1b[K,\n'}
+[9.504084] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[9.504241] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kgetlogger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.504401] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   41 |     RCLCPP_INFO(this -> \x1b[01;31m\x1b[Kgetlogger\x1b[m\x1b[K(), "Robot Gui Started !");\n'}
+[9.504555] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[9.504741] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:41:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kgetlogger\x1b[m\x1b[K\xe2\x80\x99\n'}
+[9.504902] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   41 |     RCLCPP_INFO(this -> \x1b[01;31m\x1b[Kgetlogger\x1b[m\x1b[K(), "Robot Gui Started !");\n'}
+[9.505057] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[9.588378] (-) TimerEvent: {}
+[9.690568] (-) TimerEvent: {}
+[9.791686] (-) TimerEvent: {}
+[9.893342] (-) TimerEvent: {}
+[9.993804] (-) TimerEvent: {}
+[10.094551] (-) TimerEvent: {}
+[10.196167] (-) TimerEvent: {}
+[10.296816] (-) TimerEvent: {}
+[10.397581] (-) TimerEvent: {}
+[10.498961] (-) TimerEvent: {}
+[10.600648] (-) TimerEvent: {}
+[10.701745] (-) TimerEvent: {}
+[10.802986] (-) TimerEvent: {}
+[10.904130] (-) TimerEvent: {}
+[11.004822] (-) TimerEvent: {}
+[11.107166] (-) TimerEvent: {}
+[11.208700] (-) TimerEvent: {}
+[11.309305] (-) TimerEvent: {}
+[11.410422] (-) TimerEvent: {}
+[11.512089] (-) TimerEvent: {}
+[11.613413] (-) TimerEvent: {}
+[11.714838] (-) TimerEvent: {}
+[11.816043] (-) TimerEvent: {}
+[11.917483] (-) TimerEvent: {}
+[12.018935] (-) TimerEvent: {}
+[12.119649] (-) TimerEvent: {}
+[12.220300] (-) TimerEvent: {}
+[12.321943] (-) TimerEvent: {}
+[12.423181] (-) TimerEvent: {}
+[12.523750] (-) TimerEvent: {}
+[12.625250] (-) TimerEvent: {}
+[12.725886] (-) TimerEvent: {}
+[12.827520] (-) TimerEvent: {}
+[12.928573] (-) TimerEvent: {}
+[13.029678] (-) TimerEvent: {}
+[13.130727] (-) TimerEvent: {}
+[13.231531] (-) TimerEvent: {}
+[13.332021] (-) TimerEvent: {}
+[13.432707] (-) TimerEvent: {}
+[13.533807] (-) TimerEvent: {}
+[13.634834] (-) TimerEvent: {}
+[13.736368] (-) TimerEvent: {}
+[13.837594] (-) TimerEvent: {}
+[13.938553] (-) TimerEvent: {}
+[14.039236] (-) TimerEvent: {}
+[14.140302] (-) TimerEvent: {}
+[14.242354] (-) TimerEvent: {}
+[14.343421] (-) TimerEvent: {}
+[14.444005] (-) TimerEvent: {}
+[14.544491] (-) TimerEvent: {}
+[14.645100] (-) TimerEvent: {}
+[14.745686] (-) TimerEvent: {}
+[14.847236] (-) TimerEvent: {}
+[14.948755] (-) TimerEvent: {}
+[15.049325] (-) TimerEvent: {}
+[15.150831] (-) TimerEvent: {}
+[15.252607] (-) TimerEvent: {}
+[15.353662] (-) TimerEvent: {}
+[15.454357] (-) TimerEvent: {}
+[15.555233] (-) TimerEvent: {}
+[15.656813] (-) TimerEvent: {}
+[15.757584] (-) TimerEvent: {}
+[15.858540] (-) TimerEvent: {}
+[15.960094] (-) TimerEvent: {}
+[16.048016] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104: CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Error 1\n'}
+[16.049142] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/my_node_ihm.dir/all] Error 2\n'}
+[16.049446] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[16.051948] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 2}
+[16.060784] (-) TimerEvent: {}
+[16.162288] (-) TimerEvent: {}
+[16.263827] (-) TimerEvent: {}
+[16.287334] (robot_mobile_pkg_cpp) JobEnded: {'identifier': 'robot_mobile_pkg_cpp', 'rc': 2}
+[16.298821] (-) EventReactorShutdown: {}

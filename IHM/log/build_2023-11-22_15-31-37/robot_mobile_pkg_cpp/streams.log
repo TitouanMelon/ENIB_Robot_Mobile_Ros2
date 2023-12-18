@@ -1,0 +1,68 @@
+[0.131s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.182s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[0.182s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.202s] [ 22%] Built target my_img_pub_node_autogen
+[0.203s] [ 22%] Built target my_node_ihm_autogen
+[0.218s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.229s] [ 55%] Built target my_img_pub_node
+[0.248s] [ 66%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[3.969s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::rgb_onSliderValueChanged(int)[m[K’:
+[3.969s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:243:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Klabel[m[K’
+[3.969s]   243 |     rgb_data_low.[01;31m[Klabel[m[K = "rgb_low_values";
+[3.969s]       |                  [01;31m[K^~~~~[m[K
+[3.969s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:244:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Klabel[m[K’
+[3.969s]   244 |     rgb_data_high.[01;31m[Klabel[m[K = "rgb_low_values";
+[3.969s]       |                   [01;31m[K^~~~~[m[K
+[3.969s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:245:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ksize[m[K’
+[3.970s]   245 |     rgb_data_low.[01;31m[Ksize[m[K = 3;
+[3.970s]       |                  [01;31m[K^~~~[m[K
+[3.970s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:246:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ksize[m[K’
+[3.970s]   246 |     rgb_data_high.[01;31m[Ksize[m[K = 3;
+[3.970s]       |                   [01;31m[K^~~~[m[K
+[3.970s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:247:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kstride[m[K’
+[3.970s]   247 |     rgb_data_low.[01;31m[Kstride[m[K = 1;
+[3.970s]       |                  [01;31m[K^~~~~~[m[K
+[3.971s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:248:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kstride[m[K’
+[3.971s]   248 |     rgb_data_high.[01;31m[Kstride[m[K = 1;
+[3.971s]       |                   [01;31m[K^~~~~~[m[K
+[3.971s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:249:18:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Koffset[m[K’
+[3.971s]   249 |     rgb_data_low.[01;31m[Koffset[m[K = 1;
+[3.971s]       |                  [01;31m[K^~~~~~[m[K
+[3.971s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:250:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Koffset[m[K’
+[3.971s]   250 |     rgb_data_high.[01;31m[Koffset[m[K = 1;
+[3.972s]       |                   [01;31m[K^~~~~~[m[K
+[3.973s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:302:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ksize[m[K’
+[3.973s]   302 |         for(int i = 0; i < rgb_data_low.[01;31m[Ksize[m[K; i++)
+[3.973s]       |                                         [01;31m[K^~~~[m[K
+[3.973s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:305:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ksize[m[K’
+[3.973s]   305 |         for(int j = 0; j <rgb_data_high.[01;31m[Ksize[m[K ; i++)
+[3.973s]       |                                         [01;31m[K^~~~[m[K
+[3.978s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:305:48:[m[K [01;31m[Kerror: [m[K‘[01m[Ki[m[K’ was not declared in this scope; did you mean ‘[01m[Kui[m[K’?
+[3.978s]   305 |         for(int j = 0; j <rgb_data_high.size ; [01;31m[Ki[m[K++)
+[3.979s]       |                                                [01;31m[K^[m[K
+[3.979s]       |                                                [32m[Kui[m[K
+[3.979s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[3.979s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[3.979s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[3.979s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[3.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[3.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[3.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[3.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[3.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.980s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.980s]                  from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:14[m[K,
+[3.981s]                  from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[3.981s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:309:85:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Klabel[m[K’
+[3.981s]   309 | logger(), "Publishing '%s': %s, %s, %s", rgb_data_low.[01;31m[Klabel[m[K.c_str(), std::to_string(rgb_low[0]).c_str(), std::to_string(rgb_low[1]).c_str(), std::to_string(rgb_low[2]).c_str());
+[3.981s]       |                                                       [01;31m[K^~~~~[m[K
+[3.981s] 
+[3.981s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:310:86:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Klabel[m[K’
+[3.981s]   310 | ogger(), "Publishing '%s': %s, %s, %s", rgb_data_high.[01;31m[Klabel[m[K.c_str(), std::to_string(rgb_high[0]).c_str(), std::to_string(rgb_high[1]).c_str(), std::to_string(rgb_high[2]).c_str());
+[3.981s]       |                                                       [01;31m[K^~~~~[m[K
+[3.982s] 
+[7.753s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+[7.753s] gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+[7.753s] gmake: *** [Makefile:146 : all] Erreur 2
+[7.755s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

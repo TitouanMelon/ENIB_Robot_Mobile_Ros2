@@ -1,0 +1,10 @@
+
+AutoGen error
+-------------
+Info error in info file
+"/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/CMakeFiles/my_node_ihm_autogen.dir/AutogenInfo.json":
+The header file "SRC:/include/ui_mainwindow.h" does not exist.
+
+gmake[2]: *** [CMakeFiles/my_node_ihm_autogen.dir/build.make:71 : CMakeFiles/my_node_ihm_autogen] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:164 : CMakeFiles/my_node_ihm_autogen.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

@@ -1,0 +1,4 @@
+[ 33%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 33%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 66%] [32m[1mLinking CXX executable my_node_ihm[0m

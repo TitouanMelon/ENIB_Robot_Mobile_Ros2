@@ -1,0 +1,85 @@
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 22%] Built target my_img_pub_node_autogen
+[ 22%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 55%] Built target my_img_pub_node
+[ 66%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMainWindow::connect(QSlider*&, const char*, MainWindow*, void (MainWindow::*)(int))[m[K’
+   38 |     [01;31m[Kconnect((*ui).horizontalSlider_red_low, SIGNAL(&QSlider::valueChanged), this, &MainWindow::rgb_onSliderValueChanged)[m[K;
+      |     [01;31m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:51[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:1[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/include/./ui_mainwindow.h:12[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:3[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:242:43:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Func1, class Func2> static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const typename QtPrivate::FunctionPointer<Func2>::Object*, Func2, Qt::ConnectionType)[m[K’
+  242 |     static inline QMetaObject::Connection [01;36m[Kconnect[m[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,
+      |                                           [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:242:43:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h: In substitution of ‘[01m[Ktemplate<class Func1, class Func2> static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const typename QtPrivate::FunctionPointer<Func2>::Object*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = void (MainWindow::*)(int)][m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:[m[K   required from here
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:242:43:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[KObject[m[K’ in ‘[01m[Kstruct QtPrivate::FunctionPointer<const char*>[m[K’
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:274:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Func1, class Func2> static typename std::enable_if<((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, Func2)[m[K’
+  274 |             [01;36m[Kconnect[m[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 slot)
+      |             [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:274:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 4 provided
+   38 |     [01;36m[Kconnect((*ui).horizontalSlider_red_low, SIGNAL(&QSlider::valueChanged), this, &MainWindow::rgb_onSliderValueChanged)[m[K;
+      |     [01;36m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:51[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:1[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/include/./ui_mainwindow.h:12[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:3[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:283:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Func1, class Func2> static typename std::enable_if<(((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0) && (! QtPrivate::FunctionPointer<Func2>::IsPointerToMemberFunction)), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)[m[K’
+  283 |             [01;36m[Kconnect[m[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+      |             [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:283:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h: In substitution of ‘[01m[Ktemplate<class Func1, class Func2> static typename std::enable_if<(((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0) && (! QtPrivate::FunctionPointer<Func2>::IsPointerToMemberFunction)), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = void (MainWindow::*)(int)][m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:[m[K   required from here
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:283:13:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, QMetaObject::Connection>[m[K’
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:314:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Func1, class Func2> static typename std::enable_if<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == -1), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, Func2)[m[K’
+  314 |             [01;36m[Kconnect[m[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 slot)
+      |             [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:314:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 4 provided
+   38 |     [01;36m[Kconnect((*ui).horizontalSlider_red_low, SIGNAL(&QSlider::valueChanged), this, &MainWindow::rgb_onSliderValueChanged)[m[K;
+      |     [01;36m[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:51[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:1[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/include/./ui_mainwindow.h:12[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:3[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:322:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Func1, class Func2> static typename std::enable_if<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == -1), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)[m[K’
+  322 |             [01;36m[Kconnect[m[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, const QObject *context, Func2 slot,
+      |             [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:322:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h: In substitution of ‘[01m[Ktemplate<class Func1, class Func2> static typename std::enable_if<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == -1), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = void (MainWindow::*)(int)][m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:[m[K   required from here
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:322:13:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, QMetaObject::Connection>[m[K’
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:222:36:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstatic QMetaObject::Connection QObject::connect(const QObject*, const char*, const QObject*, const char*, Qt::ConnectionType)[m[K’
+  222 |     static QMetaObject::Connection [01;36m[Kconnect[m[K(const QObject *sender, const char *signal,
+      |                                    [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:223:62:[m[K [01;36m[Knote: [m[K  no known conversion for argument 4 from ‘[01m[Kvoid (MainWindow::*)(int)[m[K’ to ‘[01m[Kconst char*[m[K’
+  223 |                  const QObject *receiver, [01;36m[Kconst char *member[m[K, Qt::ConnectionType = Qt::AutoConnection);
+      |                                           [01;36m[K~~~~~~~~~~~~^~~~~~[m[K
+
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:225:36:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstatic QMetaObject::Connection QObject::connect(const QObject*, const QMetaMethod&, const QObject*, const QMetaMethod&, Qt::ConnectionType)[m[K’
+  225 |     static QMetaObject::Connection [01;36m[Kconnect[m[K(const QObject *sender, const QMetaMethod &signal,
+      |                                    [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:225:86:[m[K [01;36m[Knote: [m[K  no known conversion for argument 2 from ‘[01m[Kconst char*[m[K’ to ‘[01m[Kconst QMetaMethod&[m[K’
+  225 | nection connect(const QObject *sender, [01;36m[Kconst QMetaMethod &signal[m[K,
+      |                                        [01;36m[K~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:481:32:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KQMetaObject::Connection QObject::connect(const QObject*, const char*, const char*, Qt::ConnectionType) const[m[K’
+  481 | inline QMetaObject::Connection [01;36m[KQObject[m[K::connect(const QObject *asender, const char *asignal,
+      |                                [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:482:57:[m[K [01;36m[Knote: [m[K  no known conversion for argument 3 from ‘[01m[KMainWindow*[m[K’ to ‘[01m[Kconst char*[m[K’
+  482 |                                           [01;36m[Kconst char *amember[m[K, Qt::ConnectionType atype) const
+      |                                           [01;36m[K~~~~~~~~~~~~^~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

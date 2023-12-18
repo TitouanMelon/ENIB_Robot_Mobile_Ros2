@@ -1,0 +1,17 @@
+[0.131s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.181s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.181s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[0.201s] [ 22%] Built target my_img_pub_node_autogen
+[0.201s] [ 22%] Built target my_node_ihm_autogen
+[0.215s] [35m[1mConsolidate compiler generated dependencies of target my_img_pub_node[0m
+[0.232s] [ 66%] Built target my_node_ihm
+[0.237s] [ 77%] [32mBuilding CXX object CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o[0m
+[3.845s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:[m[K In member function ‘[01m[Kvoid ImagePublisher::publishImage()[m[K’:
+[3.845s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:30:88:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct sensor_msgs::msg::Image_<std::allocator<void> >[m[K’ has no member named ‘[01m[Kget[m[K’
+[3.845s]    30 | d_msgs::msg::Header(), "bgr8", image).toImageMsg(*message.[01;31m[Kget[m[K());
+[3.845s]       |                                                           [01;31m[K^~~[m[K
+[3.845s] 
+[5.098s] gmake[2]: *** [CMakeFiles/my_img_pub_node.dir/build.make:90 : CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o] Erreur 1
+[5.099s] gmake[1]: *** [CMakeFiles/Makefile2:141 : CMakeFiles/my_img_pub_node.dir/all] Erreur 2
+[5.099s] gmake: *** [Makefile:146 : all] Erreur 2
+[5.102s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

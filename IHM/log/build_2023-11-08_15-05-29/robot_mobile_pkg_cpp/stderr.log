@@ -1,0 +1,5 @@
+[0mCMake Error: Error required internal CMake variable not set, cmake may not be built correctly.
+Missing variable is:
+CMAKE_xml_LINK_EXECUTABLE[0m
+[0mCMake Generate step failed.  Build files cannot be regenerated correctly.[0m
+gmake: *** [Makefile:281 : cmake_check_build_system] Erreur 1

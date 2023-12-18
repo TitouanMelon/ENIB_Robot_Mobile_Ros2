@@ -1,0 +1,13 @@
+[0.114s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.165s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.175s] 
+[0.175s] AutoGen error
+[0.175s] -------------
+[0.175s] Info error in info file
+[0.175s] "/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/CMakeFiles/my_node_ihm_autogen.dir/AutogenInfo.json":
+[0.175s] The header file "SRC:/include/ui_mainwindow.h" does not exist.
+[0.175s] 
+[0.175s] gmake[2]: *** [CMakeFiles/my_node_ihm_autogen.dir/build.make:71 : CMakeFiles/my_node_ihm_autogen] Erreur 1
+[0.176s] gmake[1]: *** [CMakeFiles/Makefile2:164 : CMakeFiles/my_node_ihm_autogen.dir/all] Erreur 2
+[0.176s] gmake: *** [Makefile:146 : all] Erreur 2
+[0.179s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

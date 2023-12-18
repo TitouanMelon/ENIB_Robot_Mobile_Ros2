@@ -1,0 +1,143 @@
+[2.207s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[2.208s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=2, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f41e7191f00>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f41e7191930>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f41e7191930>>)
+[2.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[2.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[2.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[2.311s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[2.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[2.312s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[2.312s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm'
+[2.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[2.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[2.312s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[2.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[2.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[2.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[2.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[2.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[2.313s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[2.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[2.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[2.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[2.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[2.340s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[2.341s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[2.341s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[2.341s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[2.342s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[2.342s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[2.342s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[2.343s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[2.343s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[2.343s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[2.343s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[2.343s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[2.343s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[2.344s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[2.344s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[2.344s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[2.344s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[2.344s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[2.345s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[2.345s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[2.345s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[2.345s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[2.346s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[2.346s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[2.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extensions ['ignore', 'ignore_ament_install']
+[2.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extension 'ignore'
+[2.346s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extension 'ignore_ament_install'
+[2.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extensions ['colcon_pkg']
+[2.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extension 'colcon_pkg'
+[2.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extensions ['colcon_meta']
+[2.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extension 'colcon_meta'
+[2.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extensions ['ros']
+[2.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/robot_mobile_pkg_cpp) by extension 'ros'
+[2.352s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robot_mobile_pkg_cpp' with type 'ros.ament_cmake' and name 'robot_mobile_pkg_cpp'
+[2.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[2.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[2.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[2.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[2.352s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[2.564s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[2.564s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[2.631s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install
+[2.667s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 1 installed packages in /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install
+[2.716s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/dony/ROS_UDEMY/ros2_ws/install
+[2.756s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[2.759s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'cmake_args' from command line to 'None'
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'cmake_target' from command line to 'None'
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'cmake_clean_cache' from command line to 'False'
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'cmake_clean_first' from command line to 'False'
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'cmake_force_configure' from command line to 'False'
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'ament_cmake_args' from command line to 'None'
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'catkin_cmake_args' from command line to 'None'
+[2.979s] Level 5:colcon.colcon_core.verb:set package 'robot_mobile_pkg_cpp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[2.979s] DEBUG:colcon.colcon_core.verb:Building package 'robot_mobile_pkg_cpp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp', 'merge_install': False, 'path': '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp', 'symlink_install': False, 'test_result_base': None}
+[3.011s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[3.044s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[3.044s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp' with build type 'ament_cmake'
+[3.044s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp'
+[3.084s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[3.084s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.085s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.299s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2
+[55.070s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2
+[55.159s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --install /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp
+[55.270s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_mobile_pkg_cpp)
+[55.271s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --install /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp
+[55.333s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp' for CMake module files
+[55.334s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp' for CMake config files
+[55.335s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_mobile_pkg_cpp', 'cmake_prefix_path')
+[55.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/hook/cmake_prefix_path.ps1'
+[55.375s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/hook/cmake_prefix_path.dsv'
+[55.376s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/hook/cmake_prefix_path.sh'
+[55.378s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib'
+[55.380s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/bin'
+[55.380s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/pkgconfig/robot_mobile_pkg_cpp.pc'
+[55.380s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/python3.10/site-packages'
+[55.381s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/bin'
+[55.420s] INFO:colcon.colcon_core.shell:Creating package script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.ps1'
+[55.424s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.dsv'
+[55.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.sh'
+[55.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.bash'
+[55.428s] INFO:colcon.colcon_core.shell:Creating package script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.zsh'
+[55.431s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/colcon-core/packages/robot_mobile_pkg_cpp)
+[55.554s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robot_mobile_pkg_cpp)
+[55.601s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp' for CMake module files
+[55.605s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp' for CMake config files
+[55.606s] Level 1:colcon.colcon_core.shell:create_environment_hook('robot_mobile_pkg_cpp', 'cmake_prefix_path')
+[55.660s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/hook/cmake_prefix_path.ps1'
+[55.663s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/hook/cmake_prefix_path.dsv'
+[55.664s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/hook/cmake_prefix_path.sh'
+[55.666s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib'
+[55.666s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/bin'
+[55.666s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/pkgconfig/robot_mobile_pkg_cpp.pc'
+[55.667s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/python3.10/site-packages'
+[55.667s] Level 1:colcon.colcon_core.environment:checking '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/bin'
+[55.716s] INFO:colcon.colcon_core.shell:Creating package script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.ps1'
+[55.717s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.dsv'
+[55.718s] INFO:colcon.colcon_core.shell:Creating package script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.sh'
+[55.719s] INFO:colcon.colcon_core.shell:Creating package script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.bash'
+[55.720s] INFO:colcon.colcon_core.shell:Creating package script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.zsh'
+[55.720s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/colcon-core/packages/robot_mobile_pkg_cpp)
+[55.721s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[55.722s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[55.723s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[55.723s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[55.798s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[55.799s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[55.799s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[55.837s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[55.878s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/local_setup.ps1'
+[55.880s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/_local_setup_util_ps1.py'
+[55.883s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/setup.ps1'
+[55.926s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/local_setup.sh'
+[55.928s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/_local_setup_util_sh.py'
+[55.929s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/setup.sh'
+[55.968s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/local_setup.bash'
+[55.970s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/setup.bash'
+[56.017s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/local_setup.zsh'
+[56.018s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/setup.zsh'

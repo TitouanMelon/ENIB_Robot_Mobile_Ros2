@@ -1,0 +1,21 @@
+
+AutoUic subprocess error
+------------------------
+The uic process failed to compile
+  "SRC:/include/mainwindow.ui"
+into
+  "BIN:/my_node_ihm_autogen/include/./ui_mainwindow.h"
+included by
+  "SRC:/include/mainwindow.hpp"
+
+Command
+-------
+/usr/lib/qt5/bin/uic -o /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/include/./ui_mainwindow.h /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/include/mainwindow.ui
+
+Output
+------
+/usr/lib/qt5/bin/uic: symbol lookup error: /snap/core20/current/lib/x86_64-linux-gnu/libpthread.so.0: undefined symbol: __libc_pthread_init, version GLIBC_PRIVATE
+
+gmake[2]: *** [CMakeFiles/my_node_ihm_autogen.dir/build.make:71: CMakeFiles/my_node_ihm_autogen] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/my_node_ihm_autogen.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

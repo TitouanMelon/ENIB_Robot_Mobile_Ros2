@@ -1,0 +1,347 @@
+[0.000000] (-) TimerEvent: {}
+[0.000317] (robot_mobile_pkg_cpp) JobQueued: {'identifier': 'robot_mobile_pkg_cpp', 'dependencies': OrderedDict()}
+[0.000394] (robot_mobile_pkg_cpp) JobStarted: {'identifier': 'robot_mobile_pkg_cpp'}
+[0.099925] (-) TimerEvent: {}
+[0.201064] (-) TimerEvent: {}
+[0.240894] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'cmake'}
+[0.244623] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'build'}
+[0.245519] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp', '--', '-j2', '-l2'], 'cwd': '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dony'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dony'), ('OLDPWD', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1137'), ('SYSTEMD_EXEC_PID', '1312'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3142'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install:/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install:/home/dony/ROS_UDEMY/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dony'), ('JOURNAL_STREAM', '8:22557'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dony'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/dony/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dony-VirtualBox:@/tmp/.ICE-unix/1290,unix/dony-VirtualBox:/tmp/.ICE-unix/1290'), ('INVOCATION_ID', '0b2e4c2636714a29bf5c2d83aab1bbef'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.3PFJE2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install/my_package:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/my_cpp_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:24ca8f45-7ecc-4d3b-89b8-5a6245374651'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install/my_package:/home/dony/ROS_UDEMY/ros2_ws/install/my_cpp_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_cpp:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble')]), 'shell': False}
+[0.301717] (-) TimerEvent: {}
+[0.366572] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_node_ihm\x1b[0m\n'}
+[0.401880] (-) TimerEvent: {}
+[0.452312] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 20%] Built target my_node_ihm_autogen\n'}
+[0.501739] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_node_ihm\x1b[0m\n'}
+[0.502206] (-) TimerEvent: {}
+[0.603107] (-) TimerEvent: {}
+[0.609307] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.703251] (-) TimerEvent: {}
+[0.803773] (-) TimerEvent: {}
+[0.904790] (-) TimerEvent: {}
+[1.006297] (-) TimerEvent: {}
+[1.107094] (-) TimerEvent: {}
+[1.208296] (-) TimerEvent: {}
+[1.308859] (-) TimerEvent: {}
+[1.409762] (-) TimerEvent: {}
+[1.510703] (-) TimerEvent: {}
+[1.611776] (-) TimerEvent: {}
+[1.712583] (-) TimerEvent: {}
+[1.813090] (-) TimerEvent: {}
+[1.914363] (-) TimerEvent: {}
+[2.014888] (-) TimerEvent: {}
+[2.115483] (-) TimerEvent: {}
+[2.217003] (-) TimerEvent: {}
+[2.318703] (-) TimerEvent: {}
+[2.420116] (-) TimerEvent: {}
+[2.521257] (-) TimerEvent: {}
+[2.622219] (-) TimerEvent: {}
+[2.722863] (-) TimerEvent: {}
+[2.823397] (-) TimerEvent: {}
+[2.924905] (-) TimerEvent: {}
+[3.025506] (-) TimerEvent: {}
+[3.126672] (-) TimerEvent: {}
+[3.227476] (-) TimerEvent: {}
+[3.328181] (-) TimerEvent: {}
+[3.428789] (-) TimerEvent: {}
+[3.529599] (-) TimerEvent: {}
+[3.630333] (-) TimerEvent: {}
+[3.731008] (-) TimerEvent: {}
+[3.831771] (-) TimerEvent: {}
+[3.932588] (-) TimerEvent: {}
+[4.033085] (-) TimerEvent: {}
+[4.134139] (-) TimerEvent: {}
+[4.234821] (-) TimerEvent: {}
+[4.335546] (-) TimerEvent: {}
+[4.436722] (-) TimerEvent: {}
+[4.537780] (-) TimerEvent: {}
+[4.638497] (-) TimerEvent: {}
+[4.739167] (-) TimerEvent: {}
+[4.839942] (-) TimerEvent: {}
+[4.940700] (-) TimerEvent: {}
+[5.041564] (-) TimerEvent: {}
+[5.142252] (-) TimerEvent: {}
+[5.242976] (-) TimerEvent: {}
+[5.343746] (-) TimerEvent: {}
+[5.444688] (-) TimerEvent: {}
+[5.545348] (-) TimerEvent: {}
+[5.646049] (-) TimerEvent: {}
+[5.746761] (-) TimerEvent: {}
+[5.847422] (-) TimerEvent: {}
+[5.948183] (-) TimerEvent: {}
+[6.048845] (-) TimerEvent: {}
+[6.149543] (-) TimerEvent: {}
+[6.250247] (-) TimerEvent: {}
+[6.350940] (-) TimerEvent: {}
+[6.451669] (-) TimerEvent: {}
+[6.552462] (-) TimerEvent: {}
+[6.653610] (-) TimerEvent: {}
+[6.754288] (-) TimerEvent: {}
+[6.854985] (-) TimerEvent: {}
+[6.955698] (-) TimerEvent: {}
+[7.056460] (-) TimerEvent: {}
+[7.157164] (-) TimerEvent: {}
+[7.257917] (-) TimerEvent: {}
+[7.358842] (-) TimerEvent: {}
+[7.459544] (-) TimerEvent: {}
+[7.560278] (-) TimerEvent: {}
+[7.660968] (-) TimerEvent: {}
+[7.761679] (-) TimerEvent: {}
+[7.862370] (-) TimerEvent: {}
+[7.963074] (-) TimerEvent: {}
+[8.064788] (-) TimerEvent: {}
+[8.165489] (-) TimerEvent: {}
+[8.266190] (-) TimerEvent: {}
+[8.366921] (-) TimerEvent: {}
+[8.467675] (-) TimerEvent: {}
+[8.568449] (-) TimerEvent: {}
+[8.669195] (-) TimerEvent: {}
+[8.769918] (-) TimerEvent: {}
+[8.870622] (-) TimerEvent: {}
+[8.971348] (-) TimerEvent: {}
+[9.072446] (-) TimerEvent: {}
+[9.173124] (-) TimerEvent: {}
+[9.273815] (-) TimerEvent: {}
+[9.374483] (-) TimerEvent: {}
+[9.475224] (-) TimerEvent: {}
+[9.576533] (-) TimerEvent: {}
+[9.677301] (-) TimerEvent: {}
+[9.778013] (-) TimerEvent: {}
+[9.878909] (-) TimerEvent: {}
+[9.979624] (-) TimerEvent: {}
+[10.080378] (-) TimerEvent: {}
+[10.181136] (-) TimerEvent: {}
+[10.281831] (-) TimerEvent: {}
+[10.382697] (-) TimerEvent: {}
+[10.483415] (-) TimerEvent: {}
+[10.584778] (-) TimerEvent: {}
+[10.685324] (-) TimerEvent: {}
+[10.786099] (-) TimerEvent: {}
+[10.886642] (-) TimerEvent: {}
+[10.987444] (-) TimerEvent: {}
+[11.088532] (-) TimerEvent: {}
+[11.189537] (-) TimerEvent: {}
+[11.290233] (-) TimerEvent: {}
+[11.391054] (-) TimerEvent: {}
+[11.492614] (-) TimerEvent: {}
+[11.593319] (-) TimerEvent: {}
+[11.694008] (-) TimerEvent: {}
+[11.794788] (-) TimerEvent: {}
+[11.895489] (-) TimerEvent: {}
+[11.996333] (-) TimerEvent: {}
+[12.097066] (-) TimerEvent: {}
+[12.197761] (-) TimerEvent: {}
+[12.298427] (-) TimerEvent: {}
+[12.399128] (-) TimerEvent: {}
+[12.500344] (-) TimerEvent: {}
+[12.601032] (-) TimerEvent: {}
+[12.701766] (-) TimerEvent: {}
+[12.802462] (-) TimerEvent: {}
+[12.903167] (-) TimerEvent: {}
+[13.004303] (-) TimerEvent: {}
+[13.104973] (-) TimerEvent: {}
+[13.205676] (-) TimerEvent: {}
+[13.306398] (-) TimerEvent: {}
+[13.407183] (-) TimerEvent: {}
+[13.508048] (-) TimerEvent: {}
+[13.608778] (-) TimerEvent: {}
+[13.709718] (-) TimerEvent: {}
+[13.810729] (-) TimerEvent: {}
+[13.911707] (-) TimerEvent: {}
+[14.012861] (-) TimerEvent: {}
+[14.113823] (-) TimerEvent: {}
+[14.214836] (-) TimerEvent: {}
+[14.316470] (-) TimerEvent: {}
+[14.417439] (-) TimerEvent: {}
+[14.518325] (-) TimerEvent: {}
+[14.619408] (-) TimerEvent: {}
+[14.720598] (-) TimerEvent: {}
+[14.821623] (-) TimerEvent: {}
+[14.922566] (-) TimerEvent: {}
+[15.023572] (-) TimerEvent: {}
+[15.124766] (-) TimerEvent: {}
+[15.225656] (-) TimerEvent: {}
+[15.326567] (-) TimerEvent: {}
+[15.427304] (-) TimerEvent: {}
+[15.528057] (-) TimerEvent: {}
+[15.628866] (-) TimerEvent: {}
+[15.729632] (-) TimerEvent: {}
+[15.830405] (-) TimerEvent: {}
+[15.931286] (-) TimerEvent: {}
+[16.031875] (-) TimerEvent: {}
+[16.132529] (-) TimerEvent: {}
+[16.233068] (-) TimerEvent: {}
+[16.333595] (-) TimerEvent: {}
+[16.436716] (-) TimerEvent: {}
+[16.537286] (-) TimerEvent: {}
+[16.638206] (-) TimerEvent: {}
+[16.738707] (-) TimerEvent: {}
+[16.839339] (-) TimerEvent: {}
+[16.940130] (-) TimerEvent: {}
+[17.040845] (-) TimerEvent: {}
+[17.141384] (-) TimerEvent: {}
+[17.241946] (-) TimerEvent: {}
+[17.342499] (-) TimerEvent: {}
+[17.443121] (-) TimerEvent: {}
+[17.543721] (-) TimerEvent: {}
+[17.644254] (-) TimerEvent: {}
+[17.744887] (-) TimerEvent: {}
+[17.845459] (-) TimerEvent: {}
+[17.945988] (-) TimerEvent: {}
+[18.046597] (-) TimerEvent: {}
+[18.147183] (-) TimerEvent: {}
+[18.247810] (-) TimerEvent: {}
+[18.348810] (-) TimerEvent: {}
+[18.449417] (-) TimerEvent: {}
+[18.550581] (-) TimerEvent: {}
+[18.651164] (-) TimerEvent: {}
+[18.751854] (-) TimerEvent: {}
+[18.852569] (-) TimerEvent: {}
+[18.953172] (-) TimerEvent: {}
+[19.053825] (-) TimerEvent: {}
+[19.154458] (-) TimerEvent: {}
+[19.255162] (-) TimerEvent: {}
+[19.355779] (-) TimerEvent: {}
+[19.456333] (-) TimerEvent: {}
+[19.556892] (-) TimerEvent: {}
+[19.657502] (-) TimerEvent: {}
+[19.758120] (-) TimerEvent: {}
+[19.858686] (-) TimerEvent: {}
+[19.959241] (-) TimerEvent: {}
+[20.059837] (-) TimerEvent: {}
+[20.160464] (-) TimerEvent: {}
+[20.261063] (-) TimerEvent: {}
+[20.361730] (-) TimerEvent: {}
+[20.462380] (-) TimerEvent: {}
+[20.562977] (-) TimerEvent: {}
+[20.663516] (-) TimerEvent: {}
+[20.764123] (-) TimerEvent: {}
+[20.864706] (-) TimerEvent: {}
+[20.965240] (-) TimerEvent: {}
+[21.065806] (-) TimerEvent: {}
+[21.166338] (-) TimerEvent: {}
+[21.266993] (-) TimerEvent: {}
+[21.367819] (-) TimerEvent: {}
+[21.468476] (-) TimerEvent: {}
+[21.569270] (-) TimerEvent: {}
+[21.669878] (-) TimerEvent: {}
+[21.770526] (-) TimerEvent: {}
+[21.871145] (-) TimerEvent: {}
+[21.971872] (-) TimerEvent: {}
+[22.072507] (-) TimerEvent: {}
+[22.173116] (-) TimerEvent: {}
+[22.273726] (-) TimerEvent: {}
+[22.374294] (-) TimerEvent: {}
+[22.474908] (-) TimerEvent: {}
+[22.575526] (-) TimerEvent: {}
+[22.676367] (-) TimerEvent: {}
+[22.777390] (-) TimerEvent: {}
+[22.877975] (-) TimerEvent: {}
+[22.978517] (-) TimerEvent: {}
+[23.079093] (-) TimerEvent: {}
+[23.179701] (-) TimerEvent: {}
+[23.280239] (-) TimerEvent: {}
+[23.380875] (-) TimerEvent: {}
+[23.481435] (-) TimerEvent: {}
+[23.582073] (-) TimerEvent: {}
+[23.682669] (-) TimerEvent: {}
+[23.783415] (-) TimerEvent: {}
+[23.884068] (-) TimerEvent: {}
+[23.984631] (-) TimerEvent: {}
+[24.085200] (-) TimerEvent: {}
+[24.185721] (-) TimerEvent: {}
+[24.286263] (-) TimerEvent: {}
+[24.386815] (-) TimerEvent: {}
+[24.487372] (-) TimerEvent: {}
+[24.588119] (-) TimerEvent: {}
+[24.688863] (-) TimerEvent: {}
+[24.789777] (-) TimerEvent: {}
+[24.891056] (-) TimerEvent: {}
+[24.991740] (-) TimerEvent: {}
+[25.092431] (-) TimerEvent: {}
+[25.193083] (-) TimerEvent: {}
+[25.293640] (-) TimerEvent: {}
+[25.394333] (-) TimerEvent: {}
+[25.495081] (-) TimerEvent: {}
+[25.595706] (-) TimerEvent: {}
+[25.696545] (-) TimerEvent: {}
+[25.797096] (-) TimerEvent: {}
+[25.897642] (-) TimerEvent: {}
+[25.998171] (-) TimerEvent: {}
+[26.098644] (-) TimerEvent: {}
+[26.199211] (-) TimerEvent: {}
+[26.300490] (-) TimerEvent: {}
+[26.401378] (-) TimerEvent: {}
+[26.502382] (-) TimerEvent: {}
+[26.603434] (-) TimerEvent: {}
+[26.704279] (-) TimerEvent: {}
+[26.805752] (-) TimerEvent: {}
+[26.907270] (-) TimerEvent: {}
+[27.008369] (-) TimerEvent: {}
+[27.109883] (-) TimerEvent: {}
+[27.210670] (-) TimerEvent: {}
+[27.311708] (-) TimerEvent: {}
+[27.412693] (-) TimerEvent: {}
+[27.513967] (-) TimerEvent: {}
+[27.615122] (-) TimerEvent: {}
+[27.716470] (-) TimerEvent: {}
+[27.817587] (-) TimerEvent: {}
+[27.918226] (-) TimerEvent: {}
+[28.019473] (-) TimerEvent: {}
+[28.120246] (-) TimerEvent: {}
+[28.211083] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX executable my_node_ihm\x1b[0m\n'}
+[28.220474] (-) TimerEvent: {}
+[28.321887] (-) TimerEvent: {}
+[28.424905] (-) TimerEvent: {}
+[28.525494] (-) TimerEvent: {}
+[28.629042] (-) TimerEvent: {}
+[28.729869] (-) TimerEvent: {}
+[28.835818] (-) TimerEvent: {}
+[28.936844] (-) TimerEvent: {}
+[29.037707] (-) TimerEvent: {}
+[29.138815] (-) TimerEvent: {}
+[29.240783] (-) TimerEvent: {}
+[29.341890] (-) TimerEvent: {}
+[29.442771] (-) TimerEvent: {}
+[29.543651] (-) TimerEvent: {}
+[29.644571] (-) TimerEvent: {}
+[29.745345] (-) TimerEvent: {}
+[29.846093] (-) TimerEvent: {}
+[29.946917] (-) TimerEvent: {}
+[30.047525] (-) TimerEvent: {}
+[30.148188] (-) TimerEvent: {}
+[30.248856] (-) TimerEvent: {}
+[30.349479] (-) TimerEvent: {}
+[30.450089] (-) TimerEvent: {}
+[30.550592] (-) TimerEvent: {}
+[30.651098] (-) TimerEvent: {}
+[30.734986] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[100%] Built target my_node_ihm\n'}
+[30.751596] (-) TimerEvent: {}
+[30.758736] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 0}
+[30.842439] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'install'}
+[30.851794] (-) TimerEvent: {}
+[30.859352] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp'], 'cwd': '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'dony'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/dony'), ('OLDPWD', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1137'), ('SYSTEMD_EXEC_PID', '1312'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3142'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install:/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install:/home/dony/ROS_UDEMY/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'dony'), ('JOURNAL_STREAM', '8:22557'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'dony'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/dony/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/dony-VirtualBox:@/tmp/.ICE-unix/1290,unix/dony-VirtualBox:/tmp/.ICE-unix/1290'), ('INVOCATION_ID', '0b2e4c2636714a29bf5c2d83aab1bbef'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.3PFJE2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install/my_package:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/my_cpp_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_cpp:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:24ca8f45-7ecc-4d3b-89b8-5a6245374651'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg/lib/python3.10/site-packages:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install/my_package:/home/dony/ROS_UDEMY/ros2_ws/install/my_cpp_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_cpp:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble')]), 'shell': False}
+[30.876928] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Install configuration: "Debug"\n'}
+[30.880290] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Installing: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm\n'}
+[30.952087] (-) TimerEvent: {}
+[30.961055] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Set runtime path of "/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/lib/robot_mobile_pkg_cpp/my_node_ihm" to ""\n'}
+[30.961656] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/package_run_dependencies/robot_mobile_pkg_cpp\n'}
+[30.962131] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/parent_prefix_path/robot_mobile_pkg_cpp\n'}
+[30.962526] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.sh\n'}
+[30.963840] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/ament_prefix_path.dsv\n'}
+[30.964283] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.sh\n'}
+[30.964700] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/environment/path.dsv\n'}
+[30.965093] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.bash\n'}
+[30.965480] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.sh\n'}
+[30.965910] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.zsh\n'}
+[30.966448] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/local_setup.dsv\n'}
+[30.967011] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Installing: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.dsv\n'}
+[30.970076] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/ament_index/resource_index/packages/robot_mobile_pkg_cpp\n'}
+[30.970640] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig.cmake\n'}
+[30.970981] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/cmake/robot_mobile_pkg_cppConfig-version.cmake\n'}
+[30.971375] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Up-to-date: /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install/robot_mobile_pkg_cpp/share/robot_mobile_pkg_cpp/package.xml\n'}
+[30.977138] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 0}
+[31.052265] (-) TimerEvent: {}
+[31.155913] (-) TimerEvent: {}
+[31.257431] (-) TimerEvent: {}
+[31.358340] (-) TimerEvent: {}
+[31.391461] (robot_mobile_pkg_cpp) JobEnded: {'identifier': 'robot_mobile_pkg_cpp', 'rc': 0}
+[31.394998] (-) EventReactorShutdown: {}

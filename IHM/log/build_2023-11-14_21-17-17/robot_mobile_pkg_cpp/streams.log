@@ -1,0 +1,40 @@
+[0.271s] Invoking command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2
+[0.387s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[1.843s] [ 20%] Built target my_node_ihm_autogen
+[1.904s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[2.077s] [ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o[0m
+[2.092s] [ 60%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o[0m
+[19.141s] [ 80%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[27.750s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[27.750s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:16:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+[27.750s]    13 |     ui(new Ui::[01;31m[KMainWindow[m[K)
+[27.750s]       |                [01;31m[K^~~~~~~~~~[m[K
+[27.754s] In file included from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[27.754s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/../include/mainwindow.hpp:15:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+[27.756s]    15 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+[27.757s]       |                      [01;36m[K^~~~~~~~~~[m[K
+[27.757s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:24:7:[m[K [01;31m[Kerror: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+[27.757s]    24 |     ui[01;31m[K->[m[KsetupUi(this);
+[27.757s]       |       [01;31m[K^~[m[K
+[27.758s] In file included from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[27.758s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/../include/mainwindow.hpp:15:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+[27.758s]    15 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+[27.758s]       |                      [01;36m[K^~~~~~~~~~[m[K
+[27.789s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In destructor ‘[01m[Kvirtual MainWindow::~MainWindow()[m[K’:
+[27.790s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:62:5:[m[K [01;35m[Kwarning: [m[Kpossible problem detected in invocation of ‘[01m[Koperator delete[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdelete-incomplete-Wdelete-incomplete]8;;[m[K]
+[27.790s]    62 |     [01;35m[Kdelete ui[m[K;
+[27.790s]       |     [01;35m[K^~~~~~~~~[m[K
+[27.790s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:62:12:[m[K [01;35m[Kwarning: [m[Kinvalid use of incomplete type ‘[01m[Kclass Ui::MainWindow[m[K’
+[27.791s]    62 |     delete [01;35m[Kui[m[K;
+[27.791s]       |            [01;35m[K^~[m[K
+[27.791s] In file included from [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[27.791s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/../include/mainwindow.hpp:15:22:[m[K [01;36m[Knote: [m[Kforward declaration of ‘[01m[Kclass Ui::MainWindow[m[K’
+[27.791s]    15 | namespace Ui { class [01;36m[KMainWindow[m[K; }
+[27.792s]       |                      [01;36m[K^~~~~~~~~~[m[K
+[27.792s] [01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:62:5:[m[K [01;36m[Knote: [m[Kneither the destructor nor the class-specific ‘[01m[Koperator delete[m[K’ will be called, even if they are declared when the class is defined
+[27.792s]    62 |     [01;36m[Kdelete ui[m[K;
+[27.792s]       |     [01;36m[K^~~~~~~~~[m[K
+[34.416s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104: CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Error 1
+[34.417s] gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/my_node_ihm.dir/all] Error 2
+[34.420s] gmake: *** [Makefile:146: all] Error 2
+[34.423s] Invoked command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2

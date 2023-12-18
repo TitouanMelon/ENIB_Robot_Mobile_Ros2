@@ -1,0 +1,15 @@
+[0.262s] Invoking command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2
+[0.364s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.393s] 
+[0.394s] AutoUic error
+[0.394s] -------------
+[0.394s] "SRC:/src/mainwindow.cpp"
+[0.394s] includes the uic file "ui_mainwindow.h",
+[0.394s] but the user interface file "mainwindow.ui"
+[0.394s] could not be found in the following directories
+[0.395s]   "SRC:/src"
+[0.395s] 
+[0.397s] gmake[2]: *** [CMakeFiles/my_node_ihm_autogen.dir/build.make:71: CMakeFiles/my_node_ihm_autogen] Error 1
+[0.398s] gmake[1]: *** [CMakeFiles/Makefile2:164: CMakeFiles/my_node_ihm_autogen.dir/all] Error 2
+[0.400s] gmake: *** [Makefile:146: all] Error 2
+[0.403s] Invoked command in '/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/dony/ROS_UDEMY/ros2_ws/install/my_py_pkg:/home/dony/ROS_UDEMY/ros2_ws/install/activity_002_py:/opt/ros/humble /usr/bin/cmake --build /home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j2 -l2

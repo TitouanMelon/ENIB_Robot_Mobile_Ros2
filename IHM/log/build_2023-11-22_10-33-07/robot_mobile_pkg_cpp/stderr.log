@@ -1,0 +1,19 @@
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:76:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K==[m[K’ token
+   76 | [01;31m[K==[m[K======================================================
+      | [01;31m[K^~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_ON_OFF_stateChanged(int)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:217:45:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-in-bool-context-Wint-in-bool-context]8;;[m[K]
+  217 |         (*ui).pushButton_Up->setEnabled([01;35m[KQt::Checked[m[K);
+      |                                         [01;35m[K~~~~^~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:218:47:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-in-bool-context-Wint-in-bool-context]8;;[m[K]
+  218 |         (*ui).pushButton_Down->setEnabled([01;35m[KQt::Checked[m[K);
+      |                                           [01;35m[K~~~~^~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:219:47:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-in-bool-context-Wint-in-bool-context]8;;[m[K]
+  219 |         (*ui).pushButton_Left->setEnabled([01;35m[KQt::Checked[m[K);
+      |                                           [01;35m[K~~~~^~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:220:48:[m[K [01;35m[Kwarning: [m[Kenum constant in boolean context [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wint-in-bool-context-Wint-in-bool-context]8;;[m[K]
+  220 |         (*ui).pushButton_Right->setEnabled([01;35m[KQt::Checked[m[K);
+      |                                            [01;35m[K~~~~^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

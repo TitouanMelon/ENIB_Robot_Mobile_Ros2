@@ -1,0 +1,27 @@
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[ 22%] Built target my_img_pub_node_autogen
+[ 55%] Built target my_img_pub_node
+[ 55%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::rgb_onSliderValueChanged(int)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:246:30:[m[K [01;31m[Kerror: [m[K‘[01m[KsenderSlider[m[K’ was not declared in this scope
+  246 |         QString senderName = [01;31m[KsenderSlider[m[K->objectName();
+      |                              [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:241:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krgb_low[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  241 |     static uint8_t [01;35m[Krgb_low[m[K[3];
+      |                    [01;35m[K^~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:242:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krgb_high[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  242 |     static uint8_t [01;35m[Krgb_high[m[K[3];
+      |                    [01;35m[K^~~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K At global scope:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:242:20:[m[K [01;35m[Kwarning: [m[K‘[01m[Krgb_high[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:241:20:[m[K [01;35m[Kwarning: [m[K‘[01m[Krgb_low[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  241 |     static uint8_t [01;35m[Krgb_low[m[K[3];
+      |                    [01;35m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

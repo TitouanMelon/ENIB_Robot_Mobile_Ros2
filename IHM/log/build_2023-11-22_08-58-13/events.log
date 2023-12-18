@@ -1,0 +1,233 @@
+[0.000000] (-) TimerEvent: {}
+[0.000124] (robot_mobile_pkg_cpp) JobQueued: {'identifier': 'robot_mobile_pkg_cpp', 'dependencies': OrderedDict()}
+[0.000248] (robot_mobile_pkg_cpp) JobStarted: {'identifier': 'robot_mobile_pkg_cpp'}
+[0.099747] (-) TimerEvent: {}
+[0.129278] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'cmake'}
+[0.130643] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'build'}
+[0.130690] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', '--', '-j8', '-l8'], 'cwd': '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rospc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rospc'), ('OLDPWD', '/home/rospc'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1230'), ('SYSTEMD_EXEC_PID', '1419'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '3493'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rospc/IHM/robot_mobile_ihm/install:/home/rospc/qt_ros_ws2/install:/home/rospc/robot_ihm_widget/install:/home/rospc/robot_mobile_ihm/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rospc'), ('JOURNAL_STREAM', '8:26184'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rospc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rospc:@/tmp/.ICE-unix/1389,unix/rospc:/tmp/.ICE-unix/1389'), ('INVOCATION_ID', 'e30eefd61c9f45b79146ec742791be22'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VSJPE2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:26989509-080a-43b2-a728-97ba7ca605b4'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble')]), 'shell': False}
+[0.157663] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.199879] (-) TimerEvent: {}
+[0.300147] (-) TimerEvent: {}
+[0.306337] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.338861] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.342093] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.352211] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.364774] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.382233] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400263] (-) TimerEvent: {}
+[0.447144] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.448652] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.500398] (-) TimerEvent: {}
+[0.572822] (robot_mobile_pkg_cpp) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.600535] (-) TimerEvent: {}
+[0.700802] (-) TimerEvent: {}
+[0.755757] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.3 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.800912] (-) TimerEvent: {}
+[0.901177] (-) TimerEvent: {}
+[0.976123] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.001313] (-) TimerEvent: {}
+[1.016196] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Generating done\n'}
+[1.019077] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'-- Build files have been written to: /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp\n'}
+[1.057549] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_node_ihm\x1b[0m\n'}
+[1.057891] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_img_pub_node\x1b[0m\n'}
+[1.078858] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] Built target my_node_ihm_autogen\n'}
+[1.088138] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] Built target my_img_pub_node_autogen\n'}
+[1.092665] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_node_ihm\x1b[0m\n'}
+[1.098889] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_img_pub_node\x1b[0m\n'}
+[1.101425] (-) TimerEvent: {}
+[1.109680] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o\x1b[0m\n'}
+[1.109950] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/my_img_pub_node.dir/my_img_pub_node_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[1.129049] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[1.129620] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[1.130681] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o\x1b[0m\n'}
+[1.201551] (-) TimerEvent: {}
+[1.301888] (-) TimerEvent: {}
+[1.402263] (-) TimerEvent: {}
+[1.502645] (-) TimerEvent: {}
+[1.603026] (-) TimerEvent: {}
+[1.703354] (-) TimerEvent: {}
+[1.803682] (-) TimerEvent: {}
+[1.904021] (-) TimerEvent: {}
+[2.004341] (-) TimerEvent: {}
+[2.104659] (-) TimerEvent: {}
+[2.204978] (-) TimerEvent: {}
+[2.305303] (-) TimerEvent: {}
+[2.405628] (-) TimerEvent: {}
+[2.505958] (-) TimerEvent: {}
+[2.606298] (-) TimerEvent: {}
+[2.706639] (-) TimerEvent: {}
+[2.806973] (-) TimerEvent: {}
+[2.907331] (-) TimerEvent: {}
+[3.007665] (-) TimerEvent: {}
+[3.107995] (-) TimerEvent: {}
+[3.208331] (-) TimerEvent: {}
+[3.308598] (-) TimerEvent: {}
+[3.408927] (-) TimerEvent: {}
+[3.509257] (-) TimerEvent: {}
+[3.609589] (-) TimerEvent: {}
+[3.709925] (-) TimerEvent: {}
+[3.810255] (-) TimerEvent: {}
+[3.871423] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:30:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krclcpp\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[3.871818] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   30 |     \x1b[01;31m\x1b[Krclcpp\x1b[m\x1b[K:ublisher<sensor_msgs::msg::Image>::SharedPtr publisher_;\n'}
+[3.871944] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[3.878988] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KImagePublisher::ImagePublisher()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.879244] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:7:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.879412] (robot_mobile_pkg_cpp) StderrLine: {'line': b'    7 |         \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K = create_publisher<sensor_msgs::msg::Image>("IMAGE_frame", 10);\n'}
+[3.879543] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.879665] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |         \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[3.901724] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid ImagePublisher::publishImage()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.901959] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:27:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Krmw_publisher_t\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.902118] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   27 |         \x1b[01;31m\x1b[Kpublisher_\x1b[m\x1b[K->publish(message);\n'}
+[3.902249] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.902370] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |         \x1b[32m\x1b[Krmw_publisher_t\x1b[m\x1b[K\n'}
+[3.910366] (-) TimerEvent: {}
+[4.010706] (-) TimerEvent: {}
+[4.111035] (-) TimerEvent: {}
+[4.211366] (-) TimerEvent: {}
+[4.311695] (-) TimerEvent: {}
+[4.412024] (-) TimerEvent: {}
+[4.512342] (-) TimerEvent: {}
+[4.612680] (-) TimerEvent: {}
+[4.713020] (-) TimerEvent: {}
+[4.813361] (-) TimerEvent: {}
+[4.913694] (-) TimerEvent: {}
+[5.010370] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_img_pub_node.dir/build.make:90 : CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o] Erreur 1\n'}
+[5.010656] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:141 : CMakeFiles/my_img_pub_node.dir/all] Erreur 2\n'}
+[5.010815] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[1]: *** Attente des t\xc3\xa2ches non termin\xc3\xa9es....\n'}
+[5.013793] (-) TimerEvent: {}
+[5.114096] (-) TimerEvent: {}
+[5.214424] (-) TimerEvent: {}
+[5.314779] (-) TimerEvent: {}
+[5.415112] (-) TimerEvent: {}
+[5.515444] (-) TimerEvent: {}
+[5.615763] (-) TimerEvent: {}
+[5.716078] (-) TimerEvent: {}
+[5.816400] (-) TimerEvent: {}
+[5.916712] (-) TimerEvent: {}
+[6.017024] (-) TimerEvent: {}
+[6.117354] (-) TimerEvent: {}
+[6.217667] (-) TimerEvent: {}
+[6.318036] (-) TimerEvent: {}
+[6.418339] (-) TimerEvent: {}
+[6.518655] (-) TimerEvent: {}
+[6.618973] (-) TimerEvent: {}
+[6.719295] (-) TimerEvent: {}
+[6.819610] (-) TimerEvent: {}
+[6.919891] (-) TimerEvent: {}
+[7.020197] (-) TimerEvent: {}
+[7.120505] (-) TimerEvent: {}
+[7.220826] (-) TimerEvent: {}
+[7.321131] (-) TimerEvent: {}
+[7.421421] (-) TimerEvent: {}
+[7.521700] (-) TimerEvent: {}
+[7.621996] (-) TimerEvent: {}
+[7.722310] (-) TimerEvent: {}
+[7.822629] (-) TimerEvent: {}
+[7.922945] (-) TimerEvent: {}
+[8.023262] (-) TimerEvent: {}
+[8.123627] (-) TimerEvent: {}
+[8.223994] (-) TimerEvent: {}
+[8.324306] (-) TimerEvent: {}
+[8.424624] (-) TimerEvent: {}
+[8.524938] (-) TimerEvent: {}
+[8.625264] (-) TimerEvent: {}
+[8.725575] (-) TimerEvent: {}
+[8.825867] (-) TimerEvent: {}
+[8.926176] (-) TimerEvent: {}
+[9.026509] (-) TimerEvent: {}
+[9.126825] (-) TimerEvent: {}
+[9.227141] (-) TimerEvent: {}
+[9.327425] (-) TimerEvent: {}
+[9.427720] (-) TimerEvent: {}
+[9.528039] (-) TimerEvent: {}
+[9.628351] (-) TimerEvent: {}
+[9.728653] (-) TimerEvent: {}
+[9.828938] (-) TimerEvent: {}
+[9.929218] (-) TimerEvent: {}
+[10.029538] (-) TimerEvent: {}
+[10.129865] (-) TimerEvent: {}
+[10.230182] (-) TimerEvent: {}
+[10.330487] (-) TimerEvent: {}
+[10.430783] (-) TimerEvent: {}
+[10.531068] (-) TimerEvent: {}
+[10.631353] (-) TimerEvent: {}
+[10.731652] (-) TimerEvent: {}
+[10.831958] (-) TimerEvent: {}
+[10.932261] (-) TimerEvent: {}
+[11.032563] (-) TimerEvent: {}
+[11.132851] (-) TimerEvent: {}
+[11.233125] (-) TimerEvent: {}
+[11.333396] (-) TimerEvent: {}
+[11.433703] (-) TimerEvent: {}
+[11.534004] (-) TimerEvent: {}
+[11.634317] (-) TimerEvent: {}
+[11.734617] (-) TimerEvent: {}
+[11.834918] (-) TimerEvent: {}
+[11.935217] (-) TimerEvent: {}
+[12.035534] (-) TimerEvent: {}
+[12.135838] (-) TimerEvent: {}
+[12.236143] (-) TimerEvent: {}
+[12.336441] (-) TimerEvent: {}
+[12.436744] (-) TimerEvent: {}
+[12.537047] (-) TimerEvent: {}
+[12.637348] (-) TimerEvent: {}
+[12.737651] (-) TimerEvent: {}
+[12.837956] (-) TimerEvent: {}
+[12.938253] (-) TimerEvent: {}
+[13.038589] (-) TimerEvent: {}
+[13.138901] (-) TimerEvent: {}
+[13.239215] (-) TimerEvent: {}
+[13.339537] (-) TimerEvent: {}
+[13.439850] (-) TimerEvent: {}
+[13.540166] (-) TimerEvent: {}
+[13.640526] (-) TimerEvent: {}
+[13.740839] (-) TimerEvent: {}
+[13.841142] (-) TimerEvent: {}
+[13.941444] (-) TimerEvent: {}
+[14.041749] (-) TimerEvent: {}
+[14.142035] (-) TimerEvent: {}
+[14.242322] (-) TimerEvent: {}
+[14.342643] (-) TimerEvent: {}
+[14.442942] (-) TimerEvent: {}
+[14.543253] (-) TimerEvent: {}
+[14.643568] (-) TimerEvent: {}
+[14.743851] (-) TimerEvent: {}
+[14.844132] (-) TimerEvent: {}
+[14.944409] (-) TimerEvent: {}
+[15.044696] (-) TimerEvent: {}
+[15.145004] (-) TimerEvent: {}
+[15.245424] (-) TimerEvent: {}
+[15.345733] (-) TimerEvent: {}
+[15.446030] (-) TimerEvent: {}
+[15.546338] (-) TimerEvent: {}
+[15.646654] (-) TimerEvent: {}
+[15.746967] (-) TimerEvent: {}
+[15.847291] (-) TimerEvent: {}
+[15.947559] (-) TimerEvent: {}
+[16.047856] (-) TimerEvent: {}
+[16.148163] (-) TimerEvent: {}
+[16.248490] (-) TimerEvent: {}
+[16.348811] (-) TimerEvent: {}
+[16.449119] (-) TimerEvent: {}
+[16.549429] (-) TimerEvent: {}
+[16.649709] (-) TimerEvent: {}
+[16.705568] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable my_node_ihm\x1b[0m\n'}
+[16.749829] (-) TimerEvent: {}
+[16.850181] (-) TimerEvent: {}
+[16.950526] (-) TimerEvent: {}
+[17.050881] (-) TimerEvent: {}
+[17.151214] (-) TimerEvent: {}
+[17.251541] (-) TimerEvent: {}
+[17.351866] (-) TimerEvent: {}
+[17.452197] (-) TimerEvent: {}
+[17.552490] (-) TimerEvent: {}
+[17.652781] (-) TimerEvent: {}
+[17.753104] (-) TimerEvent: {}
+[17.853424] (-) TimerEvent: {}
+[17.953733] (-) TimerEvent: {}
+[17.982858] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 88%] Built target my_node_ihm\n'}
+[17.984251] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake: *** [Makefile:146 : all] Erreur 2\n'}
+[17.986190] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 2}
+[18.054190] (-) TimerEvent: {}
+[18.094570] (robot_mobile_pkg_cpp) JobEnded: {'identifier': 'robot_mobile_pkg_cpp', 'rc': 2}
+[18.105323] (-) EventReactorShutdown: {}

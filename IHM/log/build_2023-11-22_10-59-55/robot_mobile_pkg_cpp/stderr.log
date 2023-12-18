@@ -1,0 +1,8 @@
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:[m[K In constructor ‘[01m[KImagePublisher::ImagePublisher()[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:8:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kui[m[K’ was not declared in this scope
+    8 |         (*[01;31m[Kui[m[K).ON_OFF->setChecked(false);
+      |           [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/my_img_pub_node.dir/build.make:90 : CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:141 : CMakeFiles/my_img_pub_node.dir/all] Erreur 2
+gmake[1]: *** Attente des tâches non terminées....
+gmake: *** [Makefile:146 : all] Erreur 2

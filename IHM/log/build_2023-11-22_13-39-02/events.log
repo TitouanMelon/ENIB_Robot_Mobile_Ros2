@@ -1,0 +1,176 @@
+[0.000000] (-) TimerEvent: {}
+[0.000565] (robot_mobile_pkg_cpp) JobQueued: {'identifier': 'robot_mobile_pkg_cpp', 'dependencies': OrderedDict()}
+[0.000958] (robot_mobile_pkg_cpp) JobStarted: {'identifier': 'robot_mobile_pkg_cpp'}
+[0.100200] (-) TimerEvent: {}
+[0.127486] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'cmake'}
+[0.129175] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'build'}
+[0.129223] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', '--', '-j8', '-l8'], 'cwd': '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rospc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rospc'), ('OLDPWD', '/home/rospc'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1230'), ('SYSTEMD_EXEC_PID', '1419'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5905'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rospc/IHM/robot_mobile_ihm/install:/home/rospc/qt_ros_ws2/install:/home/rospc/robot_ihm_widget/install:/home/rospc/robot_mobile_ihm/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rospc'), ('JOURNAL_STREAM', '8:26184'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rospc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rospc:@/tmp/.ICE-unix/1389,unix/rospc:/tmp/.ICE-unix/1389'), ('INVOCATION_ID', 'e30eefd61c9f45b79146ec742791be22'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.VSJPE2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:ca356f86-536e-4401-bf12-8d51d43c3ed7'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble')]), 'shell': False}
+[0.181728] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_img_pub_node\x1b[0m\n'}
+[0.181919] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_node_ihm\x1b[0m\n'}
+[0.200356] (-) TimerEvent: {}
+[0.201480] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] Built target my_img_pub_node_autogen\n'}
+[0.210450] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 22%] Built target my_node_ihm_autogen\n'}
+[0.227023] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_node_ihm\x1b[0m\n'}
+[0.227766] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 55%] Built target my_img_pub_node\n'}
+[0.256480] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 66%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[0.256705] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o\x1b[0m\n'}
+[0.257107] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.300468] (-) TimerEvent: {}
+[0.400852] (-) TimerEvent: {}
+[0.501148] (-) TimerEvent: {}
+[0.601456] (-) TimerEvent: {}
+[0.701760] (-) TimerEvent: {}
+[0.802053] (-) TimerEvent: {}
+[0.902348] (-) TimerEvent: {}
+[1.002648] (-) TimerEvent: {}
+[1.102940] (-) TimerEvent: {}
+[1.203238] (-) TimerEvent: {}
+[1.303546] (-) TimerEvent: {}
+[1.403866] (-) TimerEvent: {}
+[1.504180] (-) TimerEvent: {}
+[1.604494] (-) TimerEvent: {}
+[1.704803] (-) TimerEvent: {}
+[1.805142] (-) TimerEvent: {}
+[1.905440] (-) TimerEvent: {}
+[2.005735] (-) TimerEvent: {}
+[2.106035] (-) TimerEvent: {}
+[2.206335] (-) TimerEvent: {}
+[2.306635] (-) TimerEvent: {}
+[2.406947] (-) TimerEvent: {}
+[2.507246] (-) TimerEvent: {}
+[2.607547] (-) TimerEvent: {}
+[2.707848] (-) TimerEvent: {}
+[2.808153] (-) TimerEvent: {}
+[2.908454] (-) TimerEvent: {}
+[3.008724] (-) TimerEvent: {}
+[3.109036] (-) TimerEvent: {}
+[3.209373] (-) TimerEvent: {}
+[3.309666] (-) TimerEvent: {}
+[3.409960] (-) TimerEvent: {}
+[3.510273] (-) TimerEvent: {}
+[3.610575] (-) TimerEvent: {}
+[3.710865] (-) TimerEvent: {}
+[3.811268] (-) TimerEvent: {}
+[3.911598] (-) TimerEvent: {}
+[4.011936] (-) TimerEvent: {}
+[4.082726] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMainWindow::MainWindow(QWidget*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.083287] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KMainWindow::connect(QSlider*&, const char*, MainWindow*, void (MainWindow::*)(int))\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.083626] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   38 |     \x1b[01;31m\x1b[Kconnect((*ui).horizontalSlider_red_low, SIGNAL(&QSlider::valueChanged), this, &MainWindow::rgb_onSliderValueChanged)\x1b[m\x1b[K;\n'}
+[4.083763] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.083891] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:51\x1b[m\x1b[K,\n'}
+[4.084016] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:1\x1b[m\x1b[K,\n'}
+[4.084142] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/include/./ui_mainwindow.h:12\x1b[m\x1b[K,\n'}
+[4.084265] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:3\x1b[m\x1b[K,\n'}
+[4.084385] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[4.084502] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:242:43:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Func1, class Func2> static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const typename QtPrivate::FunctionPointer<Func2>::Object*, Func2, Qt::ConnectionType)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.084648] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  242 |     static inline QMetaObject::Connection \x1b[01;36m\x1b[Kconnect\x1b[m\x1b[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal,\n'}
+[4.084780] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                           \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.084905] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:242:43:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.085030] (robot_mobile_pkg_cpp) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h: In substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Func1, class Func2> static QMetaObject::Connection QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const typename QtPrivate::FunctionPointer<Func2>::Object*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = void (MainWindow::*)(int)]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.085159] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:\x1b[m\x1b[K   required from here\n'}
+[4.085285] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:242:43:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[KObject\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct QtPrivate::FunctionPointer<const char*>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.085409] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:274:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Func1, class Func2> static typename std::enable_if<((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, Func2)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.085561] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  274 |             \x1b[01;36m\x1b[Kconnect\x1b[m\x1b[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 slot)\n'}
+[4.085687] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.085807] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:274:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.085928] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 4 provided\n'}
+[4.086063] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   38 |     \x1b[01;36m\x1b[Kconnect((*ui).horizontalSlider_red_low, SIGNAL(&QSlider::valueChanged), this, &MainWindow::rgb_onSliderValueChanged)\x1b[m\x1b[K;\n'}
+[4.086188] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.086311] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:51\x1b[m\x1b[K,\n'}
+[4.086439] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:1\x1b[m\x1b[K,\n'}
+[4.086564] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/include/./ui_mainwindow.h:12\x1b[m\x1b[K,\n'}
+[4.086703] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:3\x1b[m\x1b[K,\n'}
+[4.086827] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[4.086946] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:283:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Func1, class Func2> static typename std::enable_if<(((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0) && (! QtPrivate::FunctionPointer<Func2>::IsPointerToMemberFunction)), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.087082] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  283 |             \x1b[01;36m\x1b[Kconnect\x1b[m\x1b[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, const QObject *context, Func2 slot,\n'}
+[4.087208] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.087328] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:283:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.087452] (robot_mobile_pkg_cpp) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h: In substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Func1, class Func2> static typename std::enable_if<(((int)(QtPrivate::FunctionPointer<Func2>::ArgumentCount) >= 0) && (! QtPrivate::FunctionPointer<Func2>::IsPointerToMemberFunction)), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = void (MainWindow::*)(int)]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.087594] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:\x1b[m\x1b[K   required from here\n'}
+[4.087718] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:283:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, QMetaObject::Connection>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.087844] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:314:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Func1, class Func2> static typename std::enable_if<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == -1), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, Func2)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.087978] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  314 |             \x1b[01;36m\x1b[Kconnect\x1b[m\x1b[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, Func2 slot)\n'}
+[4.088102] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.088225] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:314:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.088347] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 4 provided\n'}
+[4.088478] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   38 |     \x1b[01;36m\x1b[Kconnect((*ui).horizontalSlider_red_low, SIGNAL(&QSlider::valueChanged), this, &MainWindow::rgb_onSliderValueChanged)\x1b[m\x1b[K;\n'}
+[4.088604] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.088744] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h:51\x1b[m\x1b[K,\n'}
+[4.088866] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant:1\x1b[m\x1b[K,\n'}
+[4.088986] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/include/./ui_mainwindow.h:12\x1b[m\x1b[K,\n'}
+[4.089108] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:3\x1b[m\x1b[K,\n'}
+[4.089241] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[4.089367] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:322:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Func1, class Func2> static typename std::enable_if<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == -1), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.089508] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  322 |             \x1b[01;36m\x1b[Kconnect\x1b[m\x1b[K(const typename QtPrivate::FunctionPointer<Func1>::Object *sender, Func1 signal, const QObject *context, Func2 slot,\n'}
+[4.089634] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.089767] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:322:13:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.089890] (robot_mobile_pkg_cpp) StderrLine: {'line': b'/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h: In substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class Func1, class Func2> static typename std::enable_if<(QtPrivate::FunctionPointer<Func2>::ArgumentCount == -1), QMetaObject::Connection>::type QObject::connect(const typename QtPrivate::FunctionPointer<Func>::Object*, Func1, const QObject*, Func2, Qt::ConnectionType) [with Func1 = const char*; Func2 = void (MainWindow::*)(int)]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.090026] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:12:\x1b[m\x1b[K   required from here\n'}
+[4.090152] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:322:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, QMetaObject::Connection>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.090277] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:222:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstatic QMetaObject::Connection QObject::connect(const QObject*, const char*, const QObject*, const char*, Qt::ConnectionType)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.090407] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  222 |     static QMetaObject::Connection \x1b[01;36m\x1b[Kconnect\x1b[m\x1b[K(const QObject *sender, const char *signal,\n'}
+[4.090529] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                    \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.090653] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:223:62:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 4 from \xe2\x80\x98\x1b[01m\x1b[Kvoid (MainWindow::*)(int)\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.090781] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  223 |                         const QObject *receiver, \x1b[01;36m\x1b[Kconst char *member\x1b[m\x1b[K, Qt::ConnectionType = Qt::AutoConnection);\n'}
+[4.090905] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                                  \x1b[01;36m\x1b[K~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[4.091028] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:225:36:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstatic QMetaObject::Connection QObject::connect(const QObject*, const QMetaMethod&, const QObject*, const QMetaMethod&, Qt::ConnectionType)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.091155] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  225 |     static QMetaObject::Connection \x1b[01;36m\x1b[Kconnect\x1b[m\x1b[K(const QObject *sender, const QMetaMethod &signal,\n'}
+[4.091274] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                    \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.091395] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:225:86:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 2 from \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst QMetaMethod&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.091529] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  225 |     static QMetaObject::Connection connect(const QObject *sender, \x1b[01;36m\x1b[Kconst QMetaMethod &signal\x1b[m\x1b[K,\n'}
+[4.091653] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                                                   \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~~~\x1b[m\x1b[K\n'}
+[4.091786] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:481:32:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[KQMetaObject::Connection QObject::connect(const QObject*, const char*, const char*, Qt::ConnectionType) const\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.091912] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  481 | inline QMetaObject::Connection \x1b[01;36m\x1b[KQObject\x1b[m\x1b[K::connect(const QObject *asender, const char *asignal,\n'}
+[4.092035] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.092157] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h:482:57:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 3 from \xe2\x80\x98\x1b[01m\x1b[KMainWindow*\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst char*\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.092289] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  482 |                                             \x1b[01;36m\x1b[Kconst char *amember\x1b[m\x1b[K, Qt::ConnectionType atype) const\n'}
+[4.092410] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                             \x1b[01;36m\x1b[K~~~~~~~~~~~~^~~~~~~\x1b[m\x1b[K\n'}
+[4.112043] (-) TimerEvent: {}
+[4.118062] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::rgb_onSliderValueChanged(int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.118289] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:219:30:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass QLCDNumber\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[KsetText\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.118449] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  219 |         (*ui).lcdNumber_rgb->\x1b[01;31m\x1b[KsetText\x1b[m\x1b[K(QString("%1: %2").arg(senderName.arg(value)));\n'}
+[4.118580] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                              \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.212157] (-) TimerEvent: {}
+[4.312508] (-) TimerEvent: {}
+[4.412780] (-) TimerEvent: {}
+[4.513064] (-) TimerEvent: {}
+[4.613356] (-) TimerEvent: {}
+[4.713658] (-) TimerEvent: {}
+[4.813958] (-) TimerEvent: {}
+[4.914234] (-) TimerEvent: {}
+[5.014585] (-) TimerEvent: {}
+[5.114868] (-) TimerEvent: {}
+[5.215209] (-) TimerEvent: {}
+[5.315506] (-) TimerEvent: {}
+[5.415816] (-) TimerEvent: {}
+[5.516142] (-) TimerEvent: {}
+[5.616457] (-) TimerEvent: {}
+[5.716744] (-) TimerEvent: {}
+[5.817031] (-) TimerEvent: {}
+[5.917324] (-) TimerEvent: {}
+[6.017620] (-) TimerEvent: {}
+[6.117915] (-) TimerEvent: {}
+[6.218194] (-) TimerEvent: {}
+[6.318479] (-) TimerEvent: {}
+[6.418777] (-) TimerEvent: {}
+[6.519080] (-) TimerEvent: {}
+[6.619367] (-) TimerEvent: {}
+[6.719651] (-) TimerEvent: {}
+[6.819940] (-) TimerEvent: {}
+[6.920241] (-) TimerEvent: {}
+[7.020539] (-) TimerEvent: {}
+[7.120824] (-) TimerEvent: {}
+[7.221135] (-) TimerEvent: {}
+[7.321431] (-) TimerEvent: {}
+[7.421722] (-) TimerEvent: {}
+[7.522015] (-) TimerEvent: {}
+[7.622307] (-) TimerEvent: {}
+[7.722618] (-) TimerEvent: {}
+[7.817893] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1\n'}
+[7.818211] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2\n'}
+[7.818509] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake: *** [Makefile:146 : all] Erreur 2\n'}
+[7.821529] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 2}
+[7.822617] (-) TimerEvent: {}
+[7.923015] (-) TimerEvent: {}
+[7.934620] (robot_mobile_pkg_cpp) JobEnded: {'identifier': 'robot_mobile_pkg_cpp', 'rc': 2}
+[7.945070] (-) EventReactorShutdown: {}

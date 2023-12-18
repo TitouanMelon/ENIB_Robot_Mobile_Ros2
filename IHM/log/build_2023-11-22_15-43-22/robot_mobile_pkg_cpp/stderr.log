@@ -1,0 +1,31 @@
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::rgb_onSliderValueChanged(int)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:295:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ksize[m[K’
+  295 |         for(int i = 0; i < rgb_data_low.[01;31m[Ksize[m[K; i++)
+      |                                         [01;31m[K^~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:298:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kstruct std_msgs::msg::Int8MultiArray_<std::allocator<void> >[m[K’ has no member named ‘[01m[Ksize[m[K’
+  298 |         for(int j = 0; j <rgb_data_high.[01;31m[Ksize[m[K ; j++)
+      |                                         [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:14[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:302:89:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kc_str[m[K’ in ‘[01m[K"rgb_low_values"[m[K’, which is of non-class type ‘[01m[Kconst char [15][m[K’
+  302 | er(), "Publishing '%s': %s, %s, %s", "rgb_low_values".[01;31m[Kc_str[m[K(), std::to_string(rgb_low[0]).c_str(), std::to_string(rgb_low[1]).c_str(), std::to_string(rgb_low[2]).c_str());
+      |                                                       [01;31m[K^~~~~[m[K
+
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:303:90:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kc_str[m[K’ in ‘[01m[K"rgb_high_values"[m[K’, which is of non-class type ‘[01m[Kconst char [16][m[K’
+  303 | r(), "Publishing '%s': %s, %s, %s", "rgb_high_values".[01;31m[Kc_str[m[K(), std::to_string(rgb_high[0]).c_str(), std::to_string(rgb_high[1]).c_str(), std::to_string(rgb_high[2]).c_str());
+      |                                                       [01;31m[K^~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

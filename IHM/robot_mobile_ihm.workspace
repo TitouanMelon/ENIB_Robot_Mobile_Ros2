@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Workspace>
+    <Distribution path="/opt/ros/humble"/>
+    <DefaultBuildSystem value="2"/>
+</Workspace>
+
+<!--DefaultBuildSystem value="2": This line sets the default build system for the ROS workspace. The value "2" may correspond to a specific build system. In ROS, the two primary build systems are Catkin (value="1") and Colcon (value="2"). In this case, "2" is likely indicating the use of Colcon as the default build system.-->

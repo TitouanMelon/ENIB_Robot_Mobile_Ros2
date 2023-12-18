@@ -1,0 +1,25 @@
+[0.132s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.181s] [ 11%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.184s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[0.203s] [ 22%] Built target my_img_pub_node_autogen
+[0.203s] [ 22%] Built target my_node_ihm_autogen
+[0.216s] [35m[1mConsolidate compiler generated dependencies of target my_img_pub_node[0m
+[0.237s] [ 66%] Built target my_node_ihm
+[0.238s] [ 77%] [32mBuilding CXX object CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o[0m
+[2.753s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:30:5:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ does not name a type
+[2.753s]    30 |     [01;31m[Krclcpp[m[K:Publisher<sensor_msgs::msg::Image>::SharedPtr publisher_;
+[2.753s]       |     [01;31m[K^~~~~~[m[K
+[2.760s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:[m[K In constructor ‘[01m[KImagePublisher::ImagePublisher()[m[K’:
+[2.760s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:7:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[2.760s]     7 |         [01;31m[Kpublisher_[m[K = create_publisher<sensor_msgs::msg::Image>("IMAGE_frame", 10);
+[2.760s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.760s]       |         [32m[Krmw_publisher_t[m[K
+[2.781s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:[m[K In member function ‘[01m[Kvoid ImagePublisher::publishImage()[m[K’:
+[2.781s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+[2.781s]    27 |         [01;31m[Kpublisher_[m[K->publish(message);
+[2.781s]       |         [01;31m[K^~~~~~~~~~[m[K
+[2.781s]       |         [32m[Krmw_publisher_t[m[K
+[3.768s] gmake[2]: *** [CMakeFiles/my_img_pub_node.dir/build.make:90 : CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o] Erreur 1
+[3.769s] gmake[1]: *** [CMakeFiles/Makefile2:141 : CMakeFiles/my_img_pub_node.dir/all] Erreur 2
+[3.769s] gmake: *** [Makefile:146 : all] Erreur 2
+[3.772s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

@@ -1,0 +1,48 @@
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 22%] Built target my_img_pub_node_autogen
+[ 22%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 55%] Built target my_img_pub_node
+[ 66%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:14[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::rgb_onSliderValueChanged(int)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:314:109:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd_msgs::msg::UInt8MultiArray_<std::allocator<void> >[m[K’ and ‘[01m[Kint[m[K’)
+  314 | ring(rgb_data_low[01;31m[K[[m[K0]).c_str(), std::to_string(rgb_data_low[1]).c_str(), std::to_string(rgb_data_low[2]).c_str());
+      |                  [01;31m[K^[m[K
+
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:314:150:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd_msgs::msg::UInt8MultiArray_<std::allocator<void> >[m[K’ and ‘[01m[Kint[m[K’)
+  314 | ring(rgb_data_low[01;31m[K[[m[K1]).c_str(), std::to_string(rgb_data_low[2]).c_str());
+      |                  [01;31m[K^[m[K
+
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:314:191:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd_msgs::msg::UInt8MultiArray_<std::allocator<void> >[m[K’ and ‘[01m[Kint[m[K’)
+  314 | ring(rgb_data_low[01;31m[K[[m[K2]).c_str());
+      |                  [01;31m[K^[m[K
+
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:315:111:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd_msgs::msg::UInt8MultiArray_<std::allocator<void> >[m[K’ and ‘[01m[Kint[m[K’)
+  315 | ing(rgb_data_high[01;31m[K[[m[K0]).c_str(), std::to_string(rgb_data_high[1]).c_str(), std::to_string(rgb_data_high[2]).c_str());
+      |                  [01;31m[K^[m[K
+
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:315:153:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd_msgs::msg::UInt8MultiArray_<std::allocator<void> >[m[K’ and ‘[01m[Kint[m[K’)
+  315 | ing(rgb_data_high[01;31m[K[[m[K1]).c_str(), std::to_string(rgb_data_high[2]).c_str());
+      |                  [01;31m[K^[m[K
+
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:315:195:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator[][m[K’ (operand types are ‘[01m[Kstd_msgs::msg::UInt8MultiArray_<std::allocator<void> >[m[K’ and ‘[01m[Kint[m[K’)
+  315 | ing(rgb_data_high[01;31m[K[[m[K2]).c_str());
+      |                  [01;31m[K^[m[K
+
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

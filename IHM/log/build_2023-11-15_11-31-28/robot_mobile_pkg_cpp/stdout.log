@@ -1,0 +1,5 @@
+[ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 20%] Built target my_node_ihm_autogen
+[ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m

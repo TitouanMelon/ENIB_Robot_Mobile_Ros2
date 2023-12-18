@@ -1,0 +1,8 @@
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:[m[K In member function ‘[01m[Kvoid ImagePublisher::publishImage()[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:30:86:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Ksensor_msgs::msg::Image_<std::allocator<void> >[m[K’
+   30 | d_msgs::msg::Header(), "bgr8", image).toImageMsg(message[01;31m[K->[m[Kget());
+      |                                                         [01;31m[K^~[m[K
+
+gmake[2]: *** [CMakeFiles/my_img_pub_node.dir/build.make:90 : CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:141 : CMakeFiles/my_img_pub_node.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

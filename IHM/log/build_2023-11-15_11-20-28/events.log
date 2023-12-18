@@ -1,0 +1,168 @@
+[0.000000] (-) TimerEvent: {}
+[0.000141] (robot_mobile_pkg_cpp) JobQueued: {'identifier': 'robot_mobile_pkg_cpp', 'dependencies': OrderedDict()}
+[0.000196] (robot_mobile_pkg_cpp) JobStarted: {'identifier': 'robot_mobile_pkg_cpp'}
+[0.099257] (-) TimerEvent: {}
+[0.125634] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'cmake'}
+[0.126936] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'build'}
+[0.127231] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', '--', '-j8', '-l8'], 'cwd': '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rospc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rospc'), ('OLDPWD', '/home/rospc'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1227'), ('SYSTEMD_EXEC_PID', '1415'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '9447'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rospc/IHM/robot_mobile_ihm/install:/home/rospc/qt_ros_ws2/install:/home/rospc/robot_ihm_widget/install:/home/rospc/robot_mobile_ihm/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rospc'), ('JOURNAL_STREAM', '8:21450'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rospc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rospc:@/tmp/.ICE-unix/1387,unix/rospc:/tmp/.ICE-unix/1387'), ('INVOCATION_ID', '2cde54000edc4099ad5743fa1eac4c35'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.2FXTE2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:16b5d45d-918d-47c0-a807-b9cad9fbf5ef'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble')]), 'shell': False}
+[0.178739] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_node_ihm\x1b[0m\n'}
+[0.199356] (-) TimerEvent: {}
+[0.200762] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 20%] Built target my_node_ihm_autogen\n'}
+[0.218229] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_node_ihm\x1b[0m\n'}
+[0.247414] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.299505] (-) TimerEvent: {}
+[0.399793] (-) TimerEvent: {}
+[0.500145] (-) TimerEvent: {}
+[0.600498] (-) TimerEvent: {}
+[0.700834] (-) TimerEvent: {}
+[0.801182] (-) TimerEvent: {}
+[0.901519] (-) TimerEvent: {}
+[1.001872] (-) TimerEvent: {}
+[1.102209] (-) TimerEvent: {}
+[1.202535] (-) TimerEvent: {}
+[1.302872] (-) TimerEvent: {}
+[1.403211] (-) TimerEvent: {}
+[1.503543] (-) TimerEvent: {}
+[1.603862] (-) TimerEvent: {}
+[1.704209] (-) TimerEvent: {}
+[1.804557] (-) TimerEvent: {}
+[1.904901] (-) TimerEvent: {}
+[2.005246] (-) TimerEvent: {}
+[2.105566] (-) TimerEvent: {}
+[2.205901] (-) TimerEvent: {}
+[2.306238] (-) TimerEvent: {}
+[2.406574] (-) TimerEvent: {}
+[2.506921] (-) TimerEvent: {}
+[2.607263] (-) TimerEvent: {}
+[2.707608] (-) TimerEvent: {}
+[2.807942] (-) TimerEvent: {}
+[2.908273] (-) TimerEvent: {}
+[3.008586] (-) TimerEvent: {}
+[3.108918] (-) TimerEvent: {}
+[3.209239] (-) TimerEvent: {}
+[3.309548] (-) TimerEvent: {}
+[3.409865] (-) TimerEvent: {}
+[3.510176] (-) TimerEvent: {}
+[3.610518] (-) TimerEvent: {}
+[3.710856] (-) TimerEvent: {}
+[3.735004] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:10:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KInt\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.735272] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   10 | rclcpp::Publisher<std_msgs::msg::\x1b[01;31m\x1b[KInt\x1b[m\x1b[K>::SharedPtr publisher_mode;\n'}
+[3.735410] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.735555] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:10:37:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.735682] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   10 | rclcpp::Publisher<std_msgs::msg::Int\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr publisher_mode;\n'}
+[3.735806] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.735940] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:10:50:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected initializer before \xe2\x80\x98\x1b[01m\x1b[Kpublisher_mode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.736049] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   10 | rclcpp::Publisher<std_msgs::msg::Int>::SharedPtr \x1b[01;31m\x1b[Kpublisher_mode\x1b[m\x1b[K;\n'}
+[3.736149] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                                  \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.789372] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMainWindow::MainWindow(QWidget*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.789608] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:35:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_mode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_dir\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.789744] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   35 |     \x1b[01;31m\x1b[Kpublisher_mode\x1b[m\x1b[K = node->create_publisher<std_msgs::msg::Int>("mode", 10);\n'}
+[3.789855] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.789960] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_dir\x1b[m\x1b[K\n'}
+[3.790242] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:35:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KInt\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.790456] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   35 | ublisher_mode = node->create_publisher<std_msgs::msg::\x1b[01;31m\x1b[KInt\x1b[m\x1b[K>("mode", 10);\n'}
+[3.790581] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                                       \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.790733] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\n'}
+[3.790851] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:35:64:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Node::create_publisher<<expression error> >(const char [5], int)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.790973] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   35 | sher_mode = \x1b[01;31m\x1b[Knode->create_publisher<std_msgs::msg::Int>("mode", 10)\x1b[m\x1b[K;\n'}
+[3.791095] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.791215] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\n'}
+[3.791330] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321\x1b[m\x1b[K,\n'}
+[3.791454] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[3.791579] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[3.791701] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.791829] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:11\x1b[m\x1b[K,\n'}
+[3.791966] (robot_mobile_pkg_cpp) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[3.792091] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.792230] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   73 | \x1b[01;36m\x1b[KNode\x1b[m\x1b[K::create_publisher(\n'}
+[3.792355] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.792474] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[3.792596] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:35:64:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[3.792719] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   35 | sher_mode = \x1b[01;31m\x1b[Knode->create_publisher<std_msgs::msg::Int>("mode", 10)\x1b[m\x1b[K;\n'}
+[3.792844] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.792980] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\n'}
+[3.809940] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K At global scope:\n'}
+[3.810350] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:120:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::on_radioButton_Auto_toggled(bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.810494] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  120 | void \x1b[01;31m\x1b[KMainWindow\x1b[m\x1b[K::on_radioButton_Auto_toggled(bool checked)\n'}
+[3.810610] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.810719] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:120:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::on_radioButton_Auto_toggled(bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.810826] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[3.810939] (-) TimerEvent: {}
+[3.811071] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[3.811204] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   18 | class \x1b[01;36m\x1b[KMainWindow\x1b[m\x1b[K : public QMainWindow\n'}
+[3.811329] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.811456] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:125:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeAuto()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.811591] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  125 | void \x1b[01;31m\x1b[KMainWindow\x1b[m\x1b[K::publishModeAuto(){\n'}
+[3.811715] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.811843] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:125:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeAuto()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.811953] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[3.812071] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[3.812189] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   18 | class \x1b[01;36m\x1b[KMainWindow\x1b[m\x1b[K : public QMainWindow\n'}
+[3.812310] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.812436] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:135:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::on_radioButton_Man_toggled(bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.812559] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  135 | void \x1b[01;31m\x1b[KMainWindow\x1b[m\x1b[K::on_radioButton_Man_toggled(bool checked)\n'}
+[3.812676] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.812799] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:135:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::on_radioButton_Man_toggled(bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.812923] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[3.813043] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[3.813164] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   18 | class \x1b[01;36m\x1b[KMainWindow\x1b[m\x1b[K : public QMainWindow\n'}
+[3.813285] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.813404] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:140:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeMan()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.813525] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  140 | void \x1b[01;31m\x1b[KMainWindow\x1b[m\x1b[K::publishModeMan(){\n'}
+[3.813642] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.813758] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:140:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeMan()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.813891] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[3.814014] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[3.814139] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   18 | class \x1b[01;36m\x1b[KMainWindow\x1b[m\x1b[K : public QMainWindow\n'}
+[3.814268] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.814390] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:148:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::on_radioButton_Track_toggled(bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.814515] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  148 | void \x1b[01;31m\x1b[KMainWindow\x1b[m\x1b[K::on_radioButton_Track_toggled(bool checked)\n'}
+[3.814650] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.814773] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:148:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::on_radioButton_Track_toggled(bool)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.814907] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[3.815030] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[3.815155] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   18 | class \x1b[01;36m\x1b[KMainWindow\x1b[m\x1b[K : public QMainWindow\n'}
+[3.815274] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.815396] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:153:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeTrack()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.815529] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  153 | void \x1b[01;31m\x1b[KMainWindow\x1b[m\x1b[K::publishModeTrack(){\n'}
+[3.815653] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.815774] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:153:6:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeTrack()\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.815896] (robot_mobile_pkg_cpp) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1\x1b[m\x1b[K:\n'}
+[3.816013] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MainWindow\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[3.816135] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   18 | class \x1b[01;36m\x1b[KMainWindow\x1b[m\x1b[K : public QMainWindow\n'}
+[3.816257] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.911063] (-) TimerEvent: {}
+[4.011402] (-) TimerEvent: {}
+[4.111739] (-) TimerEvent: {}
+[4.212067] (-) TimerEvent: {}
+[4.312406] (-) TimerEvent: {}
+[4.412739] (-) TimerEvent: {}
+[4.513082] (-) TimerEvent: {}
+[4.613448] (-) TimerEvent: {}
+[4.713785] (-) TimerEvent: {}
+[4.814123] (-) TimerEvent: {}
+[4.914464] (-) TimerEvent: {}
+[5.014805] (-) TimerEvent: {}
+[5.115139] (-) TimerEvent: {}
+[5.215464] (-) TimerEvent: {}
+[5.315806] (-) TimerEvent: {}
+[5.416143] (-) TimerEvent: {}
+[5.516467] (-) TimerEvent: {}
+[5.616811] (-) TimerEvent: {}
+[5.717138] (-) TimerEvent: {}
+[5.817456] (-) TimerEvent: {}
+[5.917799] (-) TimerEvent: {}
+[6.018148] (-) TimerEvent: {}
+[6.118452] (-) TimerEvent: {}
+[6.218756] (-) TimerEvent: {}
+[6.319108] (-) TimerEvent: {}
+[6.419428] (-) TimerEvent: {}
+[6.519729] (-) TimerEvent: {}
+[6.620062] (-) TimerEvent: {}
+[6.620915] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1\n'}
+[6.621262] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2\n'}
+[6.621730] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake: *** [Makefile:146 : all] Erreur 2\n'}
+[6.624689] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 2}
+[6.720303] (-) TimerEvent: {}
+[6.726492] (robot_mobile_pkg_cpp) JobEnded: {'identifier': 'robot_mobile_pkg_cpp', 'rc': 2}
+[6.737101] (-) EventReactorShutdown: {}

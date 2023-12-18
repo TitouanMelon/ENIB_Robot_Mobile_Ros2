@@ -1,0 +1,7 @@
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:16:[m[K [01;31m[Kerror: [m[K‘[01m[KMainWindow[m[K’ in namespace ‘[01m[KUi[m[K’ does not name a type
+   13 |     ui(new Ui::[01;31m[KMainWindow[m[K)
+      |                [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104: CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:138: CMakeFiles/my_node_ihm.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

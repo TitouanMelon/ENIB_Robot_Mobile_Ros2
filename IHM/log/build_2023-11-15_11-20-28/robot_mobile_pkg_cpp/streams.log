@@ -1,0 +1,94 @@
+[0.129s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.179s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.201s] [ 20%] Built target my_node_ihm_autogen
+[0.218s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.247s] [ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[3.735s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:10:34:[m[K [01;31m[Kerror: [m[K‘[01m[KInt[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[3.735s]    10 | rclcpp::Publisher<std_msgs::msg::[01;31m[KInt[m[K>::SharedPtr publisher_mode;
+[3.735s]       |                                  [01;31m[K^~~[m[K
+[3.735s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:10:37:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.736s]    10 | rclcpp::Publisher<std_msgs::msg::Int[01;31m[K>[m[K::SharedPtr publisher_mode;
+[3.736s]       |                                     [01;31m[K^[m[K
+[3.736s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:10:50:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kpublisher_mode[m[K’
+[3.736s]    10 | rclcpp::Publisher<std_msgs::msg::Int>::SharedPtr [01;31m[Kpublisher_mode[m[K;
+[3.736s]       |                                                  [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.789s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[3.789s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:35:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_mode[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_dir[m[K’?
+[3.790s]    35 |     [01;31m[Kpublisher_mode[m[K = node->create_publisher<std_msgs::msg::Int>("mode", 10);
+[3.790s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.790s]       |     [32m[Kpublisher_dir[m[K
+[3.790s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:35:60:[m[K [01;31m[Kerror: [m[K‘[01m[KInt[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[3.790s]    35 | ublisher_mode = node->create_publisher<std_msgs::msg::[01;31m[KInt[m[K>("mode", 10);
+[3.790s]       |                                                       [01;31m[K^~~[m[K
+[3.791s] 
+[3.791s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:35:64:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_publisher<<expression error> >(const char [5], int)[m[K’
+[3.791s]    35 | sher_mode = [01;31m[Knode->create_publisher<std_msgs::msg::Int>("mode", 10)[m[K;
+[3.791s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[3.791s] 
+[3.791s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+[3.791s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[3.791s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[3.792s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.792s]                  from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:11[m[K,
+[3.792s]                  from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[3.792s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[3.792s]    73 | [01;36m[KNode[m[K::create_publisher(
+[3.792s]       | [01;36m[K^~~~[m[K
+[3.792s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[3.792s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:35:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.793s]    35 | sher_mode = [01;31m[Knode->create_publisher<std_msgs::msg::Int>("mode", 10)[m[K;
+[3.793s]       |             [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[3.793s] 
+[3.810s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K At global scope:
+[3.810s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:120:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::on_radioButton_Auto_toggled(bool)[m[K’
+[3.810s]   120 | void [01;31m[KMainWindow[m[K::on_radioButton_Auto_toggled(bool checked)
+[3.810s]       |      [01;31m[K^~~~~~~~~~[m[K
+[3.811s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:120:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::on_radioButton_Auto_toggled(bool)[m[K’
+[3.811s] In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[3.811s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+[3.811s]    18 | class [01;36m[KMainWindow[m[K : public QMainWindow
+[3.811s]       |       [01;36m[K^~~~~~~~~~[m[K
+[3.811s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:125:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::publishModeAuto()[m[K’
+[3.811s]   125 | void [01;31m[KMainWindow[m[K::publishModeAuto(){
+[3.812s]       |      [01;31m[K^~~~~~~~~~[m[K
+[3.812s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:125:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::publishModeAuto()[m[K’
+[3.812s] In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[3.812s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+[3.812s]    18 | class [01;36m[KMainWindow[m[K : public QMainWindow
+[3.812s]       |       [01;36m[K^~~~~~~~~~[m[K
+[3.812s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:135:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::on_radioButton_Man_toggled(bool)[m[K’
+[3.812s]   135 | void [01;31m[KMainWindow[m[K::on_radioButton_Man_toggled(bool checked)
+[3.813s]       |      [01;31m[K^~~~~~~~~~[m[K
+[3.813s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:135:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::on_radioButton_Man_toggled(bool)[m[K’
+[3.813s] In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[3.813s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+[3.813s]    18 | class [01;36m[KMainWindow[m[K : public QMainWindow
+[3.813s]       |       [01;36m[K^~~~~~~~~~[m[K
+[3.813s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:140:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::publishModeMan()[m[K’
+[3.813s]   140 | void [01;31m[KMainWindow[m[K::publishModeMan(){
+[3.814s]       |      [01;31m[K^~~~~~~~~~[m[K
+[3.814s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:140:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::publishModeMan()[m[K’
+[3.814s] In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[3.814s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+[3.814s]    18 | class [01;36m[KMainWindow[m[K : public QMainWindow
+[3.814s]       |       [01;36m[K^~~~~~~~~~[m[K
+[3.814s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:148:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::on_radioButton_Track_toggled(bool)[m[K’
+[3.814s]   148 | void [01;31m[KMainWindow[m[K::on_radioButton_Track_toggled(bool checked)
+[3.815s]       |      [01;31m[K^~~~~~~~~~[m[K
+[3.815s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:148:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::on_radioButton_Track_toggled(bool)[m[K’
+[3.815s] In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[3.815s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+[3.815s]    18 | class [01;36m[KMainWindow[m[K : public QMainWindow
+[3.815s]       |       [01;36m[K^~~~~~~~~~[m[K
+[3.815s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:153:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::publishModeTrack()[m[K’
+[3.815s]   153 | void [01;31m[KMainWindow[m[K::publishModeTrack(){
+[3.816s]       |      [01;31m[K^~~~~~~~~~[m[K
+[3.816s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:153:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::publishModeTrack()[m[K’
+[3.816s] In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[3.816s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:18:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+[3.816s]    18 | class [01;36m[KMainWindow[m[K : public QMainWindow
+[3.816s]       |       [01;36m[K^~~~~~~~~~[m[K
+[6.621s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+[6.621s] gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+[6.622s] gmake: *** [Makefile:146 : all] Erreur 2
+[6.625s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

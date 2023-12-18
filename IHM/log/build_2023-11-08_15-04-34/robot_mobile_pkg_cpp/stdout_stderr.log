@@ -1,0 +1,10 @@
+[ 33%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 33%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 66%] [32m[1mLinking CXX executable my_node_ihm[0m
+/usr/bin/ld : /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o : dans la fonction « _start » :
+(.text+0x1b) : référence indéfinie vers « main »
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:162 : my_node_ihm] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

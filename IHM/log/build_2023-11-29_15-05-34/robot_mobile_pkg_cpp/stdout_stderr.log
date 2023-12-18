@@ -1,0 +1,11 @@
+[ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 20%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:80:25:[m[K [01;31m[Kerror: [m[Kexpression cannot be used as a function
+   80 |     [01;31m[K((*ui).graphicsView)(graphicsScene)[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

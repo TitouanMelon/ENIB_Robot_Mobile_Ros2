@@ -1,0 +1,16 @@
+[0.128s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.179s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.179s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[0.199s] [ 22%] Built target my_img_pub_node_autogen
+[0.201s] [ 22%] Built target my_node_ihm_autogen
+[0.217s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.225s] [ 55%] Built target my_img_pub_node
+[0.249s] [ 66%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[3.927s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::on_ON_OFF_stateChanged(int)[m[K’:
+[3.927s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:291:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass QGraphicsScene[m[K’ has no member named ‘[01m[KsetEnabled[m[K’
+[3.927s]   291 |         graphicsScene->[01;31m[KsetEnabled[m[K(false);
+[3.927s]       |                        [01;31m[K^~~~~~~~~~[m[K
+[7.555s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+[7.556s] gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+[7.556s] gmake: *** [Makefile:146 : all] Erreur 2
+[7.558s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

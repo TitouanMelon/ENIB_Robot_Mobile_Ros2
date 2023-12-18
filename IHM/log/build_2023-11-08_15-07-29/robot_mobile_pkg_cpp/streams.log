@@ -1,0 +1,34 @@
+[0.099s] Invoking command in '/home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.124s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.271s] -- Found rclcpp: 16.0.6 (/opt/ros/humble/share/rclcpp/cmake)
+[0.306s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.308s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.315s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.329s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.347s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.416s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.417s] -- Found rmw_fastrtps_cpp: 6.2.4 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.539s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.789s] -- Configuring done
+[0.813s] -- Generating done
+[0.815s] -- Build files have been written to: /home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp
+[0.852s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[1.351s] [ 20%] Built target my_node_ihm_autogen
+[1.363s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[1.374s] [ 60%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o[0m
+[1.374s] [ 60%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[1.374s] [ 80%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o[0m
+[1.384s] [01m[K/home/rospc/IHM/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1:10:[m[K [01;31m[Kfatal error: [m[K./include/mainwindow.h: Aucun fichier ou dossier de ce type
+[1.384s]     1 | #include [01;31m[K"./include/mainwindow.h"[m[K
+[1.384s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.384s] compilation terminated.
+[1.385s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+[1.385s] gmake[2]: *** Attente des tâches non terminées....
+[1.398s] [01m[K/home/rospc/IHM/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/my_node.cpp:2:10:[m[K [01;31m[Kfatal error: [m[K../include/mainwindow.h: Aucun fichier ou dossier de ce type
+[1.398s]     2 | #include [01;31m[K"../include/mainwindow.h"[m[K
+[1.398s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.398s] compilation terminated.
+[1.399s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:90 : CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o] Erreur 1
+[4.987s] gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+[4.987s] gmake: *** [Makefile:146 : all] Erreur 2
+[4.989s] Invoked command in '/home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/IHM/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

@@ -1,0 +1,7 @@
+[ 11%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[ 22%] Built target my_img_pub_node_autogen
+[ 22%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_img_pub_node[0m
+[ 66%] Built target my_node_ihm
+[ 77%] [32mBuilding CXX object CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o[0m

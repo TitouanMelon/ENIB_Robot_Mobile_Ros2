@@ -1,0 +1,19 @@
+[0.133s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.183s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.183s] [ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[0.203s] [ 22%] Built target my_img_pub_node_autogen
+[0.206s] [ 22%] Built target my_node_ihm_autogen
+[0.221s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.232s] [ 33%] [32mBuilding CXX object CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o[0m
+[0.250s] [ 44%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[2.805s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:[m[K In constructor ‘[01m[KImagePublisher::ImagePublisher()[m[K’:
+[2.805s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:8:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kui[m[K’ was not declared in this scope
+[2.805s]     8 |         (*[01;31m[Kui[m[K).ON_OFF->setChecked(false);
+[2.806s]       |           [01;31m[K^~[m[K
+[3.968s] gmake[2]: *** [CMakeFiles/my_img_pub_node.dir/build.make:90 : CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o] Erreur 1
+[3.968s] gmake[1]: *** [CMakeFiles/Makefile2:141 : CMakeFiles/my_img_pub_node.dir/all] Erreur 2
+[3.968s] gmake[1]: *** Attente des tâches non terminées....
+[15.643s] [ 55%] [32m[1mLinking CXX executable my_node_ihm[0m
+[16.946s] [ 77%] Built target my_node_ihm
+[16.948s] gmake: *** [Makefile:146 : all] Erreur 2
+[16.950s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

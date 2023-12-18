@@ -1,0 +1,17 @@
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:38:96:[m[K [01;31m[Kerror: [m[K‘[01m[Krgb_onSliderValueChanged[m[K’ is not a member of ‘[01m[KMainWindow[m[K’
+   38 | w, SIGNAL(&QSlider::valueChanged), this, &MainWindow::[01;31m[Krgb_onSliderValueChanged[m[K);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K At global scope:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:215:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::rgb_onSliderValueChanged(int)[m[K’
+  215 | void [01;31m[KMainWindow[m[K::rgb_onSliderValueChanged(int value){
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:215:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::rgb_onSliderValueChanged(int)[m[K’
+In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:24:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   24 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

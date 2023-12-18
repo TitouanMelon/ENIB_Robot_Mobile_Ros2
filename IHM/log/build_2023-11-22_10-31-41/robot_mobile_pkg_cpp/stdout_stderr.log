@@ -1,0 +1,21 @@
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 22%] Built target my_img_pub_node_autogen
+[ 22%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 55%] Built target my_img_pub_node
+[ 66%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:76:1:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K==[m[K’ token
+   76 | [01;31m[K==[m[K======================================================
+      | [01;31m[K^~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:214:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid MainWindow::on_ON_OFF_stateChanged(int)[m[K’
+  214 | void [01;31m[KMainWindow[m[K::on_ON_OFF_stateChanged(int arg1)
+      |      [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:214:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid MainWindow::on_ON_OFF_stateChanged(int)[m[K’
+In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:24:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass MainWindow[m[K’ defined here
+   24 | class [01;36m[KMainWindow[m[K : public QMainWindow
+      |       [01;36m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:167 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

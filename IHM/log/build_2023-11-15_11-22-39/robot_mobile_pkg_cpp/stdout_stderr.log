@@ -1,0 +1,28 @@
+[ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 20%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:1[m[K:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/./../include/mainwindow.hpp:14:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/int.hpp: Aucun fichier ou dossier de ce type
+   14 | #include [01;31m[K<std_msgs/msg/int.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/my_node.cpp:1[m[K:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/../include/mainwindow.hpp:14:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/int.hpp: Aucun fichier ou dossier de ce type
+   14 | #include [01;31m[K<std_msgs/msg/int.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+In file included from [01m[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/6YEA5652QU/moc_mainwindow.cpp:10[m[K,
+                 from [01m[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/mocs_compilation.cpp:2[m[K:
+[01m[K/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp/my_node_ihm_autogen/6YEA5652QU/../../../../src/robot_mobile_pkg_cpp/include/mainwindow.hpp:14:10:[m[K [01;31m[Kfatal error: [m[Kstd_msgs/msg/int.hpp: Aucun fichier ou dossier de ce type
+   14 | #include [01;31m[K<std_msgs/msg/int.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:90 : CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o] Erreur 1
+gmake[2]: *** Attente des tâches non terminées....
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:76 : CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o] Erreur 1
+gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2

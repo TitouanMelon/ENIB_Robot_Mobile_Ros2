@@ -1,0 +1,12 @@
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::rgb_onSliderValueChanged(int)[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:241:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krgb_low[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  241 |     static uint8_t [01;35m[Krgb_low[m[K[3];
+      |                    [01;35m[K^~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:242:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krgb_high[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  242 |     static uint8_t [01;35m[Krgb_high[m[K[3];
+      |                    [01;35m[K^~~~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K At global scope:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:242:20:[m[K [01;35m[Kwarning: [m[K‘[01m[Krgb_high[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:241:20:[m[K [01;35m[Kwarning: [m[K‘[01m[Krgb_low[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  241 |     static uint8_t [01;35m[Krgb_low[m[K[3];
+      |                    [01;35m[K^~~~~~~[m[K

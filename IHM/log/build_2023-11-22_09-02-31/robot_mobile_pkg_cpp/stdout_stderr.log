@@ -1,0 +1,23 @@
+[ 11%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[ 22%] [34m[1mAutomatic MOC and UIC for target my_img_pub_node[0m
+[ 22%] Built target my_img_pub_node_autogen
+[ 22%] Built target my_node_ihm_autogen
+[35m[1mConsolidate compiler generated dependencies of target my_img_pub_node[0m
+[ 66%] Built target my_node_ihm
+[ 77%] [32mBuilding CXX object CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o[0m
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:30:5:[m[K [01;31m[Kerror: [m[K‘[01m[Krclcpp[m[K’ does not name a type
+   30 |     [01;31m[Krclcpp[m[K:Publisher<sensor_msgs::msg::Image>::SharedPtr publisher_;
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:[m[K In constructor ‘[01m[KImagePublisher::ImagePublisher()[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:7:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+    7 |         [01;31m[Kpublisher_[m[K = create_publisher<sensor_msgs::msg::Image>("IMAGE_frame", 10);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krmw_publisher_t[m[K
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:[m[K In member function ‘[01m[Kvoid ImagePublisher::publishImage()[m[K’:
+[01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/img_pub_node.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_publisher_t[m[K’?
+   27 |         [01;31m[Kpublisher_[m[K->publish(message);
+      |         [01;31m[K^~~~~~~~~~[m[K
+      |         [32m[Krmw_publisher_t[m[K
+gmake[2]: *** [CMakeFiles/my_img_pub_node.dir/build.make:90 : CMakeFiles/my_img_pub_node.dir/src/img_pub_node.cpp.o] Erreur 1
+gmake[1]: *** [CMakeFiles/Makefile2:141 : CMakeFiles/my_img_pub_node.dir/all] Erreur 2
+gmake: *** [Makefile:146 : all] Erreur 2
