@@ -2,7 +2,7 @@
 
 Project to make a moving robot with communication and sensors
 
-![robot sheme](./img/robotScheme.png)
+![robot sheme](./conception/img/robotScheme.png)
 
 # Install OS
 
@@ -48,7 +48,7 @@ Go to the **Get Software** level and select the latest version of your OS
 
 Next accept the EULA and fil the form with the name of your choice but a valid email address on the next prompt
 
-![STM32 prompt](./img/stm32.PNG)
+![STM32 prompt](./conception/img/stm32.PNG)
 
 You will receive an email with the download link
 
@@ -82,5 +82,5 @@ cp -r ./ENIB_Robot_Mobile_Ros2/WORKSPACE_F411_uROS6 /your/path/of/workspace/fold
 |PB0        | ADC1_4        | Sensor IR 2     |
 
 
-![STM32 prompt](./img/UART1_STM32.jpg)
-![STM32 prompt](./img/Shield_Ard.jpg)
+![STM32 prompt](./conception/img/UART1_STM32.jpg)
+![STM32 prompt](./conception/img/Shield_Ard.jpg)
