@@ -4,6 +4,24 @@ Project to make a moving robot with communication and sensors
 
 ![robot sheme](./conception/img/robotScheme.png)
 
+# Folder description
+
+```
+\---Camera : camera's program 
+\---IHM : qt ihm
+\---WORKSPACE_F411_uROS6 : stm32 workspace
+\---conception
+|   \---3D_models
+|   \---img : img to readme
+|   \---installation scripts
+|   \---schematique : eagle
+\---docs
+|   \---externe : extern pdf 
+|   \---html : documentation in web format
+|   \---latex : documentation in pdf format
+\---report : report for ERI
+```
+
 # Install OS
 
 ## On a PC
@@ -13,8 +31,19 @@ Install <a href="https://www.raspberrypi.com/software/">RPI imager</a> and with 
 
 CHOOSE OS -> Other general-purpose OS -> Ubuntu -> Ubuntu Desktop 22.04.03 LTS (64bits)
 
-# Install ROS2
+# Install all in one script
+>[!NOTE]
+>this section is recommended for a pc but it is possible to apply it to the raspberry PI
 
+You can install all necessary tools with this following commands.
+```
+wget ROS.sh
+wget STM32cubeIDE.sh
+sed blabla && ./ROS.sh
+```
+
+# For PC and RaspberryPi
+## Install ROS2
 ROS2 installation is the same on PC and on RPI
 
 ```
@@ -24,7 +53,7 @@ chmod +x ./rosInstall.sh
 ./rosInstall.sh
 ```
 
-# Install MicroRos
+## Install MicroRos
 
 >[!WARNING]
 >Be carreful the installation of microRos require a minimum of 1GB of RAM to succes
@@ -38,11 +67,25 @@ wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/edit/main/script/mic
 chmod +x ./microRosInstall.sh
 ./microRosInstall.sh
 ```
-# STM32CubeIde
+
+## Copy scripts on pc
+```
+cd ~
+wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/STM32.sh
+wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/SET_ROS_DOMAIN_ID.sh
+sudo ln -s ./STM32.sh /usr/bin/stm32_ros_agent 
+sudo ln -s ./SET_ROS_DOMAIN_ID.sh /usr/bin/set_ros_id
+```
+
+# For Pc only
+>[!NOTE]
+>this section is recommended for a pc but it is possible to apply it to the raspberry PI
+
+## STM32CubeIde
 
 Get <a href="https://www.st.com/en/development-tools/stm32cubeide.html">STM32CubeIde</a> and install it 
 
-## Install
+### Install
 
 Go to the **Get Software** level and select the latest version of your OS
 
@@ -54,7 +97,7 @@ You will receive an email with the download link
 
 After download just launch the executable and follow the instructions
 
-## Get the workspace
+### Get the workspace
 
 ```
 sudo apt install git unzip -y
@@ -63,6 +106,17 @@ unzip ./ENIB_Robot_Mobile_Ros2/WORKSPACE_F411_uROS6/base_robot/micro_ros_stm32cu
 cp -r ./ENIB_Robot_Mobile_Ros2/WORKSPACE_F411_uROS6 /your/path/of/workspace/folder
 # Uncomment the next line to remove the git folder after move workspace
 #sudo rm -r ENIB_Robot_Mobile_Ros2
+```
+
+### Install gtkterm
+```
+sudo apt install gtkterm -y
+```
+
+## QT creator and QT creator ros
+```
+sudo apt install qtcreator -y
+sudo snap install qtcreator-ros --classic
 ```
 
 # Pinout
