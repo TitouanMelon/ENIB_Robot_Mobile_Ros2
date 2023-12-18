@@ -15,9 +15,9 @@
 \item 
 \#define \mbox{\hyperlink{_v_l53_l0_x_8c_a4b19f214c60c75fdebd40fab2ab214d8}{ACTIVE\+\_\+\+WHILE}}~0
 \item 
-\#define \mbox{\hyperlink{_v_l53_l0_x_8c_ad8b608ea82f1d76f3ccf33b658cec012}{IO\+\_\+2\+V8}}~0
+\#define \mbox{\hyperlink{_v_l53_l0_x_8c_ad8b608ea82f1d76f3ccf33b658cec012}{IO\+\_\+2\+V8}}~1
 \item 
-\#define \mbox{\hyperlink{_v_l53_l0_x_8c_a280feb883e9d4a7edcc69c8bcb9f38f2}{ADDRESS}}~ADDRESS\+\_\+\+DEFAULT2
+\#define \mbox{\hyperlink{_v_l53_l0_x_8c_a280feb883e9d4a7edcc69c8bcb9f38f2}{ADDRESS}}~0x52
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -56,6 +56,8 @@ uint16\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_a3e1989fd43b7a20b5366d6ff68ee2788}
 uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_ac2ebf1aa766207c115a7f67cb6cdb0f2}{g\+\_\+i2c\+Addr}} = ADDRESS
 \item 
 uint8\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_a50099b66ab2504517a7a2e5130a41cb0}{g\+\_\+stop\+Variable}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{_v_l53_l0_x_8c_a4f103281f9159074795b56efb49e9867}{addr\+\_\+read}} = 0
 \end{DoxyCompactItemize}
 
 
@@ -83,7 +85,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00019}{19}} of file \
 \index{VL53L0X.c@{VL53L0X.c}!ADDRESS@{ADDRESS}}
 \index{ADDRESS@{ADDRESS}!VL53L0X.c@{VL53L0X.c}}
 \doxysubsubsection{\texorpdfstring{ADDRESS}{ADDRESS}}
-{\footnotesize\ttfamily \#define ADDRESS~ADDRESS\+\_\+\+DEFAULT2}
+{\footnotesize\ttfamily \#define ADDRESS~0x52}
 
 
 
@@ -93,7 +95,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00021}{21}} of file \
 \index{VL53L0X.c@{VL53L0X.c}!IO\_2V8@{IO\_2V8}}
 \index{IO\_2V8@{IO\_2V8}!VL53L0X.c@{VL53L0X.c}}
 \doxysubsubsection{\texorpdfstring{IO\_2V8}{IO\_2V8}}
-{\footnotesize\ttfamily \#define IO\+\_\+2\+V8~0}
+{\footnotesize\ttfamily \#define IO\+\_\+2\+V8~1}
 
 
 
@@ -110,7 +112,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00020}{20}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00102}{102}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00103}{103}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_a8a245f240513893a09d74055fc2c9ad1}\label{_v_l53_l0_x_8c_a8a245f240513893a09d74055fc2c9ad1} 
 \index{VL53L0X.c@{VL53L0X.c}!getSignalRateLimit@{getSignalRateLimit}}
@@ -120,7 +122,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00102}{102}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00328}{328}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00329}{329}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_a48968728ebf3f96fe8408e24871c5edf}\label{_v_l53_l0_x_8c_a48968728ebf3f96fe8408e24871c5edf} 
 \index{VL53L0X.c@{VL53L0X.c}!initVL53L0X@{initVL53L0X}}
@@ -130,7 +132,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00328}{328}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00114}{114}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00115}{115}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_ab0a8b6cd53ad23f5cee2941472eff9da}\label{_v_l53_l0_x_8c_ab0a8b6cd53ad23f5cee2941472eff9da} 
 \index{VL53L0X.c@{VL53L0X.c}!performSingleRefCalibration@{performSingleRefCalibration}}
@@ -150,7 +152,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00369}{369}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00341}{341}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00342}{342}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_a2e9db5636b09511a0663c21aab12a20d}\label{_v_l53_l0_x_8c_a2e9db5636b09511a0663c21aab12a20d} 
 \index{VL53L0X.c@{VL53L0X.c}!readReg@{readReg}}
@@ -170,7 +172,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00062}{62}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00069}{69}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00070}{70}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_abca216a4ac4b799fdfacfbb302d4ae76}\label{_v_l53_l0_x_8c_abca216a4ac4b799fdfacfbb302d4ae76} 
 \index{VL53L0X.c@{VL53L0X.c}!readReg32Bit@{readReg32Bit}}
@@ -180,7 +182,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00069}{69}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00077}{77}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00079}{79}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_a8db5deeec4ee773d049e20205eb3325c}\label{_v_l53_l0_x_8c_a8db5deeec4ee773d049e20205eb3325c} 
 \index{VL53L0X.c@{VL53L0X.c}!setAddress@{setAddress}}
@@ -190,7 +192,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00077}{77}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00097}{97}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00098}{98}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_a946eb216c97fd492238b1bcda70de2fc}\label{_v_l53_l0_x_8c_a946eb216c97fd492238b1bcda70de2fc} 
 \index{VL53L0X.c@{VL53L0X.c}!setSignalRateLimit@{setSignalRateLimit}}
@@ -200,7 +202,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00097}{97}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00318}{318}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00319}{319}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_ae752ee027a82b5abc44574086f49dbf1}\label{_v_l53_l0_x_8c_ae752ee027a82b5abc44574086f49dbf1} 
 \index{VL53L0X.c@{VL53L0X.c}!writeMulti@{writeMulti}}
@@ -210,7 +212,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00318}{318}} of file 
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00086}{86}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00089}{89}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_ad6179041819c85cb36e331f40ebf3652}\label{_v_l53_l0_x_8c_ad6179041819c85cb36e331f40ebf3652} 
 \index{VL53L0X.c@{VL53L0X.c}!writeReg@{writeReg}}
@@ -220,7 +222,7 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00086}{86}} of file \
 
 
 
-Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00038}{38}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00039}{39}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
 
 \Hypertarget{_v_l53_l0_x_8c_a7413a862a6adb50d11147aac61ad89c1}\label{_v_l53_l0_x_8c_a7413a862a6adb50d11147aac61ad89c1} 
 \index{VL53L0X.c@{VL53L0X.c}!writeReg16Bit@{writeReg16Bit}}
@@ -245,6 +247,16 @@ Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00052}{52}} of file \
 
 
 \doxysubsection{Variable Documentation}
+\Hypertarget{_v_l53_l0_x_8c_a4f103281f9159074795b56efb49e9867}\label{_v_l53_l0_x_8c_a4f103281f9159074795b56efb49e9867} 
+\index{VL53L0X.c@{VL53L0X.c}!addr\_read@{addr\_read}}
+\index{addr\_read@{addr\_read}!VL53L0X.c@{VL53L0X.c}}
+\doxysubsubsection{\texorpdfstring{addr\_read}{addr\_read}}
+{\footnotesize\ttfamily uint16\+\_\+t addr\+\_\+read = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_v_l53_l0_x_8c_source_l00029}{29}} of file \mbox{\hyperlink{_v_l53_l0_x_8c_source}{VL53\+L0\+X.\+c}}.
+
 \Hypertarget{_v_l53_l0_x_8c_ac2ebf1aa766207c115a7f67cb6cdb0f2}\label{_v_l53_l0_x_8c_ac2ebf1aa766207c115a7f67cb6cdb0f2} 
 \index{VL53L0X.c@{VL53L0X.c}!g\_i2cAddr@{g\_i2cAddr}}
 \index{g\_i2cAddr@{g\_i2cAddr}!VL53L0X.c@{VL53L0X.c}}

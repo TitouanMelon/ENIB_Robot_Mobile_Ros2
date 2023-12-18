@@ -405,510 +405,498 @@
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00441}00441\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ SEUIL\ =\ 20;\ \textcolor{comment}{//Trigger}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00442}00442\ \ \ \ \ \textcolor{keywordtype}{int}\ obs\ =\ 0;\ \textcolor{comment}{//Bool\ to\ indicate\ if\ we\ detect\ an\ obstacle\ or\ not}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00443}00443\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00444}00444\ \ \ \ \ \textcolor{keywordtype}{int}\ tmp\ =\ 0;\ \textcolor{comment}{//For\ debug\ purpose}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00445}00445\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00446}00446\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00447}00447\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00448}00448\ \ \ \ \ \ \ \ \ dist\ =\ readRangeSingleMillimeters()/10;\ \textcolor{comment}{//Get\ the\ distance\ from\ the\ sensor}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00449}00449\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00450}00450\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (tmp\ >\ 10000)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00451}00451\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00452}00452\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Valeur\ VL53\ :\ \%d\(\backslash\)r\(\backslash\)n"{}},\ dist);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00453}00453\ \ \ \ \ \ \ \ \ \ \ \ \ tmp\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00454}00454\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00455}00455\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00456}00456\ \ \ \ \ \ \ \ \ \ \ \ \ tmp++;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00457}00457\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00458}00458\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dist\ <\ SEUIL\ \&\&\ dist\ !=\ 0)\ \textcolor{comment}{//If\ distance\ is\ less\ than\ the\ trigger}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00459}00459\ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 1;\ \textcolor{comment}{//We\ detect\ an\ obstacle}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00460}00460\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00461}00461\ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 0;\ \textcolor{comment}{//We\ do\ not\ detect\ an\ obstacle}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00462}00462\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00463}00463\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}}))\ \textcolor{comment}{//If\ no\ data\ in\ queue}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00464}00464\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueSend(\mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}},\ (\textcolor{keywordtype}{void}\ *)\&obs,\ portMAX\_DELAY);\ \textcolor{comment}{//Send\ data}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00465}00465\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00466}00466\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00467}00467\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00468}00468\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00469}00469\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00470}00470\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00471}00471\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00472}00472\ \textcolor{preprocessor}{\#if\ LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00473}\mbox{\hyperlink{main_8h_a0437f457b0f155ea2e19c99e841144f4}{00473}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a0437f457b0f155ea2e19c99e841144f4}{task\_Grove\_LCD}}(\textcolor{keywordtype}{void}\ *pvParameters)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00474}00474\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00475}00475\ \textcolor{preprocessor}{\#if\ SYNCHRO\_EX\ ==\ EXSTARTUP}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00476}00476\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00477}00477\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00478}00478\ \ \ \ \ \ \ \ \ \ groveLCD\_setCursor(0,0);\ \textcolor{comment}{//Set\ cursor\ position\ to\ 0,0}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00479}00479\ \ \ \ \ \ \ \ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}TEST\ LCD"{}});\ \textcolor{comment}{//Write\ TEST\ LCD\ on\ the\ screen}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00480}00480\ \ \ \ \ \ \ \ \ \ vTaskDelay(100);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00481}00481\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00482}00482\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXFINAL}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00483}00483\ \ \ \ \ \mbox{\hyperlink{struct_a_message}{AMessage}}\ pxRxedMessage;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00484}00484\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00485}00485\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00486}00486\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00487}00487\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}}))\ \textcolor{comment}{//If\ data\ in\ the\ queue}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00488}00488\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00489}00489\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueReceive(\mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}},\ \&pxRxedMessage,\ portMAX\_DELAY);\ \textcolor{comment}{//Receive\ data}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00490}00490\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mode\ =\ pxRxedMessage.\mbox{\hyperlink{struct_a_message_a9eab91667db4d35c7231dcddf7b89a76}{data}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00491}00491\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ direction=pxRxedMessage.\mbox{\hyperlink{struct_a_message_a25827e9cb2be1cdb757882bea43e0af9}{command}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00492}00492\ \ \ \ \ \ \ \ \ \ \ \ \ groveLCD\_setCursor(0,0);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00493}00493\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Write\ on\ screen\ information\ about\ mode}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00494}00494\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_OBS)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00495}00495\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}M:Obstacle\ \ D:\%c"{}},\ direction);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00496}00496\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_ZIG)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00497}00497\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}M:Manuel\ \ \ \ \ \ \ \ "{}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00498}00498\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_CAM)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00499}00499\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}M:Camera\ \ \ \ \ \ \ \ "{}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00500}00500\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00501}00501\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00502}00502\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00503}00503\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00504}00504\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SYNCHRO\_EX}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00505}00505\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00506}00506\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00507}00507\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00508}\mbox{\hyperlink{main_8h_aa20650615a802a253757e491905b6af9}{00508}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\_Supervision}}(\textcolor{keywordtype}{void}\ *pvParameters)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00509}00509\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00510}00510\ \textcolor{preprocessor}{\#if\ SYNCHRO\_EX\ ==\ EXSTARTUP}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00511}00511\ \ \ \ \ int16\_t\ consigne\_G=0;\ \textcolor{comment}{//Motor\ left\ speed}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00512}00512\ \ \ \ \ int16\_t\ consigne\_D=0;\ \textcolor{comment}{//Motor\ rigth\ speed}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00444}00444\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00445}00445\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00446}00446\ \ \ \ \ \ \ \ \ dist\ =\ readRangeSingleMillimeters()/10;\ \textcolor{comment}{//Get\ the\ distance\ from\ the\ sensor}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00447}00447\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00448}00448\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dist\ <\ SEUIL\ \&\&\ dist\ !=\ 0)\ \textcolor{comment}{//If\ distance\ is\ less\ than\ the\ trigger}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00449}00449\ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 1;\ \textcolor{comment}{//We\ detect\ an\ obstacle}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00450}00450\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00451}00451\ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 0;\ \textcolor{comment}{//We\ do\ not\ detect\ an\ obstacle}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00452}00452\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00453}00453\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}}))\ \textcolor{comment}{//If\ no\ data\ in\ queue}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00454}00454\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueSend(\mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}},\ (\textcolor{keywordtype}{void}\ *)\&obs,\ portMAX\_DELAY);\ \textcolor{comment}{//Send\ data}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00455}00455\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00456}00456\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00457}00457\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00458}00458\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00459}00459\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00460}00460\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00461}00461\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00462}00462\ \textcolor{preprocessor}{\#if\ LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00463}\mbox{\hyperlink{main_8h_a0437f457b0f155ea2e19c99e841144f4}{00463}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a0437f457b0f155ea2e19c99e841144f4}{task\_Grove\_LCD}}(\textcolor{keywordtype}{void}\ *pvParameters)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00464}00464\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00465}00465\ \textcolor{preprocessor}{\#if\ SYNCHRO\_EX\ ==\ EXSTARTUP}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00466}00466\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00467}00467\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00468}00468\ \ \ \ \ \ \ \ \ \ groveLCD\_setCursor(0,0);\ \textcolor{comment}{//Set\ cursor\ position\ to\ 0,0}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00469}00469\ \ \ \ \ \ \ \ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}TEST\ LCD"{}});\ \textcolor{comment}{//Write\ TEST\ LCD\ on\ the\ screen}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00470}00470\ \ \ \ \ \ \ \ \ \ vTaskDelay(100);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00471}00471\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00472}00472\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXFINAL}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00473}00473\ \ \ \ \ \mbox{\hyperlink{struct_a_message}{AMessage}}\ pxRxedMessage;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00474}00474\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00475}00475\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00476}00476\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00477}00477\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}}))\ \textcolor{comment}{//If\ data\ in\ the\ queue}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00478}00478\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00479}00479\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueReceive(\mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}},\ \&pxRxedMessage,\ portMAX\_DELAY);\ \textcolor{comment}{//Receive\ data}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00480}00480\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mode\ =\ pxRxedMessage.\mbox{\hyperlink{struct_a_message_a9eab91667db4d35c7231dcddf7b89a76}{data}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00481}00481\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ direction=pxRxedMessage.\mbox{\hyperlink{struct_a_message_a25827e9cb2be1cdb757882bea43e0af9}{command}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00482}00482\ \ \ \ \ \ \ \ \ \ \ \ \ groveLCD\_setCursor(0,0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00483}00483\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Write\ on\ screen\ information\ about\ mode}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00484}00484\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_OBS)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00485}00485\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}M:Obstacle\ \ D:\%c"{}},\ direction);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00486}00486\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_ZIG)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00487}00487\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}M:Manuel\ \ \ \ \ \ \ \ "{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00488}00488\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_CAM)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00489}00489\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}M:Camera\ \ \ \ \ \ \ \ "{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00490}00490\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00491}00491\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00492}00492\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00493}00493\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00494}00494\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SYNCHRO\_EX}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00495}00495\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00496}00496\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00497}00497\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00498}\mbox{\hyperlink{main_8h_aa20650615a802a253757e491905b6af9}{00498}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\_Supervision}}(\textcolor{keywordtype}{void}\ *pvParameters)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00499}00499\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00500}00500\ \textcolor{preprocessor}{\#if\ SYNCHRO\_EX\ ==\ EXSTARTUP}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00501}00501\ \ \ \ \ int16\_t\ consigne\_G=0;\ \textcolor{comment}{//Motor\ left\ speed}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00502}00502\ \ \ \ \ int16\_t\ consigne\_D=0;\ \textcolor{comment}{//Motor\ rigth\ speed}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00503}00503\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00504}00504\ \ \ \ \ \textcolor{keywordtype}{int}\ tab\_mes\_ir[2];\ \textcolor{comment}{//VL53L0X\ sensors\ values}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00505}00505\ \ \ \ \ uint16\_t\ mes\_vl53=0;\ \textcolor{comment}{//VL530X\ sensor\ value}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00506}00506\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00507}00507\ \ \ \ \ vTaskDelay(100);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00508}00508\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00509}00509\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00510}00510\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Get\ sensor\ value}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00511}00511\ \ \ \ \ \ \ \ \ captDistIR\_Get(tab\_mes\_ir);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00512}00512\ \ \ \ \ \ \ \ \ \textcolor{comment}{//mes\_vl53\ =\ readRangeSingleMillimeters()/10;}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00513}00513\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00514}00514\ \ \ \ \ \textcolor{keywordtype}{int}\ tab\_mes\_ir[2];\ \textcolor{comment}{//VL53L0X\ sensors\ values}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00515}00515\ \ \ \ \ uint16\_t\ mes\_vl53=0;\ \textcolor{comment}{//VL530X\ sensor\ value}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00516}00516\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00517}00517\ \ \ \ \ vTaskDelay(100);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00518}00518\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00519}00519\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00520}00520\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Get\ sensor\ value}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00521}00521\ \ \ \ \ \ \ \ \ captDistIR\_Get(tab\_mes\_ir);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00522}00522\ \ \ \ \ \ \ \ \ \textcolor{comment}{//mes\_vl53\ =\ readRangeSingleMillimeters()/10;}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00523}00523\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00524}00524\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((tab\_mes\_ir[0]>2000)||(tab\_mes\_ir[1]>2000))}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00525}00525\ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ !!\ obstacle}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00526}00526\ \ \ \ \ \ \ \ \ \ \ \ \ consigne\_G=0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00527}00527\ \ \ \ \ \ \ \ \ \ \ \ \ consigne\_D=0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00528}00528\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00529}00529\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00530}00530\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00531}00531\ \ \ \ \ \ \ \ \ \ \ \ \ consigne\_G=1000;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00532}00532\ \ \ \ \ \ \ \ \ \ \ \ \ consigne\_D=1000;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00533}00533\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00534}00534\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00535}00535\ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\_mot\_L}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&consigne\_G,\ \ portMAX\_DELAY\ );}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00536}00536\ \ \ \ \ \ \ \ \ xSemaphoreTake(\ \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY\ );}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00537}00537\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00538}00538\ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\_mot\_R}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&consigne\_D,\ \ portMAX\_DELAY\ );}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00539}00539\ \ \ \ \ \ \ \ \ xSemaphoreTake(\ \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY\ );}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00540}00540\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00541}00541\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00542}00542\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00543}00543\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTESTCORRECTOR}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00544}00544\ \ \ \ \ int16\_t\ speedLeft\ =\ \mbox{\hyperlink{main_8c_abfb9d3a25ca2e3a1dae1c814522ca875}{TEST\_CORRECTOR\_SPEEDL}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00545}00545\ \ \ \ \ int16\_t\ speedRight\ =\ \mbox{\hyperlink{main_8c_aafb3a6eb5ef46672cb007ee167d395a4}{TEST\_CORRECTOR\_SPEEDR}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00546}00546\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00547}00547\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00548}00548\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00549}00549\ \ \ \ \ \ \ \ \ xQueueSend(\mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\_mot\_L}},\ (\textcolor{keywordtype}{void}\ *)\&speedLeft,\ portMAX\_DELAY);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00550}00550\ \ \ \ \ \ \ \ \ xSemaphoreTake(\mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00551}00551\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00552}00552\ \ \ \ \ \ \ \ \ xQueueSend(\mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\_mot\_R}},\ (\textcolor{keywordtype}{void}\ *)\&speedRight,\ portMAX\_DELAY);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00553}00553\ \ \ \ \ \ \ \ \ xSemaphoreTake(\mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00554}00554\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00555}00555\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00556}00556\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00557}00557\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXFINAL}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00558}00558\ \ \ \ \ int16\_t\ speedLeft;\ \textcolor{comment}{//Motor\ left\ speed}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00559}00559\ \ \ \ \ int16\_t\ speedRight;\ \textcolor{comment}{//Motor\ rigth\ speed}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00560}00560\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00561}00561\ \ \ \ \ \textcolor{keywordtype}{int}\ table[2];\ \textcolor{comment}{//VL53L0X\ sensors\ values}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00562}00562\ \textcolor{preprocessor}{\ \ \ \ \#if\ VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00563}00563\ \ \ \ \ \textcolor{keywordtype}{int}\ vl53\ =\ 0;\ \textcolor{comment}{//VL530X\ detect\ an\ obstacle\ or\ not}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00564}00564\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00565}00565\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00566}00566\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ obs\ =\ 0;\ \textcolor{comment}{//store\ the\ number\ of\ different\ obstacle\ detected\ without\ break}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00567}00567\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ dir\ =\ \textcolor{charliteral}{'f'};\ \textcolor{comment}{//represent\ the\ direction\ of\ the\ robot\ in\ obstacle\ mode}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00568}00568\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ direction\ =\ \mbox{\hyperlink{main_8c_a63ec0cea9c1f0ca8a7893c2c53d2fd81}{DEFAULT\_DIR}};\ \textcolor{comment}{//default\ direction\ of\ the\ robot}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00569}00569\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ speed\ =\ \mbox{\hyperlink{main_8c_afc945b2e8394478f97e2aabc7aebaf0e}{DEFAULT\_SPEED}};\ \textcolor{comment}{//default\ speed\ of\ the\ robot}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00570}00570\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mode\ =\ \mbox{\hyperlink{main_8c_ab9c800875296f23bd616d7d273ff16d7}{DEFAULT\_MODE}};\ \textcolor{comment}{//default\ mode\ of\ the\ robot}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00571}00571\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ x\ =\ 0;\ \textcolor{comment}{//position\ x\ of\ the\ object\ detect\ by\ the\ camera}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00572}00572\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ y\ =\ 0;\ \textcolor{comment}{//position\ y\ of\ the\ object\ detect\ by\ the\ camera}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00573}00573\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00574}00574\ \textcolor{preprocessor}{\#if\ LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00575}00575\ \ \ \ \ \ \mbox{\hyperlink{struct_a_message}{AMessage}}\ pxMessage;\ \textcolor{comment}{//LCD\ queue\ message}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00576}00576\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00577}00577\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00578}00578\ \textcolor{preprocessor}{\#if\ MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00579}00579\ \ \ \ \ \mbox{\hyperlink{struct_micro_ros_sub_msg}{MicroRosSubMsg}}\ SubToMsg;\ \textcolor{comment}{//ROS\ subscriber\ queue\ message}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00580}00580\ \ \ \ \ \mbox{\hyperlink{struct_micro_ros_pub_msg}{MicroRosPubMsg}}\ MsgToPub;\ \textcolor{comment}{//ROS\ publisher\ queue\ message}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00581}00581\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00582}00582\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00583}00583\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00584}00584\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00585}00585\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00586}00586\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}{qhMR\_sub}}))\ \textcolor{comment}{//If\ data\ \ are\ in\ the\ the\ queue}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00587}00587\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00588}00588\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueReceive(\mbox{\hyperlink{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}{qhMR\_sub}},\ \&SubToMsg,\ portMAX\_DELAY);\ \textcolor{comment}{//Receive\ data}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00589}00589\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Set\ mode,\ speed\ and\ direction\ if\ the\ data\ is\ correct}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00590}00590\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a1ea5d0cb93f22f7d0fdf804bd68c3326}{mode}}\ >=\ 0\ \&\&\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a1ea5d0cb93f22f7d0fdf804bd68c3326}{mode}}\ <\ LAST\_MODE)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00591}00591\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a1ea5d0cb93f22f7d0fdf804bd68c3326}{mode}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00592}00592\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a851cf68c8f607573c1a5e987784c83f6}{dir}}\ >=\ 0\ \&\&\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a851cf68c8f607573c1a5e987784c83f6}{dir}}\ <\ LAST\_DIR)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00593}00593\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ direction\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a851cf68c8f607573c1a5e987784c83f6}{dir}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00594}00594\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}\ >\ 0\ \&\&\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}\ <\ LAST\_SPEED)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00595}00595\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00596}00596\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Set\ x\ and\ y\ position}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00597}00597\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00598}00598\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00599}00599\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#if\ DEBUG\_PRINTF}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00600}00600\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%cc\%c[2J\%c[0;0HVariable\ to\ make\ decision\ :\ \(\backslash\)n\(\backslash\)rDirection\ :\ \%d\(\backslash\)r\(\backslash\)nMode:\ \%d\(\backslash\)r\(\backslash\)nSpeed\ :\ \%d\(\backslash\)r\(\backslash\)nX:\ \%d\(\backslash\)r\(\backslash\)nY\ :\ \%d\(\backslash\)r\(\backslash\)n"{}},\ 0x1b,\ 0x1b,\ 0x1b,\ direction,\ mode,\ speed,\ x,\ y);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00601}00601\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//DEBUG\_PRINTF}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00602}00602\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00603}00603\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00604}00604\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00605}00605\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_ZIG)\ \textcolor{comment}{//Mode\ manual}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00606}00606\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00607}00607\ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'N'};\ \textcolor{comment}{//No\ direction\ information}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00608}00608\ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 0;\ \textcolor{comment}{//No\ obstacle}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00609}00609\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(direction)\ \textcolor{comment}{//Set\ the\ motor\ speed\ depending\ of\ the\ direction\ variable}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00610}00610\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00611}00611\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ STOP:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00612}00612\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00613}00613\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00614}00614\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00615}00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ AVANT:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00616}00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00617}00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00618}00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00619}00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ RECULE:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00620}00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00621}00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00622}00622\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00623}00623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DROITE:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00624}00624\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00625}00625\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00626}00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00627}00627\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ GAUCHE:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00630}00630\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00631}00631\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ AVANT\_GAUCHE:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00632}00632\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ (\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}/2)+(8*(speed-\/50));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00633}00633\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00634}00634\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00635}00635\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ AVANT\_DROITE:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00636}00636\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00637}00637\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ (\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}/2)+(8*(speed-\/50));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00638}00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00639}00639\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ RECULE\_GAUCHE:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00640}00640\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00641}00641\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/((\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}/2)+(8*(speed-\/50)));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00642}00642\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00643}00643\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ RECULE\_DROITE:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00644}00644\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/((\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}/2)+(8*(speed-\/50)));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00645}00645\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00646}00646\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00647}00647\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00648}00648\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00649}00649\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00650}00650\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00651}00651\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00652}00652\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00653}00653\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_OBS)\ \textcolor{comment}{//Mode\ obstacle}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00654}00654\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00655}00655\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Get\ sensors\ informations}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00656}00656\ \ \ \ \ \ \ \ \ \ \ \ \ captDistIR\_Get(table);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00657}00657\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#if\ VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00658}00658\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}}))}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00659}00659\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ xQueueReceive(\mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}},\ \&vl53,\ portMAX\_DELAY);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00660}00660\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00661}00661\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vl53\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00662}00662\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00663}00663\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (vl53\ ==\ 1)\ \textcolor{comment}{//if\ an\ obstacle\ is\ detected\ on\ the\ back\ we\ stop}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00664}00664\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00665}00665\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00666}00666\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00667}00667\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'S'};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00668}00668\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 1;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00669}00669\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00670}00670\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00671}00671\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00672}00672\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (table[0]\ >\ \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\_DIST\_SENSOR}}\ ||\ table[1]\ >\ \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\_DIST\_SENSOR}})\ \textcolor{comment}{//We\ have\ an\ obstacle\ in\ front\ of\ the\ robot}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00673}00673\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00674}00674\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (obs\ >\ 10)\ \textcolor{comment}{//If\ we\ detect\ more\ than\ 10\ different\ obstacle\ we\ turn\ on\ the\ left\ until\ they\ are\ no\ more\ obstacle}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00675}00675\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00676}00676\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00677}00677\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/\mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00678}00678\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'G'};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00679}00679\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00680}00680\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00681}00681\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00682}00682\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00683}00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00684}00684\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00685}00685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (table[0]\ >\ table[1]\ \&\&\ table[0]\ >\ \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\_DIST\_SENSOR}})\ \textcolor{comment}{//We\ have\ an\ obstacle\ on\ our\ right}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00514}00514\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}((tab\_mes\_ir[0]>2000)||(tab\_mes\_ir[1]>2000))}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00515}00515\ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ !!\ obstacle}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00516}00516\ \ \ \ \ \ \ \ \ \ \ \ \ consigne\_G=0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00517}00517\ \ \ \ \ \ \ \ \ \ \ \ \ consigne\_D=0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00518}00518\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00519}00519\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00520}00520\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00521}00521\ \ \ \ \ \ \ \ \ \ \ \ \ consigne\_G=1000;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00522}00522\ \ \ \ \ \ \ \ \ \ \ \ \ consigne\_D=1000;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00523}00523\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00524}00524\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00525}00525\ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\_mot\_L}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&consigne\_G,\ \ portMAX\_DELAY\ );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00526}00526\ \ \ \ \ \ \ \ \ xSemaphoreTake(\ \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY\ );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00527}00527\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00528}00528\ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\_mot\_R}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&consigne\_D,\ \ portMAX\_DELAY\ );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00529}00529\ \ \ \ \ \ \ \ \ xSemaphoreTake(\ \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY\ );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00530}00530\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00531}00531\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00532}00532\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00533}00533\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTESTCORRECTOR}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00534}00534\ \ \ \ \ int16\_t\ speedLeft\ =\ \mbox{\hyperlink{main_8c_abfb9d3a25ca2e3a1dae1c814522ca875}{TEST\_CORRECTOR\_SPEEDL}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00535}00535\ \ \ \ \ int16\_t\ speedRight\ =\ \mbox{\hyperlink{main_8c_aafb3a6eb5ef46672cb007ee167d395a4}{TEST\_CORRECTOR\_SPEEDR}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00536}00536\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00537}00537\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00538}00538\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00539}00539\ \ \ \ \ \ \ \ \ xQueueSend(\mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\_mot\_L}},\ (\textcolor{keywordtype}{void}\ *)\&speedLeft,\ portMAX\_DELAY);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00540}00540\ \ \ \ \ \ \ \ \ xSemaphoreTake(\mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00541}00541\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00542}00542\ \ \ \ \ \ \ \ \ xQueueSend(\mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\_mot\_R}},\ (\textcolor{keywordtype}{void}\ *)\&speedRight,\ portMAX\_DELAY);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00543}00543\ \ \ \ \ \ \ \ \ xSemaphoreTake(\mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00544}00544\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00545}00545\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00546}00546\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00547}00547\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXFINAL}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00548}00548\ \ \ \ \ int16\_t\ speedLeft;\ \textcolor{comment}{//Motor\ left\ speed}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00549}00549\ \ \ \ \ int16\_t\ speedRight;\ \textcolor{comment}{//Motor\ rigth\ speed}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00550}00550\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00551}00551\ \ \ \ \ \textcolor{keywordtype}{int}\ table[2];\ \textcolor{comment}{//VL53L0X\ sensors\ values}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00552}00552\ \textcolor{preprocessor}{\ \ \ \ \#if\ VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00553}00553\ \ \ \ \ \textcolor{keywordtype}{int}\ vl53\ =\ 0;\ \textcolor{comment}{//VL530X\ detect\ an\ obstacle\ or\ not}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00554}00554\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00555}00555\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00556}00556\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ obs\ =\ 0;\ \textcolor{comment}{//store\ the\ number\ of\ different\ obstacle\ detected\ without\ break}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00557}00557\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{char}\ dir\ =\ \textcolor{charliteral}{'f'};\ \textcolor{comment}{//represent\ the\ direction\ of\ the\ robot\ in\ obstacle\ mode}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00558}00558\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ direction\ =\ \mbox{\hyperlink{main_8c_a63ec0cea9c1f0ca8a7893c2c53d2fd81}{DEFAULT\_DIR}};\ \textcolor{comment}{//default\ direction\ of\ the\ robot}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00559}00559\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ speed\ =\ \mbox{\hyperlink{main_8c_afc945b2e8394478f97e2aabc7aebaf0e}{DEFAULT\_SPEED}};\ \textcolor{comment}{//default\ speed\ of\ the\ robot}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00560}00560\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ mode\ =\ \mbox{\hyperlink{main_8c_ab9c800875296f23bd616d7d273ff16d7}{DEFAULT\_MODE}};\ \textcolor{comment}{//default\ mode\ of\ the\ robot}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00561}00561\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ x\ =\ 0;\ \textcolor{comment}{//position\ x\ of\ the\ object\ detect\ by\ the\ camera}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00562}00562\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ y\ =\ 0;\ \textcolor{comment}{//position\ y\ of\ the\ object\ detect\ by\ the\ camera}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00563}00563\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00564}00564\ \textcolor{preprocessor}{\#if\ LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00565}00565\ \ \ \ \ \ \mbox{\hyperlink{struct_a_message}{AMessage}}\ pxMessage;\ \textcolor{comment}{//LCD\ queue\ message}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00566}00566\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00567}00567\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00568}00568\ \textcolor{preprocessor}{\#if\ MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00569}00569\ \ \ \ \ \mbox{\hyperlink{struct_micro_ros_sub_msg}{MicroRosSubMsg}}\ SubToMsg;\ \textcolor{comment}{//ROS\ subscriber\ queue\ message}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00570}00570\ \ \ \ \ \mbox{\hyperlink{struct_micro_ros_pub_msg}{MicroRosPubMsg}}\ MsgToPub;\ \textcolor{comment}{//ROS\ publisher\ queue\ message}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00571}00571\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00572}00572\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00573}00573\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00574}00574\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00575}00575\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00576}00576\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}{qhMR\_sub}}))\ \textcolor{comment}{//If\ data\ \ are\ in\ the\ the\ queue}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00577}00577\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00578}00578\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueReceive(\mbox{\hyperlink{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}{qhMR\_sub}},\ \&SubToMsg,\ portMAX\_DELAY);\ \textcolor{comment}{//Receive\ data}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00579}00579\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Set\ mode,\ speed\ and\ direction\ if\ the\ data\ is\ correct}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00580}00580\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a1ea5d0cb93f22f7d0fdf804bd68c3326}{mode}}\ >=\ 0\ \&\&\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a1ea5d0cb93f22f7d0fdf804bd68c3326}{mode}}\ <\ LAST\_MODE)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00581}00581\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a1ea5d0cb93f22f7d0fdf804bd68c3326}{mode}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00582}00582\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a851cf68c8f607573c1a5e987784c83f6}{dir}}\ >=\ 0\ \&\&\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a851cf68c8f607573c1a5e987784c83f6}{dir}}\ <\ LAST\_DIR)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00583}00583\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ direction\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a851cf68c8f607573c1a5e987784c83f6}{dir}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00584}00584\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}\ >\ 0\ \&\&\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}\ <\ LAST\_SPEED)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00585}00585\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speed\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00586}00586\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Set\ x\ and\ y\ position}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00587}00587\ \ \ \ \ \ \ \ \ \ \ \ \ x\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a6150e0515f7202e2fb518f7206ed97dc}{x}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00588}00588\ \ \ \ \ \ \ \ \ \ \ \ \ y\ =\ SubToMsg.\mbox{\hyperlink{struct_micro_ros_sub_msg_a0a2f84ed7838f07779ae24c5a9086d33}{y}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00589}00589\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#if\ DEBUG\_PRINTF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00590}00590\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%cc\%c[2J\%c[0;0HVariable\ to\ make\ decision\ :\ \(\backslash\)n\(\backslash\)rDirection\ :\ \%d\(\backslash\)r\(\backslash\)nMode:\ \%d\(\backslash\)r\(\backslash\)nSpeed\ :\ \%d\(\backslash\)r\(\backslash\)nX:\ \%d\(\backslash\)r\(\backslash\)nY\ :\ \%d\(\backslash\)r\(\backslash\)n"{}},\ 0x1b,\ 0x1b,\ 0x1b,\ direction,\ mode,\ speed,\ x,\ y);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00591}00591\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//DEBUG\_PRINTF}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00592}00592\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00593}00593\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00594}00594\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00595}00595\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_ZIG)\ \textcolor{comment}{//Mode\ manual}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00596}00596\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00597}00597\ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'N'};\ \textcolor{comment}{//No\ direction\ information}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00598}00598\ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 0;\ \textcolor{comment}{//No\ obstacle}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00599}00599\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}(direction)\ \textcolor{comment}{//Set\ the\ motor\ speed\ depending\ of\ the\ direction\ variable}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00600}00600\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00601}00601\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ STOP:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00602}00602\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00603}00603\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00604}00604\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00605}00605\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ AVANT:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00606}00606\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00607}00607\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00608}00608\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00609}00609\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ RECULE:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00610}00610\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00611}00611\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00612}00612\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00613}00613\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ DROITE:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00614}00614\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00615}00615\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00616}00616\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00617}00617\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ GAUCHE:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00618}00618\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00619}00619\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00620}00620\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00621}00621\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ AVANT\_GAUCHE:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00622}00622\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ (\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}/2)+(8*(speed-\/50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00623}00623\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00624}00624\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00625}00625\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ AVANT\_DROITE:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00626}00626\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00627}00627\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ (\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}/2)+(8*(speed-\/50));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00628}00628\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00629}00629\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ RECULE\_GAUCHE:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00630}00630\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00631}00631\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/((\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}/2)+(8*(speed-\/50)));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00632}00632\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00633}00633\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ RECULE\_DROITE:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00634}00634\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/((\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}/2)+(8*(speed-\/50)));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00635}00635\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/(\mbox{\hyperlink{main_8c_adad34192ac4bc13e73ed3be5a6309d53}{VITESSE\_KART}}+(8*(speed-\/50)));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00636}00636\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00637}00637\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00638}00638\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00639}00639\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00640}00640\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00641}00641\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00642}00642\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00643}00643\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_OBS)\ \textcolor{comment}{//Mode\ obstacle}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00644}00644\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00645}00645\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//Get\ sensors\ informations}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00646}00646\ \ \ \ \ \ \ \ \ \ \ \ \ captDistIR\_Get(table);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00647}00647\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#if\ VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00648}00648\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}}))}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00649}00649\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ xQueueReceive(\mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}},\ \&vl53,\ portMAX\_DELAY);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00650}00650\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00651}00651\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ vl53\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00652}00652\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00653}00653\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (vl53\ ==\ 1)\ \textcolor{comment}{//if\ an\ obstacle\ is\ detected\ on\ the\ back\ we\ stop}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00654}00654\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00655}00655\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (dir\ !=\ \textcolor{charliteral}{'S'})}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00656}00656\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Detection\ d'un\ obstacle\ à\ l'arrièrre"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00657}00657\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00658}00658\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00659}00659\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'S'};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00660}00660\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00661}00661\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00662}00662\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00663}00663\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#endif\ }\textcolor{comment}{//VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00664}00664\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (table[0]\ >\ \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\_DIST\_SENSOR}}\ ||\ table[1]\ >\ \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\_DIST\_SENSOR}})\ \textcolor{comment}{//We\ have\ an\ obstacle\ in\ front\ of\ the\ robot}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00665}00665\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00666}00666\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (obs\ >\ 10)\ \textcolor{comment}{//If\ we\ detect\ more\ than\ 10\ different\ obstacle\ we\ turn\ on\ the\ left\ until\ they\ are\ no\ more\ obstacle}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00667}00667\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00668}00668\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00669}00669\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/\mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00670}00670\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'G'};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00671}00671\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00672}00672\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00673}00673\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00674}00674\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00675}00675\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00676}00676\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00677}00677\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (table[0]\ >\ table[1]\ \&\&\ table[0]\ >\ \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\_DIST\_SENSOR}})\ \textcolor{comment}{//We\ have\ an\ obstacle\ on\ our\ right}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00678}00678\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00679}00679\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'G'};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00680}00680\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/\mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00681}00681\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00682}00682\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (obs\%2\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00683}00683\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ obs++;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00684}00684\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00685}00685\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (table[0]\ <\ table[1]\ \&\&\ table[1]\ >\ \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\_DIST\_SENSOR}})\ \textcolor{comment}{//We\ have\ an\ obstacle\ on\ left\ right}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00686}00686\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00687}00687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'G'};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00688}00688\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ -\/\mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00689}00689\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00690}00690\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (obs\%2\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00687}00687\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'D'};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00688}00688\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00689}00689\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/\mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00690}00690\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (obs\%2\ ==\ 1)}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00691}00691\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ obs++;}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00692}00692\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00693}00693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (table[0]\ <\ table[1]\ \&\&\ table[1]\ >\ \mbox{\hyperlink{main_8c_a6c7b89fa170faf81cf0702509bc7caef}{SEUIL\_DIST\_SENSOR}})\ \textcolor{comment}{//We\ have\ an\ obstacle\ on\ left\ right}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00694}00694\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00695}00695\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'D'};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00696}00696\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00697}00697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ -\/\mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}}/2;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00698}00698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (obs\%2\ ==\ 1)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00699}00699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ obs++;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00700}00700\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00701}00701\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00702}00702\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00703}00703\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{comment}{//No\ obstacle}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00704}00704\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00705}00705\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00706}00706\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00707}00707\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'F'};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00708}00708\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00709}00709\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00710}00710\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00711}00711\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_CAM)\ \textcolor{comment}{//Mode\ camera}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00712}00712\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00713}00713\ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'N'};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00714}00714\ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00715}00715\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00716}00716\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(x\ <\ 0\ ||\ y\ <\ 0)\ \textcolor{comment}{//No\ object}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00717}00717\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00718}00718\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00719}00719\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00720}00720\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00721}00721\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{comment}{//Try\ to\ keep\ the\ object\ on\ the\ center}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00722}00722\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00723}00723\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_a83be4ba677a5b20cd4b969a5d2828f39}{VITESSE\_CAM}}\ -\/\ ((\mbox{\hyperlink{main_8c_ab898595d41f7c7a6f5a7a7f2678c3bdd}{CAMERA\_X\_MAX}}/2\ -\/\ x))/3;\ \textcolor{comment}{//\ (int)\ (((float)\ ((x-\/CAMERA\_X\_MAX/2)/CAMERA\_X\_MAX))*500);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00724}00724\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_a83be4ba677a5b20cd4b969a5d2828f39}{VITESSE\_CAM}}\ +\ ((\mbox{\hyperlink{main_8c_ab898595d41f7c7a6f5a7a7f2678c3bdd}{CAMERA\_X\_MAX}}/2\ -\/\ x))/3;\ \textcolor{comment}{//\ (int)\ (((float)\ (x/CAMERA\_X\_MAX))*500);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00725}00725\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00726}00726\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00727}00727\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00728}00728\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ DEBUG\_MOTOR}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00729}00729\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Motor\ L\ :\ \%d\ ||\ R\ :\ \%d\(\backslash\)r\(\backslash\)n"{}},\ speedLeft,\ speedRight);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00730}00730\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00731}00731\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00732}00732\ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\_mot\_L}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&speedLeft,\ \ portMAX\_DELAY\ );\ \textcolor{comment}{//Send\ motor\ left\ speed}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00733}00733\ \ \ \ \ \ \ \ \ xSemaphoreTake(\ \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY\ );}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00734}00734\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00735}00735\ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\_mot\_R}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&speedRight,\ \ portMAX\_DELAY\ );\ \textcolor{comment}{//Send\ motor\ right\ speed}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00736}00736\ \ \ \ \ \ \ \ \ xSemaphoreTake(\ \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY\ );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00693}00693\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00694}00694\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00695}00695\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{comment}{//No\ obstacle}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00696}00696\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00697}00697\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00698}00698\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_a71fa41f4b84f3fa3973737ac75e785a4}{VITESSE\_OBS}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00699}00699\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'F'};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00700}00700\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00701}00701\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00702}00702\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00703}00703\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (mode\ ==\ MODE\_CAM)\ \textcolor{comment}{//Mode\ camera}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00704}00704\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00705}00705\ \ \ \ \ \ \ \ \ \ \ \ \ dir\ =\ \textcolor{charliteral}{'N'};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00706}00706\ \ \ \ \ \ \ \ \ \ \ \ \ obs\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00707}00707\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00708}00708\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(x\ <\ 0\ ||\ y\ <\ 0)\ \textcolor{comment}{//No\ object}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00709}00709\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00710}00710\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00711}00711\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00712}00712\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00713}00713\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{comment}{//Try\ to\ keep\ the\ object\ on\ the\ center}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00714}00714\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00715}00715\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedLeft\ =\ \mbox{\hyperlink{main_8c_a83be4ba677a5b20cd4b969a5d2828f39}{VITESSE\_CAM}}\ -\/\ ((\mbox{\hyperlink{main_8c_ab898595d41f7c7a6f5a7a7f2678c3bdd}{CAMERA\_X\_MAX}}/2\ -\/\ x))/3;\ \textcolor{comment}{//\ (int)\ (((float)\ ((x-\/CAMERA\_X\_MAX/2)/CAMERA\_X\_MAX))*500);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00716}00716\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ speedRight\ =\ \mbox{\hyperlink{main_8c_a83be4ba677a5b20cd4b969a5d2828f39}{VITESSE\_CAM}}\ +\ ((\mbox{\hyperlink{main_8c_ab898595d41f7c7a6f5a7a7f2678c3bdd}{CAMERA\_X\_MAX}}/2\ -\/\ x))/3;\ \textcolor{comment}{//\ (int)\ (((float)\ (x/CAMERA\_X\_MAX))*500);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00717}00717\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00718}00718\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00719}00719\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00720}00720\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ DEBUG\_MOTOR}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00721}00721\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Motor\ L\ :\ \%d\ ||\ R\ :\ \%d\(\backslash\)r\(\backslash\)n"{}},\ speedLeft,\ speedRight);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00722}00722\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00723}00723\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00724}00724\ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\_mot\_L}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&speedLeft,\ \ portMAX\_DELAY\ );\ \textcolor{comment}{//Send\ motor\ left\ speed}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00725}00725\ \ \ \ \ \ \ \ \ xSemaphoreTake(\ \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY\ );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00726}00726\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00727}00727\ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\_mot\_R}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&speedRight,\ \ portMAX\_DELAY\ );\ \textcolor{comment}{//Send\ motor\ right\ speed}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00728}00728\ \ \ \ \ \ \ \ \ xSemaphoreTake(\ \mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}},\ portMAX\_DELAY\ );}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00729}00729\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00730}00730\ \textcolor{preprocessor}{\ \ \ \ \#if\ MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00731}00731\ \ \ \ \ \ \ \ \ MsgToPub.\mbox{\hyperlink{struct_micro_ros_pub_msg_afc966782c25222ee96a1bdd1d4b360f8}{dir}}\ =\ dir;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00732}00732\ \ \ \ \ \ \ \ \ MsgToPub.\mbox{\hyperlink{struct_micro_ros_pub_msg_a1ea5d0cb93f22f7d0fdf804bd68c3326}{mode}}\ =\ mode;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00733}00733\ \ \ \ \ \ \ \ \ MsgToPub.\mbox{\hyperlink{struct_micro_ros_pub_msg_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}\ =\ speed;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00734}00734\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a2ec1e708e81871b5c6929cb901a69c51}{qhMR\_pub}}))\ \textcolor{comment}{//If\ no\ data\ in\ queue}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00735}00735\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueSend(\mbox{\hyperlink{main_8c_a2ec1e708e81871b5c6929cb901a69c51}{qhMR\_pub}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&MsgToPub,\ portMAX\_DELAY);\ \textcolor{comment}{//Send\ data}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00736}00736\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//MICROROS}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00737}00737\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00738}00738\ \textcolor{preprocessor}{\ \ \ \ \#if\ MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00739}00739\ \ \ \ \ \ \ \ \ MsgToPub.\mbox{\hyperlink{struct_micro_ros_pub_msg_afc966782c25222ee96a1bdd1d4b360f8}{dir}}\ =\ dir;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00740}00740\ \ \ \ \ \ \ \ \ MsgToPub.\mbox{\hyperlink{struct_micro_ros_pub_msg_a1ea5d0cb93f22f7d0fdf804bd68c3326}{mode}}\ =\ mode;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00741}00741\ \ \ \ \ \ \ \ \ MsgToPub.\mbox{\hyperlink{struct_micro_ros_pub_msg_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}\ =\ speed;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00742}00742\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a2ec1e708e81871b5c6929cb901a69c51}{qhMR\_pub}}))\ \textcolor{comment}{//If\ no\ data\ in\ queue}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00743}00743\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueSend(\mbox{\hyperlink{main_8c_a2ec1e708e81871b5c6929cb901a69c51}{qhMR\_pub}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&MsgToPub,\ portMAX\_DELAY);\ \textcolor{comment}{//Send\ data}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00744}00744\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00745}00745\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00746}00746\ \textcolor{preprocessor}{\ \ \ \ \#if\ LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00747}00747\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}}))\ \textcolor{comment}{//If\ no\ data\ in\ queue}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00748}00748\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00749}00749\ \ \ \ \ \ \ \ \ \ \ \ \ pxMessage.\mbox{\hyperlink{struct_a_message_a9eab91667db4d35c7231dcddf7b89a76}{data}}=mode;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00750}00750\ \ \ \ \ \ \ \ \ \ \ \ \ pxMessage.\mbox{\hyperlink{struct_a_message_a25827e9cb2be1cdb757882bea43e0af9}{command}}=dir;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00751}00751\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&pxMessage,\ portMAX\_DELAY);\ \textcolor{comment}{//Send\ data}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00752}00752\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00753}00753\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00754}00754\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00755}00755\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00756}00756\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00757}00757\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SYNCHRO\_EX}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00758}00758\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00759}00759\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00760}\mbox{\hyperlink{main_8h_a840291bc02cba5474a4cb46a9b9566fe}{00760}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00761}00761\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00762}00762\ \ \ HAL\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00763}00763\ \ \ \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{SystemClock\_Config}}();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00764}00764\ \ \ MX\_GPIO\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00765}00765\ \ \ MX\_DMA\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00766}00766\ \ \ MX\_USART2\_UART\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00767}00767\ \ \ MX\_I2C1\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00768}00768\ \ \ MX\_USART1\_UART\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00769}00769\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00770}00770\ \ \ \mbox{\hyperlink{retarget_8h_ac7028227e5051dfa3bb8fabb0edd07c8}{RetargetInit}}(\&huart2);\ \textcolor{comment}{//make\ printf\ and\ scanf\ work\ with\ uart2}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00771}00771\ \ \ printf(\textcolor{stringliteral}{"{}\%cc\%c[2J\%c[0;0HTitouan//Jeremy//Louanne//Donald\(\backslash\)r\(\backslash\)n"{}},\ 0x1b,\ 0x1b,\ 0x1b);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00772}00772\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00773}00773\ \ \ motorCommand\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00774}00774\ \ \ quadEncoder\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00775}00775\ \ \ captDistIR\_Init();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00776}00776\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00777}00777\ \ \ HAL\_Delay(500);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00778}00778\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00779}00779\ \textcolor{preprocessor}{\#if\ VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00780}00780\ \ \ initVL53L0X();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00781}00781\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0\ ;\ i<20\ ;\ i++)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00782}00782\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00783}00783\ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\%d\(\backslash\)r\(\backslash\)n"{}},\ readRangeSingleMillimeters()/10);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00784}00784\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00785}00785\ \ \ HAL\_Delay(500);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00786}00786\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00787}00787\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00788}00788\ \ \ \textcolor{comment}{//\ Test\ Ecran\ LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00789}00789\ \textcolor{preprocessor}{\#if\ LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00790}00790\ \ \ groveLCD\_begin(16,2,0);\ \textcolor{comment}{//\ !!\ cette\ fonction\ prend\ du\ temps}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00791}00791\ \ \ HAL\_Delay(100);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00792}00792\ \ \ groveLCD\_setCursor(0,0);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00793}00793\ \ \ groveLCD\_setColor(1);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00794}00794\ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}Titouan//Jeremy//Louanne"{}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00795}00795\ \ \ HAL\_Delay(1000);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00796}00796\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00797}00797\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00798}00798\ \ \ osKernelInitialize();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00799}00799\ \ \ \textcolor{comment}{//defaultTaskHandle\ =\ osThreadNew(microros\_task,\ NULL,\ \&defaultTask\_attributes);}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00800}00800\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00801}00801\ \ \ \textcolor{comment}{//Create\ the\ diffrent\ task\ depending\ of\ the\ config}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00802}00802\ \textcolor{preprocessor}{\#if\ SYNCHRO\_EX\ ==\ EXSTARTUP}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00803}00803\ \textcolor{preprocessor}{\ \ \ \ \#if\ MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00804}00804\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_a5aca40d972a3057895d59e61e0e69678}{microros\_task}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}microros\_task"{}},\ 3000\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 24,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00805}00805\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00806}00806\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\_Supervision}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Supervision"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 27,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00807}00807\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}{task\_Motor\_Left}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Mot\ L"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 25,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00808}00808\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_a81f652726bff3b9832ab014d3fc28d1e}{task\_Motor\_Right}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Mot\ R"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 26,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00809}00809\ \textcolor{preprocessor}{\ \ \ \ \#if\ LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00810}00810\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_a0437f457b0f155ea2e19c99e841144f4}{task\_Grove\_LCD}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Mot\ R"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 23,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00811}00811\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00812}00812\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTEST\_UART2}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00813}00813\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a0068220a4432a5ea9b4442d018b706f8}{test\_uart2}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ print\ uart\ 2"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ tskIDLE\_PRIORITY,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00814}00814\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXCORRECTOR}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00815}00815\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a}{test\_motor}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ test\ motor"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ tskIDLE\_PRIORITY,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00816}00816\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTESTCORRECTOR}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00817}00817\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\_Supervision}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Supervision"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 27,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00818}00818\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}{task\_Motor\_Left}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Motor\ Left"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 25,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00819}00819\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a81f652726bff3b9832ab014d3fc28d1e}{task\_Motor\_Right}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Motor\ Right"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 26,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00820}00820\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTEST\_VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00821}00821\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a03356c29f7343d5cd605bcd3e80e27e0}{test\_vl53}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}test\_vl53"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ tskIDLE\_PRIORITY,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00822}00822\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTEST\_MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00823}00823\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a5aca40d972a3057895d59e61e0e69678}{microros\_task}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}microros\_task"{}},\ 3000\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ tskIDLE\_PRIORITY,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00824}00824\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXFINAL}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00825}00825\ \textcolor{preprocessor}{\ \ \ \ \#if\ MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00826}00826\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a5aca40d972a3057895d59e61e0e69678}{microros\_task}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}microros\_task"{}},\ 3000\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 24,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00827}00827\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//MICROROS}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00828}00828\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\_Supervision}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Supervision"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 27,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00829}00829\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}{task\_Motor\_Left}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Motor\ Left"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 25,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00830}00830\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a81f652726bff3b9832ab014d3fc28d1e}{task\_Motor\_Right}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Motor\ Right"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 26,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00738}00738\ \textcolor{preprocessor}{\ \ \ \ \#if\ LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00739}00739\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!uxQueueMessagesWaiting(\mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}}))\ \textcolor{comment}{//If\ no\ data\ in\ queue}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00740}00740\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00741}00741\ \ \ \ \ \ \ \ \ \ \ \ \ pxMessage.\mbox{\hyperlink{struct_a_message_a9eab91667db4d35c7231dcddf7b89a76}{data}}=mode;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00742}00742\ \ \ \ \ \ \ \ \ \ \ \ \ pxMessage.\mbox{\hyperlink{struct_a_message_a25827e9cb2be1cdb757882bea43e0af9}{command}}=dir;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00743}00743\ \ \ \ \ \ \ \ \ \ \ \ \ xQueueSend(\ \mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}},\ (\ \textcolor{keywordtype}{void}\ *\ )\ \&pxMessage,\ portMAX\_DELAY);\ \textcolor{comment}{//Send\ data}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00744}00744\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00745}00745\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00746}00746\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00747}00747\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00748}00748\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00749}00749\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SYNCHRO\_EX}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00750}00750\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00751}00751\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00752}\mbox{\hyperlink{main_8h_a840291bc02cba5474a4cb46a9b9566fe}{00752}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00753}00753\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00754}00754\ \ \ HAL\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00755}00755\ \ \ \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{SystemClock\_Config}}();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00756}00756\ \ \ MX\_GPIO\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00757}00757\ \ \ MX\_DMA\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00758}00758\ \ \ MX\_USART2\_UART\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00759}00759\ \ \ MX\_I2C1\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00760}00760\ \ \ MX\_USART1\_UART\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00761}00761\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00762}00762\ \ \ \mbox{\hyperlink{retarget_8h_ac7028227e5051dfa3bb8fabb0edd07c8}{RetargetInit}}(\&huart2);\ \textcolor{comment}{//make\ printf\ and\ scanf\ work\ with\ uart2}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00763}00763\ \ \ printf(\textcolor{stringliteral}{"{}\%cc\%c[2J\%c[0;0HTitouan//Jeremy//Louanne//Donald\(\backslash\)r\(\backslash\)n"{}},\ 0x1b,\ 0x1b,\ 0x1b);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00764}00764\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00765}00765\ \ \ motorCommand\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00766}00766\ \ \ quadEncoder\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00767}00767\ \ \ captDistIR\_Init();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00768}00768\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00769}00769\ \ \ HAL\_Delay(500);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00770}00770\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00771}00771\ \textcolor{preprocessor}{\#if\ VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00772}00772\ \ \ initVL53L0X();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00773}00773\ \ \ HAL\_Delay(500);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00774}00774\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00775}00775\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00776}00776\ \ \ \textcolor{comment}{//\ Test\ Ecran\ LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00777}00777\ \textcolor{preprocessor}{\#if\ LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00778}00778\ \ \ groveLCD\_begin(16,2,0);\ \textcolor{comment}{//\ !!\ cette\ fonction\ prend\ du\ temps}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00779}00779\ \ \ HAL\_Delay(100);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00780}00780\ \ \ groveLCD\_setCursor(0,0);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00781}00781\ \ \ groveLCD\_setColor(1);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00782}00782\ \ \ groveLCD\_term\_printf(\textcolor{stringliteral}{"{}Titouan//Jeremy//Louanne"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00783}00783\ \ \ HAL\_Delay(1000);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00784}00784\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00785}00785\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00786}00786\ \ \ osKernelInitialize();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00787}00787\ \ \ \textcolor{comment}{//defaultTaskHandle\ =\ osThreadNew(microros\_task,\ NULL,\ \&defaultTask\_attributes);}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00788}00788\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00789}00789\ \ \ \textcolor{comment}{//Create\ the\ diffrent\ task\ depending\ of\ the\ config}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00790}00790\ \textcolor{preprocessor}{\#if\ SYNCHRO\_EX\ ==\ EXSTARTUP}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00791}00791\ \textcolor{preprocessor}{\ \ \ \ \#if\ MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00792}00792\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_a5aca40d972a3057895d59e61e0e69678}{microros\_task}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}microros\_task"{}},\ 3000\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 24,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00793}00793\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00794}00794\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\_Supervision}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Supervision"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 27,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00795}00795\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}{task\_Motor\_Left}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Mot\ L"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 25,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00796}00796\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_a81f652726bff3b9832ab014d3fc28d1e}{task\_Motor\_Right}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Mot\ R"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 26,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00797}00797\ \textcolor{preprocessor}{\ \ \ \ \#if\ LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00798}00798\ \ \ \ \ xTaskCreate(\ \mbox{\hyperlink{main_8c_a0437f457b0f155ea2e19c99e841144f4}{task\_Grove\_LCD}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Mot\ R"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 23,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00799}00799\ \textcolor{preprocessor}{\ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00800}00800\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTEST\_UART2}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00801}00801\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a0068220a4432a5ea9b4442d018b706f8}{test\_uart2}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ print\ uart\ 2"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ tskIDLE\_PRIORITY,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00802}00802\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXCORRECTOR}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00803}00803\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a}{test\_motor}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ test\ motor"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ tskIDLE\_PRIORITY,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00804}00804\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTESTCORRECTOR}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00805}00805\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\_Supervision}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Supervision"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 27,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00806}00806\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}{task\_Motor\_Left}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Motor\ Left"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 25,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00807}00807\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a81f652726bff3b9832ab014d3fc28d1e}{task\_Motor\_Right}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Motor\ Right"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 26,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00808}00808\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTEST\_VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00809}00809\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a03356c29f7343d5cd605bcd3e80e27e0}{test\_vl53}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}test\_vl53"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ tskIDLE\_PRIORITY,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00810}00810\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXTEST\_MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00811}00811\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a5aca40d972a3057895d59e61e0e69678}{microros\_task}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}microros\_task"{}},\ 3000\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ tskIDLE\_PRIORITY,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00812}00812\ \textcolor{preprocessor}{\#elif\ SYNCHRO\_EX\ ==\ EXFINAL}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00813}00813\ \textcolor{preprocessor}{\ \ \ \ \#if\ MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00814}00814\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a5aca40d972a3057895d59e61e0e69678}{microros\_task}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}microros\_task"{}},\ 3000\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 24,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00815}00815\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//MICROROS}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00816}00816\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aa20650615a802a253757e491905b6af9}{task\_Supervision}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Supervision"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 27,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00817}00817\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_aeaf40c2ad14431735bdc8432bf5e57de}{task\_Motor\_Left}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Motor\ Left"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 25,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00818}00818\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a81f652726bff3b9832ab014d3fc28d1e}{task\_Motor\_Right}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ Motor\ Right"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 26,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00819}00819\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00820}00820\ \textcolor{preprocessor}{\ \ \ \ \#if\ VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00821}00821\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a0770d7007222fbff5f97c3ea3b3cbb5c}{task\_VL53}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ VL53"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 23,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00822}00822\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//VL53}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00823}00823\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00824}00824\ \textcolor{preprocessor}{\ \ \ \ \#if\ LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00825}00825\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a0437f457b0f155ea2e19c99e841144f4}{task\_Grove\_LCD}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ LCD"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 23,\ NULL);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00826}00826\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//LCD}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00827}00827\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SYNCHRO\_EX}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00828}00828\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00829}00829\ \ \ \ \ \textcolor{comment}{//Create\ the\ semaphore}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00830}00830\ \ \ \ \ vSemaphoreCreateBinary(\mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}});}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00831}00831\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00832}00832\ \textcolor{preprocessor}{\ \ \ \ \#if\ VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00833}00833\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a0770d7007222fbff5f97c3ea3b3cbb5c}{task\_VL53}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ VL53"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 23,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00834}00834\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//VL53}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00835}00835\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00836}00836\ \textcolor{preprocessor}{\ \ \ \ \#if\ LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00837}00837\ \ \ \ \ xTaskCreate(\mbox{\hyperlink{main_8c_a0437f457b0f155ea2e19c99e841144f4}{task\_Grove\_LCD}},\ (\ \textcolor{keyword}{const}\ portCHAR\ *\ )\ \textcolor{stringliteral}{"{}task\ LCD"{}},\ 128\ \textcolor{comment}{/*\ stack\ size\ */},\ NULL,\ 23,\ NULL);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00838}00838\ \textcolor{preprocessor}{\ \ \ \ \#endif\ }\textcolor{comment}{//LCD}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00839}00839\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//SYNCHRO\_EX}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00832}00832\ \ \ \ \ \textcolor{comment}{//Init\ all\ the\ queue}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00833}00833\ \ \ \ \ \mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\_mot\_L}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(int16\_t));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00834}00834\ \ \ \ \ \mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\_mot\_R}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(int16\_t));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00835}00835\ \ \ \ \ \mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00836}00836\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00837}00837\ \ \ \ \ \mbox{\hyperlink{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}{qhMR\_sub}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_micro_ros_sub_msg}{MicroRosSubMsg}}));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00838}00838\ \ \ \ \ \mbox{\hyperlink{main_8c_a2ec1e708e81871b5c6929cb901a69c51}{qhMR\_pub}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_micro_ros_pub_msg}{MicroRosPubMsg}}));}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00839}00839\ \ \ \ \ \mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_a_message}{AMessage}}));}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00840}00840\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00841}00841\ \ \ \ \ \textcolor{comment}{//Create\ the\ semaphore}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00842}00842\ \ \ \ \ vSemaphoreCreateBinary(\mbox{\hyperlink{main_8c_a8c732ee84a40140fe90e1edb5e3fe61a}{xSem\_Supervision}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00843}00843\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00844}00844\ \ \ \ \ \textcolor{comment}{//Init\ all\ the\ queue}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00845}00845\ \ \ \ \ \mbox{\hyperlink{main_8c_a938902e735d5df04bf790f601801da8e}{q\_mot\_L}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(int16\_t));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00846}00846\ \ \ \ \ \mbox{\hyperlink{main_8c_aa26ca3e16f249f82045250c09e1cd053}{q\_mot\_R}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(int16\_t));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00847}00847\ \ \ \ \ \mbox{\hyperlink{main_8c_a3350c1d692cc188bf1b42c2a3810b9d1}{qhVl53}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00848}00848\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00849}00849\ \ \ \ \ \mbox{\hyperlink{main_8c_a2313a36ccf1c497c3b1595ad8f7a266a}{qhMR\_sub}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_micro_ros_sub_msg}{MicroRosSubMsg}}));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00850}00850\ \ \ \ \ \mbox{\hyperlink{main_8c_a2ec1e708e81871b5c6929cb901a69c51}{qhMR\_pub}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_micro_ros_pub_msg}{MicroRosPubMsg}}));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00851}00851\ \ \ \ \ \mbox{\hyperlink{main_8c_a494090d44b64e4d33b49a38031ede042}{qhLCD}}\ =\ xQueueCreate(1,\ \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_a_message}{AMessage}}));}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00852}00852\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00853}00853\ \ \ \ \ osKernelStart();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00854}00854\ \ \ \ \ \textcolor{keywordflow}{while}(1)\{\}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00841}00841\ \ \ \ \ osKernelStart();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00842}00842\ \ \ \ \ \textcolor{keywordflow}{while}(1)\{\}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00843}00843\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00844}00844\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00845}\mbox{\hyperlink{main_8h_a0068220a4432a5ea9b4442d018b706f8}{00845}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a0068220a4432a5ea9b4442d018b706f8}{test\_uart2}}(\textcolor{keywordtype}{void}\ *pvParameters)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00846}00846\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00847}00847\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[100]\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00848}00848\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00849}00849\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00850}00850\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Veuillez\ saisir\ votre\ nom\ :\(\backslash\)r\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00851}00851\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%s"{}},\ buf);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00852}00852\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}bonjour\ et\ bienvenue\ \%s\(\backslash\)r\(\backslash\)n"{}},\ buf);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00853}00853\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00854}00854\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00855}00855\ \}}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00856}00856\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00857}\mbox{\hyperlink{main_8h_a0068220a4432a5ea9b4442d018b706f8}{00857}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a0068220a4432a5ea9b4442d018b706f8}{test\_uart2}}(\textcolor{keywordtype}{void}\ *pvParameters)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00857}\mbox{\hyperlink{main_8h_a03356c29f7343d5cd605bcd3e80e27e0}{00857}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a03356c29f7343d5cd605bcd3e80e27e0}{test\_vl53}}(\textcolor{keywordtype}{void}\ *pvParameters)}
 \DoxyCodeLine{\Hypertarget{main_8c_source_l00858}00858\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00859}00859\ \ \ \ \ \textcolor{keywordtype}{char}\ buf[100]\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00860}00860\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00861}00861\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00862}00862\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Veuillez\ saisir\ votre\ nom\ :\(\backslash\)r\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00863}00863\ \ \ \ \ \ \ \ \ scanf(\textcolor{stringliteral}{"{}\%s"{}},\ buf);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00864}00864\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}bonjour\ et\ bienvenue\ \%s\(\backslash\)r\(\backslash\)n"{}},\ buf);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00865}00865\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00866}00866\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00867}00867\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00868}00868\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00869}\mbox{\hyperlink{main_8h_a03356c29f7343d5cd605bcd3e80e27e0}{00869}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_a03356c29f7343d5cd605bcd3e80e27e0}{test\_vl53}}(\textcolor{keywordtype}{void}\ *pvParameters)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00870}00870\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00871}00871\ \ \ \ \ uint16\_t\ val;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00872}00872\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00873}00873\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00874}00874\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00875}00875\ \ \ \ \ \ \ \ \ val\ =\ readRangeSingleMillimeters()/10;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00876}00876\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Distance\ capteur\ :\ \%d\(\backslash\)r\(\backslash\)n"{}},\ val);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00877}00877\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00878}00878\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00879}00879\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00880}\mbox{\hyperlink{main_8h_aac27f033a986ce7ecadc6f9532aa8c3a}{00880}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a}{test\_motor}}(\textcolor{keywordtype}{void}\ *pvParameters)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00881}00881\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00882}00882\ \ \ \ \ int16\_t\ \ consigne\ =\ \mbox{\hyperlink{main_8c_a991a2b437e497b7c30f7c37f3da862c0}{TEST\_CORRECTOR\_DUTY}};}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00883}00883\ \ \ \ \ \textcolor{keywordflow}{if}\ (consigne\ <\ 0\ ||\ consigne\ >\ 200)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00884}00884\ \ \ \ \ \ \ \ \ consigne\ =\ 150;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00885}00885\ \ \ \ \ \textcolor{keywordtype}{int}\ speed\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00886}00886\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00887}00887\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00888}00888\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00889}00889\ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00890}00890\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ TEST\_LEFT\_MOTOR}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00891}00891\ \ \ \ \ \ \ \ \ motorLeft\_SetDuty(consigne);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00892}00892\ \ \ \ \ \ \ \ \ speed\ =\ quadEncoder\_GetSpeedL();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00893}00893\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#else}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00894}00894\ \ \ \ \ \ \ \ \ motorRight\_SetDuty(consigne);}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00895}00895\ \ \ \ \ \ \ \ \ speed\ =\ quadEncoder\_GetSpeedR();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00896}00896\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00897}00897\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00898}00898\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i<\mbox{\hyperlink{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58}{NB}})}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00899}00899\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00900}00900\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_a377891cff46d2f0a39f956b917366f95}{tab\_speed}}[i]=speed;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00901}00901\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00902}00902\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00903}00903\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00904}00904\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}sampling\ end"{}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00905}00905\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00906}00906\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00907}00907\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00908}00908\ }
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00909}00909\ \textcolor{comment}{//=========================================================================}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00910}00910\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00911}00911\ \textcolor{comment}{\ \ *\ @brief\ \ Period\ elapsed\ callback\ in\ non\ blocking\ mode}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00912}00912\ \textcolor{comment}{\ \ *\ @note\ \ \ This\ function\ is\ called\ \ when\ TIM1\ interrupt\ took\ place,\ inside}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00913}00913\ \textcolor{comment}{\ \ *\ HAL\_TIM\_IRQHandler().\ It\ makes\ a\ direct\ call\ to\ HAL\_IncTick()\ to\ increment}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00914}00914\ \textcolor{comment}{\ \ *\ a\ global\ variable\ "{}uwTick"{}\ used\ as\ application\ time\ base.}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00915}00915\ \textcolor{comment}{\ \ *\ @param\ \ htim\ :\ TIM\ handle}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00916}00916\ \textcolor{comment}{\ \ *\ @retval\ None}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00917}00917\ \textcolor{comment}{\ \ */}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00918}00918\ \textcolor{keywordtype}{void}\ HAL\_TIM\_PeriodElapsedCallback(TIM\_HandleTypeDef\ *htim)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00919}00919\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00920}00920\ \ \ \textcolor{keywordflow}{if}\ (htim-\/>Instance\ ==\ TIM4)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00921}00921\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00922}00922\ \ \ \ \ HAL\_IncTick();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00923}00923\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00924}00924\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00925}00925\ \textcolor{comment}{//=========================================================================}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00926}00926\ \textcolor{keywordtype}{void}\ Error\_Handler(\textcolor{keywordtype}{void})}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00927}00927\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00928}00928\ \ \ \_\_disable\_irq();}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00929}00929\ \ \ \textcolor{keywordflow}{while}\ (1)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00930}00930\ \ \ \{\}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00931}00931\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00932}00932\ \textcolor{comment}{//=========================================================================}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00933}00933\ \textcolor{preprocessor}{\#ifdef\ \ USE\_FULL\_ASSERT}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00934}00934\ \textcolor{comment}{/*}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00935}00935\ \textcolor{comment}{\ \ *\ @brief\ \ Reports\ the\ name\ of\ the\ source\ file\ and\ the\ source\ line\ number}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00936}00936\ \textcolor{comment}{\ \ *\ \ \ \ \ \ \ \ \ where\ the\ assert\_param\ error\ has\ occurred.}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00937}00937\ \textcolor{comment}{\ \ *\ @param\ \ file:\ pointer\ to\ the\ source\ file\ name}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00938}00938\ \textcolor{comment}{\ \ *\ @param\ \ line:\ assert\_param\ error\ line\ source\ number}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00939}00939\ \textcolor{comment}{\ \ *\ @retval\ None}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00940}00940\ \textcolor{comment}{\ \ */}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00941}00941\ \textcolor{keywordtype}{void}\ assert\_failed(uint8\_t\ *file,\ uint32\_t\ line)}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00942}00942\ \{}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00943}00943\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ 6\ */}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00944}00944\ \ \ \textcolor{comment}{/*\ User\ can\ add\ his\ own\ implementation\ to\ report\ the\ file\ name\ and\ line\ number,}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00945}00945\ \textcolor{comment}{\ \ \ \ \ ex:\ printf("{}Wrong\ parameters\ value:\ file\ \%s\ on\ line\ \%d\(\backslash\)r\(\backslash\)n"{},\ file,\ line)\ */}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00946}00946\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ 6\ */}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00947}00947\ \}}
-\DoxyCodeLine{\Hypertarget{main_8c_source_l00948}00948\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USE\_FULL\_ASSERT\ */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00859}00859\ \ \ \ \ uint16\_t\ val;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00860}00860\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00861}00861\ \ \ \ \ \textcolor{keywordflow}{for}(;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00862}00862\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00863}00863\ \ \ \ \ \ \ \ \ val\ =\ readRangeSingleMillimeters()/10;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00864}00864\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}Distance\ capteur\ :\ \%d\(\backslash\)r\(\backslash\)n"{}},\ val);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00865}00865\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00866}00866\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00867}00867\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00868}\mbox{\hyperlink{main_8h_aac27f033a986ce7ecadc6f9532aa8c3a}{00868}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8c_aac27f033a986ce7ecadc6f9532aa8c3a}{test\_motor}}(\textcolor{keywordtype}{void}\ *pvParameters)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00869}00869\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00870}00870\ \ \ \ \ int16\_t\ \ consigne\ =\ \mbox{\hyperlink{main_8c_a991a2b437e497b7c30f7c37f3da862c0}{TEST\_CORRECTOR\_DUTY}};}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00871}00871\ \ \ \ \ \textcolor{keywordflow}{if}\ (consigne\ <\ 0\ ||\ consigne\ >\ 200)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00872}00872\ \ \ \ \ \ \ \ \ consigne\ =\ 150;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00873}00873\ \ \ \ \ \textcolor{keywordtype}{int}\ speed\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00874}00874\ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00875}00875\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00876}00876\ \ \ \ \ \textcolor{keywordflow}{for}\ (;;)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00877}00877\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00878}00878\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#if\ TEST\_LEFT\_MOTOR}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00879}00879\ \ \ \ \ \ \ \ \ motorLeft\_SetDuty(consigne);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00880}00880\ \ \ \ \ \ \ \ \ speed\ =\ quadEncoder\_GetSpeedL();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00881}00881\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00882}00882\ \ \ \ \ \ \ \ \ motorRight\_SetDuty(consigne);}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00883}00883\ \ \ \ \ \ \ \ \ speed\ =\ quadEncoder\_GetSpeedR();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00884}00884\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#endif}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00885}00885\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00886}00886\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i<\mbox{\hyperlink{main_8c_a58e95dc1eb9d6ce16f515e77beeadd58}{NB}})}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00887}00887\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00888}00888\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8c_a377891cff46d2f0a39f956b917366f95}{tab\_speed}}[i]=speed;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00889}00889\ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00890}00890\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00891}00891\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00892}00892\ \ \ \ \ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}sampling\ end"{}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00893}00893\ \ \ \ \ \ \ \ \ vTaskDelay(\mbox{\hyperlink{main_8c_a2e077c020d61734cb1ff60a0675673bd}{SAMPLING\_PERIOD\_ms}});}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00894}00894\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00895}00895\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00896}00896\ }
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00897}00897\ \textcolor{comment}{//=========================================================================}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00898}00898\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00899}00899\ \textcolor{comment}{\ \ *\ @brief\ \ Period\ elapsed\ callback\ in\ non\ blocking\ mode}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00900}00900\ \textcolor{comment}{\ \ *\ @note\ \ \ This\ function\ is\ called\ \ when\ TIM1\ interrupt\ took\ place,\ inside}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00901}00901\ \textcolor{comment}{\ \ *\ HAL\_TIM\_IRQHandler().\ It\ makes\ a\ direct\ call\ to\ HAL\_IncTick()\ to\ increment}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00902}00902\ \textcolor{comment}{\ \ *\ a\ global\ variable\ "{}uwTick"{}\ used\ as\ application\ time\ base.}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00903}00903\ \textcolor{comment}{\ \ *\ @param\ \ htim\ :\ TIM\ handle}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00904}00904\ \textcolor{comment}{\ \ *\ @retval\ None}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00905}00905\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00906}00906\ \textcolor{keywordtype}{void}\ HAL\_TIM\_PeriodElapsedCallback(TIM\_HandleTypeDef\ *htim)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00907}00907\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00908}00908\ \ \ \textcolor{keywordflow}{if}\ (htim-\/>Instance\ ==\ TIM4)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00909}00909\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00910}00910\ \ \ \ \ HAL\_IncTick();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00911}00911\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00912}00912\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00913}00913\ \textcolor{comment}{//=========================================================================}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00914}00914\ \textcolor{keywordtype}{void}\ Error\_Handler(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00915}00915\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00916}00916\ \ \ \_\_disable\_irq();}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00917}00917\ \ \ \textcolor{keywordflow}{while}\ (1)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00918}00918\ \ \ \{\}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00919}00919\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00920}00920\ \textcolor{comment}{//=========================================================================}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00921}00921\ \textcolor{preprocessor}{\#ifdef\ \ USE\_FULL\_ASSERT}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00922}00922\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00923}00923\ \textcolor{comment}{\ \ *\ @brief\ \ Reports\ the\ name\ of\ the\ source\ file\ and\ the\ source\ line\ number}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00924}00924\ \textcolor{comment}{\ \ *\ \ \ \ \ \ \ \ \ where\ the\ assert\_param\ error\ has\ occurred.}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00925}00925\ \textcolor{comment}{\ \ *\ @param\ \ file:\ pointer\ to\ the\ source\ file\ name}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00926}00926\ \textcolor{comment}{\ \ *\ @param\ \ line:\ assert\_param\ error\ line\ source\ number}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00927}00927\ \textcolor{comment}{\ \ *\ @retval\ None}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00928}00928\ \textcolor{comment}{\ \ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00929}00929\ \textcolor{keywordtype}{void}\ assert\_failed(uint8\_t\ *file,\ uint32\_t\ line)}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00930}00930\ \{}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00931}00931\ \ \ \textcolor{comment}{/*\ USER\ CODE\ BEGIN\ 6\ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00932}00932\ \ \ \textcolor{comment}{/*\ User\ can\ add\ his\ own\ implementation\ to\ report\ the\ file\ name\ and\ line\ number,}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00933}00933\ \textcolor{comment}{\ \ \ \ \ ex:\ printf("{}Wrong\ parameters\ value:\ file\ \%s\ on\ line\ \%d\(\backslash\)r\(\backslash\)n"{},\ file,\ line)\ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00934}00934\ \ \ \textcolor{comment}{/*\ USER\ CODE\ END\ 6\ */}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00935}00935\ \}}
+\DoxyCodeLine{\Hypertarget{main_8c_source_l00936}00936\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USE\_FULL\_ASSERT\ */}\textcolor{preprocessor}{}}
 
 \end{DoxyCode}

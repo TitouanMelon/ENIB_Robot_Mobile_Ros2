@@ -37,7 +37,7 @@
   \item {\_link}
     \subitem {syscalls.c}, \hyperpage{137}
   \item {\_lseek}
-    \subitem {retarget.c}, \hyperpage{122}
+    \subitem {retarget.c}, \hyperpage{121}
     \subitem {retarget.h}, \hyperpage{37}
     \subitem {syscalls.c}, \hyperpage{137}
   \item {\_open}
@@ -63,6 +63,8 @@
 
   \item {ACTIVE\_WHILE}
     \subitem {VL53L0X.c}, \hyperpage{146}
+  \item {addr\_read}
+    \subitem {VL53L0X.c}, \hyperpage{148}
   \item {ADDRESS}
     \subitem {VL53L0X.c}, \hyperpage{146}
   \item {ADDRESS\_DEFAULT}
@@ -147,7 +149,7 @@
   \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microROS.c}, 
 		\hyperpage{111}, \hyperpage{113}
   \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microros\_allocators.c}, 
-		\hyperpage{114}
+		\hyperpage{113}
   \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microros\_time.c}, 
 		\hyperpage{114}
   \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/motorCommand.c}, 
@@ -310,7 +312,7 @@
   \item {g\_i2cAddr}
     \subitem {VL53L0X.c}, \hyperpage{148}
   \item {g\_stopVariable}
-    \subitem {VL53L0X.c}, \hyperpage{148}
+    \subitem {VL53L0X.c}, \hyperpage{149}
   \item {getAddress}
     \subitem {VL53L0X.c}, \hyperpage{146}
     \subitem {VL53L0X.h}, \hyperpage{66}
@@ -318,7 +320,7 @@
     \subitem {VL53L0X.c}, \hyperpage{146}
     \subitem {VL53L0X.h}, \hyperpage{66}
   \item {gHuart}
-    \subitem {retarget.c}, \hyperpage{123}
+    \subitem {retarget.c}, \hyperpage{122}
   \item {GLOBAL\_CONFIG\_REF\_EN\_START\_SELECT}
     \subitem {VL53L0X.h}, \hyperpage{55}
   \item {GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF0}
@@ -678,14 +680,14 @@
     \subitem {\_getpid}, \hyperpage{121}
     \subitem {\_isatty}, \hyperpage{121}
     \subitem {\_kill}, \hyperpage{121}
-    \subitem {\_lseek}, \hyperpage{122}
+    \subitem {\_lseek}, \hyperpage{121}
     \subitem {\_read}, \hyperpage{122}
     \subitem {\_write}, \hyperpage{122}
-    \subitem {gHuart}, \hyperpage{123}
+    \subitem {gHuart}, \hyperpage{122}
     \subitem {RetargetInit}, \hyperpage{122}
     \subitem {STDERR\_FILENO}, \hyperpage{120}
     \subitem {STDIN\_FILENO}, \hyperpage{120}
-    \subitem {STDOUT\_FILENO}, \hyperpage{121}
+    \subitem {STDOUT\_FILENO}, \hyperpage{120}
   \item {retarget.h}
     \subitem {\_RETARGET\_H\_\_}, \hyperpage{36}
     \subitem {\_close}, \hyperpage{36}
@@ -757,7 +759,7 @@
   \item {STDIN\_FILENO}
     \subitem {retarget.c}, \hyperpage{120}
   \item {STDOUT\_FILENO}
-    \subitem {retarget.c}, \hyperpage{121}
+    \subitem {retarget.c}, \hyperpage{120}
   \item {stm32f4xx\_hal\_timebase\_tim.c}
     \subitem {HAL\_InitTick}, \hyperpage{130}
     \subitem {HAL\_ResumeTick}, \hyperpage{130}
@@ -919,9 +921,10 @@
     \subitem {main.c}, \hyperpage{92}
   \item {VL53L0X.c}
     \subitem {ACTIVE\_WHILE}, \hyperpage{146}
+    \subitem {addr\_read}, \hyperpage{148}
     \subitem {ADDRESS}, \hyperpage{146}
     \subitem {g\_i2cAddr}, \hyperpage{148}
-    \subitem {g\_stopVariable}, \hyperpage{148}
+    \subitem {g\_stopVariable}, \hyperpage{149}
     \subitem {getAddress}, \hyperpage{146}
     \subitem {getSignalRateLimit}, \hyperpage{146}
     \subitem {initVL53L0X}, \hyperpage{146}

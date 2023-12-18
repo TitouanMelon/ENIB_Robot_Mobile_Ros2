@@ -111,9 +111,9 @@ $(document).ready(function(){initNavTree('_v_l53_l0_x_8c.html',''); initResizabl
 Macros</h2></td></tr>
 <tr class="memitem:a4b19f214c60c75fdebd40fab2ab214d8" id="r_a4b19f214c60c75fdebd40fab2ab214d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_l53_l0_x_8c.html#a4b19f214c60c75fdebd40fab2ab214d8">ACTIVE_WHILE</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:a4b19f214c60c75fdebd40fab2ab214d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8b608ea82f1d76f3ccf33b658cec012" id="r_ad8b608ea82f1d76f3ccf33b658cec012"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_l53_l0_x_8c.html#ad8b608ea82f1d76f3ccf33b658cec012">IO_2V8</a>&#160;&#160;&#160;0</td></tr>
+<tr class="memitem:ad8b608ea82f1d76f3ccf33b658cec012" id="r_ad8b608ea82f1d76f3ccf33b658cec012"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_l53_l0_x_8c.html#ad8b608ea82f1d76f3ccf33b658cec012">IO_2V8</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:ad8b608ea82f1d76f3ccf33b658cec012"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a280feb883e9d4a7edcc69c8bcb9f38f2" id="r_a280feb883e9d4a7edcc69c8bcb9f38f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_l53_l0_x_8c.html#a280feb883e9d4a7edcc69c8bcb9f38f2">ADDRESS</a>&#160;&#160;&#160;ADDRESS_DEFAULT2</td></tr>
+<tr class="memitem:a280feb883e9d4a7edcc69c8bcb9f38f2" id="r_a280feb883e9d4a7edcc69c8bcb9f38f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_l53_l0_x_8c.html#a280feb883e9d4a7edcc69c8bcb9f38f2">ADDRESS</a>&#160;&#160;&#160;0x52</td></tr>
 <tr class="separator:a280feb883e9d4a7edcc69c8bcb9f38f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -153,6 +153,8 @@ Variables</h2></td></tr>
 <tr class="separator:ac2ebf1aa766207c115a7f67cb6cdb0f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50099b66ab2504517a7a2e5130a41cb0" id="r_a50099b66ab2504517a7a2e5130a41cb0"><td class="memItemLeft" align="right" valign="top">uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_l53_l0_x_8c.html#a50099b66ab2504517a7a2e5130a41cb0">g_stopVariable</a></td></tr>
 <tr class="separator:a50099b66ab2504517a7a2e5130a41cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f103281f9159074795b56efb49e9867" id="r_a4f103281f9159074795b56efb49e9867"><td class="memItemLeft" align="right" valign="top">uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_v_l53_l0_x_8c.html#a4f103281f9159074795b56efb49e9867">addr_read</a> = 0</td></tr>
+<tr class="separator:a4f103281f9159074795b56efb49e9867"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>: VL53L0X API STSW-IMG005 portage Most of the functionality of this library is based on the VL53L0X API provided by ST (STSW-IMG005), and some of the explanatory comments are quoted or paraphrased from the API source code, API user manual (UM2039), and the VL53L0X datasheet. </p>
@@ -182,7 +184,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ADDRESS&#160;&#160;&#160;ADDRESS_DEFAULT2</td>
+          <td class="memname">#define ADDRESS&#160;&#160;&#160;0x52</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -198,7 +200,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define IO_2V8&#160;&#160;&#160;0</td>
+          <td class="memname">#define IO_2V8&#160;&#160;&#160;1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -224,7 +226,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00102">102</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00103">103</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -244,7 +246,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00328">328</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00329">329</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -263,7 +265,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00114">114</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00115">115</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -302,7 +304,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00341">341</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00342">342</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -342,7 +344,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00069">69</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00070">70</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -362,7 +364,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00077">77</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00079">79</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -382,7 +384,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00097">97</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00098">98</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -402,7 +404,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00318">318</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00319">319</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -438,7 +440,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00086">86</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00089">89</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -468,7 +470,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00038">38</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00039">39</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
 
 </div>
 </div>
@@ -533,6 +535,22 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a4f103281f9159074795b56efb49e9867" name="a4f103281f9159074795b56efb49e9867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f103281f9159074795b56efb49e9867">&#9670;&#160;</a></span>addr_read</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint16_t addr_read = 0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_v_l53_l0_x_8c_source.html#l00029">29</a> of file <a class="el" href="_v_l53_l0_x_8c_source.html">VL53L0X.c</a>.</p>
+
+</div>
+</div>
 <a id="ac2ebf1aa766207c115a7f67cb6cdb0f2" name="ac2ebf1aa766207c115a7f67cb6cdb0f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2ebf1aa766207c115a7f67cb6cdb0f2">&#9670;&#160;</a></span>g_i2cAddr</h2>
 

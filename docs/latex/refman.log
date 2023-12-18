@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.9)  14 DEC 2023 20:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.9)  17 DEC 2023 22:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1871,6 +1871,11 @@ ing-stm32/blob/master/nucleo-f030[]
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
+
+ []
+
+
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
 (fancyhdr)                \setlength{\headheight}{22.16548pt}.
@@ -1879,11 +1884,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
 [119]
-Underfull \hbox (badness 10000) in paragraph at lines 8--18
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 56--57
 \T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
 ing-stm32/blob/master/nucleo-f030[]
@@ -1898,11 +1898,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[121] [122]) (./retarget_8c_source.tex [123])
+[121]) (./retarget_8c_source.tex [122] [123])
 (./stm32f4xx__hal__msp_8c_source.tex [124] [125] [126] [127] [128])
 (./stm32f4xx__hal__timebase__tim_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 29
+[][][]
  []
 
 
@@ -1914,11 +1919,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
 [129]
-Underfull \hbox (badness 10000) detected at line 29
-[][][]
- []
-
-
 Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
@@ -2024,309 +2024,309 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 
-Overfull \hbox (313.74979pt too wide) in paragraph at lines 97--99
+Overfull \hbox (313.74979pt too wide) in paragraph at lines 99--101
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/captDistIR.h,
  []
 
 
-Overfull \hbox (296.25421pt too wide) in paragraph at lines 99--101
+Overfull \hbox (296.25421pt too wide) in paragraph at lines 101--103
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/config.h,
  []
 
 
-Overfull \hbox (306.66695pt too wide) in paragraph at lines 101--103
+Overfull \hbox (306.66695pt too wide) in paragraph at lines 103--105
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_gpio.h,
  []
 
 
-Overfull \hbox (301.51903pt too wide) in paragraph at lines 103--105
+Overfull \hbox (301.51903pt too wide) in paragraph at lines 105--107
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_i2c.h,
  []
 
 
-Overfull \hbox (305.88374pt too wide) in paragraph at lines 105--107
+Overfull \hbox (305.88374pt too wide) in paragraph at lines 107--109
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_uart.h,
  []
 
 
-Overfull \hbox (340.72264pt too wide) in paragraph at lines 107--109
+Overfull \hbox (340.72264pt too wide) in paragraph at lines 109--111
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/FreeRTOSConfig.h,
- []
-
-
-Overfull \hbox (311.67105pt too wide) in paragraph at lines 109--111
-[]\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/groveLCD.h,
  []
 
 [155
 
 
 ]
-Overfull \hbox (291.74522pt too wide) in paragraph at lines 111--113
+Overfull \hbox (311.67105pt too wide) in paragraph at lines 111--113
+[]\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
+/WORKSPACE_F411_uROS6/base_robot/Core/Inc/groveLCD.h,
+ []
+
+
+Overfull \hbox (291.74522pt too wide) in paragraph at lines 113--115
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/main.h,
  []
 
 
-Overfull \hbox (313.38097pt too wide) in paragraph at lines 113--115
+Overfull \hbox (313.38097pt too wide) in paragraph at lines 115--117
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/microROS.h,
  []
 
 
-Overfull \hbox (336.75345pt too wide) in paragraph at lines 115--117
+Overfull \hbox (336.75345pt too wide) in paragraph at lines 117--119
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/motorCommand.h,
  []
 
 
-Overfull \hbox (325.32358pt too wide) in paragraph at lines 117--119
+Overfull \hbox (325.32358pt too wide) in paragraph at lines 119--121
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/quadEncoder.h,
  []
 
 
-Overfull \hbox (303.25583pt too wide) in paragraph at lines 119--121
+Overfull \hbox (303.25583pt too wide) in paragraph at lines 121--123
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/retarget.h,
  []
 
 
-Overfull \hbox (352.00818pt too wide) in paragraph at lines 121--123
+Overfull \hbox (352.00818pt too wide) in paragraph at lines 123--125
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/stm32f4xx_hal_conf.h,
  []
 
 
-Overfull \hbox (322.75862pt too wide) in paragraph at lines 123--125
+Overfull \hbox (322.75862pt too wide) in paragraph at lines 125--127
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/stm32f4xx_it.h,
  []
 
 
-Overfull \hbox (321.06697pt too wide) in paragraph at lines 125--127
+Overfull \hbox (321.06697pt too wide) in paragraph at lines 127--129
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/systemclock.h,
  []
 
 
-Overfull \hbox (283.74426pt too wide) in paragraph at lines 127--129
+Overfull \hbox (283.74426pt too wide) in paragraph at lines 129--131
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/util.h,
  []
 
 
-Overfull \hbox (309.26785pt too wide) in paragraph at lines 129--131
+Overfull \hbox (309.26785pt too wide) in paragraph at lines 131--133
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/VL53L0X.h,
  []
 
 
-Overfull \hbox (314.73987pt too wide) in paragraph at lines 131--133
+Overfull \hbox (314.73987pt too wide) in paragraph at lines 133--135
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/captDistIR.c,
  []
 
 
-Overfull \hbox (331.52441pt too wide) in paragraph at lines 133--135
+Overfull \hbox (331.52441pt too wide) in paragraph at lines 135--137
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/dma_transport.c,
  []
 
 
-Overfull \hbox (307.65703pt too wide) in paragraph at lines 135--137
+Overfull \hbox (307.65703pt too wide) in paragraph at lines 137--139
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_gpio.c,
  []
 
 
-Overfull \hbox (302.50911pt too wide) in paragraph at lines 137--139
+Overfull \hbox (302.50911pt too wide) in paragraph at lines 139--141
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_i2c.c,
  []
 
 
-Overfull \hbox (306.87383pt too wide) in paragraph at lines 139--141
+Overfull \hbox (306.87383pt too wide) in paragraph at lines 141--143
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_uart.c,
  []
 
 
-Overfull \hbox (303.96696pt too wide) in paragraph at lines 141--143
+Overfull \hbox (303.96696pt too wide) in paragraph at lines 143--145
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/freertos.c,
  []
 
 
-Overfull \hbox (312.66113pt too wide) in paragraph at lines 143--145
+Overfull \hbox (312.66113pt too wide) in paragraph at lines 145--147
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/groveLCD.c,
  []
 
 
-Overfull \hbox (292.7353pt too wide) in paragraph at lines 145--147
+Overfull \hbox (292.7353pt too wide) in paragraph at lines 147--149
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/main.c,
  []
 
 
-Overfull \hbox (314.37105pt too wide) in paragraph at lines 147--149
+Overfull \hbox (314.37105pt too wide) in paragraph at lines 149--151
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/microROS.c,
  []
 
 
-Overfull \hbox (351.1084pt too wide) in paragraph at lines 149--151
+Overfull \hbox (351.1084pt too wide) in paragraph at lines 151--153
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/microros_allocators.c,
  []
 
 
-Overfull \hbox (329.59875pt too wide) in paragraph at lines 151--153
+Overfull \hbox (329.59875pt too wide) in paragraph at lines 153--155
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/microros_time.c,
  []
 
 
-Overfull \hbox (337.74353pt too wide) in paragraph at lines 153--155
+Overfull \hbox (337.74353pt too wide) in paragraph at lines 155--157
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/motorCommand.c,
  []
 
 
-Overfull \hbox (326.31366pt too wide) in paragraph at lines 155--157
+Overfull \hbox (326.31366pt too wide) in paragraph at lines 157--159
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/quadEncoder.c,
  []
 
 
-Overfull \hbox (304.24591pt too wide) in paragraph at lines 157--159
+Overfull \hbox (304.24591pt too wide) in paragraph at lines 159--161
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/retarget.c,
  []
 
 
-Overfull \hbox (352.94432pt too wide) in paragraph at lines 159--161
+Overfull \hbox (352.94432pt too wide) in paragraph at lines 161--163
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_hal_msp.c,
  []
 
 
-Overfull \hbox (389.77153pt too wide) in paragraph at lines 161--163
+Overfull \hbox (389.77153pt too wide) in paragraph at lines 163--165
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_hal_timebase_tim.c,
  []
 
 
-Overfull \hbox (323.7487pt too wide) in paragraph at lines 163--165
+Overfull \hbox (323.7487pt too wide) in paragraph at lines 165--167
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_it.c,
  []
 
 
-Overfull \hbox (304.59738pt too wide) in paragraph at lines 165--167
+Overfull \hbox (304.59738pt too wide) in paragraph at lines 167--169
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/syscalls.c,
  []
 
 
-Overfull \hbox (306.73026pt too wide) in paragraph at lines 167--169
+Overfull \hbox (306.73026pt too wide) in paragraph at lines 169--171
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/sysmem.c,
  []
 
 
-Overfull \hbox (322.05705pt too wide) in paragraph at lines 169--171
+Overfull \hbox (322.05705pt too wide) in paragraph at lines 171--173
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/systemclock.c,
  []
 
 
-Overfull \hbox (284.73434pt too wide) in paragraph at lines 171--173
+Overfull \hbox (284.73434pt too wide) in paragraph at lines 173--175
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/util.c,
  []
 
 
-Overfull \hbox (310.25793pt too wide) in paragraph at lines 173--175
+Overfull \hbox (310.25793pt too wide) in paragraph at lines 175--177
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/VL53L0X.c,
  []
 
 [156]
-Overfull \hbox (17.55711pt too wide) in paragraph at lines 287--288
+Overfull \hbox (17.55711pt too wide) in paragraph at lines 289--290
 []\T1/phv/m/n/10 FINAL_RANGE_CONFIG_MIN_COUNT_RATE_RTN_LIMIT 
  []
 
 [157] [158] [159] [160] [161]
-Underfull \hbox (badness 10000) in paragraph at lines 943--944
+Underfull \hbox (badness 10000) in paragraph at lines 946--947
 []| \T1/phv/m/n/10 ALGO_PART_TO_PART_RANGE_OFFSET_MM,
  []
 
 
-Overfull \hbox (18.00928pt too wide) in paragraph at lines 948--950
+Overfull \hbox (18.00928pt too wide) in paragraph at lines 951--953
 []| \T1/phv/m/n/10 CROSSTALK_COMPENSATION_PEAK_RATE_MCPS,
  []
 
 
-Overfull \hbox (40.059pt too wide) in paragraph at lines 956--958
+Overfull \hbox (40.059pt too wide) in paragraph at lines 959--961
 []| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_MIN_COUNT_RATE_RTN_LIMIT,
  []
 
 [162]
-Underfull \hbox (badness 10000) in paragraph at lines 963--964
+Underfull \hbox (badness 10000) in paragraph at lines 966--967
 []| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_VALID_PHASE_HIGH,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 964--965
+Underfull \hbox (badness 10000) in paragraph at lines 967--968
 []| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_VALID_PHASE_LOW,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 968--969
+Underfull \hbox (badness 10000) in paragraph at lines 971--972
 []| \T1/phv/m/n/10 GLOBAL_CONFIG_REF_EN_START_SELECT,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 999--1000
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
 []| \T1/phv/m/n/10 PRE_RANGE_CONFIG_SIGMA_THRESH_LO,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1000--1001
+Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
 []| \T1/phv/m/n/10 PRE_RANGE_CONFIG_TIMEOUT_MACROP_HI,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
+Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
 []| \T1/phv/m/n/10 PRE_RANGE_CONFIG_VALID_PHASE_HIGH,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
+Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
 []| \T1/phv/m/n/10 PRE_RANGE_MIN_COUNT_RATE_RTN_LIMIT,
  []
 
 
-Overfull \hbox (18.64836pt too wide) in paragraph at lines 1010--1012
+Overfull \hbox (18.64836pt too wide) in paragraph at lines 1013--1015
 []| \T1/phv/m/n/10 RE-SULT_CORE_AMBIENT_WINDOW_EVENTS_REF,
  []
 
 
-Overfull \hbox (18.87346pt too wide) in paragraph at lines 1012--1014
+Overfull \hbox (18.87346pt too wide) in paragraph at lines 1015--1017
 []| \T1/phv/m/n/10 RE-SULT_CORE_AMBIENT_WINDOW_EVENTS_RTN,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1037--1038
+Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
 []| \T1/phv/m/n/10 VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV,
  []
 
@@ -2340,14 +2340,14 @@ L3 programming layer <2023-11-09>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 85F0CB71E83179C53076D33FF305E058;111616.
+(rerunfilecheck)             Checksum: E8926012911D2B6F86A695710A0B3D06;111787.
 
  ) 
 Here is how much of TeX's memory you used:
- 25507 strings out of 474266
- 499573 string characters out of 5751444
- 2007558 words of memory out of 5000000
- 40879 multiletter control sequences out of 15000+600000
+ 25506 strings out of 474266
+ 499717 string characters out of 5751444
+ 2008558 words of memory out of 5000000
+ 40881 multiletter control sequences out of 15000+600000
  614667 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,16n,117p,2304b,963s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2363,10 +2363,10 @@ mf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2023/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvet
 ic/uhvb8ac.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
 <c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (177 pages, 674001 bytes).
+Output written on refman.pdf (177 pages, 674267 bytes).
 PDF statistics:
- 12696 PDF objects out of 12825 (max. 8388607)
- 12365 compressed objects within 124 object streams
- 6393 named destinations out of 7423 (max. 500000)
- 3857 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 12699 PDF objects out of 12825 (max. 8388607)
+ 12368 compressed objects within 124 object streams
+ 6390 named destinations out of 7423 (max. 500000)
+ 3865 words of extra memory for PDF output out of 10000 (max. 10000000)
 

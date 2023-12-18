@@ -388,7 +388,7 @@
 \contentsline {subsubsection}{\numberline {5.32.3.1}createPublisher()}{112}{subsubsection.5.32.3.1}%
 \contentsline {subsubsection}{\numberline {5.32.3.2}createSubscriber()}{112}{subsubsection.5.32.3.2}%
 \contentsline {section}{\numberline {5.33}micro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{113}{section.5.33}%
-\contentsline {section}{\numberline {5.34}microros\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}allocators.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{114}{section.5.34}%
+\contentsline {section}{\numberline {5.34}microros\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}allocators.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{113}{section.5.34}%
 \contentsline {section}{\numberline {5.35}microros\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}time.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{114}{section.5.35}%
 \contentsline {section}{\numberline {5.36}motor\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Command.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{115}{section.5.36}%
 \contentsline {section}{\numberline {5.37}quad\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Encoder.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{116}{section.5.37}%
@@ -396,20 +396,20 @@
 \contentsline {subsection}{\numberline {5.38.1}Detailed Description}{120}{subsection.5.38.1}%
 \contentsline {subsection}{\numberline {5.38.2}Macro Definition Documentation}{120}{subsection.5.38.2}%
 \contentsline {subsubsection}{\numberline {5.38.2.1}STDERR\_FILENO}{120}{subsubsection.5.38.2.1}%
-\contentsline {subsubsection}{\numberline {5.38.2.2}STDIN\_FILENO}{121}{subsubsection.5.38.2.2}%
+\contentsline {subsubsection}{\numberline {5.38.2.2}STDIN\_FILENO}{120}{subsubsection.5.38.2.2}%
 \contentsline {subsubsection}{\numberline {5.38.2.3}STDOUT\_FILENO}{121}{subsubsection.5.38.2.3}%
 \contentsline {subsection}{\numberline {5.38.3}Function Documentation}{121}{subsection.5.38.3}%
 \contentsline {subsubsection}{\numberline {5.38.3.1}\_close()}{121}{subsubsection.5.38.3.1}%
 \contentsline {subsubsection}{\numberline {5.38.3.2}\_fstat()}{121}{subsubsection.5.38.3.2}%
 \contentsline {subsubsection}{\numberline {5.38.3.3}\_getpid()}{121}{subsubsection.5.38.3.3}%
 \contentsline {subsubsection}{\numberline {5.38.3.4}\_isatty()}{121}{subsubsection.5.38.3.4}%
-\contentsline {subsubsection}{\numberline {5.38.3.5}\_kill()}{122}{subsubsection.5.38.3.5}%
+\contentsline {subsubsection}{\numberline {5.38.3.5}\_kill()}{121}{subsubsection.5.38.3.5}%
 \contentsline {subsubsection}{\numberline {5.38.3.6}\_lseek()}{122}{subsubsection.5.38.3.6}%
 \contentsline {subsubsection}{\numberline {5.38.3.7}\_read()}{122}{subsubsection.5.38.3.7}%
 \contentsline {subsubsection}{\numberline {5.38.3.8}\_write()}{122}{subsubsection.5.38.3.8}%
 \contentsline {subsubsection}{\numberline {5.38.3.9}RetargetInit()}{122}{subsubsection.5.38.3.9}%
-\contentsline {subsection}{\numberline {5.38.4}Variable Documentation}{123}{subsection.5.38.4}%
-\contentsline {subsubsection}{\numberline {5.38.4.1}gHuart}{123}{subsubsection.5.38.4.1}%
+\contentsline {subsection}{\numberline {5.38.4}Variable Documentation}{122}{subsection.5.38.4}%
+\contentsline {subsubsection}{\numberline {5.38.4.1}gHuart}{122}{subsubsection.5.38.4.1}%
 \contentsline {section}{\numberline {5.39}retarget.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{123}{section.5.39}%
 \contentsline {section}{\numberline {5.40}stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}msp.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{124}{section.5.40}%
 \contentsline {section}{\numberline {5.41}C\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}:/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Users/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Administrator/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Documents/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Git\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Hub/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ENIB\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Robot\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mobile\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Ros2/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}WORKSPACE\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}F411\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}u\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ROS6/base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}robot/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Core/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Src/stm32f4xx\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}timebase\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}tim.c File Reference}{129}{section.5.41}%
@@ -477,7 +477,8 @@
 \contentsline {subsubsection}{\numberline {5.50.3.13}writeReg16Bit()}{148}{subsubsection.5.50.3.13}%
 \contentsline {subsubsection}{\numberline {5.50.3.14}writeReg32Bit()}{148}{subsubsection.5.50.3.14}%
 \contentsline {subsection}{\numberline {5.50.4}Variable Documentation}{148}{subsection.5.50.4}%
-\contentsline {subsubsection}{\numberline {5.50.4.1}g\_i2cAddr}{148}{subsubsection.5.50.4.1}%
-\contentsline {subsubsection}{\numberline {5.50.4.2}g\_stopVariable}{149}{subsubsection.5.50.4.2}%
+\contentsline {subsubsection}{\numberline {5.50.4.1}addr\_read}{148}{subsubsection.5.50.4.1}%
+\contentsline {subsubsection}{\numberline {5.50.4.2}g\_i2cAddr}{149}{subsubsection.5.50.4.2}%
+\contentsline {subsubsection}{\numberline {5.50.4.3}g\_stopVariable}{149}{subsubsection.5.50.4.3}%
 \contentsline {section}{\numberline {5.51}VL53\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}L0\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}X.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c}{149}{section.5.51}%
 \contentsline {chapter}{Index}{155}{section*.36}%
