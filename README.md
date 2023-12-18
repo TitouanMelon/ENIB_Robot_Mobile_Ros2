@@ -38,6 +38,7 @@ CHOOSE OS -> Other general-purpose OS -> Ubuntu -> Ubuntu Desktop 22.04.03 LTS (
 
 You can install all necessary tools with this following commands.
 ```
+sudo apt install wget -y
 wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/ROS.sh
 wget STM32cubeIDE.sh
 sed -i 's/\r$//' ./ROS.sh && ./ROS.sh
@@ -48,8 +49,8 @@ sed -i 's/\r$//' ./ROS.sh && ./ROS.sh
 ROS2 installation is the same on PC and on RPI
 
 ```
-sudo apt install wget
-wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/edit/main/script/rosInstall.sh
+sudo apt install wget -y
+wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/ROS_Install.sh
 chmod +x ./rosInstall.sh
 ./rosInstall.sh
 ```
@@ -63,8 +64,8 @@ chmod +x ./rosInstall.sh
 >In order to install on a RPI4 with 2GB of RAM you can remove gdm3 install the script with the console and reinstall gdm3
 
 ```
-sudo apt install wget
-wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/edit/main/script/microRosInstall.sh
+sudo apt install wget -y
+wget wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/MicroROS_Install.sh
 chmod +x ./microRosInstall.sh
 ./microRosInstall.sh
 ```
@@ -72,6 +73,7 @@ chmod +x ./microRosInstall.sh
 ## Copy scripts on pc
 ```
 cd ~
+sudo apt install wget -y
 wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/STM32.sh
 wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/SET_ROS_DOMAIN_ID.sh
 echo "ROS_DOMAIN_ID=0" | sudo tee -a /etc/environment
