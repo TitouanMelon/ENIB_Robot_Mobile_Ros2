@@ -8,7 +8,9 @@
   * @mainpage Robot ROS
   * @image html Mylogo.png
   * @htmlinclude about-MyProject.html
+  * @section Externe Externe documentation
   * <a href="base_robot.pdf">Documentation about the pinout of the robot</a>
+  * <a href="vl53l0x-datasheet-I2C.pdf">I2C protocole for VLX530X</a>
   * @section Principal Principal function
   * function @ref main : init function and start kernel.@n
   * function @ref microros_task : Create the publishers and the subscribers and exploit them.@n

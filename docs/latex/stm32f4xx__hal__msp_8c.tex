@@ -1,0 +1,277 @@
+\doxysection{C\+:/\+Users/\+Administrator/\+Documents/\+Git\+Hub/\+ENIB\+\_\+\+Robot\+\_\+\+Mobile\+\_\+\+Ros2/\+WORKSPACE\+\_\+\+F411\+\_\+u\+ROS6/base\+\_\+robot/\+Core/\+Src/stm32f4xx\+\_\+hal\+\_\+msp.c File Reference}
+\hypertarget{stm32f4xx__hal__msp_8c}{}\label{stm32f4xx__hal__msp_8c}\index{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/stm32f4xx\_hal\_msp.c@{C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/stm32f4xx\_hal\_msp.c}}
+
+
+\+: function to configure the pinout of STM32  
+
+
+{\ttfamily \#include "{}main.\+h"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a27afd861bd5468360685c3f800f48a21}{USART2\+\_\+\+IRQ\+\_\+\+PRIO}}~9
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a8ecc34abe5fe5246ab2644ad76f1793a}{USART6\+\_\+\+IRQ\+\_\+\+PRIO}}~10
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a5a1c6fadd981ce13ca3a45b10284b59c}{EXTI0\+\_\+\+IRQ\+\_\+\+PRIO}}~6
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__msp_8c_ac70e3d92d8dedf0f6ecee0f03df52821}{EXTI15\+\_\+10\+\_\+\+IRQ\+\_\+\+PRIO}}~7
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__msp_8c_adff58977457ba4e8ecf24dc2fbba70ff}{I2\+C1\+\_\+\+ER\+\_\+\+IRQ\+\_\+\+PRIO}}~2
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__msp_8c_aaf9bb96d355f2e9fc1bdfeae8cf8757e}{I2\+C1\+\_\+\+EV\+\_\+\+IRQ\+\_\+\+PRIO}}~11
+\item 
+\#define \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a8e8b304a06415a88be421ae79e9a283c}{TIM5\+\_\+\+IRQ\+\_\+\+PRIO}}~12
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a0ab2072a359b99a46e2c70eafcfac4a4}{HAL\+\_\+\+PWM\+\_\+\+Timer3\+\_\+\+Msp\+Init}} (void)
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_ac189a65b75284ff8040614d57d3232fc}{HAL\+\_\+\+Encoder\+\_\+\+Timer1\+\_\+\+Msp\+Init}} (void)
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a6acd78e46efa0bc6400a01080a15691b}{HAL\+\_\+\+Encoder\+\_\+\+Timer2\+\_\+\+Msp\+Init}} (void)
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_ad5f227eb82b156cda95b76e4bcb84da5}{HAL\+\_\+adcir\+\_\+\+Msp\+Init}} (void)
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f}{HAL\+\_\+\+Msp\+Init}} (void)
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073}{HAL\+\_\+\+I2\+C\+\_\+\+Msp\+Init}} (I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hi2c)
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a2ec8d9b09854c732e2feed549278f048}{HAL\+\_\+\+I2\+C\+\_\+\+Msp\+De\+Init}} (I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hi2c)
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7}{HAL\+\_\+\+UART\+\_\+\+Msp\+Init}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\item 
+void \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a718f39804e3b910d738a0e1e46151188}{HAL\+\_\+\+UART\+\_\+\+Msp\+De\+Init}} (UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a34251392f0d5e2461e3aef615918c235}{hdma\+\_\+usart1\+\_\+rx}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a5af94ab36bfe698db3e6beea96d10a90}{hdma\+\_\+usart1\+\_\+tx}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a784aa25dc7e4580cfbf80658340f482c}{hdma\+\_\+usart2\+\_\+rx}}
+\item 
+DMA\+\_\+\+Handle\+Type\+Def \mbox{\hyperlink{stm32f4xx__hal__msp_8c_a0083b476c2a75ab9fb2ccbed0048857e}{hdma\+\_\+usart2\+\_\+tx}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: function to configure the pinout of STM32 
+
+
+
+Definition in file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{stm32f4xx__hal__msp_8c_a5a1c6fadd981ce13ca3a45b10284b59c}\label{stm32f4xx__hal__msp_8c_a5a1c6fadd981ce13ca3a45b10284b59c} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!EXTI0\_IRQ\_PRIO@{EXTI0\_IRQ\_PRIO}}
+\index{EXTI0\_IRQ\_PRIO@{EXTI0\_IRQ\_PRIO}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{EXTI0\_IRQ\_PRIO}{EXTI0\_IRQ\_PRIO}}
+{\footnotesize\ttfamily \#define EXTI0\+\_\+\+IRQ\+\_\+\+PRIO~6}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00010}{10}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_ac70e3d92d8dedf0f6ecee0f03df52821}\label{stm32f4xx__hal__msp_8c_ac70e3d92d8dedf0f6ecee0f03df52821} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!EXTI15\_10\_IRQ\_PRIO@{EXTI15\_10\_IRQ\_PRIO}}
+\index{EXTI15\_10\_IRQ\_PRIO@{EXTI15\_10\_IRQ\_PRIO}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{EXTI15\_10\_IRQ\_PRIO}{EXTI15\_10\_IRQ\_PRIO}}
+{\footnotesize\ttfamily \#define EXTI15\+\_\+10\+\_\+\+IRQ\+\_\+\+PRIO~7}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00011}{11}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_adff58977457ba4e8ecf24dc2fbba70ff}\label{stm32f4xx__hal__msp_8c_adff58977457ba4e8ecf24dc2fbba70ff} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!I2C1\_ER\_IRQ\_PRIO@{I2C1\_ER\_IRQ\_PRIO}}
+\index{I2C1\_ER\_IRQ\_PRIO@{I2C1\_ER\_IRQ\_PRIO}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{I2C1\_ER\_IRQ\_PRIO}{I2C1\_ER\_IRQ\_PRIO}}
+{\footnotesize\ttfamily \#define I2\+C1\+\_\+\+ER\+\_\+\+IRQ\+\_\+\+PRIO~2}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00012}{12}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_aaf9bb96d355f2e9fc1bdfeae8cf8757e}\label{stm32f4xx__hal__msp_8c_aaf9bb96d355f2e9fc1bdfeae8cf8757e} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!I2C1\_EV\_IRQ\_PRIO@{I2C1\_EV\_IRQ\_PRIO}}
+\index{I2C1\_EV\_IRQ\_PRIO@{I2C1\_EV\_IRQ\_PRIO}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{I2C1\_EV\_IRQ\_PRIO}{I2C1\_EV\_IRQ\_PRIO}}
+{\footnotesize\ttfamily \#define I2\+C1\+\_\+\+EV\+\_\+\+IRQ\+\_\+\+PRIO~11}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00013}{13}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a8e8b304a06415a88be421ae79e9a283c}\label{stm32f4xx__hal__msp_8c_a8e8b304a06415a88be421ae79e9a283c} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!TIM5\_IRQ\_PRIO@{TIM5\_IRQ\_PRIO}}
+\index{TIM5\_IRQ\_PRIO@{TIM5\_IRQ\_PRIO}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{TIM5\_IRQ\_PRIO}{TIM5\_IRQ\_PRIO}}
+{\footnotesize\ttfamily \#define TIM5\+\_\+\+IRQ\+\_\+\+PRIO~12}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00014}{14}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a27afd861bd5468360685c3f800f48a21}\label{stm32f4xx__hal__msp_8c_a27afd861bd5468360685c3f800f48a21} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!USART2\_IRQ\_PRIO@{USART2\_IRQ\_PRIO}}
+\index{USART2\_IRQ\_PRIO@{USART2\_IRQ\_PRIO}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{USART2\_IRQ\_PRIO}{USART2\_IRQ\_PRIO}}
+{\footnotesize\ttfamily \#define USART2\+\_\+\+IRQ\+\_\+\+PRIO~9}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00007}{7}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a8ecc34abe5fe5246ab2644ad76f1793a}\label{stm32f4xx__hal__msp_8c_a8ecc34abe5fe5246ab2644ad76f1793a} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!USART6\_IRQ\_PRIO@{USART6\_IRQ\_PRIO}}
+\index{USART6\_IRQ\_PRIO@{USART6\_IRQ\_PRIO}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{USART6\_IRQ\_PRIO}{USART6\_IRQ\_PRIO}}
+{\footnotesize\ttfamily \#define USART6\+\_\+\+IRQ\+\_\+\+PRIO~10}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00008}{8}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{stm32f4xx__hal__msp_8c_ad5f227eb82b156cda95b76e4bcb84da5}\label{stm32f4xx__hal__msp_8c_ad5f227eb82b156cda95b76e4bcb84da5} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_adcir\_MspInit@{HAL\_adcir\_MspInit}}
+\index{HAL\_adcir\_MspInit@{HAL\_adcir\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_adcir\_MspInit()}{HAL\_adcir\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+adcir\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00162}{162}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_ac189a65b75284ff8040614d57d3232fc}\label{stm32f4xx__hal__msp_8c_ac189a65b75284ff8040614d57d3232fc} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_Encoder\_Timer1\_MspInit@{HAL\_Encoder\_Timer1\_MspInit}}
+\index{HAL\_Encoder\_Timer1\_MspInit@{HAL\_Encoder\_Timer1\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_Encoder\_Timer1\_MspInit()}{HAL\_Encoder\_Timer1\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+Encoder\+\_\+\+Timer1\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00053}{53}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a6acd78e46efa0bc6400a01080a15691b}\label{stm32f4xx__hal__msp_8c_a6acd78e46efa0bc6400a01080a15691b} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_Encoder\_Timer2\_MspInit@{HAL\_Encoder\_Timer2\_MspInit}}
+\index{HAL\_Encoder\_Timer2\_MspInit@{HAL\_Encoder\_Timer2\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_Encoder\_Timer2\_MspInit()}{HAL\_Encoder\_Timer2\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+Encoder\+\_\+\+Timer2\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00084}{84}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a2ec8d9b09854c732e2feed549278f048}\label{stm32f4xx__hal__msp_8c_a2ec8d9b09854c732e2feed549278f048} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_I2C\_MspDeInit@{HAL\_I2C\_MspDeInit}}
+\index{HAL\_I2C\_MspDeInit@{HAL\_I2C\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_I2C\_MspDeInit()}{HAL\_I2C\_MspDeInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+I2\+C\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hi2c }\end{DoxyParamCaption})}
+
+I2\+C1 GPIO Configuration PB6 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C1\+\_\+\+SCL PB7 -\/-\/-\/---\texorpdfstring{$>$}{>} I2\+C1\+\_\+\+SDA
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00222}{222}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073}\label{stm32f4xx__hal__msp_8c_abe01a202c27b23fc150aa66af3130073} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_I2C\_MspInit@{HAL\_I2C\_MspInit}}
+\index{HAL\_I2C\_MspInit@{HAL\_I2C\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_I2C\_MspInit()}{HAL\_I2C\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+I2\+C\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{I2\+C\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hi2c }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00192}{192}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f}\label{stm32f4xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_MspInit@{HAL\_MspInit}}
+\index{HAL\_MspInit@{HAL\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_MspInit()}{HAL\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00026}{26}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a0ab2072a359b99a46e2c70eafcfac4a4}\label{stm32f4xx__hal__msp_8c_a0ab2072a359b99a46e2c70eafcfac4a4} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_PWM\_Timer3\_MspInit@{HAL\_PWM\_Timer3\_MspInit}}
+\index{HAL\_PWM\_Timer3\_MspInit@{HAL\_PWM\_Timer3\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_PWM\_Timer3\_MspInit()}{HAL\_PWM\_Timer3\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+PWM\+\_\+\+Timer3\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00115}{115}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a718f39804e3b910d738a0e1e46151188}\label{stm32f4xx__hal__msp_8c_a718f39804e3b910d738a0e1e46151188} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_UART\_MspDeInit@{HAL\_UART\_MspDeInit}}
+\index{HAL\_UART\_MspDeInit@{HAL\_UART\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_MspDeInit()}{HAL\_UART\_MspDeInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+UART\+\_\+\+Msp\+De\+Init (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+USART1 GPIO Configuration PA9 -\/-\/-\/---\texorpdfstring{$>$}{>} USART1\+\_\+\+TX PA10 -\/-\/-\/---\texorpdfstring{$>$}{>} USART1\+\_\+\+RX
+
+USART2 GPIO Configuration PA2 -\/-\/-\/---\texorpdfstring{$>$}{>} USART2\+\_\+\+TX PA3 -\/-\/-\/---\texorpdfstring{$>$}{>} USART2\+\_\+\+RX
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00403}{403}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7}\label{stm32f4xx__hal__msp_8c_a0e553b32211877322f949b14801bbfa7} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_UART\_MspInit@{HAL\_UART\_MspInit}}
+\index{HAL\_UART\_MspInit@{HAL\_UART\_MspInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{HAL\_UART\_MspInit()}{HAL\_UART\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+UART\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source_l00260}{260}} of file \mbox{\hyperlink{stm32f4xx__hal__msp_8c_source}{stm32f4xx\+\_\+hal\+\_\+msp.\+c}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{stm32f4xx__hal__msp_8c_a34251392f0d5e2461e3aef615918c235}\label{stm32f4xx__hal__msp_8c_a34251392f0d5e2461e3aef615918c235} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!hdma\_usart1\_rx@{hdma\_usart1\_rx}}
+\index{hdma\_usart1\_rx@{hdma\_usart1\_rx}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart1\_rx}{hdma\_usart1\_rx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart1\+\_\+rx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00006}{6}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a5af94ab36bfe698db3e6beea96d10a90}\label{stm32f4xx__hal__msp_8c_a5af94ab36bfe698db3e6beea96d10a90} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!hdma\_usart1\_tx@{hdma\_usart1\_tx}}
+\index{hdma\_usart1\_tx@{hdma\_usart1\_tx}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart1\_tx}{hdma\_usart1\_tx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart1\+\_\+tx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00007}{7}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a784aa25dc7e4580cfbf80658340f482c}\label{stm32f4xx__hal__msp_8c_a784aa25dc7e4580cfbf80658340f482c} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!hdma\_usart2\_rx@{hdma\_usart2\_rx}}
+\index{hdma\_usart2\_rx@{hdma\_usart2\_rx}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart2\_rx}{hdma\_usart2\_rx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart2\+\_\+rx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00008}{8}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+
+\Hypertarget{stm32f4xx__hal__msp_8c_a0083b476c2a75ab9fb2ccbed0048857e}\label{stm32f4xx__hal__msp_8c_a0083b476c2a75ab9fb2ccbed0048857e} 
+\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!hdma\_usart2\_tx@{hdma\_usart2\_tx}}
+\index{hdma\_usart2\_tx@{hdma\_usart2\_tx}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
+\doxysubsubsection{\texorpdfstring{hdma\_usart2\_tx}{hdma\_usart2\_tx}}
+{\footnotesize\ttfamily DMA\+\_\+\+Handle\+Type\+Def hdma\+\_\+usart2\+\_\+tx\hspace{0.3cm}{\ttfamily [extern]}}
+
+
+
+Definition at line \mbox{\hyperlink{drv__uart_8c_source_l00009}{9}} of file \mbox{\hyperlink{drv__uart_8c_source}{drv\+\_\+uart.\+c}}.
+

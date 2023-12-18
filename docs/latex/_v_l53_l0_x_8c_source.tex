@@ -12,368 +12,364 @@
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_v_l53_l0_x_8h}{VL53L0X.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}drv\_i2c.h"{}}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00019}00019\ \textcolor{preprocessor}{\#define\ ACTIVE\_WHILE\ 0}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00020}00020\ \textcolor{preprocessor}{\#define\ IO\_2V8\ 1}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00021}00021\ \textcolor{preprocessor}{\#define\ ADDRESS\ 0x52}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00023}00023\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00024}00024\ \textcolor{comment}{//\ Local\ variables\ within\ this\ file\ (private)}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00025}00025\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00026}00026\ uint8\_t\ g\_i2cAddr\ =\ ADDRESS;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00027}00027\ uint8\_t\ g\_stopVariable;\ \textcolor{comment}{//\ read\ by\ init\ and\ used\ when\ starting\ measurement;\ is\ StopVariable\ field\ of\ VL53L0X\_DevData\_t\ structure\ in\ API}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00029}00029\ uint16\_t\ addr\_read\ =\ 0;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00019}00019\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00020}00020\ \textcolor{comment}{//\ Local\ variables\ within\ this\ file\ (private)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00021}00021\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00022}00022\ uint8\_t\ g\_i2cAddr\ =\ \mbox{\hyperlink{_v_l53_l0_x_8h_a280feb883e9d4a7edcc69c8bcb9f38f2}{ADDRESS}};}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00023}00023\ uint8\_t\ g\_stopVariable;\ \textcolor{comment}{//\ read\ by\ init\ and\ used\ when\ starting\ measurement;\ is\ StopVariable\ field\ of\ VL53L0X\_DevData\_t\ structure\ in\ API}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00025}00025\ uint16\_t\ addr\_read\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00027}00027\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00028}00028\ \textcolor{comment}{//\ Locally\ used\ functions\ (private)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00029}00029\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00030}00030\ uint8\_t\ performSingleRefCalibration(uint8\_t\ vhv\_init\_byte);}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00031}00031\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00032}00032\ \textcolor{comment}{//\ Locally\ used\ functions\ (private)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00032}00032\ \textcolor{comment}{//\ I2C\ communication\ Functions}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00033}00033\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00034}00034\ uint8\_t\ performSingleRefCalibration(uint8\_t\ vhv\_init\_byte);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00035}00035\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00036}00036\ \textcolor{comment}{//\ I2C\ communication\ Functions}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00037}00037\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00038}00038\ \textcolor{comment}{//\ Write\ an\ 8-\/bit\ register}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00039}00039\ \textcolor{keywordtype}{void}\ writeReg(uint8\_t\ reg,\ uint8\_t\ value)\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00040}00040\ \ \ \ \ i2c1\_WriteRegBuffer(g\_i2cAddr,reg,\&value,1);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00041}00041\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00043}00043\ \textcolor{comment}{//\ Write\ a\ 16-\/bit\ register}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00044}00044\ \textcolor{keywordtype}{void}\ writeReg16Bit(uint8\_t\ reg,\ uint16\_t\ value)\{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00045}00045\ \ \ \ \ uint8\_t\ tab[2];}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00046}00046\ \ \ \ \ tab[0]=\ ((value\ >>\ 8));}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00047}00047\ \ \ \ \ tab[1]\ =\ ((value\ )\ \&\ 0xFF);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00048}00048\ \ \ \ \ i2c1\_WriteRegBuffer(g\_i2cAddr,reg,tab,2);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00049}00049\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00050}00050\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00051}00051\ \textcolor{comment}{//\ Write\ a\ 32-\/bit\ register}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00052}00052\ \textcolor{keywordtype}{void}\ writeReg32Bit(uint8\_t\ reg,\ uint32\_t\ value)\{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00053}00053\ \ \ \ \ uint8\_t\ tab[4];}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ tab[3]=\ ((value\ >>\ 24)\ \&\ 0xFF);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00055}00055\ \ \ \ \ \ \ \ \ tab[2]=\ ((value\ >>\ 16)\ \&\ 0xFF);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00056}00056\ \ \ \ \ \ \ \ \ tab[1]=\ ((value\ >>\ 8)\ \&\ 0xFF);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00057}00057\ \ \ \ \ \ \ \ \ tab[0]\ =\ ((value\ )\ \&\ 0xFF);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00058}00058\ \ \ \ \ \ \ \ \ i2c1\_WriteRegBuffer(g\_i2cAddr,reg,tab,4);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00059}00059\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00060}00060\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00061}00061\ \textcolor{comment}{//\ Read\ an\ 8-\/bit\ register}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00062}00062\ uint8\_t\ readReg(uint8\_t\ reg)\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00063}00063\ \ \ \ \ uint8\_t\ value=0;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00064}00064\ \ \ \ \ i2c1\_WriteBuffer(g\_i2cAddr,\ \&reg,\ 1);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00065}00065\ \ \ \ \ i2c1\_ReadBuffer(g\_i2cAddr|0x01,\ \&value,\ 1);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00067}00067\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00068}00068\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00069}00069\ \textcolor{comment}{//\ Read\ a\ 16-\/bit\ register}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00070}00070\ uint16\_t\ readReg16Bit(uint8\_t\ reg)\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00071}00071\ \ \ \ \ uint8\_t\ tab[2];}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00072}00072\ \ \ \ \ i2c1\_WriteBuffer(g\_i2cAddr,\ \&reg,\ 1);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00073}00073\ \ \ \ \ i2c1\_ReadBuffer(g\_i2cAddr|0x01,\ tab,\ 2);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00074}00074\ \ \ \ \ uint16\_t\ value=\ ((uint16\_t)tab[0]\ <<\ 8)\ |\ (uint16\_t)tab[1];}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00075}00075\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00076}00076\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00077}00077\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00078}00078\ \textcolor{comment}{//\ Read\ a\ 32-\/bit\ register}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00079}00079\ uint32\_t\ readReg32Bit(uint8\_t\ reg)\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00080}00080\ \ \ uint8\_t\ tab[4];}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00081}00081\ \ \ i2c1\_WriteBuffer(g\_i2cAddr,\ \&reg,\ 1);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00082}00082\ \ \ i2c1\_ReadBuffer(g\_i2cAddr|0x01,\ tab,\ 4);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00083}00083\ \ \ uint32\_t\ value=\ (tab[3]\ <<\ 24)\ |\ (tab[2]\ <<\ 16\ )\ |\ (tab[1]\ <<\ 8)\ |\ tab[0];}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00084}00084\ \ \ \textcolor{keywordflow}{return}\ value;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00085}00085\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00086}00086\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00087}00087\ \textcolor{comment}{//\ Write\ an\ arbitrary\ number\ of\ bytes\ from\ the\ given\ array\ to\ the\ sensor,}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00088}00088\ \textcolor{comment}{//\ starting\ at\ the\ given\ register}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00089}00089\ \textcolor{keywordtype}{void}\ writeMulti(uint8\_t\ reg,\ uint8\_t\ \textcolor{keyword}{const}\ *src,\ uint8\_t\ count)\{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00090}00090\ \ \ \textcolor{keywordflow}{while}\ (\ count-\/-\/\ >\ 0\ )\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00091}00091\ \ \ \ \ i2c1\_WriteRegBuffer(g\_i2cAddr,reg,(uint8\_t\ *)src,1);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00092}00092\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00093}00093\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00094}00094\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00095}00095\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00096}00096\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00097}00097\ \textcolor{comment}{//\ Public\ Methods\ //////////////////////////////////////////////////////////////}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00098}00098\ \textcolor{keywordtype}{void}\ setAddress(uint8\_t\ new\_addr)\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00099}00099\ \ \ writeReg(\ I2C\_SLAVE\_DEVICE\_ADDRESS,\ (new\_addr>>1)\ \&\ 0x7F\ );}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00100}00100\ \ \ g\_i2cAddr\ =\ new\_addr;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00034}00034\ \textcolor{comment}{//\ Write\ an\ 8-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00035}00035\ \textcolor{keywordtype}{void}\ writeReg(uint8\_t\ reg,\ uint8\_t\ value)\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00036}00036\ \ \ \ \ i2c1\_WriteRegBuffer(g\_i2cAddr,reg,\&value,1);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00039}00039\ \textcolor{comment}{//\ Write\ a\ 16-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00040}00040\ \textcolor{keywordtype}{void}\ writeReg16Bit(uint8\_t\ reg,\ uint16\_t\ value)\{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00041}00041\ \ \ \ \ uint8\_t\ tab[2];}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00042}00042\ \ \ \ \ tab[0]=\ ((value\ >>\ 8));}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00043}00043\ \ \ \ \ tab[1]\ =\ ((value\ )\ \&\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00044}00044\ \ \ \ \ i2c1\_WriteRegBuffer(g\_i2cAddr,reg,tab,2);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00047}00047\ \textcolor{comment}{//\ Write\ a\ 32-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00048}00048\ \textcolor{keywordtype}{void}\ writeReg32Bit(uint8\_t\ reg,\ uint32\_t\ value)\{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00049}00049\ \ \ \ \ uint8\_t\ tab[4];}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00050}00050\ \ \ \ \ \ \ \ \ tab[3]=\ ((value\ >>\ 24)\ \&\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00051}00051\ \ \ \ \ \ \ \ \ tab[2]=\ ((value\ >>\ 16)\ \&\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00052}00052\ \ \ \ \ \ \ \ \ tab[1]=\ ((value\ >>\ 8)\ \&\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00053}00053\ \ \ \ \ \ \ \ \ tab[0]\ =\ ((value\ )\ \&\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00054}00054\ \ \ \ \ \ \ \ \ i2c1\_WriteRegBuffer(g\_i2cAddr,reg,tab,4);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00057}00057\ \textcolor{comment}{//\ Read\ an\ 8-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00058}00058\ uint8\_t\ readReg(uint8\_t\ reg)\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00059}00059\ \ \ \ \ uint8\_t\ value=0;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00060}00060\ \ \ \ \ i2c1\_WriteBuffer(g\_i2cAddr,\ \&reg,\ 1);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00061}00061\ \ \ \ \ i2c1\_ReadBuffer(g\_i2cAddr|0x01,\ \&value,\ 1);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00062}00062\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00063}00063\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00065}00065\ \textcolor{comment}{//\ Read\ a\ 16-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00066}00066\ uint16\_t\ readReg16Bit(uint8\_t\ reg)\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00067}00067\ \ \ \ \ uint8\_t\ tab[2];}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00068}00068\ \ \ \ \ i2c1\_WriteBuffer(g\_i2cAddr,\ \&reg,\ 1);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00069}00069\ \ \ \ \ i2c1\_ReadBuffer(g\_i2cAddr|0x01,\ tab,\ 2);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00070}00070\ \ \ \ \ uint16\_t\ value=\ ((uint16\_t)tab[0]\ <<\ 8)\ |\ (uint16\_t)tab[1];}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00072}00072\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00073}00073\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00074}00074\ \textcolor{comment}{//\ Read\ a\ 32-\/bit\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00075}00075\ uint32\_t\ readReg32Bit(uint8\_t\ reg)\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00076}00076\ \ \ uint8\_t\ tab[4];}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00077}00077\ \ \ i2c1\_WriteBuffer(g\_i2cAddr,\ \&reg,\ 1);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00078}00078\ \ \ i2c1\_ReadBuffer(g\_i2cAddr|0x01,\ tab,\ 4);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00079}00079\ \ \ uint32\_t\ value=\ (tab[3]\ <<\ 24)\ |\ (tab[2]\ <<\ 16\ )\ |\ (tab[1]\ <<\ 8)\ |\ tab[0];}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00080}00080\ \ \ \textcolor{keywordflow}{return}\ value;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00083}00083\ \textcolor{comment}{//\ Write\ an\ arbitrary\ number\ of\ bytes\ from\ the\ given\ array\ to\ the\ sensor,}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00084}00084\ \textcolor{comment}{//\ starting\ at\ the\ given\ register}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00085}00085\ \textcolor{keywordtype}{void}\ writeMulti(uint8\_t\ reg,\ uint8\_t\ \textcolor{keyword}{const}\ *src,\ uint8\_t\ count)\{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00086}00086\ \ \ \textcolor{keywordflow}{while}\ (\ count-\/-\/\ >\ 0\ )\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00087}00087\ \ \ \ \ i2c1\_WriteRegBuffer(g\_i2cAddr,reg,(uint8\_t\ *)src,1);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00088}00088\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00089}00089\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00093}00093\ \textcolor{comment}{//\ Public\ Methods\ //////////////////////////////////////////////////////////////}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00094}00094\ \textcolor{keywordtype}{void}\ setAddress(uint8\_t\ new\_addr)\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00095}00095\ \ \ writeReg(\ I2C\_SLAVE\_DEVICE\_ADDRESS,\ (new\_addr>>1)\ \&\ 0x7F\ );}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00096}00096\ \ \ g\_i2cAddr\ =\ new\_addr;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00097}00097\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00099}00099\ uint8\_t\ getAddress()\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00100}00100\ \ \ \textcolor{keywordflow}{return}\ g\_i2cAddr;}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00101}00101\ \}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00102}00102\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00103}00103\ uint8\_t\ getAddress()\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00104}00104\ \ \ \textcolor{keywordflow}{return}\ g\_i2cAddr;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00105}00105\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00106}00106\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00107}00107\ \textcolor{comment}{//\ Initialize\ sensor\ using\ sequence\ based\ on\ VL53L0X\_DataInit(),}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00108}00108\ \textcolor{comment}{//\ VL53L0X\_StaticInit(),\ and\ VL53L0X\_PerformRefCalibration().}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00109}00109\ \textcolor{comment}{//\ This\ function\ does\ not\ perform\ reference\ SPAD\ calibration}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00110}00110\ \textcolor{comment}{//\ (VL53L0X\_PerformRefSpadManagement()),\ since\ the\ API\ user\ manual\ says\ that\ it}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00111}00111\ \textcolor{comment}{//\ is\ performed\ by\ ST\ on\ the\ bare\ modules;\ it\ seems\ like\ that\ should\ work\ well}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00112}00112\ \textcolor{comment}{//\ enough\ unless\ a\ cover\ glass\ is\ added.}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00113}00113\ \textcolor{comment}{//\ If\ io\_2v8\ (optional)\ is\ true\ or\ not\ given,\ the\ sensor\ is\ configured\ for\ 2V8}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00114}00114\ \textcolor{comment}{//\ mode.}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00115}00115\ uint8\_t\ initVL53L0X(\ )\{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00116}00116\ \ \ \textcolor{comment}{//\ VL53L0X\_DataInit()\ begin}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00117}00117\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00118}00118\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00119}00119\ \ \ \textcolor{comment}{//\ sensor\ uses\ 1V8\ mode\ for\ I/O\ by\ default;\ switch\ to\ 2V8\ mode\ if\ necessary}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00120}00120\ \ \ \textcolor{keywordflow}{if}\ (IO\_2V8)}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00121}00121\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00122}00122\ \ \ \ \ writeReg(VHV\_CONFIG\_PAD\_SCL\_SDA\_\_EXTSUP\_HV,}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00123}00123\ \ \ \ \ readReg(VHV\_CONFIG\_PAD\_SCL\_SDA\_\_EXTSUP\_HV)\ |\ 0x01);\ \textcolor{comment}{//\ set\ bit\ 0}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00124}00124\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00125}00125\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00126}00126\ \ \ \textcolor{comment}{//\ "{}Set\ I2C\ standard\ mode"{}}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00127}00127\ \ \ writeReg(0x88,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00128}00128\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00129}00129\ \ \ writeReg(0x80,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00130}00130\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00131}00131\ \ \ writeReg(0x00,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00132}00132\ \ \ g\_stopVariable\ =\ readReg(0x91);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00133}00133\ \ \ writeReg(0x00,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00134}00134\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00135}00135\ \ \ writeReg(0x80,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00136}00136\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00137}00137\ \ \ \textcolor{comment}{//\ disable\ SIGNAL\_RATE\_MSRC\ (bit\ 1)\ and\ SIGNAL\_RATE\_PRE\_RANGE\ (bit\ 4)\ limit\ checks}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00138}00138\ \ \ writeReg(MSRC\_CONFIG\_CONTROL,\ readReg(MSRC\_CONFIG\_CONTROL)\ |\ 0x12);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00139}00139\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00140}00140\ \ \ \textcolor{comment}{//\ set\ final\ range\ signal\ rate\ limit\ to\ 0.25\ MCPS\ (million\ counts\ per\ second)}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00141}00141\ \ \ setSignalRateLimit(0.25);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00103}00103\ \textcolor{comment}{//\ Initialize\ sensor\ using\ sequence\ based\ on\ VL53L0X\_DataInit(),}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00104}00104\ \textcolor{comment}{//\ VL53L0X\_StaticInit(),\ and\ VL53L0X\_PerformRefCalibration().}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00105}00105\ \textcolor{comment}{//\ This\ function\ does\ not\ perform\ reference\ SPAD\ calibration}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00106}00106\ \textcolor{comment}{//\ (VL53L0X\_PerformRefSpadManagement()),\ since\ the\ API\ user\ manual\ says\ that\ it}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00107}00107\ \textcolor{comment}{//\ is\ performed\ by\ ST\ on\ the\ bare\ modules;\ it\ seems\ like\ that\ should\ work\ well}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00108}00108\ \textcolor{comment}{//\ enough\ unless\ a\ cover\ glass\ is\ added.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00109}00109\ \textcolor{comment}{//\ If\ io\_2v8\ (optional)\ is\ true\ or\ not\ given,\ the\ sensor\ is\ configured\ for\ 2V8}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00110}00110\ \textcolor{comment}{//\ mode.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00111}00111\ uint8\_t\ initVL53L0X(\ )\{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00112}00112\ \ \ \textcolor{comment}{//\ VL53L0X\_DataInit()\ begin}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00115}00115\ \ \ \textcolor{comment}{//\ sensor\ uses\ 1V8\ mode\ for\ I/O\ by\ default;\ switch\ to\ 2V8\ mode\ if\ necessary}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00116}00116\ \ \ \textcolor{keywordflow}{if}\ (IO\_2V8)}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00117}00117\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00118}00118\ \ \ \ \ writeReg(VHV\_CONFIG\_PAD\_SCL\_SDA\_\_EXTSUP\_HV,}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00119}00119\ \ \ \ \ readReg(VHV\_CONFIG\_PAD\_SCL\_SDA\_\_EXTSUP\_HV)\ |\ 0x01);\ \textcolor{comment}{//\ set\ bit\ 0}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00120}00120\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00122}00122\ \ \ \textcolor{comment}{//\ "{}Set\ I2C\ standard\ mode"{}}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00123}00123\ \ \ writeReg(0x88,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00125}00125\ \ \ writeReg(0x80,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00126}00126\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00127}00127\ \ \ writeReg(0x00,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00128}00128\ \ \ g\_stopVariable\ =\ readReg(0x91);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00129}00129\ \ \ writeReg(0x00,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00130}00130\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00131}00131\ \ \ writeReg(0x80,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00133}00133\ \ \ \textcolor{comment}{//\ disable\ SIGNAL\_RATE\_MSRC\ (bit\ 1)\ and\ SIGNAL\_RATE\_PRE\_RANGE\ (bit\ 4)\ limit\ checks}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00134}00134\ \ \ writeReg(MSRC\_CONFIG\_CONTROL,\ readReg(MSRC\_CONFIG\_CONTROL)\ |\ 0x12);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00136}00136\ \ \ \textcolor{comment}{//\ set\ final\ range\ signal\ rate\ limit\ to\ 0.25\ MCPS\ (million\ counts\ per\ second)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00137}00137\ \ \ setSignalRateLimit(0.25);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00139}00139\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00140}00140\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00141}00141\ \ \ \textcolor{comment}{//\ VL53L0X\_DataInit()\ end}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00142}00142\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00143}00143\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00143}00143\ \ \ \textcolor{comment}{//\ VL53L0X\_StaticInit()\ begin}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00144}00144\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00145}00145\ \ \ \textcolor{comment}{//\ VL53L0X\_DataInit()\ end}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00146}00146\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00147}00147\ \ \ \textcolor{comment}{//\ VL53L0X\_StaticInit()\ begin}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00145}00145\ \ \ \textcolor{comment}{//\ The\ SPAD\ map\ (RefGoodSpadMap)\ is\ read\ by\ VL53L0X\_get\_info\_from\_device()\ in}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00146}00146\ \ \ \textcolor{comment}{//\ the\ API,\ but\ the\ same\ data\ seems\ to\ be\ more\ easily\ readable\ from}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00147}00147\ \ \ \textcolor{comment}{//\ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF\_0\ through\ \_6,\ so\ read\ it\ from\ there}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00148}00148\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00149}00149\ \ \ \textcolor{comment}{//\ The\ SPAD\ map\ (RefGoodSpadMap)\ is\ read\ by\ VL53L0X\_get\_info\_from\_device()\ in}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00150}00150\ \ \ \textcolor{comment}{//\ the\ API,\ but\ the\ same\ data\ seems\ to\ be\ more\ easily\ readable\ from}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00151}00151\ \ \ \textcolor{comment}{//\ GLOBAL\_CONFIG\_SPAD\_ENABLES\_REF\_0\ through\ \_6,\ so\ read\ it\ from\ there}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00152}00152\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00153}00153\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_set\_reference\_spads()\ begin\ (assume\ NVM\ values\ are\ valid)}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00154}00154\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00155}00155\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00156}00156\ \ \ writeReg(DYNAMIC\_SPAD\_REF\_EN\_START\_OFFSET,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00157}00157\ \ \ writeReg(DYNAMIC\_SPAD\_NUM\_REQUESTED\_REF\_SPAD,\ 0x2C);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00158}00158\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00159}00159\ \ \ writeReg(GLOBAL\_CONFIG\_REF\_EN\_START\_SELECT,\ 0xB4);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00160}00160\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00161}00161\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00162}00162\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_set\_reference\_spads()\ end}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00163}00163\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00164}00164\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_load\_tuning\_settings()\ begin}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00165}00165\ \ \ \textcolor{comment}{//\ DefaultTuningSettings\ from\ vl53l0x\_tuning.h}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00166}00166\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00167}00167\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00168}00168\ \ \ writeReg(0x00,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00169}00169\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00170}00170\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00171}00171\ \ \ writeReg(0x09,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00172}00172\ \ \ writeReg(0x10,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00173}00173\ \ \ writeReg(0x11,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00149}00149\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_set\_reference\_spads()\ begin\ (assume\ NVM\ values\ are\ valid)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00151}00151\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00152}00152\ \ \ writeReg(DYNAMIC\_SPAD\_REF\_EN\_START\_OFFSET,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00153}00153\ \ \ writeReg(DYNAMIC\_SPAD\_NUM\_REQUESTED\_REF\_SPAD,\ 0x2C);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00154}00154\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00155}00155\ \ \ writeReg(GLOBAL\_CONFIG\_REF\_EN\_START\_SELECT,\ 0xB4);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00156}00156\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00157}00157\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00158}00158\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_set\_reference\_spads()\ end}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00160}00160\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_load\_tuning\_settings()\ begin}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00161}00161\ \ \ \textcolor{comment}{//\ DefaultTuningSettings\ from\ vl53l0x\_tuning.h}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00163}00163\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00164}00164\ \ \ writeReg(0x00,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00166}00166\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00167}00167\ \ \ writeReg(0x09,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00168}00168\ \ \ writeReg(0x10,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00169}00169\ \ \ writeReg(0x11,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00170}00170\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00171}00171\ \ \ writeReg(0x24,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00172}00172\ \ \ writeReg(0x25,\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00173}00173\ \ \ writeReg(0x75,\ 0x00);}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00174}00174\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00175}00175\ \ \ writeReg(0x24,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00176}00176\ \ \ writeReg(0x25,\ 0xFF);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00177}00177\ \ \ writeReg(0x75,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00178}00178\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00179}00179\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00180}00180\ \ \ writeReg(0x4E,\ 0x2C);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00181}00181\ \ \ writeReg(0x48,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00182}00182\ \ \ writeReg(0x30,\ 0x20);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00183}00183\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00184}00184\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00185}00185\ \ \ writeReg(0x30,\ 0x09);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00186}00186\ \ \ writeReg(0x54,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00187}00187\ \ \ writeReg(0x31,\ 0x04);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00188}00188\ \ \ writeReg(0x32,\ 0x03);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00189}00189\ \ \ writeReg(0x40,\ 0x83);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00190}00190\ \ \ writeReg(0x46,\ 0x25);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00191}00191\ \ \ writeReg(0x60,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00192}00192\ \ \ writeReg(0x27,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00193}00193\ \ \ writeReg(0x50,\ 0x06);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00194}00194\ \ \ writeReg(0x51,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00195}00195\ \ \ writeReg(0x52,\ 0x96);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00196}00196\ \ \ writeReg(0x56,\ 0x08);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00197}00197\ \ \ writeReg(0x57,\ 0x30);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00198}00198\ \ \ writeReg(0x61,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00199}00199\ \ \ writeReg(0x62,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00200}00200\ \ \ writeReg(0x64,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00201}00201\ \ \ writeReg(0x65,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00202}00202\ \ \ writeReg(0x66,\ 0xA0);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00203}00203\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00204}00204\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00205}00205\ \ \ writeReg(0x22,\ 0x32);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00206}00206\ \ \ writeReg(0x47,\ 0x14);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00207}00207\ \ \ writeReg(0x49,\ 0xFF);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00208}00208\ \ \ writeReg(0x4A,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00209}00209\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00210}00210\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00211}00211\ \ \ writeReg(0x7A,\ 0x0A);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00212}00212\ \ \ writeReg(0x7B,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00213}00213\ \ \ writeReg(0x78,\ 0x21);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00214}00214\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00215}00215\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00216}00216\ \ \ writeReg(0x23,\ 0x34);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00217}00217\ \ \ writeReg(0x42,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00218}00218\ \ \ writeReg(0x44,\ 0xFF);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00219}00219\ \ \ writeReg(0x45,\ 0x26);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00220}00220\ \ \ writeReg(0x46,\ 0x05);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00221}00221\ \ \ writeReg(0x40,\ 0x40);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00222}00222\ \ \ writeReg(0x0E,\ 0x06);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00223}00223\ \ \ writeReg(0x20,\ 0x1A);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00224}00224\ \ \ writeReg(0x43,\ 0x40);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00175}00175\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00176}00176\ \ \ writeReg(0x4E,\ 0x2C);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00177}00177\ \ \ writeReg(0x48,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00178}00178\ \ \ writeReg(0x30,\ 0x20);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00180}00180\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00181}00181\ \ \ writeReg(0x30,\ 0x09);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00182}00182\ \ \ writeReg(0x54,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00183}00183\ \ \ writeReg(0x31,\ 0x04);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00184}00184\ \ \ writeReg(0x32,\ 0x03);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00185}00185\ \ \ writeReg(0x40,\ 0x83);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00186}00186\ \ \ writeReg(0x46,\ 0x25);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00187}00187\ \ \ writeReg(0x60,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00188}00188\ \ \ writeReg(0x27,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00189}00189\ \ \ writeReg(0x50,\ 0x06);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00190}00190\ \ \ writeReg(0x51,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00191}00191\ \ \ writeReg(0x52,\ 0x96);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00192}00192\ \ \ writeReg(0x56,\ 0x08);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00193}00193\ \ \ writeReg(0x57,\ 0x30);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00194}00194\ \ \ writeReg(0x61,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00195}00195\ \ \ writeReg(0x62,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00196}00196\ \ \ writeReg(0x64,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00197}00197\ \ \ writeReg(0x65,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00198}00198\ \ \ writeReg(0x66,\ 0xA0);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00199}00199\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00200}00200\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00201}00201\ \ \ writeReg(0x22,\ 0x32);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00202}00202\ \ \ writeReg(0x47,\ 0x14);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00203}00203\ \ \ writeReg(0x49,\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00204}00204\ \ \ writeReg(0x4A,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00206}00206\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00207}00207\ \ \ writeReg(0x7A,\ 0x0A);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00208}00208\ \ \ writeReg(0x7B,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00209}00209\ \ \ writeReg(0x78,\ 0x21);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00211}00211\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00212}00212\ \ \ writeReg(0x23,\ 0x34);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00213}00213\ \ \ writeReg(0x42,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00214}00214\ \ \ writeReg(0x44,\ 0xFF);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00215}00215\ \ \ writeReg(0x45,\ 0x26);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00216}00216\ \ \ writeReg(0x46,\ 0x05);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00217}00217\ \ \ writeReg(0x40,\ 0x40);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00218}00218\ \ \ writeReg(0x0E,\ 0x06);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00219}00219\ \ \ writeReg(0x20,\ 0x1A);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00220}00220\ \ \ writeReg(0x43,\ 0x40);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00221}00221\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00222}00222\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00223}00223\ \ \ writeReg(0x34,\ 0x03);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00224}00224\ \ \ writeReg(0x35,\ 0x44);}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00225}00225\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00226}00226\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00227}00227\ \ \ writeReg(0x34,\ 0x03);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00228}00228\ \ \ writeReg(0x35,\ 0x44);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00229}00229\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00230}00230\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00231}00231\ \ \ writeReg(0x31,\ 0x04);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00232}00232\ \ \ writeReg(0x4B,\ 0x09);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00233}00233\ \ \ writeReg(0x4C,\ 0x05);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00234}00234\ \ \ writeReg(0x4D,\ 0x04);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00235}00235\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00236}00236\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00237}00237\ \ \ writeReg(0x44,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00238}00238\ \ \ writeReg(0x45,\ 0x20);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00239}00239\ \ \ writeReg(0x47,\ 0x08);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00240}00240\ \ \ writeReg(0x48,\ 0x28);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00241}00241\ \ \ writeReg(0x67,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00242}00242\ \ \ writeReg(0x70,\ 0x04);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00243}00243\ \ \ writeReg(0x71,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00244}00244\ \ \ writeReg(0x72,\ 0xFE);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00245}00245\ \ \ writeReg(0x76,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00246}00246\ \ \ writeReg(0x77,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00247}00247\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00248}00248\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00249}00249\ \ \ writeReg(0x0D,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00226}00226\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00227}00227\ \ \ writeReg(0x31,\ 0x04);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00228}00228\ \ \ writeReg(0x4B,\ 0x09);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00229}00229\ \ \ writeReg(0x4C,\ 0x05);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00230}00230\ \ \ writeReg(0x4D,\ 0x04);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00231}00231\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00232}00232\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00233}00233\ \ \ writeReg(0x44,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00234}00234\ \ \ writeReg(0x45,\ 0x20);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00235}00235\ \ \ writeReg(0x47,\ 0x08);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00236}00236\ \ \ writeReg(0x48,\ 0x28);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00237}00237\ \ \ writeReg(0x67,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00238}00238\ \ \ writeReg(0x70,\ 0x04);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00239}00239\ \ \ writeReg(0x71,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00240}00240\ \ \ writeReg(0x72,\ 0xFE);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00241}00241\ \ \ writeReg(0x76,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00242}00242\ \ \ writeReg(0x77,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00243}00243\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00244}00244\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00245}00245\ \ \ writeReg(0x0D,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00247}00247\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00248}00248\ \ \ writeReg(0x80,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00249}00249\ \ \ writeReg(0x01,\ 0xF8);}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00250}00250\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00251}00251\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00252}00252\ \ \ writeReg(0x80,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00253}00253\ \ \ writeReg(0x01,\ 0xF8);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00254}00254\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00255}00255\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00256}00256\ \ \ writeReg(0x8E,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00257}00257\ \ \ writeReg(0x00,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00258}00258\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00259}00259\ \ \ writeReg(0x80,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00260}00260\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00261}00261\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_load\_tuning\_settings()\ end}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00262}00262\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00263}00263\ \ \ \textcolor{comment}{//\ "{}Set\ interrupt\ config\ to\ new\ sample\ ready"{}}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00264}00264\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_SetGpioConfig()\ begin}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00251}00251\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00252}00252\ \ \ writeReg(0x8E,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00253}00253\ \ \ writeReg(0x00,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00254}00254\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00255}00255\ \ \ writeReg(0x80,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00256}00256\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00257}00257\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_load\_tuning\_settings()\ end}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00259}00259\ \ \ \textcolor{comment}{//\ "{}Set\ interrupt\ config\ to\ new\ sample\ ready"{}}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00260}00260\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_SetGpioConfig()\ begin}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00261}00261\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00262}00262\ \ \ writeReg(SYSTEM\_INTERRUPT\_CONFIG\_GPIO,\ 0x04);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00263}00263\ \ \ writeReg(GPIO\_HV\_MUX\_ACTIVE\_HIGH,\ readReg(GPIO\_HV\_MUX\_ACTIVE\_HIGH)\ \&\ \string~0x10);\ \textcolor{comment}{//\ active\ low}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00264}00264\ \ \ writeReg(SYSTEM\_INTERRUPT\_CLEAR,\ 0x01);}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00265}00265\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00266}00266\ \ \ writeReg(SYSTEM\_INTERRUPT\_CONFIG\_GPIO,\ 0x04);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00267}00267\ \ \ writeReg(GPIO\_HV\_MUX\_ACTIVE\_HIGH,\ readReg(GPIO\_HV\_MUX\_ACTIVE\_HIGH)\ \&\ \string~0x10);\ \textcolor{comment}{//\ active\ low}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00268}00268\ \ \ writeReg(SYSTEM\_INTERRUPT\_CLEAR,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00266}00266\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_SetGpioConfig()\ end}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00267}00267\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00268}00268\ }
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00269}00269\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00270}00270\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_SetGpioConfig()\ end}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00271}00271\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00272}00272\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00273}00273\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00274}00274\ \ \ \textcolor{comment}{//\ "{}Disable\ MSRC\ and\ TCC\ by\ default"{}}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00275}00275\ \ \ \textcolor{comment}{//\ MSRC\ =\ Minimum\ Signal\ Rate\ Check}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00276}00276\ \ \ \textcolor{comment}{//\ TCC\ =\ Target\ CentreCheck}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00277}00277\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_SetSequenceStepEnable()\ begin}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00270}00270\ \ \ \textcolor{comment}{//\ "{}Disable\ MSRC\ and\ TCC\ by\ default"{}}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00271}00271\ \ \ \textcolor{comment}{//\ MSRC\ =\ Minimum\ Signal\ Rate\ Check}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00272}00272\ \ \ \textcolor{comment}{//\ TCC\ =\ Target\ CentreCheck}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00273}00273\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_SetSequenceStepEnable()\ begin}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00275}00275\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0xE8);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00277}00277\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_SetSequenceStepEnable()\ end}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00278}00278\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00279}00279\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0xE8);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00279}00279\ }
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00280}00280\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00281}00281\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_SetSequenceStepEnable()\ end}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00281}00281\ \ \ \textcolor{comment}{//\ VL53L0X\_StaticInit()\ end}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00282}00282\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00283}00283\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00283}00283\ \ \ \textcolor{comment}{//\ VL53L0X\_PerformRefCalibration()\ begin\ (VL53L0X\_perform\_ref\_calibration())}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00284}00284\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00285}00285\ \ \ \textcolor{comment}{//\ VL53L0X\_StaticInit()\ end}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00285}00285\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_perform\_vhv\_calibration()\ begin}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00286}00286\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00287}00287\ \ \ \textcolor{comment}{//\ VL53L0X\_PerformRefCalibration()\ begin\ (VL53L0X\_perform\_ref\_calibration())}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00288}00288\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00289}00289\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_perform\_vhv\_calibration()\ begin}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00290}00290\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00291}00291\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00292}00292\ \ \ \textcolor{keywordflow}{if}\ (performSingleRefCalibration(0x40))\ \{\ \textcolor{keywordflow}{return}\ 1;\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00287}00287\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00288}00288\ \ \ \textcolor{keywordflow}{if}\ (performSingleRefCalibration(0x40))\ \{\ \textcolor{keywordflow}{return}\ 1;\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00289}00289\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00290}00290\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_perform\_vhv\_calibration()\ end}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00292}00292\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_perform\_phase\_calibration()\ begin}}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00293}00293\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00294}00294\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_perform\_vhv\_calibration()\ end}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00295}00295\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00296}00296\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_perform\_phase\_calibration()\ begin}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00297}00297\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00298}00298\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0x02);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00299}00299\ \ \ \textcolor{keywordflow}{if}\ (performSingleRefCalibration(0x00))\ \{\ \textcolor{keywordflow}{return}\ 1;\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00300}00300\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00301}00301\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_perform\_phase\_calibration()\ end}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00302}00302\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00303}00303\ \ \ \textcolor{comment}{//\ "{}restore\ the\ previous\ Sequence\ Config"{}}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00304}00304\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0xE8);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00305}00305\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00306}00306\ \ \ \textcolor{comment}{//\ VL53L0X\_PerformRefCalibration()\ end}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00307}00307\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00308}00308\ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00309}00309\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00310}00310\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00311}00311\ \textcolor{comment}{//\ Set\ the\ return\ signal\ rate\ limit\ check\ value\ in\ units\ of\ MCPS\ (mega\ counts}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00312}00312\ \textcolor{comment}{//\ per\ second).\ "{}This\ represents\ the\ amplitude\ of\ the\ signal\ reflected\ from\ the}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00313}00313\ \textcolor{comment}{//\ target\ and\ detected\ by\ the\ device"{};\ setting\ this\ limit\ presumably\ determines}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00314}00314\ \textcolor{comment}{//\ the\ minimum\ measurement\ necessary\ for\ the\ sensor\ to\ report\ a\ valid\ reading.}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00315}00315\ \textcolor{comment}{//\ Setting\ a\ lower\ limit\ increases\ the\ potential\ range\ of\ the\ sensor\ but\ also}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00316}00316\ \textcolor{comment}{//\ seems\ to\ increase\ the\ likelihood\ of\ getting\ an\ inaccurate\ reading\ because\ of}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00317}00317\ \textcolor{comment}{//\ unwanted\ reflections\ from\ objects\ other\ than\ the\ intended\ target.}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00318}00318\ \textcolor{comment}{//\ Defaults\ to\ 0.25\ MCPS\ as\ initialized\ by\ the\ ST\ API\ and\ this\ library.}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00319}00319\ uint8\_t\ setSignalRateLimit(\textcolor{keywordtype}{float}\ limit\_Mcps)}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00320}00320\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00321}00321\ \ \ \textcolor{keywordflow}{if}\ (limit\_Mcps\ <\ 0\ ||\ limit\_Mcps\ >\ 511.99)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00322}00322\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00323}00323\ \ \ \textcolor{comment}{//\ Q9.7\ fixed\ point\ format\ (9\ integer\ bits,\ 7\ fractional\ bits)}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00324}00324\ \ \ writeReg16Bit(FINAL\_RANGE\_CONFIG\_MIN\_COUNT\_RATE\_RTN\_LIMIT,\ limit\_Mcps\ *\ (1\ <<\ 7));}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00325}00325\ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00326}00326\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00327}00327\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00328}00328\ \textcolor{comment}{//\ Get\ the\ return\ signal\ rate\ limit\ check\ value\ in\ MCPS}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00329}00329\ \textcolor{keywordtype}{float}\ getSignalRateLimit(\textcolor{keywordtype}{void})}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00330}00330\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00331}00331\ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})readReg16Bit(FINAL\_RANGE\_CONFIG\_MIN\_COUNT\_RATE\_RTN\_LIMIT)\ /\ (1\ <<\ 7);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00332}00332\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00294}00294\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0x02);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00295}00295\ \ \ \textcolor{keywordflow}{if}\ (performSingleRefCalibration(0x00))\ \{\ \textcolor{keywordflow}{return}\ 1;\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00296}00296\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00297}00297\ \ \ \textcolor{comment}{//\ -\/-\/\ VL53L0X\_perform\_phase\_calibration()\ end}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00299}00299\ \ \ \textcolor{comment}{//\ "{}restore\ the\ previous\ Sequence\ Config"{}}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00300}00300\ \ \ writeReg(SYSTEM\_SEQUENCE\_CONFIG,\ 0xE8);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00302}00302\ \ \ \textcolor{comment}{//\ VL53L0X\_PerformRefCalibration()\ end}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00304}00304\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00305}00305\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00306}00306\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00307}00307\ \textcolor{comment}{//\ Set\ the\ return\ signal\ rate\ limit\ check\ value\ in\ units\ of\ MCPS\ (mega\ counts}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00308}00308\ \textcolor{comment}{//\ per\ second).\ "{}This\ represents\ the\ amplitude\ of\ the\ signal\ reflected\ from\ the}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00309}00309\ \textcolor{comment}{//\ target\ and\ detected\ by\ the\ device"{};\ setting\ this\ limit\ presumably\ determines}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00310}00310\ \textcolor{comment}{//\ the\ minimum\ measurement\ necessary\ for\ the\ sensor\ to\ report\ a\ valid\ reading.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00311}00311\ \textcolor{comment}{//\ Setting\ a\ lower\ limit\ increases\ the\ potential\ range\ of\ the\ sensor\ but\ also}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00312}00312\ \textcolor{comment}{//\ seems\ to\ increase\ the\ likelihood\ of\ getting\ an\ inaccurate\ reading\ because\ of}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00313}00313\ \textcolor{comment}{//\ unwanted\ reflections\ from\ objects\ other\ than\ the\ intended\ target.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00314}00314\ \textcolor{comment}{//\ Defaults\ to\ 0.25\ MCPS\ as\ initialized\ by\ the\ ST\ API\ and\ this\ library.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00315}00315\ uint8\_t\ setSignalRateLimit(\textcolor{keywordtype}{float}\ limit\_Mcps)}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00316}00316\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00317}00317\ \ \ \textcolor{keywordflow}{if}\ (limit\_Mcps\ <\ 0\ ||\ limit\_Mcps\ >\ 511.99)\ \{\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00318}00318\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00319}00319\ \ \ \textcolor{comment}{//\ Q9.7\ fixed\ point\ format\ (9\ integer\ bits,\ 7\ fractional\ bits)}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00320}00320\ \ \ writeReg16Bit(FINAL\_RANGE\_CONFIG\_MIN\_COUNT\_RATE\_RTN\_LIMIT,\ limit\_Mcps\ *\ (1\ <<\ 7));}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00321}00321\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00322}00322\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00323}00323\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00324}00324\ \textcolor{comment}{//\ Get\ the\ return\ signal\ rate\ limit\ check\ value\ in\ MCPS}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00325}00325\ \textcolor{keywordtype}{float}\ getSignalRateLimit(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00326}00326\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00327}00327\ \ \ \textcolor{keywordflow}{return}\ (\textcolor{keywordtype}{float})readReg16Bit(FINAL\_RANGE\_CONFIG\_MIN\_COUNT\_RATE\_RTN\_LIMIT)\ /\ (1\ <<\ 7);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00328}00328\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00329}00329\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00330}00330\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00331}00331\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00332}00332\ }
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00333}00333\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00334}00334\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00335}00335\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00336}00336\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00337}00337\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00338}00338\ \textcolor{comment}{//\ Performs\ a\ single-\/shot\ range\ measurement\ and\ returns\ the\ reading\ in}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00339}00339\ \textcolor{comment}{//\ millimeters}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00340}00340\ \textcolor{comment}{//\ based\ on\ VL53L0X\_PerformSingleRangingMeasurement()}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00341}00341\ \textcolor{comment}{//\ extraStats\ provides\ additional\ info\ for\ this\ measurment.\ Set\ to\ 0\ if\ not\ needed.}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00342}00342\ uint16\_t\ readRangeSingleMillimeters(\ \textcolor{comment}{/*statInfo\_t\ *extraStats\ */})\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00343}00343\ \ \ writeReg(0x80,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00344}00344\ \ \ writeReg(0xFF,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00345}00345\ \ \ writeReg(0x00,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00346}00346\ \ \ writeReg(0x91,\ g\_stopVariable);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00347}00347\ \ \ writeReg(0x00,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00348}00348\ \ \ writeReg(0xFF,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00349}00349\ \ \ writeReg(0x80,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00350}00350\ \ \ writeReg(SYSRANGE\_START,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00351}00351\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00352}00352\ \ \ uint16\_t\ temp;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00353}00353\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00354}00354\ \ \ \textcolor{keywordflow}{if}\ (ACTIVE\_WHILE)}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00355}00355\ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00356}00356\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (readReg(SYSRANGE\_START)\ \&\ 0x01)\{\};}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00357}00357\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((readReg(RESULT\_INTERRUPT\_STATUS)\ \&\ 0x07)\ ==\ 0)\{\};}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00358}00358\ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00359}00359\ \ \ \textcolor{comment}{//\ assumptions:\ Linearity\ Corrective\ Gain\ is\ 1000\ (default);}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00360}00360\ \ \ \textcolor{comment}{//\ fractional\ ranging\ is\ not\ enabled}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00361}00361\ \ \ temp\ =\ readReg16Bit(RESULT\_RANGE\_STATUS\ +\ 10);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00362}00362\ \ \ temp+=0;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00334}00334\ \textcolor{comment}{//\ Performs\ a\ single-\/shot\ range\ measurement\ and\ returns\ the\ reading\ in}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00335}00335\ \textcolor{comment}{//\ millimeters}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00336}00336\ \textcolor{comment}{//\ based\ on\ VL53L0X\_PerformSingleRangingMeasurement()}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00337}00337\ \textcolor{comment}{//\ extraStats\ provides\ additional\ info\ for\ this\ measurment.\ Set\ to\ 0\ if\ not\ needed.}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00338}00338\ uint16\_t\ readRangeSingleMillimeters(\ \textcolor{comment}{/*statInfo\_t\ *extraStats\ */})\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00339}00339\ \ \ writeReg(0x80,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00340}00340\ \ \ writeReg(0xFF,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00341}00341\ \ \ writeReg(0x00,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00342}00342\ \ \ writeReg(0x91,\ g\_stopVariable);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00343}00343\ \ \ writeReg(0x00,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00344}00344\ \ \ writeReg(0xFF,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00345}00345\ \ \ writeReg(0x80,\ 0x00);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00346}00346\ \ \ writeReg(SYSRANGE\_START,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00347}00347\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00348}00348\ \ \ uint16\_t\ temp;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00350}00350\ \ \ \textcolor{keywordflow}{if}\ (ACTIVE\_WHILE)}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00351}00351\ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00352}00352\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (readReg(SYSRANGE\_START)\ \&\ 0x01)\{\};}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00353}00353\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((readReg(RESULT\_INTERRUPT\_STATUS)\ \&\ 0x07)\ ==\ 0)\{\};}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00354}00354\ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00355}00355\ \ \ \textcolor{comment}{//\ assumptions:\ Linearity\ Corrective\ Gain\ is\ 1000\ (default);}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00356}00356\ \ \ \textcolor{comment}{//\ fractional\ ranging\ is\ not\ enabled}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00357}00357\ \ \ temp\ =\ readReg16Bit(RESULT\_RANGE\_STATUS\ +\ 10);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00358}00358\ \ \ temp+=0;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00359}00359\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00360}00360\ \ \ \textcolor{keywordflow}{return}\ temp;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00361}00361\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00362}00362\ }
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00363}00363\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00364}00364\ \ \ \textcolor{keywordflow}{return}\ temp;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00365}00365\ \}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00366}00366\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00367}00367\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00368}00368\ \textcolor{comment}{//\ based\ on\ VL53L0X\_perform\_single\_ref\_calibration()}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00369}00369\ uint8\_t\ performSingleRefCalibration(uint8\_t\ vhv\_init\_byte)}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00370}00370\ \{}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00371}00371\ \ \ writeReg(SYSRANGE\_START,\ 0x01\ |\ vhv\_init\_byte);\ \textcolor{comment}{//\ VL53L0X\_REG\_SYSRANGE\_MODE\_START\_STOP}}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00372}00372\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00373}00373\ \ \ \textcolor{keywordflow}{if}\ (ACTIVE\_WHILE)}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00374}00374\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((readReg(RESULT\_INTERRUPT\_STATUS)\ \&\ 0x07)\ ==\ 0)\{\};}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00364}00364\ \textcolor{comment}{//\ based\ on\ VL53L0X\_perform\_single\_ref\_calibration()}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00365}00365\ uint8\_t\ performSingleRefCalibration(uint8\_t\ vhv\_init\_byte)}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00366}00366\ \{}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00367}00367\ \ \ writeReg(SYSRANGE\_START,\ 0x01\ |\ vhv\_init\_byte);\ \textcolor{comment}{//\ VL53L0X\_REG\_SYSRANGE\_MODE\_START\_STOP}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00368}00368\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00369}00369\ \ \ \textcolor{keywordflow}{if}\ (ACTIVE\_WHILE)}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00370}00370\ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ ((readReg(RESULT\_INTERRUPT\_STATUS)\ \&\ 0x07)\ ==\ 0)\{\};}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00371}00371\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00372}00372\ \ \ writeReg(SYSTEM\_INTERRUPT\_CLEAR,\ 0x01);}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00373}00373\ }
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00374}00374\ \ \ writeReg(SYSRANGE\_START,\ 0x00);}
 \DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00375}00375\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00376}00376\ \ \ writeReg(SYSTEM\_INTERRUPT\_CLEAR,\ 0x01);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00377}00377\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00378}00378\ \ \ writeReg(SYSRANGE\_START,\ 0x00);}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00379}00379\ }
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00380}00380\ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00381}00381\ \}}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00376}00376\ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_v_l53_l0_x_8c_source_l00377}00377\ \}}
 
 \end{DoxyCode}

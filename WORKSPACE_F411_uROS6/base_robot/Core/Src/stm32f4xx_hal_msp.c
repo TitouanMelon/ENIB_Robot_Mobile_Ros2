@@ -1,3 +1,7 @@
+/**
+ * @file stm32f4xx_hal_msp.c
+ * @brief : function to configure the pinout of STM32
+ */
 #include "main.h"
 
 #define USART2_IRQ_PRIO	9
@@ -40,10 +44,11 @@ void HAL_MspInit(void)
 }
 
 /******************************************************************
-			ENCODER - TIMER1
-PWM1/1	-->	PA8		-- Encodeur Voie A
-PWM1/2	--> PA9		-- Encodeur Voie B
-EXTI10	--> PB10		-- Index encodeur
+ * Initialise the timer1
+ * 			ENCODER - TIMER1
+ * PWM1/1	-->	PA8		-- Encodeur Voie A
+ * PWM1/2	--> PA9		-- Encodeur Voie B
+ * EXTI10	--> PB10	-- Index encodeur
 ******************************************************************/
 void HAL_Encoder_Timer1_MspInit(void)
 {
@@ -70,10 +75,11 @@ void HAL_Encoder_Timer1_MspInit(void)
 	  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 }
 /******************************************************************
-				ENCODER - TIMER2
-PWM2/1	-->	PA0		-- Encodeur Voie A
-PWM2/2	--> PA1		-- Encodeur Voie B
-EXTI0 	--> PC0		-- Index Moteur
+ * Initialise the timer2
+ * 			ENCODER - TIMER2
+ * PWM2/1	-->	PA0		-- Encodeur Voie A
+ * PWM2/2	--> PA1		-- Encodeur Voie B
+ * EXTI0 	--> PC0		-- Index Moteur
 ******************************************************************/
 void HAL_Encoder_Timer2_MspInit(void)
 {
@@ -101,10 +107,10 @@ void HAL_Encoder_Timer2_MspInit(void)
 }
 
 /******************************************************************
-//			PWM - TIMER3 COMMANDE MOTEURS
-PA6 --> PWM3/1
-PC7 --> PWM3/2
-PB3 --> ENABLE MOTEUR (actif état Bas)
+ * 			PWM - TIMER3 COMMANDE MOTEURS
+ * PA6 --> PWM3/1
+ * PC7 --> PWM3/2
+ * PB3 --> ENABLE MOTEUR (Active at low level)
 ******************************************************************/
 void HAL_PWM_Timer3_MspInit(void)
 {
@@ -147,10 +153,11 @@ void HAL_PWM_Timer3_MspInit(void)
 }
 
 /******************************************************************
-			ADC
-ADC1_4	--> PA4
-ADC1_8	--> PB0
-http://stm32f4-discovery.com/2014/04/library-06-ad-converter-on-stm32f4xx/
+ * Initialise the ADC channel
+ * 			ADC
+ * ADC1_4	--> PA4
+ * ADC1_8	--> PB0
+ * http://stm32f4-discovery.com/2014/04/library-06-ad-converter-on-stm32f4xx/
 ******************************************************************/
 void HAL_adcir_MspInit(void)
 {
@@ -206,12 +213,12 @@ void HAL_I2C_MspInit(I2C_HandleTypeDef* hi2c)
   }
 }
 
-/******************************************************************
-* @brief I2C MSP De-Initialization
-* This function freeze the hardware resources used in this example
-* @param hi2c: I2C handle pointer
-* @retval None
-******************************************************************/
+//******************************************************************
+//* @brief I2C MSP De-Initialization
+//* This function freeze the hardware resources used in this example
+//* @param hi2c: I2C handle pointer
+//* @retval None
+//******************************************************************/
 void HAL_I2C_MspDeInit(I2C_HandleTypeDef* hi2c)
 {
   if(hi2c->Instance==I2C1)
@@ -387,12 +394,12 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
 
 }
 
-/******************************************************************
-* @brief UART MSP De-Initialization
-* This function freeze the hardware resources used in this example
-* @param huart: UART handle pointer
-* @retval None
-******************************************************************/
+//******************************************************************
+//* @brief UART MSP De-Initialization
+//* This function freeze the hardware resources used in this example
+//* @param huart: UART handle pointer
+//* @retval None
+//******************************************************************/
 void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
 {
   if(huart->Instance==USART1)

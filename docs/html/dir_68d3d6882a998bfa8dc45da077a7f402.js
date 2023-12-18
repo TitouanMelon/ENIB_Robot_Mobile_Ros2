@@ -14,7 +14,7 @@ var dir_68d3d6882a998bfa8dc45da077a7f402 =
     [ "motorCommand.c", "motor_command_8c_source.html", null ],
     [ "quadEncoder.c", "quad_encoder_8c_source.html", null ],
     [ "retarget.c", "retarget_8c.html", "retarget_8c" ],
-    [ "stm32f4xx_hal_msp.c", "stm32f4xx__hal__msp_8c_source.html", null ],
+    [ "stm32f4xx_hal_msp.c", "stm32f4xx__hal__msp_8c.html", "stm32f4xx__hal__msp_8c" ],
     [ "stm32f4xx_hal_timebase_tim.c", "stm32f4xx__hal__timebase__tim_8c.html", "stm32f4xx__hal__timebase__tim_8c" ],
     [ "stm32f4xx_it.c", "stm32f4xx__it_8c_source.html", null ],
     [ "syscalls.c", "syscalls_8c.html", null ],

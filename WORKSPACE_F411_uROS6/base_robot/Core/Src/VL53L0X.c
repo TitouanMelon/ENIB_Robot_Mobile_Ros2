@@ -16,10 +16,6 @@
 #include "VL53L0X.h"
 #include "drv_i2c.h"
 
-#define ACTIVE_WHILE 0
-#define IO_2V8 1
-#define ADDRESS 0x52
-
 //---------------------------------------------------------
 // Local variables within this file (private)
 //---------------------------------------------------------

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.9)  18 DEC 2023 13:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.9)  18 DEC 2023 14:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1088,31 +1088,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--204
 ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.41 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
- []
-
 [10]
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.44 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ [][] [][]\T1/phv/m/n/10 5.40 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
 ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.46 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ [][] [][]\T1/phv/m/n/10 5.42 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+ [][] [][]\T1/phv/m/n/10 5.45 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
 ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
  []
 
 [11]
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
- [][] [][]\T1/phv/m/n/10 5.50 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ [][] [][]\T1/phv/m/n/10 5.47 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
 ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
  []
 
-[12]
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--204
+ [][] [][]\T1/phv/m/n/10 5.51 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ []
+
+[12] [13] [14
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 207.
  (./index.tex
 Chapter 1.
@@ -1125,27 +1133,26 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 3.
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-0.
+1.
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 10.
+(Font)              scaled to size 8.99994pt on input line 11.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 21.
+(Font)              scaled to size 10.79993pt on input line 22.
  [1
-
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 23.
+(Font)              scaled to size 8.99994pt on input line 24.
 
-Underfull \hbox (badness 10000) detected at line 23
+Underfull \hbox (badness 10000) detected at line 24
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 26
+Underfull \hbox (badness 10000) detected at line 27
 [][][]
  []
 
@@ -1357,22 +1364,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[49]
+[49] [50]
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 7.19995pt on input line 363.
- [50]
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
-|   \T1/pcr/m/sl/8 vcsel[]_[]period[]_[]pclks \T1/pcr/m/n/8 ) ((((uint32[]_[]t)
-2304 $\OMS/cmsy/m/n/8 ^^C$ \T1/pcr/m/n/8 (vcsel[]_[]period[]_[]pclks) $\OMS/cms
-y/m/n/8 ^^C$ \T1/pcr/m/n/8 1655) + 500) /
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
-\T1/pcr/m/n/8 #define check[]Timeout[]Expired( ) (g[]_[]io[]Timeout $\OML/cmm/m
-/it/8 >$ \T1/pcr/m/n/8 0 && ((uint16[]_[]t)millis() - g[]_[]timeout[]Start[]Ms)
- $\OML/cmm/m/it/8 >$
- []
+(Font)              scaled to size 7.19995pt on input line 389.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1387,35 +1381,44 @@ pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_aa2e9e03cdf06111f2b11e09e306760c4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.453 \doxysubsubsection
-                        {\texorpdfstring{CROSSTALK\_COMPENSATION\_PEAK\_RATE...
+l.444 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00088}{88}}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_ae1a60036fb03564b63b0ec16677cc0a9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.453 \doxysubsubsection
-                        {\texorpdfstring{CROSSTALK\_COMPENSATION\_PEAK\_RATE...
+l.444 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00088}{88}}...
+]
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
+|   \T1/pcr/m/sl/8 vcsel[]_[]period[]_[]pclks \T1/pcr/m/n/8 ) ((((uint32[]_[]t)
+2304 $\OMS/cmsy/m/n/8 ^^C$ \T1/pcr/m/n/8 (vcsel[]_[]period[]_[]pclks) $\OMS/cms
+y/m/n/8 ^^C$ \T1/pcr/m/n/8 1655) + 500) /
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 460--461
+\T1/pcr/m/n/8 #define check[]Timeout[]Expired( ) (g[]_[]io[]Timeout $\OML/cmm/m
+/it/8 >$ \T1/pcr/m/n/8 0 && ((uint16[]_[]t)millis() - g[]_[]timeout[]Start[]Ms)
+ $\OML/cmm/m/it/8 >$
+ []
+
+[52
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a820e8fa7723077ffda211953f1243c37}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.453 \doxysubsubsection
-                        {\texorpdfstring{CROSSTALK\_COMPENSATION\_PEAK\_RATE...
-] [52
+l.514 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00084}{84}}...
+
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_ae99d1a42cc4f2c921eeff9c69a866200}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.515 
-      
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_aa788277256137dac0b82c0565140de54}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.515 
-      ]
+l.514 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00084}{84}}...
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1426,53 +1429,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [53
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_aa788277256137dac0b82c0565140de54}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.589 \doxysubsubsection
+                        {\texorpdfstring{FINAL\_RANGE\_CONFIG\_MIN\_SNR}{FIN...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a821a6c8b87fa2723f5410928bf796e12}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.598 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00071}{71}}...
-
+l.589 \doxysubsubsection
+                        {\texorpdfstring{FINAL\_RANGE\_CONFIG\_MIN\_SNR}{FIN...
+] [54
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a169be6dc1891aa49fddcc22fb7340db4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.598 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00071}{71}}...
+l.664 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00052}{52}}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a54b83b68e77225d34f98cb247b94adf3}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.598 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00071}{71}}...
-] [54
+l.664 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00052}{52}}...
+
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_ac48f0c7483af856f9fe1783ab33b93a5}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.668 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00069}{69}}...
+l.664 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00052}{52}}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a267ca5ee8d8b347b0956daf611339dc4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.668 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00069}{69}}...
-
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_ac6e3d1cd347360cb8928fcb4bd48e2d1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.668 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00069}{69}}...
-
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_a375bd2b4e8d7c3e8130f8758fc5b7fc3}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.668 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00069}{69}}...
+l.664 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00052}{52}}...
 ]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1484,17 +1480,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [55
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_ac6e3d1cd347360cb8928fcb4bd48e2d1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.744 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00079}{79}}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a375bd2b4e8d7c3e8130f8758fc5b7fc3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.744 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00079}{79}}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a296f98fd1eb5b788d4100d3b0a9a3727}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.748 D
+l.744 D
        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00079}{79}}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a0bad2a324b2ea2a5c7fcf555a5dac53d}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.748 D
+l.744 D
        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00079}{79}}...
 ] [56]
 
@@ -1510,29 +1520,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_ac96f0353f6896b6a6c9bfeaa69da2214}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.908 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00147}{147}...
+l.904 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00071}{71}}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a6200cd477285263cdee2c0813d5673a6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.908 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00147}{147}...
-
+l.904 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00071}{71}}...
+] [58
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a8bec46444dd7f7b66f69a8ff573a0e7b}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.908 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00147}{147}...
-] [58
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_a4bcc4d65d5299670fe82e115758583a5}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.988 D
-       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00150}{150}...
+l.984 D
+       efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00046}{46}}...
 ]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1544,60 +1547,53 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [59
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a4bcc4d65d5299670fe82e115758583a5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1064 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00047}{47}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a132ff4b1e969e27e56e29ed916f2412c}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1068 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00055}{55}...
+l.1064 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00047}{47}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a66856ac71254a56880038bca04664b24}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1068 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00055}{55}...
-
+l.1064 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00047}{47}...
+] [60
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a69e4db4503e4c0da0ff292682a2737b9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1068 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00055}{55}...
+l.1144 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00061}{61}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a918118c0fdf1ea393e0a20e371310e9a}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1068 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00055}{55}...
-] [60
+l.1144 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00061}{61}...
+
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a93889a4512c1bab706e6b2f145989da8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1148 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00045}{45}...
+l.1144 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00061}{61}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_ae3fcc6d82c746084b932c7ac125cbf8f}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1148 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00045}{45}...
-
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_a6637ed1d278711ab5553e98ff99aec57}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1148 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00045}{45}...
-
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_a1640fbe4a7b31d02b8d3b416921eb2ff}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1148 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00045}{45}...
+l.1144 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00061}{61}...
 ]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1609,59 +1605,59 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [61
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a6637ed1d278711ab5553e98ff99aec57}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1224 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00050}{50}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a1640fbe4a7b31d02b8d3b416921eb2ff}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1224 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00050}{50}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a323906602ac50d67cd54019bf6befdb9}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1228 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00033}{33}...
+l.1224 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00050}{50}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a576ad3a7d21c21b25c4745c21df040e8}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1228 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00033}{33}...
-
+l.1224 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00050}{50}...
+] [62
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a0c136a7040d79a926de866f5676df6f6}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1228 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00033}{33}...
+l.1304 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00037}{37}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_aa4662894211ed1f810668d8c64a5616e}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1228 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00033}{33}...
-] [62
+l.1304 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00037}{37}...
+
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_ad655d862c529a55e17a20d401e7d967c}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1308 D
+l.1304 D
         efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00037}{37}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a84179ae2a32adeb1c2df4f5336208d8a}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1308 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00037}{37}...
-
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_a8b8d1a3aac3d65ba4518ce14b0b58537}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1308 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00037}{37}...
-
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_af40e16604cc2cef5bc5bbed72000ae87}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1308 D
+l.1304 D
         efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00037}{37}...
 ]
 
@@ -1674,39 +1670,46 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [63
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a8b8d1a3aac3d65ba4518ce14b0b58537}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1384 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00181}{181...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_af40e16604cc2cef5bc5bbed72000ae87}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1384 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00181}{181...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a8c340bcd85cffaac810ee47a0241706c}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1388 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00020}{20}...
+l.1384 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00181}{181...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a6429722d22fe6ca66ef3d8470d066ceb}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1388 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00020}{20}...
+l.1384 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00181}{181...
 ] [64
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a6d3e0fc7c392cea736c4114fa1233b4c}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1468 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00018}{18}...
+l.1464 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00099}{99}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a31c96b7ce1d07686e72a3b9642c3f4bc}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1468 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00018}{18}...
-
-pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
-h_a74241935b17022399d0348e1c9b136f8}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.1468 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00018}{18}...
+l.1464 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00099}{99}...
 ]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1718,38 +1721,43 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [65
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
+h_a74241935b17022399d0348e1c9b136f8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1544 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00020}{20}...
+
+pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a76b774b2c00ba9412c301d70f7050115}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1548 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00084}{84}...
+l.1544 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00020}{20}...
 
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a2e37298ac5ecbe7ca0900315e71e9375}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1548 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00084}{84}...
-
+l.1544 D
+        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00020}{20}...
+] [66
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_abe305ff4b6e18509568202e772bd4810}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1548 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00084}{84}...
-
+l.1617 
+       
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_aafa1b54eb9121c8a9f18ca154db8e6d4}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1548 D
-        efinition at line \mbox{\hyperlink{_v_l53_l0_x_8h_source_l00084}{84}...
-] [66
+l.1617 
+       
 pdfTeX warning (ext4): destination with the same identifier (name{_v_l53_l0_x_8
 h_a8609aa80574602a7cbfb02d6ba9f9bae}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1621 
+l.1617 
        ]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1760,23 +1768,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
 [67]) (./_v_l53_l0_x_8h_source.tex [68] [69] [70] [71])
-(./capt_dist_i_r_8c_source.tex) (./dma__transport_8c_source.tex [72])
-(./drv__gpio_8c_source.tex [73]) (./drv__i2c_8c_source.tex [74] [75] [76])
-(./drv__uart_8c_source.tex [77]) (./freertos_8c_source.tex)
-(./grove_l_c_d_8c_source.tex [78] [79] [80] [81] [82]) (./main_8c.tex
+(./capt_dist_i_r_8c_source.tex [72]) (./dma__transport_8c_source.tex [73])
+(./drv__gpio_8c_source.tex [74]) (./drv__i2c_8c_source.tex [75] [76] [77])
+(./drv__uart_8c_source.tex [78]) (./freertos_8c_source.tex)
+(./grove_l_c_d_8c_source.tex [79] [80] [81] [82] [83]) (./main_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--14
 
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[83] [84]
+[84]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1848,8 +1848,58 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[99]) (./main_8c_source.tex [100] [101] [102] [103] [104] [105] [106] [107]
-[108] [109] [110]) (./micro_r_o_s_8c.tex
+[99] [100]) (./main_8c_source.tex [101] [102] [103] [104] [105] [106] [107]
+[108] [109] [110] [111]) (./micro_r_o_s_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+[112]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[113]) (./micro_r_o_s_8c_source.tex) (./microros__allocators_8c_source.tex
+[114]) (./microros__time_8c_source.tex [115]) (./motor_command_8c_source.tex
+[116]) (./quad_encoder_8c_source.tex [117] [118] [119]) (./retarget_8c.tex
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+\T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
+ing-stm32/blob/master/nucleo-f030[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--18
+
+ []
+
+[120]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+\T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
+ing-stm32/blob/master/nucleo-f030[]
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[121] [122]) (./retarget_8c_source.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[123] [124]) (./stm32f4xx__hal__msp_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
@@ -1862,20 +1912,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[111] [112]) (./micro_r_o_s_8c_source.tex)
-(./microros__allocators_8c_source.tex [113]) (./microros__time_8c_source.tex
-[114]) (./motor_command_8c_source.tex [115]) (./quad_encoder_8c_source.tex
-[116] [117] [118]) (./retarget_8c.tex
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-\T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
-ing-stm32/blob/master/nucleo-f030[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 8--18
-
- []
-
+[125] [126]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1884,42 +1921,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[119]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
-\T1/phv/m/n/10 code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnoviello/master
-ing-stm32/blob/master/nucleo-f030[]
- []
-
-[120]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[121]) (./retarget_8c_source.tex [122] [123])
-(./stm32f4xx__hal__msp_8c_source.tex [124] [125] [126] [127] [128])
-(./stm32f4xx__hal__timebase__tim_8c.tex
+[127]) (./stm32f4xx__hal__msp_8c_source.tex [128] [129] [130] [131] [132]
+[133]) (./stm32f4xx__hal__timebase__tim_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-
+[134]
 Underfull \hbox (badness 10000) detected at line 29
 [][][]
  []
 
 
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[129]
 Underfull \hbox (badness 10000) detected at line 51
 [][][]
  []
@@ -1929,18 +1942,34 @@ Underfull \hbox (badness 10000) detected at line 78
 [][][]
  []
 
-[130]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[135]
 Underfull \hbox (badness 10000) detected at line 105
 [][][]
  []
 
-) (./stm32f4xx__hal__timebase__tim_8c_source.tex [131])
-(./stm32f4xx__it_8c_source.tex [132] [133]) (./syscalls_8c.tex
+) (./stm32f4xx__hal__timebase__tim_8c_source.tex [136])
+(./stm32f4xx__it_8c_source.tex [137] [138]) (./syscalls_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
-[134]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[139]
 Underfull \hbox (badness 10000) detected at line 68
 [][][]
  []
@@ -1950,6 +1979,7 @@ Underfull \hbox (badness 10000) detected at line 75
 [][][]
  []
 
+[140]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1958,7 +1988,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[135] [136]
+[141] [142]) (./syscalls_8c_source.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -1967,12 +1997,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[137]) (./syscalls_8c_source.tex [138] [139]) (./sysmem_8c.tex
+[143] [144]) (./sysmem_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-[140]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 22.16548pt, for example:
+(fancyhdr)                \setlength{\headheight}{22.16548pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
+
+[145]
 Underfull \hbox (badness 10000) detected at line 25
 [][][]
  []
@@ -1987,20 +2025,13 @@ Underfull \hbox (badness 10000) detected at line 69
 [][][]
  []
 
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[141]) (./sysmem_8c_source.tex) (./systemclock_8c_source.tex [142])
-(./util_8c_source.tex [143] [144]) (./_v_l53_l0_x_8c.tex
+[146]) (./sysmem_8c_source.tex) (./systemclock_8c_source.tex [147])
+(./util_8c_source.tex [148] [149]) (./_v_l53_l0_x_8c.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--13
 
  []
 
+[150]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 22.16548pt, for example:
@@ -2009,17 +2040,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
 
-[145] [146]
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 22.16548pt, for example:
-(fancyhdr)                \setlength{\headheight}{22.16548pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-10.16548pt}.
-
-[147]) (./_v_l53_l0_x_8c_source.tex [148] [149] [150] [151] [152]) [153]
-[154
+[151] [152]) (./_v_l53_l0_x_8c_source.tex [153] [154] [155] [156]) [157]
+[158
 
 ] (./refman.ind
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -2060,7 +2082,7 @@ Overfull \hbox (340.72264pt too wide) in paragraph at lines 109--111
 /WORKSPACE_F411_uROS6/base_robot/Core/Inc/FreeRTOSConfig.h,
  []
 
-[155
+[159
 
 
 ]
@@ -2261,77 +2283,79 @@ Overfull \hbox (310.25793pt too wide) in paragraph at lines 175--177
 /WORKSPACE_F411_uROS6/base_robot/Core/Src/VL53L0X.c,
  []
 
-[156]
-Overfull \hbox (17.55711pt too wide) in paragraph at lines 289--290
+[160]
+Overfull \hbox (17.55711pt too wide) in paragraph at lines 293--294
 []\T1/phv/m/n/10 FINAL_RANGE_CONFIG_MIN_COUNT_RATE_RTN_LIMIT 
  []
 
-[157] [158] [159] [160] [161]
-Underfull \hbox (badness 10000) in paragraph at lines 946--947
+[161] [162] [163] [164] [165] [166]
+Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
 []| \T1/phv/m/n/10 ALGO_PART_TO_PART_RANGE_OFFSET_MM,
  []
 
 
-Overfull \hbox (18.00928pt too wide) in paragraph at lines 951--953
+Overfull \hbox (18.00928pt too wide) in paragraph at lines 1007--1009
 []| \T1/phv/m/n/10 CROSSTALK_COMPENSATION_PEAK_RATE_MCPS,
  []
 
 
-Overfull \hbox (40.059pt too wide) in paragraph at lines 959--961
+Overfull \hbox (40.059pt too wide) in paragraph at lines 1014--1016
 []| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_MIN_COUNT_RATE_RTN_LIMIT,
  []
 
-[162]
-Underfull \hbox (badness 10000) in paragraph at lines 966--967
+
+Underfull \hbox (badness 10000) in paragraph at lines 1021--1023
 []| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_VALID_PHASE_HIGH,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 967--968
+Underfull \hbox (badness 10000) in paragraph at lines 1023--1024
 []| \T1/phv/m/n/10 FI-NAL_RANGE_CONFIG_VALID_PHASE_LOW,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 971--972
+Underfull \hbox (badness 10000) in paragraph at lines 1027--1028
 []| \T1/phv/m/n/10 GLOBAL_CONFIG_REF_EN_START_SELECT,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1002--1003
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
 []| \T1/phv/m/n/10 PRE_RANGE_CONFIG_SIGMA_THRESH_LO,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1003--1004
+Underfull \hbox (badness 10000) in paragraph at lines 1060--1061
 []| \T1/phv/m/n/10 PRE_RANGE_CONFIG_TIMEOUT_MACROP_HI,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1005--1006
+Underfull \hbox (badness 10000) in paragraph at lines 1062--1063
 []| \T1/phv/m/n/10 PRE_RANGE_CONFIG_VALID_PHASE_HIGH,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1008--1009
+Underfull \hbox (badness 10000) in paragraph at lines 1065--1066
 []| \T1/phv/m/n/10 PRE_RANGE_MIN_COUNT_RATE_RTN_LIMIT,
  []
 
-
-Overfull \hbox (18.64836pt too wide) in paragraph at lines 1013--1015
+[167]
+Overfull \hbox (18.64836pt too wide) in paragraph at lines 1070--1072
 []| \T1/phv/m/n/10 RE-SULT_CORE_AMBIENT_WINDOW_EVENTS_REF,
  []
 
 
-Overfull \hbox (18.87346pt too wide) in paragraph at lines 1015--1017
+Overfull \hbox (18.87346pt too wide) in paragraph at lines 1072--1074
 []| \T1/phv/m/n/10 RE-SULT_CORE_AMBIENT_WINDOW_EVENTS_RTN,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1040--1041
+Underfull \hbox (badness 10000) in paragraph at lines 1097--1098
 []| \T1/phv/m/n/10 VHV_CONFIG_PAD_SCL_SDA__EXTSUP_HV,
  []
 
-[163]) (./refman.aux)
+[168
+
+]) (./refman.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-09>
@@ -2341,14 +2365,14 @@ L3 programming layer <2023-11-09>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: E8926012911D2B6F86A695710A0B3D06;111787.
+(rerunfilecheck)             Checksum: DCBA7A860993275E020BDFCA55572F22;117847.
 
  ) 
 Here is how much of TeX's memory you used:
- 25506 strings out of 474266
- 499717 string characters out of 5751444
- 2007558 words of memory out of 5000000
- 40881 multiletter control sequences out of 15000+600000
+ 25617 strings out of 474266
+ 503565 string characters out of 5751444
+ 2008558 words of memory out of 5000000
+ 40933 multiletter control sequences out of 15000+600000
  614667 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  101i,16n,117p,2304b,963s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2364,10 +2388,10 @@ mf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2023/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvet
 ic/uhvb8ac.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
 <c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (177 pages, 675682 bytes).
+Output written on refman.pdf (184 pages, 689845 bytes).
 PDF statistics:
- 12703 PDF objects out of 12825 (max. 8388607)
- 12372 compressed objects within 124 object streams
- 6390 named destinations out of 7423 (max. 500000)
- 3865 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13008 PDF objects out of 15390 (max. 8388607)
+ 12667 compressed objects within 127 object streams
+ 6447 named destinations out of 7423 (max. 500000)
+ 4065 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,6 @@
 var index =
 [
+    [ "Externe documentation", "index.html#Externe", null ],
     [ "Principal function", "index.html#Principal", null ],
     [ "Secondary function", "index.html#Secondary", null ],
     [ "Test function", "index.html#Test", null ],
