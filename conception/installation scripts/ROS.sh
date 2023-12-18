@@ -27,18 +27,27 @@ echo 'ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0 -b 1152
 cd $DEST_DIR
 echo 'if [ $# -eq 0 ]; then' >> SET_ROS_DOMAIN_ID.sh
 echo '	echo usage $0 <new_id>' >> SET_ROS_DOMAIN_ID.sh
-echo '	exit' >> SET_ROS_DOMAIN_ID.sh
-echo 'fi' >> SET_ROS_DOMAIN_ID.sh
-echo 'sudo sed -i \'s/ROS_DOMAIN_ID=.*/ROS_DOMAIN_ID=\'$1\'/g\' /etc/environment' >> SET_ROS_DOMAIN_ID.sh
+echo "	exit" >> SET_ROS_DOMAIN_ID.sh
+echo "fi" >> SET_ROS_DOMAIN_ID.sh
+echo -e 'sudo sed -i \'s/ROS_DOMAIN_ID=.*/ROS_DOMAIN_ID=\'$1\'/g\' /etc/environment' >> SET_ROS_DOMAIN_ID.sh
 
-echo 'while true; do' >> SET_ROS_DOMAIN_ID.sh
-echo '	read -p \'You need to reboot to apply change. Do you want reboot now ? [y/N]\' yn' >> SET_ROS_DOMAIN_ID.sh
+echo "while true; do" >> SET_ROS_DOMAIN_ID.sh
+echo "	read -p 'You need to reboot to apply change. Do you want reboot now ? [y/N]' yn" >> SET_ROS_DOMAIN_ID.sh
 echo '	case $yn in' >> SET_ROS_DOMAIN_ID.sh
-echo '		[Yy]* ) sudo reboot; break;;' >> SET_ROS_DOMAIN_ID.sh
-echo '		[Nn]* ) exit;;' >> SET_ROS_DOMAIN_ID.sh
-echo '		* ) exit;;' >> SET_ROS_DOMAIN_ID.sh
-echo ' esac' >> SET_ROS_DOMAIN_ID.sh
-echo 'done' >> SET_ROS_DOMAIN_ID.sh
+echo "		[Yy]* ) sudo reboot; break;;" >> SET_ROS_DOMAIN_ID.sh
+echo "		[Nn]* ) exit;;" >> SET_ROS_DOMAIN_ID.sh
+echo "		* ) exit;;" >> SET_ROS_DOMAIN_ID.sh
+echo " esac" >> SET_ROS_DOMAIN_ID.sh
+echo "done" >> SET_ROS_DOMAIN_ID.sh
+
+#sudo apt install wget -y
+#wget https://raw.githubusercontent.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/main/conception/installation%20scripts/STM32.sh
+#wget https://raw.githubusercontent.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/main/conception/installation%20scripts/SET_ROS_DOMAIN_ID.sh
+#sed -i 's/\r$//' ./STM32.sh && chmod +x ./STM32.sh
+#sed -i 's/\r$//' ./SET_ROS_DOMAIN_ID.sh && chmod +x ./SET_ROS_DOMAIN_ID.sh
+#echo "ROS_DOMAIN_ID=0" | sudo tee -a /etc/environment
+#sudo ln -s $DEST_DIR/STM32.sh /usr/bin/stm32_ros_agent 
+#sudo ln -s $DEST_DIR/SET_ROS_DOMAIN_ID.sh /usr/bin/set_ros_id
 
 echo "ROS_DOMAIN_ID=0" | sudo tee -a /etc/environment
 cd $DEST_DIR
