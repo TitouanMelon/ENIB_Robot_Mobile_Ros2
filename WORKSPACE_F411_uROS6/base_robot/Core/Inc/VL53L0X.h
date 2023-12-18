@@ -5,6 +5,7 @@
  * provided by ST (STSW-IMG005), and some of the explanatory comments are quoted
  * or paraphrased from the API source code, API user manual (UM2039), and the
  * VL53L0X datasheet.
+ * <a href="vl53l0x-datasheet-I2C.pdf">I2C protocole for VLX530X</a>
  */
 
 //#define bool  uint8_t
