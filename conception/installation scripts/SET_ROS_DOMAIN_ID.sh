@@ -1,5 +1,5 @@
 if [ $# -eq 0 ]; then
-	echo 'usage './ROS.sh' <new_id>'
+	echo 'usage '$0' <new_id>'
 	exit
 fi
 sudo sed -i 's/ROS_DOMAIN_ID=.*/ROS_DOMAIN_ID='$1'/g' /etc/environment
