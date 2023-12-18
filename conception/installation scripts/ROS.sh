@@ -34,7 +34,7 @@ echo "		* ) exit;;" >> SET_ROS_DOMAIN_ID.sh
 echo " esac" >> SET_ROS_DOMAIN_ID.sh
 echo "done" >> SET_ROS_DOMAIN_ID.sh
 
-echo "ROS_DOMAIN_ID=1" | sudo tee -a /etc/environment
+echo "ROS_DOMAIN_ID=0" | sudo tee -a /etc/environment
 cd $DEST_DIR
 chmod +x ./*.sh
 sudo ln -s ./STM32.sh /usr/bin/stm32_ros_agent 
