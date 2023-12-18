@@ -37,9 +37,9 @@ CHOOSE OS -> Other general-purpose OS -> Ubuntu -> Ubuntu Desktop 22.04.03 LTS (
 
 You can install all necessary tools with this following commands.
 ```
-wget ROS.sh
+wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/ROS.sh
 wget STM32cubeIDE.sh
-sed blabla && ./ROS.sh
+sed -i 's/\r$//' ./ROS.sh && ./ROS.sh
 ```
 
 # For PC and RaspberryPi
@@ -73,6 +73,7 @@ chmod +x ./microRosInstall.sh
 cd ~
 wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/STM32.sh
 wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/blob/main/conception/installation%20scripts/SET_ROS_DOMAIN_ID.sh
+echo "ROS_DOMAIN_ID=0" | sudo tee -a /etc/environment
 sudo ln -s ./STM32.sh /usr/bin/stm32_ros_agent 
 sudo ln -s ./SET_ROS_DOMAIN_ID.sh /usr/bin/set_ros_id
 ```
