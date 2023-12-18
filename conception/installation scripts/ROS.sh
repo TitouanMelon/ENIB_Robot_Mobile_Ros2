@@ -12,27 +12,27 @@ if [ $? -ne 0 ]; then
 fi
 ######### STM32.sh ##########################
 cd $DEST_DIR
-echo "cd ./microros_ws" >> STM32.sh
-echo "source install/setup.bash" >> STM32.sh
-echo "sudo chmod 777 /dev/ttyUSB0" >> STM32.sh
-echo "ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0 -b 115200" >> STM32.sh
+echo 'cd ./microros_ws' >> STM32.sh
+echo 'source install/setup.bash' >> STM32.sh
+echo 'sudo chmod 777 /dev/ttyUSB0' >> STM32.sh
+echo 'ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0 -b 115200' >> STM32.sh
 
 ######## SET_ROS_DOMAIN_ID.sh ###############
 cd $DEST_DIR
-echo "if [ $# -eq 0 ]; then" >> SET_ROS_DOMAIN_ID.sh
-echo "	echo 'usage '$0' <new_id>'" >> SET_ROS_DOMAIN_ID.sh
-echo "	exit" >> SET_ROS_DOMAIN_ID.sh
-echo "fi" >> SET_ROS_DOMAIN_ID.sh
-echo "sudo sed -i 's/ROS_DOMAIN_ID=.*/ROS_DOMAIN_ID='$1'/g' /etc/environment" >> SET_ROS_DOMAIN_ID.sh
+echo 'if [ $# -eq 0 ]; then' >> SET_ROS_DOMAIN_ID.sh
+echo '	echo usage $0 <new_id>' >> SET_ROS_DOMAIN_ID.sh
+echo '	exit' >> SET_ROS_DOMAIN_ID.sh
+echo 'fi' >> SET_ROS_DOMAIN_ID.sh
+echo 'sudo sed -i \'s/ROS_DOMAIN_ID=.*/ROS_DOMAIN_ID=\'$1\'/g\' /etc/environment' >> SET_ROS_DOMAIN_ID.sh
 
-echo "while true; do" >> SET_ROS_DOMAIN_ID.sh
-echo "	read -p 'You need to reboot to apply change. Do you want reboot now ? [y/N]' yn" >> SET_ROS_DOMAIN_ID.sh
-echo "	case $yn in" >> SET_ROS_DOMAIN_ID.sh
-echo "		[Yy]* ) sudo reboot; break;;" >> SET_ROS_DOMAIN_ID.sh
-echo "		[Nn]* ) exit;;" >> SET_ROS_DOMAIN_ID.sh
-echo "		* ) exit;;" >> SET_ROS_DOMAIN_ID.sh
-echo " esac" >> SET_ROS_DOMAIN_ID.sh
-echo "done" >> SET_ROS_DOMAIN_ID.sh
+echo 'while true; do' >> SET_ROS_DOMAIN_ID.sh
+echo '	read -p \'You need to reboot to apply change. Do you want reboot now ? [y/N]\' yn' >> SET_ROS_DOMAIN_ID.sh
+echo '	case $yn in' >> SET_ROS_DOMAIN_ID.sh
+echo '		[Yy]* ) sudo reboot; break;;' >> SET_ROS_DOMAIN_ID.sh
+echo '		[Nn]* ) exit;;' >> SET_ROS_DOMAIN_ID.sh
+echo '		* ) exit;;' >> SET_ROS_DOMAIN_ID.sh
+echo ' esac' >> SET_ROS_DOMAIN_ID.sh
+echo 'done' >> SET_ROS_DOMAIN_ID.sh
 
 echo "ROS_DOMAIN_ID=0" | sudo tee -a /etc/environment
 cd $DEST_DIR
