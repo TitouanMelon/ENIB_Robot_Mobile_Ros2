@@ -37,8 +37,8 @@ echo "done" >> SET_ROS_DOMAIN_ID.sh
 echo "ROS_DOMAIN_ID=0" | sudo tee -a /etc/environment
 cd $DEST_DIR
 chmod +x ./*.sh
-sudo ln -s ./STM32.sh /usr/bin/stm32_ros_agent 
-sudo ln -s ./SET_ROS_DOMAIN_ID.sh /usr/bin/set_ros_id
+sudo ln -s $DEST_DIR/STM32.sh /usr/bin/stm32_ros_agent 
+sudo ln -s $DEST_DIR/SET_ROS_DOMAIN_ID.sh /usr/bin/set_ros_id
 
 ###################### STM32 ##################################################
 sudo apt install wget -y
