@@ -34,6 +34,7 @@ CHOOSE OS -> Other general-purpose OS -> Ubuntu -> Ubuntu Desktop 22.04.03 LTS (
 # Install all in one script
 >[!NOTE]
 >this section is recommended for a pc but it is possible to apply it to the raspberry PI
+>You need 8Go of free space
 
 You can install all necessary tools with this following commands.
 ```
