@@ -11,8 +11,14 @@ if [ $? -ne 0 ]; then
 	exit
 fi
 ######### STM32.sh ##########################
-cd $DEST_DIR
-echo 'cd ./microros_ws' >> STM32.sh
+echo 'cd $DEST_DIR' >> STM32.sh
+echo 'DIR=$BASH_SOURCE' >> STM32.sh
+echo 'if [ -L $DIR ]; then' >> STM32.sh
+echo '  DIR=$(dirname $(readlink $DIR))' >> STM32.sh
+echo 'else' >> STM32.sh
+echo '  DIR=$(pwd)' >> STM32.sh
+echo 'fi' >> STM32.sh
+echo 'cd $DIR/microros_ws' >> STM32.sh
 echo 'source install/setup.bash' >> STM32.sh
 echo 'sudo chmod 777 /dev/ttyUSB0' >> STM32.sh
 echo 'ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0 -b 115200' >> STM32.sh
