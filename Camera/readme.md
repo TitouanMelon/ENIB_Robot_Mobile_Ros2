@@ -1,3 +1,6 @@
+>[!NOTE]
+>You need to have ROS2 install to follow this tutorial (see [here](../README.md#install-ros2) to install)
+
 # Add dependencies
 ```
 rosdep install -i --from-path py_pubsub/py_pubsub --rosdistro humble -y
