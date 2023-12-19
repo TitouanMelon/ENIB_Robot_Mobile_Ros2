@@ -1,6 +1,10 @@
-# Compile, buod and run the program
+# Add dependencies
 ```
 rosdep install -i --from-path py_pubsub/py_pubsub --rosdistro humble -y
+```
+
+# Compile, build and run the program
+```
 colcon build --packages-select py_pubsub
 source install/setup.bash
 ros2 run py_pubsub camera
@@ -8,6 +12,7 @@ ros2 run py_pubsub camera
 
 # Config camera
 ```
+sudo apt install v412-ctl
 v4l2-ctl -d /dev/video0 --all
 ```
 
