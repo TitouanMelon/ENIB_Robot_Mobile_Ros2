@@ -26,7 +26,7 @@ echo 'ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0 -b 1152
 ######## SET_ROS_DOMAIN_ID.sh ###############
 cd $DEST_DIR
 echo 'if [ $# -eq 0 ]; then' >> SET_ROS_DOMAIN_ID.sh
-echo '	echo usage $0 <new_id>' >> SET_ROS_DOMAIN_ID.sh
+echo '	echo "usage $0 <new_id>"' >> SET_ROS_DOMAIN_ID.sh
 echo "	exit" >> SET_ROS_DOMAIN_ID.sh
 echo 'fi' >> SET_ROS_DOMAIN_ID.sh
 echo 'sudo sed -i "s/ROS_DOMAIN_ID=.*/ROS_DOMAIN_ID=$1/g" /etc/environment' >> SET_ROS_DOMAIN_ID.sh
