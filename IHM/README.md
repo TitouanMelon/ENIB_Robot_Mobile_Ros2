@@ -4,6 +4,8 @@
 
 - Open qtcreator-ros
 - go to File -> Open project or file
+
+![openproject](../conception/img/openWorkspace.png)
 - Open the file 'workspace.user'
 
 # Build and run IHM
