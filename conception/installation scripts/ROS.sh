@@ -11,7 +11,7 @@ if [ $? -ne 0 ]; then
 	exit
 fi
 ######### STM32.sh ##########################
-echo 'cd $DEST_DIR' >> STM32.sh
+cd $DEST_DIR
 echo 'DIR=$BASH_SOURCE' >> STM32.sh
 echo 'if [ -L $DIR ]; then' >> STM32.sh
 echo '  DIR=$(dirname $(readlink $DIR))' >> STM32.sh
