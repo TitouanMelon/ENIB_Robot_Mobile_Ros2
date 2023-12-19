@@ -49,8 +49,10 @@ sudo ln -s $DEST_DIR/SET_ROS_DOMAIN_ID.sh /usr/bin/set_ros_id
 ###################### STM32 ##################################################
 sudo apt install wget -y
 cd $DEST_DIR
-wget https://www.enib.fr/~kerhoas/ROBOT_ROS_/WORKSPACE_F411_uROS6.zip
-unzip WORKSPACE_F411_uROS6.zip
+wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/raw/main/startup/WORKSPACE_F411_uROS.zip
+unzip WORKSPACE_F411_uROS.zip
+wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/raw/main/startup/IHM.zip
+unzip IHM.zip
 
 sudo apt install gtkterm -y
 
