@@ -230,6 +230,9 @@ stm32_ros_agent
 2. Use Visual Studio to connect to in ssh to your raspberryPi and have access to his folder 
 
 # Other information
+## Documentation of the stm32 final workspace
+You can found the documentation of the STM32 project [here](./docs)
+
 ## Config camera
 ```
 sudo apt install v412-ctl
