@@ -1,0 +1,197 @@
+[0.000000] (-) TimerEvent: {}
+[0.000347] (robot_mobile_pkg_cpp) JobQueued: {'identifier': 'robot_mobile_pkg_cpp', 'dependencies': OrderedDict()}
+[0.000757] (robot_mobile_pkg_cpp) JobStarted: {'identifier': 'robot_mobile_pkg_cpp'}
+[0.099966] (-) TimerEvent: {}
+[0.127458] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'cmake'}
+[0.128229] (robot_mobile_pkg_cpp) JobProgress: {'identifier': 'robot_mobile_pkg_cpp', 'progress': 'build'}
+[0.129257] (robot_mobile_pkg_cpp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', '--', '-j8', '-l8'], 'cwd': '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'rospc'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/rospc'), ('OLDPWD', '/home/rospc/robot_mobile_ihm/install'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '1299'), ('SYSTEMD_EXEC_PID', '1552'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('QSYS_ROOTDIR', '/home/rospc/intelFPGA_lite/20.1/quartus/sopc_builder/bin'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5129'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/rospc/IHM/robot_mobile_ihm/install:/home/rospc/qt_ros_ws2/install:/home/rospc/robot_ihm_widget/install:/home/rospc/robot_mobile_ihm/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'rospc'), ('JOURNAL_STREAM', '8:1803'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'rospc'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/rospc:@/tmp/.ICE-unix/1509,unix/rospc:/tmp/.ICE-unix/1509'), ('INVOCATION_ID', 'd5e68053af4e49588b2a37a454018c81'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'fr_FR.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.66DQF2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:15d2b9e4-95a8-4841-91a4-eba9fb13500f'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/rospc/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/IHM/robot_mobile_ihm/install/robot_mobile_pkg_cpp:/home/rospc/robot_ihm_widget/install/robot_gui_widget:/home/rospc/qt_ros_ws2/install/my_package:/opt/ros/humble')]), 'shell': False}
+[0.180867] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 20%] \x1b[34m\x1b[1mAutomatic MOC and UIC for target my_node_ihm\x1b[0m\n'}
+[0.200060] (-) TimerEvent: {}
+[0.300319] (-) TimerEvent: {}
+[0.400578] (-) TimerEvent: {}
+[0.491385] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 20%] Built target my_node_ihm_autogen\n'}
+[0.500678] (-) TimerEvent: {}
+[0.506529] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target my_node_ihm\x1b[0m\n'}
+[0.533287] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/my_node_ihm_autogen/mocs_compilation.cpp.o\x1b[0m\n'}
+[0.533500] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/my_node.cpp.o\x1b[0m\n'}
+[0.534596] (robot_mobile_pkg_cpp) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o\x1b[0m\n'}
+[0.600813] (-) TimerEvent: {}
+[0.701115] (-) TimerEvent: {}
+[0.801436] (-) TimerEvent: {}
+[0.901751] (-) TimerEvent: {}
+[1.002055] (-) TimerEvent: {}
+[1.102376] (-) TimerEvent: {}
+[1.202682] (-) TimerEvent: {}
+[1.303001] (-) TimerEvent: {}
+[1.403294] (-) TimerEvent: {}
+[1.503593] (-) TimerEvent: {}
+[1.603896] (-) TimerEvent: {}
+[1.704178] (-) TimerEvent: {}
+[1.804460] (-) TimerEvent: {}
+[1.904750] (-) TimerEvent: {}
+[2.005045] (-) TimerEvent: {}
+[2.105335] (-) TimerEvent: {}
+[2.205616] (-) TimerEvent: {}
+[2.305904] (-) TimerEvent: {}
+[2.406194] (-) TimerEvent: {}
+[2.506491] (-) TimerEvent: {}
+[2.606785] (-) TimerEvent: {}
+[2.707065] (-) TimerEvent: {}
+[2.807337] (-) TimerEvent: {}
+[2.907616] (-) TimerEvent: {}
+[3.007900] (-) TimerEvent: {}
+[3.108182] (-) TimerEvent: {}
+[3.208470] (-) TimerEvent: {}
+[3.308759] (-) TimerEvent: {}
+[3.409049] (-) TimerEvent: {}
+[3.509339] (-) TimerEvent: {}
+[3.609625] (-) TimerEvent: {}
+[3.709922] (-) TimerEvent: {}
+[3.810224] (-) TimerEvent: {}
+[3.910522] (-) TimerEvent: {}
+[4.010818] (-) TimerEvent: {}
+[4.111079] (-) TimerEvent: {}
+[4.211347] (-) TimerEvent: {}
+[4.260508] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:8:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.260747] (robot_mobile_pkg_cpp) StderrLine: {'line': b'    8 | rclcpp::Publisher<std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K>::SharedPtr publisher_dir;\n'}
+[4.260884] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.261003] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:8:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[4.261123] (robot_mobile_pkg_cpp) StderrLine: {'line': b'    8 | rclcpp::Publisher<std_msgs::msg::UInt8\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr publisher_dir;\n'}
+[4.261241] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.261358] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:8:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected initializer before \xe2\x80\x98\x1b[01m\x1b[Kpublisher_dir\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.261473] (robot_mobile_pkg_cpp) StderrLine: {'line': b'    8 | rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr \x1b[01;31m\x1b[Kpublisher_dir\x1b[m\x1b[K;\n'}
+[4.261585] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.265714] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:11:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.265932] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   11 | rclcpp::Publisher<std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K>::SharedPtr publisher_mode;\n'}
+[4.266065] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.266182] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:11:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[4.266302] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   11 | rclcpp::Publisher<std_msgs::msg::UInt8\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr publisher_mode;\n'}
+[4.266420] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.266536] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:11:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected initializer before \xe2\x80\x98\x1b[01m\x1b[Kpublisher_mode\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.266653] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   11 | rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr \x1b[01;31m\x1b[Kpublisher_mode\x1b[m\x1b[K;\n'}
+[4.266769] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.271089] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:34:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.271308] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   13 | rclcpp::Publisher<std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K>::SharedPtr publisher_speed;\n'}
+[4.271441] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                  \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.271559] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Ktemplate argument 1 is invalid\n'}
+[4.271677] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   13 | rclcpp::Publisher<std_msgs::msg::UInt8\x1b[01;31m\x1b[K>\x1b[m\x1b[K::SharedPtr publisher_speed;\n'}
+[4.271803] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.271915] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected initializer before \xe2\x80\x98\x1b[01m\x1b[Kpublisher_speed\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.272034] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   13 | rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr \x1b[01;31m\x1b[Kpublisher_speed\x1b[m\x1b[K;\n'}
+[4.272149] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.311460] (-) TimerEvent: {}
+[4.330175] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMainWindow::MainWindow(QWidget*)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.330402] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:61:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_dir\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.330539] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   61 |     \x1b[01;31m\x1b[Kpublisher_dir\x1b[m\x1b[K = node->create_publisher<std_msgs::msg::Int32>("direction", 10);\n'}
+[4.330663] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.330786] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.350061] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:62:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_mode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.350267] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   62 |     \x1b[01;31m\x1b[Kpublisher_mode\x1b[m\x1b[K = node->create_publisher<std_msgs::msg::Int32>("mode", 10);\n'}
+[4.350388] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.350496] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.359125] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:63:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_speed\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KpublishSpeed\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.359296] (robot_mobile_pkg_cpp) StderrLine: {'line': b'   63 |     \x1b[01;31m\x1b[Kpublisher_speed\x1b[m\x1b[K = node->create_publisher<std_msgs::msg::Int32>("speed", 10);\n'}
+[4.359370] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.359432] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[KpublishSpeed\x1b[m\x1b[K\n'}
+[4.369814] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishNewsUp()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.369972] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:100:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.370045] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  100 |     auto message = std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K();\n'}
+[4.370119] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.379768] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:103:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_dir\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.379934] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  103 |     \x1b[01;31m\x1b[Kpublisher_dir\x1b[m\x1b[K->publish(message);\n'}
+[4.380006] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.380068] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.380786] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishNewsDown()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.380901] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:112:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.380971] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  112 |     auto message = std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K();\n'}
+[4.381034] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.390669] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:115:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_dir\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.390833] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  115 |     \x1b[01;31m\x1b[Kpublisher_dir\x1b[m\x1b[K->publish(message);\n'}
+[4.390906] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.390979] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.391669] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishNewsLeft()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.391777] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:124:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.391846] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  124 |     auto message = std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K();\n'}
+[4.391910] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.401608] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:127:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_dir\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.401775] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  127 |     \x1b[01;31m\x1b[Kpublisher_dir\x1b[m\x1b[K->publish(message);\n'}
+[4.401848] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.401916] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.402592] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishNewsRight()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.402700] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:136:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.402770] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  136 |     auto message = std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K();\n'}
+[4.402834] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.411583] (-) TimerEvent: {}
+[4.412476] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:139:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_dir\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.412629] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  139 |     \x1b[01;31m\x1b[Kpublisher_dir\x1b[m\x1b[K->publish(message);\n'}
+[4.412701] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.412763] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.413951] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeAuto()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.414076] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:169:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.414156] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  169 |     auto message = std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K();\n'}
+[4.414219] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.424872] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:172:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_mode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.425031] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  172 |     \x1b[01;31m\x1b[Kpublisher_mode\x1b[m\x1b[K->publish(message);\n'}
+[4.425101] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.425163] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.426094] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeMan()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.426207] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:197:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.426276] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  197 |     auto message = std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K();\n'}
+[4.426349] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.436910] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:200:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_mode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.437068] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  200 |     \x1b[01;31m\x1b[Kpublisher_mode\x1b[m\x1b[K->publish(message);\n'}
+[4.437139] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.437204] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.438227] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishModeTrack()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.438428] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:224:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.438575] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  224 |     auto message = std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K();\n'}
+[4.438682] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.450190] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:227:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_mode\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kpublisher_start\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.450352] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  227 |     \x1b[01;31m\x1b[Kpublisher_mode\x1b[m\x1b[K->publish(message);\n'}
+[4.450423] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.450486] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[Kpublisher_start\x1b[m\x1b[K\n'}
+[4.451263] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MainWindow::publishSpeed(uint8_t)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.451432] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:238:35:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KUInt8\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.451544] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  238 |     auto message = std_msgs::msg::\x1b[01;31m\x1b[KUInt8\x1b[m\x1b[K();\n'}
+[4.451648] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |                                   \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.460714] (robot_mobile_pkg_cpp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:241:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpublisher_speed\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[KpublishSpeed\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.460876] (robot_mobile_pkg_cpp) StderrLine: {'line': b'  241 |     \x1b[01;31m\x1b[Kpublisher_speed\x1b[m\x1b[K->publish(message);\n'}
+[4.460949] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.461039] (robot_mobile_pkg_cpp) StderrLine: {'line': b'      |     \x1b[32m\x1b[KpublishSpeed\x1b[m\x1b[K\n'}
+[4.511713] (-) TimerEvent: {}
+[4.611997] (-) TimerEvent: {}
+[4.712292] (-) TimerEvent: {}
+[4.812577] (-) TimerEvent: {}
+[4.912863] (-) TimerEvent: {}
+[5.013142] (-) TimerEvent: {}
+[5.113441] (-) TimerEvent: {}
+[5.213797] (-) TimerEvent: {}
+[5.314098] (-) TimerEvent: {}
+[5.414388] (-) TimerEvent: {}
+[5.514700] (-) TimerEvent: {}
+[5.615019] (-) TimerEvent: {}
+[5.715315] (-) TimerEvent: {}
+[5.815627] (-) TimerEvent: {}
+[5.915933] (-) TimerEvent: {}
+[6.016232] (-) TimerEvent: {}
+[6.116532] (-) TimerEvent: {}
+[6.216843] (-) TimerEvent: {}
+[6.317144] (-) TimerEvent: {}
+[6.417449] (-) TimerEvent: {}
+[6.517749] (-) TimerEvent: {}
+[6.618051] (-) TimerEvent: {}
+[6.718350] (-) TimerEvent: {}
+[6.818645] (-) TimerEvent: {}
+[6.918947] (-) TimerEvent: {}
+[7.019207] (-) TimerEvent: {}
+[7.119486] (-) TimerEvent: {}
+[7.219775] (-) TimerEvent: {}
+[7.320085] (-) TimerEvent: {}
+[7.406002] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1\n'}
+[7.406360] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2\n'}
+[7.406639] (robot_mobile_pkg_cpp) StderrLine: {'line': b'gmake: *** [Makefile:146 : all] Erreur 2\n'}
+[7.408683] (robot_mobile_pkg_cpp) CommandEnded: {'returncode': 2}
+[7.420202] (-) TimerEvent: {}
+[7.509965] (robot_mobile_pkg_cpp) JobEnded: {'identifier': 'robot_mobile_pkg_cpp', 'rc': 2}
+[7.520324] (-) TimerEvent: {}
+[7.520863] (-) EventReactorShutdown: {}

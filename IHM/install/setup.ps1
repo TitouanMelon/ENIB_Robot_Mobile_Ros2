@@ -23,9 +23,9 @@ function _colcon_prefix_chain_powershell_source_script {
 
 # source chained prefixes
 _colcon_prefix_chain_powershell_source_script "/opt/ros/humble\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/dony/ROS_UDEMY/ros2_ws/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/dony/ROS_ROBOT_PROJECT/robot_mobile_ihm/install\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/dony/ROS_ROBOT_PROJECT/qt_ros_ws2/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/rospc/robot_ihm_widget/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/rospc/qt_ros_ws2/install\local_setup.ps1"
+_colcon_prefix_chain_powershell_source_script "/home/rospc/IHM/robot_mobile_ihm/install\local_setup.ps1"
 
 # source this prefix
 $env:COLCON_CURRENT_PREFIX=(Split-Path $PSCommandPath -Parent)

@@ -1,0 +1,92 @@
+[0.129s] Invoking command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8
+[0.178s] [ 20%] [34m[1mAutomatic MOC and UIC for target my_node_ihm[0m
+[0.199s] [ 20%] Built target my_node_ihm_autogen
+[0.216s] [35m[1mConsolidate compiler generated dependencies of target my_node_ihm[0m
+[0.243s] [ 40%] [32mBuilding CXX object CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o[0m
+[3.799s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:8:34:[m[K [01;31m[Kerror: [m[K‘[01m[KUInt8[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[3.800s]     8 | rclcpp::Publisher<std_msgs::msg::[01;31m[KUInt8[m[K>::SharedPtr publisher_dir;
+[3.800s]       |                                  [01;31m[K^~~~~[m[K
+[3.800s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:8:39:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.800s]     8 | rclcpp::Publisher<std_msgs::msg::UInt8[01;31m[K>[m[K::SharedPtr publisher_dir;
+[3.800s]       |                                       [01;31m[K^[m[K
+[3.800s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:8:52:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kpublisher_dir[m[K’
+[3.800s]     8 | rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr [01;31m[Kpublisher_dir[m[K;
+[3.800s]       |                                                    [01;31m[K^~~~~~~~~~~~~[m[K
+[3.804s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:11:34:[m[K [01;31m[Kerror: [m[K‘[01m[KUInt8[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[3.804s]    11 | rclcpp::Publisher<std_msgs::msg::[01;31m[KUInt8[m[K>::SharedPtr publisher_mode;
+[3.804s]       |                                  [01;31m[K^~~~~[m[K
+[3.804s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:11:39:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.804s]    11 | rclcpp::Publisher<std_msgs::msg::UInt8[01;31m[K>[m[K::SharedPtr publisher_mode;
+[3.804s]       |                                       [01;31m[K^[m[K
+[3.805s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:11:52:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kpublisher_mode[m[K’
+[3.805s]    11 | rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr [01;31m[Kpublisher_mode[m[K;
+[3.805s]       |                                                    [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.808s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:34:[m[K [01;31m[Kerror: [m[K‘[01m[KUInt8[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’
+[3.809s]    13 | rclcpp::Publisher<std_msgs::msg::[01;31m[KUInt8[m[K>::SharedPtr publisher_speed;
+[3.809s]       |                                  [01;31m[K^~~~~[m[K
+[3.809s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:39:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[3.809s]    13 | rclcpp::Publisher<std_msgs::msg::UInt8[01;31m[K>[m[K::SharedPtr publisher_speed;
+[3.809s]       |                                       [01;31m[K^[m[K
+[3.809s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:13:52:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kpublisher_speed[m[K’
+[3.809s]    13 | rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr [01;31m[Kpublisher_speed[m[K;
+[3.809s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.864s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In constructor ‘[01m[KMainWindow::MainWindow(QWidget*)[m[K’:
+[3.864s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:61:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_dir[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.864s]    61 |     [01;31m[Kpublisher_dir[m[K = node->create_publisher<std_msgs::msg::Int32>("direction", 10);
+[3.864s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[3.864s]       |     [32m[Kpublisher_start[m[K
+[3.882s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:62:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_mode[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.882s]    62 |     [01;31m[Kpublisher_mode[m[K = node->create_publisher<std_msgs::msg::Int32>("mode", 10);
+[3.882s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.882s]       |     [32m[Kpublisher_start[m[K
+[3.890s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:63:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_speed[m[K’ was not declared in this scope; did you mean ‘[01m[KpublishSpeed[m[K’?
+[3.890s]    63 |     [01;31m[Kpublisher_speed[m[K = node->create_publisher<std_msgs::msg::Int32>("speed", 10);
+[3.890s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.890s]       |     [32m[KpublishSpeed[m[K
+[3.904s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:87:1:[m[K [01;31m[Kerror: [m[K‘[01m[KUInt8[m[K’ was not declared in this scope
+[3.904s]    87 | [01;31m[KUInt8[m[K
+[3.904s]       | [01;31m[K^~~~~[m[K
+[3.916s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::publishNewsUp()[m[K’:
+[3.916s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:103:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_dir[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.916s]   103 |     [01;31m[Kpublisher_dir[m[K->publish(message);
+[3.916s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[3.916s]       |     [32m[Kpublisher_start[m[K
+[3.925s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::publishNewsDown()[m[K’:
+[3.925s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:115:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_dir[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.925s]   115 |     [01;31m[Kpublisher_dir[m[K->publish(message);
+[3.925s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[3.925s]       |     [32m[Kpublisher_start[m[K
+[3.935s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::publishNewsLeft()[m[K’:
+[3.935s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:127:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_dir[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.935s]   127 |     [01;31m[Kpublisher_dir[m[K->publish(message);
+[3.935s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[3.935s]       |     [32m[Kpublisher_start[m[K
+[3.944s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::publishNewsRight()[m[K’:
+[3.944s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:139:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_dir[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.944s]   139 |     [01;31m[Kpublisher_dir[m[K->publish(message);
+[3.944s]       |     [01;31m[K^~~~~~~~~~~~~[m[K
+[3.945s]       |     [32m[Kpublisher_start[m[K
+[3.955s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::publishModeAuto()[m[K’:
+[3.955s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:172:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_mode[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.955s]   172 |     [01;31m[Kpublisher_mode[m[K->publish(message);
+[3.956s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.956s]       |     [32m[Kpublisher_start[m[K
+[3.966s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::publishModeMan()[m[K’:
+[3.966s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:200:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_mode[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.966s]   200 |     [01;31m[Kpublisher_mode[m[K->publish(message);
+[3.966s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.967s]       |     [32m[Kpublisher_start[m[K
+[3.977s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::publishModeTrack()[m[K’:
+[3.977s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:227:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_mode[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublisher_start[m[K’?
+[3.977s]   227 |     [01;31m[Kpublisher_mode[m[K->publish(message);
+[3.977s]       |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.977s]       |     [32m[Kpublisher_start[m[K
+[3.986s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:[m[K In member function ‘[01m[Kvoid MainWindow::publishSpeed(uint8_t)[m[K’:
+[3.986s] [01m[K/home/rospc/robot_mobile_ihm/src/robot_mobile_pkg_cpp/src/mainwindow.cpp:241:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_speed[m[K’ was not declared in this scope; did you mean ‘[01m[KpublishSpeed[m[K’?
+[3.986s]   241 |     [01;31m[Kpublisher_speed[m[K->publish(message);
+[3.986s]       |     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.986s]       |     [32m[KpublishSpeed[m[K
+[6.892s] gmake[2]: *** [CMakeFiles/my_node_ihm.dir/build.make:104 : CMakeFiles/my_node_ihm.dir/src/mainwindow.cpp.o] Erreur 1
+[6.892s] gmake[1]: *** [CMakeFiles/Makefile2:138 : CMakeFiles/my_node_ihm.dir/all] Erreur 2
+[6.892s] gmake: *** [Makefile:146 : all] Erreur 2
+[6.895s] Invoked command in '/home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/rospc/robot_mobile_ihm/build/robot_mobile_pkg_cpp -- -j8 -l8

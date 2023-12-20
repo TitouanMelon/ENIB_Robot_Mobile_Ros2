@@ -15,7 +15,7 @@
 #include <std_msgs/msg/string.hpp>
 #include <std_msgs/msg/char.hpp>
 #include <std_msgs/msg/bool.hpp>
-#include <std_msgs/msg/u_int8.hpp>
+#include <std_msgs/msg/int32.hpp>
 #include <std_msgs/msg/u_int8_multi_array.hpp>
 #include <std_msgs/msg/header.hpp>
 #include <sensor_msgs/msg/image.hpp>
@@ -34,8 +34,7 @@ public:
 
 public slots:
 
-    void onTimer_Tick();
-
+    void onTimer_Tick();   
 private slots:
     void on_pushButton_Up_clicked();
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 12.0.0, 2023-11-29T17:37:53. -->
+<!-- Written by QtCreator 12.0.0, 2023-12-13T18:44:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -131,7 +131,7 @@
     <valuelist type="QVariantList" key="ProjectExplorer.BuildConfiguration.UserEnvironmentChanges">
      <value type="QString">COLCON_PREFIX_PATH=/home/rospc/robot_mobile_ihm/install:/home/rospc/IHM/robot_mobile_ihm/install:/home/rospc/qt_ros_ws2/install:/home/rospc/robot_ihm_widget/install</value>
      <value type="QString">LD_LIBRARY_PATH=/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/snap/qtcreator-ros/98/lib:/snap/qtcreator-ros/98/usr/lib/x86_64-linux-gnu</value>
-     <value type="QString">SHLVL=29</value>
+     <value type="QString">SHLVL=33</value>
      <value type="QString">TERM=xterm</value>
      <value type="QString">_=/usr/bin/env</value>
     </valuelist>

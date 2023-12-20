@@ -5,15 +5,13 @@
 
 
 std::shared_ptr<rclcpp::Node> node = nullptr;
-
-rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr publisher_dir;
+rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr publisher_dir;
 rclcpp::Publisher<std_msgs::msg::UInt8MultiArray>::SharedPtr publisher_rgb_low;
 rclcpp::Publisher<std_msgs::msg::UInt8MultiArray>::SharedPtr publisher_rgb_high;
-rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr publisher_mode;
+rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr publisher_mode;
 rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr publisher_start;
-rclcpp::Publisher<std_msgs::msg::UInt8>::SharedPtr publisher_speed;
+rclcpp::Publisher<std_msgs::msg::Int32>::SharedPtr publisher_speed;
 rclcpp::Subscription<sensor_msgs::msg::Image>::SharedPtr subscriber_img;
-
 //=========================================================================
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -49,7 +47,7 @@ MainWindow::MainWindow(QWidget *parent) :
     timer_chrono = new QTimer();
 //---------------------------------------------------------------------
     connect( timer_chrono, SIGNAL(timeout()), this, SLOT(onTimer_Tick()));
-    //connect( m_bout_publish, SIGNAL(clicked()), this, SLOT(onButton_Publish()));
+    connect( m_bout_publish, SIGNAL(clicked()), this, SLOT(onButton_Publish()));
     connect ((*ui).radioButton_Man, SIGNAL(stateChanged(int)), this, SLOT(on_radioButton_Man_toggled(int)));
     connect((*ui).horizontalSlider_red_low, SIGNAL(valueChanged(int)), this, SLOT(rgb_onSliderValueChanged(int)));
     connect((*ui).horizontalSlider_red_high, SIGNAL(valueChanged(int)), this, SLOT(rgb_onSliderValueChanged(int)));
@@ -59,13 +57,13 @@ MainWindow::MainWindow(QWidget *parent) :
     connect((*ui).horizontalSlider_blue_high, SIGNAL(valueChanged(int)), this, SLOT(rgb_onSliderValueChanged(int)));
 
 
-    publisher_dir = node->create_publisher<std_msgs::msg::UInt8>("direction", 10);
-    publisher_mode = node->create_publisher<std_msgs::msg::UInt8>("mode", 10);
-    publisher_speed = node->create_publisher<std_msgs::msg::UInt8>("speed", 10);
+    //node = std::make_shared<rclcpp::Node>("my_node");
+    publisher_dir = node->create_publisher<std_msgs::msg::Int32>("direction", 10);
+    publisher_mode = node->create_publisher<std_msgs::msg::Int32>("mode", 10);
+    publisher_speed = node->create_publisher<std_msgs::msg::Int32>("speed", 10);
     publisher_rgb_low = node->create_publisher<std_msgs::msg::UInt8MultiArray>("/camera/hsv_low", 10);
     publisher_rgb_high = node->create_publisher<std_msgs::msg::UInt8MultiArray>("/camera/hsv_high", 10);
-
-    
+    //publisher_start = node->create_publisher<std_msgs::msg::Bool>("start", 10);
 
     subscriber_img = node->create_subscription<sensor_msgs::msg::Image>(
         "/camera/IMAGE_frame", 1000,std::bind(&MainWindow::img_callback, this, std::placeholders::_1));//"/topic/IMAGE_frame"
@@ -86,25 +84,21 @@ MainWindow::MainWindow(QWidget *parent) :
     graphicsView ->setScene(graphicsScene);
     //*/
     RCLCPP_INFO(node->get_logger(), "Robot Gui Started");
-
 }
-
 //=========================================================================
 void MainWindow::onTimer_Tick()
 {
     rclcpp::spin_some(node);
 }
-//=========================================================================
-
-
+//=================/camera/IMAGE_frame ========================================================
 void MainWindow::on_pushButton_Up_clicked(){
     publishNewsUp();
 }
 //=========================================================================
 void MainWindow::publishNewsUp(){
-    auto message = std_msgs::msg::UInt8();
+    auto message = std_msgs::msg::Int32();
     message.data = 0;
-    RCLCPP_INFO(node->get_logger(), "Publishing direction 'UP': '%d'", message.data);
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%d'", message.data);
     publisher_dir->publish(message);
 
 }
@@ -114,9 +108,9 @@ void MainWindow::on_pushButton_Down_clicked(){
 }
 //=========================================================================
 void MainWindow::publishNewsDown(){
-    auto message = std_msgs::msg::UInt8();
+    auto message = std_msgs::msg::Int32();
     message.data = 2;
-    RCLCPP_INFO(node->get_logger(), "Publishing direction 'DOWN': '%d'", message.data);
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%d'", message.data);
     publisher_dir->publish(message);
 
 }
@@ -126,9 +120,9 @@ void MainWindow::on_pushButton_Left_clicked(){
 }
 //=========================================================================
 void MainWindow::publishNewsLeft(){
-    auto message = std_msgs::msg::UInt8();
+    auto message = std_msgs::msg::Int32();
     message.data = 3;
-    RCLCPP_INFO(node->get_logger(), "Publishing direction 'LEFT': '%d'", message.data);
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%d'", message.data);
     publisher_dir->publish(message);
 
 }
@@ -138,9 +132,9 @@ void MainWindow::on_pushButton_Right_clicked(){
 }
 //=========================================================================
 void MainWindow::publishNewsRight(){
-    auto message = std_msgs::msg::UInt8();
+    auto message = std_msgs::msg::Int32();
     message.data = 1;
-    RCLCPP_INFO(node->get_logger(), "Publishing direction 'RIGHT': '%d'", message.data);
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%d'", message.data);
     publisher_dir->publish(message);
 
 }
@@ -171,9 +165,9 @@ void MainWindow::on_radioButton_Auto_toggled(bool checked)
 
 }
 void MainWindow::publishModeAuto(){
-    auto message = std_msgs::msg::UInt8();
+    auto message = std_msgs::msg::Int32();
     message.data = 0;
-    RCLCPP_INFO(node->get_logger(), "Publishing mode 'AUTO': '%d'", message.data);
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%d'", message.data);
     publisher_mode->publish(message);
 
 }
@@ -199,10 +193,13 @@ void MainWindow::on_radioButton_Man_toggled(bool checked)
     }
 }
 void MainWindow::publishModeMan(){
-    auto message = std_msgs::msg::UInt8();
+    auto message = std_msgs::msg::Int32();
+    auto command_stop = std_msgs::msg::Int32();
+    command_stop.data = 4;
     message.data = 1;
-    RCLCPP_INFO(node->get_logger(), "Publishing mode 'MANUAL': '%d'", message.data);
+    RCLCPP_INFO(node->get_logger(), "Publishing manual mode: '%d' and stop command '%d'", message.data, command_stop.data);
     publisher_mode->publish(message);
+    publisher_dir->publish(command_stop);
 
 }
 //=========================================================================
@@ -216,19 +213,26 @@ void MainWindow::on_radioButton_Track_toggled(bool checked)
         (*ui).pushButton_Right->setEnabled(!checked);
         (*ui).horizontalSlider_Speed->setEnabled(!checked);
         (*ui).horizontalSlider_red_low->setEnabled(checked);
-        (*ui).horizontalSlider_red_high->setEnabled(checked);
+        (*ui).horizontalSlider_red_high->setEnabled(checked);    
         (*ui).horizontalSlider_green_low->setEnabled(checked);
-        (*ui).horizontalSlider_green_high->setEnabled(checked);
+        (*ui).horizontalSlider_green_high->setEnabled(checked);   
         (*ui).horizontalSlider_blue_low->setEnabled(checked);
         (*ui).horizontalSlider_blue_high->setEnabled(checked);
+
+        (*ui).horizontalSlider_red_low->setValue(99);
+        (*ui).horizontalSlider_green_low->setValue(91);
+        (*ui).horizontalSlider_blue_low->setValue(29);
+        (*ui).horizontalSlider_red_high->setValue(120);
+        (*ui).horizontalSlider_green_high->setValue(255);
+        (*ui).horizontalSlider_blue_high->setValue(255);
         publishModeTrack();
     }
 
 }
 void MainWindow::publishModeTrack(){
-    auto message = std_msgs::msg::UInt8();
+    auto message = std_msgs::msg::Int32();
     message.data = 2;
-    RCLCPP_INFO(node->get_logger(), "Publishing mode 'TRACKING': '%u'", message.data);
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%u'", message.data);
     publisher_mode->publish(message);
 
 }
@@ -240,9 +244,9 @@ void MainWindow::on_horizontalSlider_Speed_valueChanged(int value)
     (*ui).lcdNumber_Speed->display(value);
 }
 void MainWindow::publishSpeed(uint8_t value){
-    auto message = std_msgs::msg::UInt8();
+    auto message = std_msgs::msg::Int32();
     message.data = value;
-    RCLCPP_INFO(node->get_logger(), "Publishing speed value: '%u'", message.data);
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%u'", message.data);
     publisher_speed->publish(message);
 
 }
@@ -379,7 +383,7 @@ void MainWindow::on_ON_OFF_stateChanged(int arg1)
 void MainWindow::publishStart(bool value){
     auto message = std_msgs::msg::Bool();
     message.data = value;
-    RCLCPP_INFO(node->get_logger(), "Publishing GUI 'STATE': '%s'", message.data ? "On" : "OFF");
+    RCLCPP_INFO(node->get_logger(), "Publishing: '%s'", message.data ? "On" : "OFF");
     publisher_start->publish(message);
 
 }
