@@ -10,6 +10,11 @@
 
 # Build and run IHM
 
-Click on the green arrow to build (add img)
+Open a terminal in the IHM directory and run this command
 
-If no executable error : (add img to indicate how to add the exe)
+```
+colcon build
+source install/setup.bash
+./build/robot_mobile_pkg_cpp/my_node_ihm
+# if you change the name of project change this line like this ./build/<node_name>/<executable_name>
+```
