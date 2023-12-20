@@ -96,83 +96,83 @@
 
   \indexspace
 
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/captDistIR.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/captDistIR.h}, 
 		\hyperpage{17}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/config.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/config.h}, 
 		\hyperpage{17}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/drv\_gpio.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/drv\_gpio.h}, 
 		\hyperpage{18}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/drv\_i2c.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/drv\_i2c.h}, 
 		\hyperpage{18}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/drv\_uart.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/drv\_uart.h}, 
 		\hyperpage{19}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/FreeRTOSConfig.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/FreeRTOSConfig.h}, 
 		\hyperpage{19}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/groveLCD.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/groveLCD.h}, 
 		\hyperpage{21}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/main.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/main.h}, 
 		\hyperpage{22}, \hyperpage{30}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/microROS.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/microROS.h}, 
 		\hyperpage{31}, \hyperpage{34}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/motorCommand.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/motorCommand.h}, 
 		\hyperpage{35}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/quadEncoder.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/quadEncoder.h}, 
 		\hyperpage{35}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/retarget.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/retarget.h}, 
 		\hyperpage{35}, \hyperpage{38}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/stm32f4xx\_hal\_conf.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/stm32f4xx\_hal\_conf.h}, 
 		\hyperpage{38}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/stm32f4xx\_it.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/stm32f4xx\_it.h}, 
 		\hyperpage{43}, \hyperpage{46}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/systemclock.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/systemclock.h}, 
 		\hyperpage{47}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/util.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/util.h}, 
 		\hyperpage{47}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Inc/VL53L0X.h}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Inc/VL53L0X.h}, 
 		\hyperpage{47}, \hyperpage{69}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/captDistIR.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/captDistIR.c}, 
 		\hyperpage{73}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/dma\_transport.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/dma\_transport.c}, 
 		\hyperpage{73}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/drv\_gpio.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/drv\_gpio.c}, 
 		\hyperpage{74}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/drv\_i2c.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/drv\_i2c.c}, 
 		\hyperpage{75}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/drv\_uart.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/drv\_uart.c}, 
 		\hyperpage{78}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/freertos.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/freertos.c}, 
 		\hyperpage{79}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/groveLCD.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/groveLCD.c}, 
 		\hyperpage{79}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/main.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/main.c}, 
 		\hyperpage{84}, \hyperpage{101}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microROS.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/microROS.c}, 
 		\hyperpage{112}, \hyperpage{114}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microros\_allocators.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/microros\_allocators.c}, 
 		\hyperpage{114}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/microros\_time.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/microros\_time.c}, 
 		\hyperpage{115}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/motorCommand.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/motorCommand.c}, 
 		\hyperpage{116}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/quadEncoder.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/quadEncoder.c}, 
 		\hyperpage{117}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/retarget.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/retarget.c}, 
 		\hyperpage{120}, \hyperpage{124}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/stm32f4xx\_hal\_msp.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/stm32f4xx\_hal\_msp.c}, 
 		\hyperpage{125}, \hyperpage{129}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/stm32f4xx\_hal\_timebase\_tim.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/stm32f4xx\_hal\_timebase\_tim.c}, 
 		\hyperpage{134}, \hyperpage{136}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/stm32f4xx\_it.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/stm32f4xx\_it.c}, 
 		\hyperpage{138}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/syscalls.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/syscalls.c}, 
 		\hyperpage{139}, \hyperpage{144}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/sysmem.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/sysmem.c}, 
 		\hyperpage{145}, \hyperpage{147}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/systemclock.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/systemclock.c}, 
 		\hyperpage{147}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/util.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/util.c}, 
 		\hyperpage{148}
-  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/WORKSPACE\_F411\_uROS6/base\_robot/Core/Src/VL53L0X.c}, 
+  \item {C:/Users/Administrator/Documents/GitHub/ENIB\_Robot\_Mobile\_Ros2/finalCode/WORKSPACE\_F411\_uROS/base\_robot/Core/Src/VL53L0X.c}, 
 		\hyperpage{150}, \hyperpage{153}
   \item {calcMacroPeriod}
     \subitem {VL53L0X.h}, \hyperpage{52}

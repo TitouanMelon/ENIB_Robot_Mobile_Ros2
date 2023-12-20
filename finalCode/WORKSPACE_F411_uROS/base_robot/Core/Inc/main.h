@@ -9,8 +9,8 @@
   * @image html Mylogo.png
   * @htmlinclude about-MyProject.html
   * @section Externe Externe documentation
-  * <a href="base_robot.pdf">Documentation about the pinout of the robot</a>
-  * <a href="vl53l0x-datasheet-I2C.pdf">I2C protocole for VLX530X</a>
+  * <a href="base_robot.pdf">Documentation about the pinout of the robot</a>@n
+  * <a href="vl53l0x-datasheet-I2C.pdf">I2C protocole for VLX530X</a>@n
   * @section Principal Principal function
   * function @ref main : init function and start kernel.@n
   * function @ref microros_task : Create the publishers and the subscribers and exploit them.@n
@@ -31,7 +31,7 @@
   * @section Config Config define
   * @subsection Exo Config exo
   * @subsection Param Config param
-  * @author Titouan Melon | Louanne Floch | Jérémy Plantec | Donald TOGNIA DJANKO DIALLO
+  * @author <a href="https://www.linkedin.com/in/titouan-melon">Titouan Melon</a>@n<a href="https://www.linkedin.com/in/louanne-floch">Louanne Floch</a>@n<a href="https://www.linkedin.com/in/j%C3%A9r%C3%A9my-plantec-7a24a81bb">Jérémy Plantec</a>@n<a href="https://www.linkedin.com/in/tognia-djanko-diallo-donald-b38281228">Donald TOGNIA DJANKO DIALLO</a>@n
   *
   ******************************************************************************
   * @attention

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.9)  18 DEC 2023 14:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.12.9)  20 DEC 2023 20:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1037,31 +1037,31 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
  [1]
 Underfull \hbox (badness 10000) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.8 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hu
-b/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+b/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.14 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.17 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.21 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -1071,51 +1071,51 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 20
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [4] [5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.30 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.32 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.38 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.40 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.42 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.45 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.47 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 204--204
+Underfull \hbox (badness 2401) in paragraph at lines 204--204
  [][] [][]\T1/phv/m/n/10 5.51 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]H
-ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[] 
+ub/[]ENIB[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][] 
  []
 
 [12] [13] [14
@@ -1133,26 +1133,31 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 3.
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 1
-1.
+3.
 (c:/texlive/2023/texmf-dist/tex/latex/psnfss/ts1phv.fd
 File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 11.
+(Font)              scaled to size 8.99994pt on input line 13.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 22.
+(Font)              scaled to size 10.79993pt on input line 24.
  [1
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 24.
+(Font)              scaled to size 8.99994pt on input line 26.
 
-Underfull \hbox (badness 10000) detected at line 24
+Underfull \hbox (badness 10000) detected at line 26
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 27
+Underfull \hbox (badness 10000) in paragraph at lines 27--31
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 33
 [][][]
  []
 
@@ -1165,55 +1170,289 @@ Chapter 2.
 ]
 Chapter 3.
 (./files.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--4
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--6
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--7
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 8--8
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--9
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--12
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--13
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--14
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
 Overfull \hbox (92.37648pt too wide) in paragraph at lines 14--14
  \T1/phv/m/n/10 for this code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnovie
 llo/mastering-stm32/blob/master/nucleo-f030[] 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--15
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
 [5]
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--24
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--25
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--27
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--29
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--31
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 33--33
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
 Overfull \hbox (92.37648pt too wide) in paragraph at lines 33--33
  \T1/phv/m/n/10 for this code [][] \T1/pcr/m/n/10 https[]://github.[]com/cnovie
 llo/mastering-stm32/blob/master/nucleo-f030[] 
  []
 
-[6]) [7] [8
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--34
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--35
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--36
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--38
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--39
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--40
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
+ [][] \T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB
+[]_[][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[] 
+ []
+
+) [7] [8
 
 ]
 Chapter 4.
 (./struct_a_message.tex
 Underfull \hbox (badness 10000) in paragraph at lines 44--44
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
-][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
+][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[]_[]u[]
  []
 
 ) (./struct_micro_ros_pub_msg.tex [9]
 Underfull \hbox (badness 10000) in paragraph at lines 56--56
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
-][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
+][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[]_[]u[]
  []
 
 ) (./struct_micro_ros_sub_msg.tex [10]
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
-][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
+][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[]_[]u[]
  []
 
 ) (./struct_sequence_step_enables.tex [11]
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
-][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
+][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[]_[]u[]
  []
 
 [12]) (./struct_sequence_step_timeouts.tex [13]
 Underfull \hbox (badness 10000) in paragraph at lines 116--116
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
-][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
+][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[]_[]u[]
  []
 
 ) (./structstat_info__t.tex [14]
 Underfull \hbox (badness 10000) in paragraph at lines 80--80
 []\T1/phv/m/n/10 C[]:/[]Users/[]Administrator/[]Documents/[]Git[]Hub/[]ENIB[]_[
-][]Robot[]_[][]Mobile[]_[][]Ros2/[]WORKSPACE[]_[][]F411[]_[]u[]ROS6/base[]
+][]Robot[]_[][]Mobile[]_[][]Ros2/final[]Code/[]WORKSPACE[]_[][]F411[]_[]u[]
  []
 
 ) [15] [16
@@ -2047,240 +2286,241 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 22.39185pt on input line 1.
 
-Overfull \hbox (313.74979pt too wide) in paragraph at lines 99--101
+Overfull \hbox (349.26315pt too wide) in paragraph at lines 99--101
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/captDistIR.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/captDistIR.h,
  []
 
 
-Overfull \hbox (296.25421pt too wide) in paragraph at lines 101--103
+Overfull \hbox (331.76758pt too wide) in paragraph at lines 101--103
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/config.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/config.h,
  []
 
 
-Overfull \hbox (306.66695pt too wide) in paragraph at lines 103--105
+Overfull \hbox (342.18031pt too wide) in paragraph at lines 103--105
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_gpio.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/drv_gpio.h,
  []
 
 
-Overfull \hbox (301.51903pt too wide) in paragraph at lines 105--107
+Overfull \hbox (337.0324pt too wide) in paragraph at lines 105--107
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_i2c.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/drv_i2c.h,
  []
 
 
-Overfull \hbox (305.88374pt too wide) in paragraph at lines 107--109
+Overfull \hbox (341.39711pt too wide) in paragraph at lines 107--109
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/drv_uart.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/drv_uart.h,
  []
 
 
-Overfull \hbox (340.72264pt too wide) in paragraph at lines 109--111
+Overfull \hbox (376.23601pt too wide) in paragraph at lines 109--111
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/FreeRTOSConfig.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/FreeRTOSConfig.h,
  []
 
 [159
 
 
 ]
-Overfull \hbox (311.67105pt too wide) in paragraph at lines 111--113
+Overfull \hbox (347.18442pt too wide) in paragraph at lines 111--113
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/groveLCD.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/groveLCD.h,
  []
 
 
-Overfull \hbox (291.74522pt too wide) in paragraph at lines 113--115
+Overfull \hbox (327.25859pt too wide) in paragraph at lines 113--115
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/main.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/main.h,
  []
 
 
-Overfull \hbox (313.38097pt too wide) in paragraph at lines 115--117
+Overfull \hbox (348.89433pt too wide) in paragraph at lines 115--117
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/microROS.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/microROS.h,
  []
 
 
-Overfull \hbox (336.75345pt too wide) in paragraph at lines 117--119
+Overfull \hbox (372.26682pt too wide) in paragraph at lines 117--119
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/motorCommand.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/motorCommand.h,
  []
 
 
-Overfull \hbox (325.32358pt too wide) in paragraph at lines 119--121
+Overfull \hbox (360.83694pt too wide) in paragraph at lines 119--121
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/quadEncoder.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/quadEncoder.h,
  []
 
 
-Overfull \hbox (303.25583pt too wide) in paragraph at lines 121--123
+Overfull \hbox (338.7692pt too wide) in paragraph at lines 121--123
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/retarget.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/retarget.h,
  []
 
 
-Overfull \hbox (352.00818pt too wide) in paragraph at lines 123--125
+Overfull \hbox (387.52155pt too wide) in paragraph at lines 123--125
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/stm32f4xx_hal_conf.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/stm32f4xx_hal_conf.h,
  []
 
 
-Overfull \hbox (322.75862pt too wide) in paragraph at lines 125--127
+Overfull \hbox (358.27199pt too wide) in paragraph at lines 125--127
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/stm32f4xx_it.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/stm32f4xx_it.h,
  []
 
 
-Overfull \hbox (321.06697pt too wide) in paragraph at lines 127--129
+Overfull \hbox (356.58034pt too wide) in paragraph at lines 127--129
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/systemclock.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/systemclock.h,
  []
 
 
-Overfull \hbox (283.74426pt too wide) in paragraph at lines 129--131
+Overfull \hbox (319.25763pt too wide) in paragraph at lines 129--131
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/util.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/util.h,
  []
 
 
-Overfull \hbox (309.26785pt too wide) in paragraph at lines 131--133
+Overfull \hbox (344.78122pt too wide) in paragraph at lines 131--133
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Inc/VL53L0X.h,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Inc/VL53L0X.h,
  []
 
 
-Overfull \hbox (314.73987pt too wide) in paragraph at lines 133--135
+Overfull \hbox (350.25323pt too wide) in paragraph at lines 133--135
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/captDistIR.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/captDistIR.c,
  []
 
 
-Overfull \hbox (331.52441pt too wide) in paragraph at lines 135--137
+Overfull \hbox (367.03778pt too wide) in paragraph at lines 135--137
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/dma_transport.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/dma_transport.c,
  []
 
 
-Overfull \hbox (307.65703pt too wide) in paragraph at lines 137--139
+Overfull \hbox (343.1704pt too wide) in paragraph at lines 137--139
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_gpio.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/drv_gpio.c,
  []
 
 
-Overfull \hbox (302.50911pt too wide) in paragraph at lines 139--141
+Overfull \hbox (338.02248pt too wide) in paragraph at lines 139--141
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_i2c.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/drv_i2c.c,
  []
 
 
-Overfull \hbox (306.87383pt too wide) in paragraph at lines 141--143
+Overfull \hbox (342.38719pt too wide) in paragraph at lines 141--143
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/drv_uart.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/drv_uart.c,
  []
 
 
-Overfull \hbox (303.96696pt too wide) in paragraph at lines 143--145
+Overfull \hbox (339.48033pt too wide) in paragraph at lines 143--145
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/freertos.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/freertos.c,
  []
 
 
-Overfull \hbox (312.66113pt too wide) in paragraph at lines 145--147
+Overfull \hbox (348.1745pt too wide) in paragraph at lines 145--147
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/groveLCD.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/groveLCD.c,
  []
 
 
-Overfull \hbox (292.7353pt too wide) in paragraph at lines 147--149
+Overfull \hbox (328.24867pt too wide) in paragraph at lines 147--149
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/main.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/main.c,
  []
 
 
-Overfull \hbox (314.37105pt too wide) in paragraph at lines 149--151
+Overfull \hbox (349.88441pt too wide) in paragraph at lines 149--151
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/microROS.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/microROS.c,
  []
 
 
-Overfull \hbox (351.1084pt too wide) in paragraph at lines 151--153
+Overfull \hbox (386.62177pt too wide) in paragraph at lines 151--153
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/microros_allocators.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/microros_allocators.c,
  []
 
 
-Overfull \hbox (329.59875pt too wide) in paragraph at lines 153--155
+Overfull \hbox (365.11212pt too wide) in paragraph at lines 153--155
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/microros_time.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/microros_time.c,
  []
 
 
-Overfull \hbox (337.74353pt too wide) in paragraph at lines 155--157
+Overfull \hbox (373.2569pt too wide) in paragraph at lines 155--157
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/motorCommand.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/motorCommand.c,
  []
 
 
-Overfull \hbox (326.31366pt too wide) in paragraph at lines 157--159
+Overfull \hbox (361.82703pt too wide) in paragraph at lines 157--159
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/quadEncoder.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/quadEncoder.c,
  []
 
 
-Overfull \hbox (304.24591pt too wide) in paragraph at lines 159--161
+Overfull \hbox (339.75928pt too wide) in paragraph at lines 159--161
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/retarget.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/retarget.c,
  []
 
 
-Overfull \hbox (352.94432pt too wide) in paragraph at lines 161--163
+Overfull \hbox (388.45769pt too wide) in paragraph at lines 161--163
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_hal_msp.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/stm32f4xx_hal_msp.c,
  []
 
 
-Overfull \hbox (389.77153pt too wide) in paragraph at lines 163--165
+Overfull \hbox (425.2849pt too wide) in paragraph at lines 163--165
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_hal_timebase_tim.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/stm32f4xx_hal_timebase_tim.c
+,
  []
 
 
-Overfull \hbox (323.7487pt too wide) in paragraph at lines 165--167
+Overfull \hbox (359.26207pt too wide) in paragraph at lines 165--167
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/stm32f4xx_it.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/stm32f4xx_it.c,
  []
 
 
-Overfull \hbox (304.59738pt too wide) in paragraph at lines 167--169
+Overfull \hbox (340.11075pt too wide) in paragraph at lines 167--169
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/syscalls.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/syscalls.c,
  []
 
 
-Overfull \hbox (306.73026pt too wide) in paragraph at lines 169--171
+Overfull \hbox (342.24362pt too wide) in paragraph at lines 169--171
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/sysmem.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/sysmem.c,
  []
 
 
-Overfull \hbox (322.05705pt too wide) in paragraph at lines 171--173
+Overfull \hbox (357.57042pt too wide) in paragraph at lines 171--173
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/systemclock.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/systemclock.c,
  []
 
 
-Overfull \hbox (284.73434pt too wide) in paragraph at lines 173--175
+Overfull \hbox (320.24771pt too wide) in paragraph at lines 173--175
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/util.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/util.c,
  []
 
 
-Overfull \hbox (310.25793pt too wide) in paragraph at lines 175--177
+Overfull \hbox (345.7713pt too wide) in paragraph at lines 175--177
 []\T1/phv/m/n/10 C:/Users/Administrator/Documents/GitHub/ENIB_Robot_Mobile_Ros2
-/WORKSPACE_F411_uROS6/base_robot/Core/Src/VL53L0X.c,
+/finalCode/WORKSPACE_F411_uROS/base_robot/Core/Src/VL53L0X.c,
  []
 
 [160]
@@ -2365,17 +2605,17 @@ L3 programming layer <2023-11-09>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: DCBA7A860993275E020BDFCA55572F22;117847.
+(rerunfilecheck)             Checksum: 69AE12D1184A77E8A353883FE472BA28;118432.
 
  ) 
 Here is how much of TeX's memory you used:
  25617 strings out of 474266
  503565 string characters out of 5751444
- 2008558 words of memory out of 5000000
+ 2007558 words of memory out of 5000000
  40933 multiletter control sequences out of 15000+600000
  614667 words of font info for 106 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 101i,16n,117p,2304b,963s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 101i,16n,117p,2374b,963s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/tex
 live/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2023/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texlive/2023/texmf-dist
@@ -2388,10 +2628,10 @@ mf-dist/fonts/type1/urw/courier/ucrro8a.pfb><c:/texlive/2023/texmf-dist/fonts/t
 ype1/urw/helvetic/uhvb8a.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvet
 ic/uhvb8ac.pfb><c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
 <c:/texlive/2023/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (184 pages, 689845 bytes).
+Output written on refman.pdf (184 pages, 690614 bytes).
 PDF statistics:
- 13008 PDF objects out of 15390 (max. 8388607)
- 12667 compressed objects within 127 object streams
+ 13012 PDF objects out of 15390 (max. 8388607)
+ 12671 compressed objects within 127 object streams
  6447 named destinations out of 7423 (max. 500000)
  4065 words of extra memory for PDF output out of 10000 (max. 10000000)
 

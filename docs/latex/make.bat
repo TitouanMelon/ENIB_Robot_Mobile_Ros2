@@ -54,3 +54,4 @@ set LATEX_COUNT=%ORG_LATEX_COUNT%
 set ORG_LATEX_COUNT=
 
 :end
+"c:\Program Files\WinRAR\WinRAR.exe" a -afzip -ep ./pdf_doc.zip ./latex/refman.pdf ./externe/base_robot.pdf ./externe/vl53l0x-datasheet-I2C.pdf 
