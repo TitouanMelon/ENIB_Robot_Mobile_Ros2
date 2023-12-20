@@ -31,7 +31,7 @@
   * @section Config Config define
   * @subsection Exo Config exo
   * @subsection Param Config param
-  * @author titouan melon
+  * @author Titouan Melon | Louanne Floch | Jérémy Plantec | Donald TOGNIA DJANKO DIALLO
   *
   ******************************************************************************
   * @attention

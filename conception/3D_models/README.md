@@ -1,7 +1,7 @@
 # 3D model for construct the robot
 
 - PlaqueHaut : other/RobotROSPlaque.CATPart
-- SupportCapteurArriere : other/CapteurVL53_2.CATPart
+- SupportCapteurArriere : other/SupportVL530X.CATPart
 - SupportCamera : other/support_webcam.CATPart
 - SupportCapteurAvant : other/SupportVL53L0X.CATPart
 
