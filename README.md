@@ -49,8 +49,6 @@ CHOOSE OS -> Other general-purpose OS -> Ubuntu -> Ubuntu Desktop 22.04.03 LTS (
 
 You can install all necessary tools with this following commands.
 
-TODO - add the possibility to just install ros et µros by specified rpi in parameter of script to avoid download all things
-
 ```
 sudo apt install wget -y
 wget https://raw.githubusercontent.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/main/conception/installation%20scripts/ROS.sh
@@ -129,6 +127,10 @@ sudo snap install qtcreator-ros --classic
 ```
 
 # Get startup workspace ready
+>[!NOTE]
+>Be carreful if a directory have the same name the commands can erase the folder
+
+Go to your project directory and run the command below
 ## Get the STM32 workspace
 ```
 sudo apt install wget unzip -y
@@ -147,7 +149,6 @@ unzip IHM.zip
 >[!NOTE]
 >You need to have ROS2 install to follow this tutorial (see [here](../README.md#install-ros2) to install)
 
-Go to your project directory and run this command
 ```
 rosdep install -i --from-path py_pubsub/py_pubsub --rosdistro humble -y
 wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/raw/main/startupCode/Camera.zip
@@ -166,7 +167,7 @@ mv -r ./ENIB_Robot_Mobile_Ros2/finalCode/* ~/robot/
 ```
 
 # Launch procedure
-* Build and run IHM
+1. Build and run IHM
 Open a terminal in the IHM directory and run this command
 
 ```
@@ -176,21 +177,21 @@ source install/setup.bash
 # if you change the name of project change this line like this ./build/<node_name>/<executable_name>
 ```
 
-* Compile, build and run the camera program
+2. Compile, build and run the camera program
 ```
 colcon build --packages-select py_pubsub
 source install/setup.bash
 ros2 run py_pubsub camera
 ```
 
-* Start the STM32.sh or stm32_ros_agent
+3. Start the STM32.sh or stm32_ros_agent
 ```
 stm32_ros_agent
 ```
-* Flash the stm32 and run the code
+4. Flash the stm32 and run the code
 >[!NOTE]
 >If multiple pattern error clean and rebuild until the error dissipear
-- Flash the stm32 and run
+ - Flash the stm32 and run
 
 # modify code
 ## Open stm32 project
@@ -206,12 +207,13 @@ stm32_ros_agent
 - Open qtcreator-ros
 - go to File -> Open project or file
 
-![openproject](../conception/img/openWorkspace.png)
+![openproject](./conception/img/openWorkspace.png)
 - Open the file 'workspace.user'
 - Then close and repeat to make qtcreator-ros load the project files
 
 ## Open camera code
-- You can code directly on the RPI or use the visual studio code to connect in ssh to your raspberryPi and have access to his folder 
+1. Code directly on the RPI
+2. Use Visual Studio to connect to in ssh to your raspberryPi and have access to his folder 
 
 # Other information
 ## Config camera
