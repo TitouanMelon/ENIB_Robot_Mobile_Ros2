@@ -17,9 +17,11 @@ Project to make a moving robot with communication and sensors
 ## Folder description
 
 ```
-\---Camera : camera's program 
-\---IHM : qt ihm
-\---WORKSPACE_F411_uROS6 : stm32 workspace
+\---finalCode
+|	\---Camera : camera's program 
+|	\---IHM : qt ihm
+|	\---WORKSPACE_F411_uROS6 : stm32 workspace
+\---startupCode : contain the startup workspace
 \---conception
 |   \---3D_models
 |   \---img : img to readme
@@ -157,11 +159,11 @@ unzip IHM.zip
 >[!NOTE]
 >You need to have ROS2 install to follow this tutorial (see [here](./README.md#install-ros2) to install)
 
-```
-rosdep install -i --from-path py_pubsub/py_pubsub --rosdistro humble -y
-wget https://github.com/TitouanMelon/ENIB_Robot_Mobile_Ros2/raw/main/startupCode/Camera.zip
-unzip Camera.zip
-```
+For the camera we can't give a startup folder because there are some configuration to do if they want modify the code like add more file
+so is easier to follow this links to do the workspace by yourself:
+
+- Tutorial ROS2 humble : https://docs.ros.org/en/humble/Tutorials/Beginner-Client-Libraries/Writing-A-Simple-Py-Publisher-And-Subscriber.html
+- Github of the tutorial exemples : https://github.com/ros2/examples/tree/rolling/rclpy
 
 # Get final workspace
 ```
@@ -175,6 +177,9 @@ mv -r ./ENIB_Robot_Mobile_Ros2/finalCode/* ~/robot/
 ```
 
 # Launch procedure
+>[!NOTE]
+>The command below is make for our final solution so you maybe need to adjust some command to execute your solution
+
 1. Build and run IHM
 Open a terminal in the IHM directory and run this command
 
@@ -190,11 +195,13 @@ source install/setup.bash
 colcon build --packages-select py_pubsub
 source install/setup.bash
 ros2 run py_pubsub camera
+# if you change the name of project change the line like this ros2 run <package_name> <entry_point>
 ```
 
 3. Start the STM32.sh or stm32_ros_agent
 ```
 stm32_ros_agent
+# or launch STM32.sh from the terminal
 ```
 4. Flash the stm32 and run the code
 >[!NOTE]
@@ -229,12 +236,45 @@ sudo apt install v412-ctl
 v4l2-ctl -d /dev/video0 --all
 ```
 
-## Publish an array of 3 Int8 on the topic camera/hsv_low once
+## Get information about ROS2 node and topic 
+- You can use rqt to see information about ROS2. It's a visual ihm to see topics and data
+- Information about all topic
+```
+ros2 topic list
+```
+
+- Information about a node
+```
+ros2 node info /nom/du/node
+```
+
+## Send and receive data on ros topic
+You can see message_type and data on this link : https://docs.ros.org/en/melodic/api/std_msgs/html/index-msg.html
+
+- Publish data once on a topic
+```
+ros2 topic --once <topic/name> <message_type> <data>
+```
+- Publish N data per seconds on a topic 
+```
+ros2 topic -r N <topic/name> <message_type> <data>
+```
+- exemple of publishing an array of 3 Int8 on the topic camera/hsv_low once ([data format](https://docs.ros.org/en/melodic/api/std_msgs/html/msg/Int8MultiArray.html))
 ```
 ros2 topic pub --once camera/hsv_low std_msgs/msg/Int8MultiArray "{data : [99,91,30]}"
 ```
 
+- Listen a topic
+```
+ros2 topic echo <topic/name>
+```
+
+## 3D models
+see 3D models information [here](./conception/3D_models/)
+
 ## Pinout
+
+more information [here](./docs/externe/base_robot.pdf)
 
 | Pin STM32 | Function      | Use             |
 |---------- | ------------- | --------------- |
