@@ -32,6 +32,14 @@ Project to make a moving robot with communication and sensors
 \---report : report for ERI
 ```
 
+## Summary
+1. [Software installation](./README.md#Software-installation-procedure)
+2. [Get startup workspace](./README.md#Get-startup-workspace)
+3. [Get final workspace](./README.md#Get-final-workspace)
+4. [Launch procedure](./README.md#Launch-procedure)
+5. [Modify the code](./README.md#modify-code)
+6. [Other information](./README.md#Other-information)
+
 # Software installation procedure
 ## Install OS
 
@@ -126,7 +134,7 @@ sudo apt install qtcreator -y
 sudo snap install qtcreator-ros --classic
 ```
 
-# Get startup workspace ready
+# Get startup workspace
 >[!NOTE]
 >Be carreful if a directory have the same name the commands can erase the folder
 
@@ -147,7 +155,7 @@ unzip IHM.zip
 
 ## Get the camera workspace
 >[!NOTE]
->You need to have ROS2 install to follow this tutorial (see [here](../README.md#install-ros2) to install)
+>You need to have ROS2 install to follow this tutorial (see [here](./README.md#install-ros2) to install)
 
 ```
 rosdep install -i --from-path py_pubsub/py_pubsub --rosdistro humble -y
@@ -190,19 +198,18 @@ stm32_ros_agent
 ```
 4. Flash the stm32 and run the code
 >[!NOTE]
->If multiple pattern error clean and rebuild until the error dissipear
- - Flash the stm32 and run
+>If you have the multiple pattern error clean and rebuild the project until the error dissipear
 
 # modify code
 ## Open stm32 project
 >[!NOTE]
->you need STM32CubeIde to follow this tutorial (see [here](../README.md#STM32CubeIde) to install)
+>you need STM32CubeIde to follow this tutorial (see [here](./README.md#STM32CubeIde) to install)
 
 - Open stm32cubeIde and select the workspace and select ok
 
 ## Open IHM
 >[!NOTE]
->you need qtcreator and qtcreator-ros to follow this tutorial (see [here](../README.md#qt-creator-and-qt-creator-ros) to install)
+>you need qtcreator and qtcreator-ros to follow this tutorial (see [here](./README.md#qt-creator-and-qt-creator-ros) to install)
 
 - Open qtcreator-ros
 - go to File -> Open project or file
