@@ -43,9 +43,8 @@ class ColorFinder(Node):
         self.hsv_high_subscription = self.create_subscription(std_msgs.msg.UInt8MultiArray, 'camera/hsv_high', self.listener_callback_hsv_high, 10)
         
         self.lock_color = threading.Lock() # For safe sharing of the color config variables between the main loop and the callback.
-        self.enable = threading.Condition() # To make the main loop wait passively for the correct mode.
-        self.lock_mode = threading.Lock() # For safe sharing of the self.mode variable between the main loop and the callback.
-        self.mode = 0
+        
+        self.mode_event = threading.Event() # To make the main loop wait passively for the correct mode.
         
         self.i = 0 # Count interations in the main loop
 
@@ -86,16 +85,12 @@ class ColorFinder(Node):
         self.X=-1.0
         self.Y=-1.0
 
-    def listener_callback_mode(self, msg):
-        self.lock_mode.acquire()
-        self.mode = msg.data
-        
-        if self.mode == 2 :
-            with self.enable:
-                self.enable.notify_all()
-
-        self.lock_mode.release()
-        print("callback mode : ", self.mode)  
+    def listener_callback_mode(self, msg):        
+        if msg.data == 2 :
+            self.mode_event.set()
+        else :
+            self.mode_event.clear()
+        print("callback mode : ", msg.data)  
         
     
     def listener_callback_hsv_low(self, msg):
@@ -115,15 +110,10 @@ class ColorFinder(Node):
             
             # Unsure that the system is in color tracking mode.
             # Waits for the correct mode if it is not the case.
-            self.lock_mode.acquire()
-            if self.mode != 2:
-                self.lock_mode.release()
-                with self.enable:
-                    if self.enable:
-                        print("Waiting for correct mode. (2)")
-                        self.enable.wait()
-            else :
-                self.lock_mode.release()
+            
+            if not self.mode_event.is_set():
+                print("Waiting for correct mode (2).")
+            self.mode_event.wait()
             
             t0 = time.perf_counter()
 
@@ -207,7 +197,7 @@ class ColorFinder(Node):
             if time_sleep > 0 :
                 time.sleep(time_sleep)
             
-            print(f"\rX : {self.X:.3f} Y : {self.Y:.3f} time sleep : {time_sleep:.3f} framrate max : {1/delta_time:.3f} framerate : {1/(time.perf_counter()-t0):.3f} max framerate : {self.frame_rate} i: {self.i} mode : {self.mode}",flush=True, end="")
+            print(f"\rX : {self.X:.3f} Y : {self.Y:.3f} time sleep : {time_sleep:.3f} framrate max : {1/delta_time:.3f} framerate : {1/(time.perf_counter()-t0):.3f} max framerate : {self.frame_rate} i: {self.i}",flush=True, end="")
             #print(f"\rt_cam : {(t1_cam-t0_cam)*1000:.3f} ms t_image : {(t1_image-t0_image)*1000:.3f} ms  t_publish : {(t1_publish-t0_publish)*1000:.3f} ms",flush=True, end="")
 
 
