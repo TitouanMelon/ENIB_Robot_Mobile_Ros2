@@ -15,7 +15,7 @@ His little name is : Humble
 - Documentation of the STM32 workspace : https://nasmelon.ddns.net/robotRos/doc/index.html
 - Visualization of the 3D model : https://nasmelon.ddns.net/robotRos/3d/index.html
 - Virtual machine with all software and startup workspace :
- - rapid speed link : 
+ - rapid speed link : https://drive.google.com/file/d/1msf677nJeT9T99g9dxZXXRz8_1ijEkyR/view?usp=sharing
  - low speed link : https://nasmelon.ddns.net/robotRos/Ubuntu22.04.ova
 
 ## Schema
