@@ -1,6 +1,7 @@
-# ENIB_Robot_Mobile_Ros2
+# Mobile robot with ROS2
 
-Project to make a moving robot with communication and sensors
+Project to make a moving robot with communication with ROS2 and sensors
+His little name is : Humble
 
 ## Project member
 - Titouan Melon : https://www.linkedin.com/in/titouan-melon
