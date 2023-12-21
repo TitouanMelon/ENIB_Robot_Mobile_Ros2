@@ -8,8 +8,14 @@ Project to make a moving robot with communication and sensors
 - Jérémy Plantec : https://www.linkedin.com/in/j%C3%A9r%C3%A9my-plantec-7a24a81bb
 - Donald TOGNIA DJANKO DIALLO : https://www.linkedin.com/in/tognia-djanko-diallo-donald-b38281228
 
-## Google drive's link
-- https://drive.google.com/drive/folders/1ekVw0Pp5evgDc79cSzruJdU0V-NTOiN-?usp=sharing
+## Extern links
+- Google drive :https://drive.google.com/drive/folders/1ekVw0Pp5evgDc79cSzruJdU0V-NTOiN-?usp=sharing
+- Documentation of the mechanical part : https://www.enib.fr/~kerhoas/robot_ros_architecture.html
+- Documentation of the STM32 workspace : https://nasmelon.ddns.net/robotRos/doc/index.html
+- Visualization of the 3D model : https://nasmelon.ddns.net/robotRos/3d/index.html
+- Virtual machine with all software and startup workspace :
+ - rapid speed link : 
+ - low speed link : https://nasmelon.ddns.net/robotRos/Ubuntu22.04.ova
 
 ## Schema
 ![robot sheme](./conception/img/robotScheme.png)

@@ -8,3 +8,4 @@
 # 3D model in one file
 
 - .obj and .stp can be found in robotObj_Stp.rar
+- Vizualize 3D model : https://nasmelon.ddns.net/robotRos/3d/index.html
