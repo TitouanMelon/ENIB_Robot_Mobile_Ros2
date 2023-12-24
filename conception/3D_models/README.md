@@ -1,9 +1,9 @@
 # 3D model for construct the robot
 - Catia file
- - [PlaqueHaut](./other/RobotROSPlaque.CATPart)
- - [SupportCapteurArriere](./other/SupportVL530X.CATPart)
- - [SupportCamera](./other/support_webcam.CATPart)
- - [SupportCapteurAvant](./other/SupportVL53L0X.CATPart)
+ - [PlaqueHaut](./piece/plaque/RobotROSPlaque.CATPart)
+ - [SupportCapteurArriere](./piece/support/SupportVL530X.CATPart)
+ - [SupportCamera](./piece/support/support_webcam.CATPart)
+ - [SupportCapteurAvant](./piece/support/SupportVL53L0X.CATPart)
 
 - Drawing
  - [PlaqueHaut](./other/drawing/PlaqueRobotRos.pdf)
