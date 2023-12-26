@@ -279,6 +279,24 @@ ros2 topic pub --once camera/hsv_low std_msgs/msg/Int8MultiArray "{data : [99,91
 ros2 topic echo <topic/name>
 ```
 
+## Redirect printf on UART2
+
+Right-click on the syscalls.c file and select Properties. Under C/C++ Build>Settings, check Exclude ressource from build
+
+Then click on Apply and close
+![syscall.c properties](./conception/img/syscall_properties.jpg)
+
+Next create two files :
+- retarget.h copy/paste code from [retarget.h](./conception/retarget/retarget.h) and save
+- retarget.c and copy/paste code from [retarget.c](./conception/retarget/retarget.c) and save
+
+After you need to include stdio.h and retarget.h in your main file and call 
+```
+RetargetInit(&huart2);
+```
+
+to indicate you want printf and scanf function on UART2
+
 ## 3D models
 see 3D models information [here](./conception/3D_models/)
 
@@ -301,5 +319,7 @@ more information [here](./docs/externe/base_robot.pdf)
 |PB0        | ADC1_4        | Sensor IR 2     |
 
 ## Robot cablage
+### USART2
 ![STM32 prompt](./conception/img/UART1_STM32.jpg)
+###Motor, Sensors and rpi
 ![STM32 prompt](./conception/img/Shield_Ard.jpg)
